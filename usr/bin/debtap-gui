@@ -5,22 +5,22 @@ export TEXTDOMAINDIR="/usr/share/locale"
 export TEXTDOMAIN=debtap-mod
 
 debfile="$1"
-Alert=$"* Alertas de erro durante a instalação, em geral, não comprometem o funcionamento correto do programa."
+Alert=$"* Error alerts during installation generally do not prevent the program from working correctly."
 
 set +H
-use_root=$(yad --form --image="/usr/share/pixmaps/deb.svg" --geometry=720x400  --form  --field=$"Leia antes de prosseguir com a instalação:":TXT $"Dê preferência para pacotes nativos, feitos para o BigLinux, Manjaro, Arch ou outro sistema Linux compatível com o formato <span color='#CC2222'>.pkg.tar</span>.
+use_root=$(yad --form --image="/usr/share/pixmaps/deb.svg" --geometry=720x400  --form  --field=$"Read before proceeding with the installation:":TXT $"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with the <span color='#CC2222'>.pkg.tar</span> format.
 
-Uma opção é utilizar programas feitos para qualquer sistema Linux, geralmente no formato <span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> ou <span color='#CC2222'>.flatpak</span>.
+Another option is to use programs made for any Linux system, usually in <span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span color='#CC2222'>.flatpak</span> format.
 
-Caso o programa não esteja disponível nos formatos anteriores, o <span color='#CC2222'>.deb</span> pode ser convertido para <span color='#CC2222'>.pkg.tar</span> e instalado neste sistema, porém, talvez a instalação não funcione corretamente."  --field="<span color='#CC2222'>$Alert</span>:LBL" \
---text $"<big>Este sistema utiliza o formato de pacotes <span color='#CC2222'>.pkg.tar</span>, porém o arquivo está no formato <span color='#CC2222'>.deb</span>.
+If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, the installation may not work correctly."  --field="<span color='#CC2222'>$Alert</span>:LBL" \
+--text $"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in <span color='#CC2222'>.deb</span> format.
 
-Deseja prosseguir com a instalação?</big>
+Do you wish to proceed with the installation?</big>
 " \
---button=$" Instalar revisando os arquivos de configuração"!gtk-preferences:1 \
---button=$" Instalar"!gtk-apply:2 \
---button=$" Fechar"!gtk-cancel:3 \
---center --on-top --borders=20 --title=$"Instalar pacote .deb" \
+--button=$"Install & Review Config Files"!gtk-preferences:1 \
+--button=$"Install"!gtk-apply:2 \
+--button=$"Close"!gtk-cancel:3 \
+--center --on-top --borders=20 --title=$"Install .deb package" \
 --window-icon="/usr/share/pixmaps/debian-logo.png"
 
 )
@@ -30,14 +30,14 @@ Deseja prosseguir com a instalação?</big>
         set -H
 
         if [ "$yadresult" = "1" ]; then
-            debtap-mod -q "$debfile" | zenity --progress --pulsate --no-cancel --auto-close --text $"Convertendo o arquivo, aguarde, pode demorar alguns minutos..."
-            zenity --info --text $"Concluído!"
+            debtap-mod -q "$debfile" | zenity --progress --pulsate --no-cancel --auto-close --text $"Converting file, please wait. This may take a few minutes..."
+            zenity --info --text $"Done!"
         fi
 
     
         if [ "$yadresult" = "2" ]; then
-            debtap-mod -Q "$debfile" | zenity --progress --pulsate --no-cancel --auto-close --text $"Convertendo o arquivo, aguarde, pode demorar alguns minutos..."
-            zenity --info --text $"Concluído!"
+            debtap-mod -Q "$debfile" | zenity --progress --pulsate --no-cancel --auto-close --text $"Converting file, please wait. This may take a few minutes..."
+            zenity --info --text $"Done!"
         fi
 
         if [ "$yadresult" = "3" ]; then
