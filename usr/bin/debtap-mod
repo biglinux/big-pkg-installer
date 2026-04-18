@@ -3226,6 +3226,7 @@ if [[ "${pkgname}" == "warsaw" ]]; then
     sed -i '/depend = java-runtime/d' .PKGINFO
     disable_namcap=y
     sed -i 's|pkgname = warsaw|pkgname = warsaw-deb|g' .PKGINFO
+	echo 'depend = libcurl-gnutls' >> .PKGINFO
 fi
 
 # Fix shodo part 2
