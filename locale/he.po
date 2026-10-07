@@ -367,6 +367,222 @@ msgstr "makepkg נכשל עם קוד יציאה {code}"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg הסתיים אך לא יצר חבילה"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "“{typed}” רק מרענן את רשימת החבילות. כאן המקבילה הבטוחה בודקת אם יש עדכונים בלי להתקין דבר; כדי להתקין אותם יש להשתמש ב-“{upgrade}”."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "אסור להריץ את “pacman -Sy” לבדו: רענון הרשימה בלי שדרוג המערכת עלול לשבור אותה."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch אינה משדרגת חבילות בודדות; כל המערכת משודרגת יחד."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "יש לציין איזו חבילה להתקין, לדוגמה: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr "חבילות .rpm נוצרו עבור Fedora/openSUSE ולא ניתן להתקין אותן כאן."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "חפשו את התוכנה במאגרים (pamac search), ב-Flathub או כ-AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac מוצא תוכנות גם ב-AUR וב-Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "חבילות .deb מומרות לחבילות pacman מקוריות על ידי debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "יש להריץ פקודה זו כמשתמש רגיל (בלי sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "יש לציין איזו חבילה להסיר, לדוגמה: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n מוחק גם את קובצי התצורה שהחבילה התקינה ב-/etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "אין חבילות יתומות להסרה."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "יש לציין מה לחפש, לדוגמה: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "יש לציין איזו חבילה, לדוגמה: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "החבילה אינה מותקנת; הרשימה מגיעה ממסד הנתונים של קובצי המאגר."
+
+msgid "Tell which file, for example: {example}"
+msgstr "יש לציין איזה קובץ, לדוגמה: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "הקובץ אינו קיים במערכת זו; מחפש במסד הנתונים של קובצי המאגר."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "במערכות מבוססות Arch אין PPAs או מאגרים נוספים להוסיף. תוכנות מהקהילה מגיעות מ-AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "חפשו באמצעות “pamac search --aur <name>” והתקינו באמצעות “pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "כדי למנוע שדרוג של חבילה, יש להוסיף אותה ל-IgnorePkg בקובץ /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "ל-“{command}” אין מקבילה ישירה כאן."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "הריצו “{tool} help” כדי לראות את הפקודות שהמערכת הזו מבינה."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "יש לציין איזה קובץ .deb להתקין, לדוגמה: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "מערכת זו משתמשת ב-pacman, לא ב-{tool}."
+
+msgid "You typed:"
+msgstr "הקלדת:"
+
+msgid "Equivalent:"
+msgstr "מקבילה:"
+
+msgid "With pamac:"
+msgstr "עם pamac:"
+
+msgid "Running:"
+msgstr "מריץ:"
+
+msgid "Update everything"
+msgstr "עדכון הכול"
+
+msgid "Check for updates"
+msgstr "בדיקת עדכונים"
+
+msgid "Install a program"
+msgstr "התקנת תוכנה"
+
+msgid "Install a downloaded file"
+msgstr "התקנת קובץ שהורד"
+
+msgid "Install a .deb file here"
+msgstr "התקנת קובץ .deb כאן"
+
+msgid "Reinstall"
+msgstr "התקנה מחדש"
+
+msgid "Remove a program"
+msgstr "הסרת תוכנה"
+
+msgid "Remove + dependencies"
+msgstr "הסרה + תלויות"
+
+msgid "Remove + configuration"
+msgstr "הסרה + תצורה"
+
+msgid "Remove orphans (unused)"
+msgstr "הסרת יתומות (שאינן בשימוש)"
+
+msgid "Search to install"
+msgstr "חיפוש להתקנה"
+
+msgid "Details (available)"
+msgstr "פרטים (זמין)"
+
+msgid "Details (installed)"
+msgstr "פרטים (מותקן)"
+
+msgid "List everything available"
+msgstr "רשימת כל הזמינות"
+
+msgid "List installed"
+msgstr "רשימת המותקנות"
+
+msgid "Search installed"
+msgstr "חיפוש בין המותקנות"
+
+msgid "Files of a package"
+msgstr "קובצי חבילה"
+
+msgid "Which package owns a file?"
+msgstr "איזו חבילה מחזיקה בקובץ?"
+
+msgid "What can be upgraded"
+msgstr "מה ניתן לשדרג"
+
+msgid "Installed by you"
+msgstr "הותקנו על ידיך"
+
+msgid "Dependencies of a package"
+msgstr "תלויות של חבילה"
+
+msgid "Who depends on a package"
+msgstr "מי תלוי בחבילה"
+
+msgid "Clean the download cache"
+msgstr "ניקוי מטמון ההורדות"
+
+msgid "Add a repository / PPA"
+msgstr "הוספת מאגר / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "מתרגם פקודות: {family} (Debian, Ubuntu, Mint, Fedora) ל-pacman ול-pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "שניהם עושים אותה עבודה: התקנה, עדכון והסרה של תוכנות. רק הפקודות משתנות."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "אפשר להמשיך להקליד פקודות {tool}: הן מתורגמות ורצות באמצעות pamac או pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "אין פקודה שתואמת את “{topic}”."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "הריצו “{tool} help” כדי לראות את כל הפקודות."
+
+msgid "What you want to do"
+msgstr "מה ברצונך לעשות"
+
+msgid "Differences that catch people"
+msgstr "הבדלים שמפתיעים"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update רק מרענן את הרשימה; apt upgrade מתקין."
+
+msgid "In pacman, -Syu does both together."
+msgstr "ב-pacman, -Syu עושה את שניהם יחד."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "הימנעו מהרצת “pacman -Sy” לבדו: זה עלול לשבור את המערכת."
+
+msgid "Package types"
+msgstr "סוגי חבילות"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt משתמש בקובצי .deb, dnf משתמש ב-.rpm, ו-pacman משתמש ב-.pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr "קובצי .deb מומרים ומותקנים באמצעות debtap-mod (או בלחיצה כפולה)."
+
+msgid "Programs from the community"
+msgstr "תוכנות מהקהילה"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR ממלא את תפקידם של PPAs ושל COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "השתמשו ב-“pamac build <name>”; לעולם אל תריצו עוזרי AUR עם sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "טיפ: “{tool} help install” מציג רק את השורות של פקודה אחת."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "עזר מהיר: נדרש “sudo” כדי להתקין או להסיר; חיפוש ורישום אינם דורשים אותו."
+
+msgid "Command not found: {cmd}"
+msgstr "הפקודה לא נמצאה: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "סקריפטי Debian רק רושמים מאגר APT ופרופיל AppArmor עבור Ubuntu; הם אינם נחוצים כאן."
 

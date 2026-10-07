@@ -366,6 +366,222 @@ msgstr "makepkg が終了コード {code} で失敗しました"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg は終了しましたが、パッケージが作成されませんでした"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "「{typed}」はパッケージリストを更新するだけです。ここでは、何もインストールせずに更新を確認する安全な同等コマンドを使います。インストールするには「{upgrade}」を使ってください。"
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "「pacman -Sy」を単独で実行しないでください。アップグレードせずにリストだけ更新すると、システムが壊れる可能性があります。"
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch では個別のパッケージだけをアップグレードしません。システム全体をまとめてアップグレードします。"
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "インストールするパッケージを指定してください。例: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr ".rpm パッケージは Fedora/openSUSE 用のため、ここではインストールできません。"
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "リポジトリ(pamac search)、Flathub、または AppImage でプログラムを探してください。"
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac は AUR と Flatpak のプログラムも検索できます: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb パッケージは debtap-mod によってネイティブの pacman パッケージに変換されます。"
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "このコマンドは一般ユーザーで実行してください(sudo なし)。"
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "削除するパッケージを指定してください。例: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n は、パッケージが /etc にインストールした設定ファイルも削除します。"
+
+msgid "There are no orphan packages to remove."
+msgstr "削除する孤立パッケージはありません。"
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "検索する内容を指定してください。例: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "パッケージを指定してください。例: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "パッケージはインストールされていません。一覧はリポジトリのファイルデータベースから取得しています。"
+
+msgid "Tell which file, for example: {example}"
+msgstr "ファイルを指定してください。例: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "このシステムにファイルがありません。リポジトリのファイルデータベースを検索します。"
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Arch 系システムには、追加する PPA や追加リポジトリはありません。コミュニティのプログラムは AUR から入手します。"
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "「pamac search --aur <name>」で検索し、「pamac build <name>」でインストールします。"
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "パッケージをアップグレードさせないようにするには、/etc/pacman.conf の IgnorePkg に追加します。"
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "「{command}」に直接対応するコマンドはありません。"
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "「{tool} help」を実行すると、このシステムが理解するコマンドを確認できます。"
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "インストールする .deb ファイルを指定してください。例: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "このシステムでは {tool} ではなく pacman を使います。"
+
+msgid "You typed:"
+msgstr "入力したコマンド:"
+
+msgid "Equivalent:"
+msgstr "同等のコマンド:"
+
+msgid "With pamac:"
+msgstr "pamac の場合:"
+
+msgid "Running:"
+msgstr "実行中:"
+
+msgid "Update everything"
+msgstr "すべて更新"
+
+msgid "Check for updates"
+msgstr "更新を確認"
+
+msgid "Install a program"
+msgstr "プログラムをインストール"
+
+msgid "Install a downloaded file"
+msgstr "ダウンロードしたファイルをインストール"
+
+msgid "Install a .deb file here"
+msgstr "この .deb ファイルをインストール"
+
+msgid "Reinstall"
+msgstr "再インストール"
+
+msgid "Remove a program"
+msgstr "プログラムを削除"
+
+msgid "Remove + dependencies"
+msgstr "削除 + 依存関係"
+
+msgid "Remove + configuration"
+msgstr "削除 + 設定"
+
+msgid "Remove orphans (unused)"
+msgstr "孤立パッケージを削除(未使用)"
+
+msgid "Search to install"
+msgstr "インストール用に検索"
+
+msgid "Details (available)"
+msgstr "詳細(未インストール)"
+
+msgid "Details (installed)"
+msgstr "詳細(インストール済み)"
+
+msgid "List everything available"
+msgstr "利用可能なものを一覧表示"
+
+msgid "List installed"
+msgstr "インストール済みを一覧表示"
+
+msgid "Search installed"
+msgstr "インストール済みを検索"
+
+msgid "Files of a package"
+msgstr "パッケージのファイル"
+
+msgid "Which package owns a file?"
+msgstr "ファイルの所有パッケージは?"
+
+msgid "What can be upgraded"
+msgstr "アップグレード可能なもの"
+
+msgid "Installed by you"
+msgstr "自分でインストールしたもの"
+
+msgid "Dependencies of a package"
+msgstr "パッケージの依存関係"
+
+msgid "Who depends on a package"
+msgstr "パッケージに依存するもの"
+
+msgid "Clean the download cache"
+msgstr "ダウンロードキャッシュを削除"
+
+msgid "Add a repository / PPA"
+msgstr "リポジトリ / PPA を追加"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "コマンド変換: {family}(Debian、Ubuntu、Mint、Fedora)から pacman と pamac(Arch、BigLinux、Manjaro)へ"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "どちらもプログラムのインストール、更新、削除という同じ役割を果たします。違うのはコマンドだけです。"
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "これまでどおり {tool} コマンドを入力できます。pamac または pacman に変換されて実行されます。"
+
+msgid "No command matches “{topic}”."
+msgstr "「{topic}」に一致するコマンドはありません。"
+
+msgid "Run “{tool} help” to see every command."
+msgstr "「{tool} help」を実行すると、すべてのコマンドを確認できます。"
+
+msgid "What you want to do"
+msgstr "やりたいこと"
+
+msgid "Differences that catch people"
+msgstr "つまずきやすい違い"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update はリストを更新するだけで、apt upgrade がインストールします。"
+
+msgid "In pacman, -Syu does both together."
+msgstr "pacman では -Syu で両方を一度に行います。"
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "「pacman -Sy」を単独で使うのは避けてください。システムが壊れる可能性があります。"
+
+msgid "Package types"
+msgstr "パッケージの種類"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt は .deb、dnf は .rpm、pacman は .pkg.tar.zst を使います。"
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb ファイルは debtap-mod(またはダブルクリック)で変換してインストールします。"
+
+msgid "Programs from the community"
+msgstr "コミュニティのプログラム"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR は PPA や COPR の役割を果たします。"
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "「pamac build <name>」を使ってください。AUR ヘルパーを sudo で実行しないでください。"
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "ヒント: 「{tool} help install」で、1 つのコマンドに関する行だけを表示します。"
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "クイックリファレンス: インストールや削除には「sudo」が必要です。検索や一覧表示には不要です。"
+
+msgid "Command not found: {cmd}"
+msgstr "コマンドが見つかりません: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "この Debian スクリプトは Ubuntu 向けに APT リポジトリと AppArmor プロファイルを登録するだけなので、ここでは不要です。"
 

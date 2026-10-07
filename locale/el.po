@@ -367,6 +367,222 @@ msgstr "Το makepkg απέτυχε με κωδικό εξόδου {code}"
 msgid "makepkg finished but produced no package"
 msgstr "Το makepkg ολοκληρώθηκε αλλά δεν παρήγαγε πακέτο"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "Το «{typed}» ανανεώνει μόνο τη λίστα πακέτων. Εδώ το ασφαλές ισοδύναμο ελέγχει για ενημερώσεις χωρίς να εγκαταστήσει τίποτα· για να τις εγκαταστήσετε, χρησιμοποιήστε το «{upgrade}»."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Μην εκτελείτε ποτέ το «pacman -Sy» μόνο του: η ανανέωση χωρίς αναβάθμιση μπορεί να χαλάσει το σύστημα."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Το Arch δεν αναβαθμίζει μεμονωμένα πακέτα· ολόκληρο το σύστημα αναβαθμίζεται μαζί."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Πείτε ποιο πακέτο να εγκατασταθεί, για παράδειγμα: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr "Τα πακέτα .rpm φτιάχνονται για Fedora/openSUSE και δεν μπορούν να εγκατασταθούν εδώ."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Αναζητήστε το πρόγραμμα στα αποθετήρια (pamac search), στο Flathub ή ως AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "Το pamac βρίσκει προγράμματα και στο AUR και στο Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "Τα πακέτα .deb μετατρέπονται σε εγγενή πακέτα pacman από το debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Εκτελέστε αυτή την εντολή ως απλός χρήστης (χωρίς sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Πείτε ποιο πακέτο να αφαιρεθεί, για παράδειγμα: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "Το -n διαγράφει επίσης τα αρχεία ρυθμίσεων που εγκατέστησε το πακέτο στο /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "Δεν υπάρχουν ορφανά πακέτα για αφαίρεση."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Πείτε τι να αναζητηθεί, για παράδειγμα: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Πείτε ποιο πακέτο, για παράδειγμα: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Το πακέτο δεν είναι εγκατεστημένο· η λίστα προέρχεται από τη βάση δεδομένων αρχείων του αποθετηρίου."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Πείτε ποιο αρχείο, για παράδειγμα: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Το αρχείο δεν υπάρχει σε αυτό το σύστημα· γίνεται αναζήτηση στη βάση δεδομένων αρχείων του αποθετηρίου."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Τα συστήματα βασισμένα στο Arch δεν έχουν PPA ή πρόσθετα αποθετήρια για προσθήκη. Τα προγράμματα της κοινότητας προέρχονται από το AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Αναζητήστε με «pamac search --aur <name>» και εγκαταστήστε με «pamac build <name>»."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Για να μην αναβαθμίζεται ένα πακέτο, προσθέστε το στο IgnorePkg στο /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "Το «{command}» δεν έχει άμεσο ισοδύναμο εδώ."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Εκτελέστε «{tool} help» για να δείτε τις εντολές που καταλαβαίνει αυτό το σύστημα."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Πείτε ποιο αρχείο .deb να εγκατασταθεί, για παράδειγμα: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Αυτό το σύστημα χρησιμοποιεί pacman, όχι {tool}."
+
+msgid "You typed:"
+msgstr "Πληκτρολογήσατε:"
+
+msgid "Equivalent:"
+msgstr "Ισοδύναμο:"
+
+msgid "With pamac:"
+msgstr "Με pamac:"
+
+msgid "Running:"
+msgstr "Εκτέλεση:"
+
+msgid "Update everything"
+msgstr "Ενημέρωση όλων"
+
+msgid "Check for updates"
+msgstr "Έλεγχος για ενημερώσεις"
+
+msgid "Install a program"
+msgstr "Εγκατάσταση προγράμματος"
+
+msgid "Install a downloaded file"
+msgstr "Εγκατάσταση ληφθέντος αρχείου"
+
+msgid "Install a .deb file here"
+msgstr "Εγκατάσταση αρχείου .deb εδώ"
+
+msgid "Reinstall"
+msgstr "Επανεγκατάσταση"
+
+msgid "Remove a program"
+msgstr "Αφαίρεση προγράμματος"
+
+msgid "Remove + dependencies"
+msgstr "Αφαίρεση + εξαρτήσεις"
+
+msgid "Remove + configuration"
+msgstr "Αφαίρεση + ρυθμίσεις"
+
+msgid "Remove orphans (unused)"
+msgstr "Αφαίρεση ορφανών (αχρησιμοποίητα)"
+
+msgid "Search to install"
+msgstr "Αναζήτηση για εγκατάσταση"
+
+msgid "Details (available)"
+msgstr "Λεπτομέρειες (διαθέσιμο)"
+
+msgid "Details (installed)"
+msgstr "Λεπτομέρειες (εγκατεστημένο)"
+
+msgid "List everything available"
+msgstr "Λίστα όλων των διαθέσιμων"
+
+msgid "List installed"
+msgstr "Λίστα εγκατεστημένων"
+
+msgid "Search installed"
+msgstr "Αναζήτηση στα εγκατεστημένα"
+
+msgid "Files of a package"
+msgstr "Αρχεία ενός πακέτου"
+
+msgid "Which package owns a file?"
+msgstr "Ποιο πακέτο κατέχει ένα αρχείο;"
+
+msgid "What can be upgraded"
+msgstr "Τι μπορεί να αναβαθμιστεί"
+
+msgid "Installed by you"
+msgstr "Εγκατεστημένα από εσάς"
+
+msgid "Dependencies of a package"
+msgstr "Εξαρτήσεις ενός πακέτου"
+
+msgid "Who depends on a package"
+msgstr "Ποιοι εξαρτώνται από ένα πακέτο"
+
+msgid "Clean the download cache"
+msgstr "Εκκαθάριση της προσωρινής μνήμης λήψεων"
+
+msgid "Add a repository / PPA"
+msgstr "Προσθήκη αποθετηρίου / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Μεταφραστής εντολών: {family} (Debian, Ubuntu, Mint, Fedora) σε pacman και pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Και τα δύο κάνουν την ίδια δουλειά: εγκατάσταση, ενημέρωση και αφαίρεση προγραμμάτων. Αλλάζουν μόνο οι εντολές."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Μπορείτε να συνεχίσετε να πληκτρολογείτε εντολές {tool}: μεταφράζονται και εκτελούνται με pamac ή pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "Καμία εντολή δεν ταιριάζει με «{topic}»."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Εκτελέστε «{tool} help» για να δείτε όλες τις εντολές."
+
+msgid "What you want to do"
+msgstr "Τι θέλετε να κάνετε"
+
+msgid "Differences that catch people"
+msgstr "Διαφορές που μπερδεύουν"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "Το apt update ανανεώνει μόνο τη λίστα· το apt upgrade εγκαθιστά."
+
+msgid "In pacman, -Syu does both together."
+msgstr "Στο pacman, το -Syu κάνει και τα δύο μαζί."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Αποφύγετε το «pacman -Sy» μόνο του: μπορεί να χαλάσει το σύστημα."
+
+msgid "Package types"
+msgstr "Τύποι πακέτων"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "Το apt χρησιμοποιεί αρχεία .deb, το dnf χρησιμοποιεί .rpm, το pacman χρησιμοποιεί .pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr "Τα αρχεία .deb μετατρέπονται και εγκαθίστανται με το debtap-mod (ή με διπλό κλικ)."
+
+msgid "Programs from the community"
+msgstr "Προγράμματα της κοινότητας"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "Το AUR παίζει το ρόλο των PPA και COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Χρησιμοποιήστε «pamac build <name>»· μην εκτελείτε ποτέ βοηθούς AUR με sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Συμβουλή: το «{tool} help install» δείχνει μόνο τις γραμμές για μία εντολή."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Γρήγορη αναφορά: το «sudo» χρειάζεται για εγκατάσταση ή αφαίρεση· η αναζήτηση και η λίστα όχι."
+
+msgid "Command not found: {cmd}"
+msgstr "Η εντολή δεν βρέθηκε: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Τα σενάρια του Debian απλώς καταχωρούν ένα αποθετήριο APT και ένα προφίλ AppArmor για το Ubuntu· δεν χρειάζονται εδώ."
 

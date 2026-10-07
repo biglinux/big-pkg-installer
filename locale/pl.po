@@ -368,6 +368,222 @@ msgstr "makepkg zakończył się niepowodzeniem z kodem wyjścia {code}"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg zakończył działanie, ale nie utworzył pakietu"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "„{typed}” tylko odświeża listę pakietów. Tutaj bezpieczny odpowiednik sprawdza dostępność aktualizacji bez instalowania czegokolwiek; aby je zainstalować, użyj „{upgrade}”."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Nigdy nie uruchamiaj samego „pacman -Sy”: odświeżanie bez aktualizacji może uszkodzić system."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch nie aktualizuje pojedynczych pakietów; cały system jest aktualizowany razem."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Podaj pakiet do zainstalowania, na przykład: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr "Pakiety .rpm są przeznaczone dla Fedory/openSUSE i nie można ich tu zainstalować."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Poszukaj programu w repozytoriach (pamac search), we Flathub lub jako AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac znajduje też programy w AUR i Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "Pakiety .deb są konwertowane na natywne pakiety pacman przez debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Uruchom to polecenie jako zwykły użytkownik (bez sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Podaj pakiet do usunięcia, na przykład: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n usuwa także pliki konfiguracyjne zainstalowane przez pakiet w /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "Nie ma osieroconych pakietów do usunięcia."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Podaj, czego szukać, na przykład: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Podaj pakiet, na przykład: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Pakiet nie jest zainstalowany; lista pochodzi z bazy plików repozytorium."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Podaj plik, na przykład: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Pliku nie ma w tym systemie; przeszukiwanie bazy plików repozytorium."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Systemy oparte na Arch nie mają PPA ani dodatkowych repozytoriów do dodania. Programy od społeczności pochodzą z AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Szukaj poleceniem „pamac search --aur <name>” i instaluj poleceniem „pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Aby uniemożliwić aktualizację pakietu, dodaj go do IgnorePkg w /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "„{command}” nie ma tutaj bezpośredniego odpowiednika."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Uruchom „{tool} help”, aby zobaczyć polecenia obsługiwane przez ten system."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Podaj plik .deb do zainstalowania, na przykład: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Ten system używa pacman, a nie {tool}."
+
+msgid "You typed:"
+msgstr "Wpisano:"
+
+msgid "Equivalent:"
+msgstr "Odpowiednik:"
+
+msgid "With pamac:"
+msgstr "Z pamac:"
+
+msgid "Running:"
+msgstr "Uruchamianie:"
+
+msgid "Update everything"
+msgstr "Zaktualizuj wszystko"
+
+msgid "Check for updates"
+msgstr "Sprawdź aktualizacje"
+
+msgid "Install a program"
+msgstr "Zainstaluj program"
+
+msgid "Install a downloaded file"
+msgstr "Zainstaluj pobrany plik"
+
+msgid "Install a .deb file here"
+msgstr "Zainstaluj tutaj plik .deb"
+
+msgid "Reinstall"
+msgstr "Zainstaluj ponownie"
+
+msgid "Remove a program"
+msgstr "Usuń program"
+
+msgid "Remove + dependencies"
+msgstr "Usuń + zależności"
+
+msgid "Remove + configuration"
+msgstr "Usuń + konfigurację"
+
+msgid "Remove orphans (unused)"
+msgstr "Usuń osierocone (nieużywane)"
+
+msgid "Search to install"
+msgstr "Szukaj do instalacji"
+
+msgid "Details (available)"
+msgstr "Szczegóły (dostępne)"
+
+msgid "Details (installed)"
+msgstr "Szczegóły (zainstalowane)"
+
+msgid "List everything available"
+msgstr "Wyświetl wszystkie dostępne"
+
+msgid "List installed"
+msgstr "Wyświetl zainstalowane"
+
+msgid "Search installed"
+msgstr "Szukaj wśród zainstalowanych"
+
+msgid "Files of a package"
+msgstr "Pliki pakietu"
+
+msgid "Which package owns a file?"
+msgstr "Który pakiet jest właścicielem pliku?"
+
+msgid "What can be upgraded"
+msgstr "Co można zaktualizować"
+
+msgid "Installed by you"
+msgstr "Zainstalowane przez Ciebie"
+
+msgid "Dependencies of a package"
+msgstr "Zależności pakietu"
+
+msgid "Who depends on a package"
+msgstr "Co zależy od pakietu"
+
+msgid "Clean the download cache"
+msgstr "Wyczyść pamięć podręczną pobierania"
+
+msgid "Add a repository / PPA"
+msgstr "Dodaj repozytorium / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Tłumacz poleceń: {family} (Debian, Ubuntu, Mint, Fedora) na pacman i pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Oba robią to samo: instalują, aktualizują i usuwają programy. Zmieniają się tylko polecenia."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Możesz nadal wpisywać polecenia {tool}: są tłumaczone i uruchamiane przez pamac lub pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "Żadne polecenie nie pasuje do „{topic}”."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Uruchom „{tool} help”, aby zobaczyć wszystkie polecenia."
+
+msgid "What you want to do"
+msgstr "Co chcesz zrobić"
+
+msgid "Differences that catch people"
+msgstr "Różnice, które zaskakują"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update tylko odświeża listę; apt upgrade instaluje."
+
+msgid "In pacman, -Syu does both together."
+msgstr "W pacman -Syu robi jedno i drugie naraz."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Unikaj samego „pacman -Sy”: może uszkodzić system."
+
+msgid "Package types"
+msgstr "Typy pakietów"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt używa plików .deb, dnf używa .rpm, pacman używa .pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr "Pliki .deb są konwertowane i instalowane przez debtap-mod (lub dwukrotne kliknięcie)."
+
+msgid "Programs from the community"
+msgstr "Programy od społeczności"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR pełni rolę PPA i COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Użyj „pamac build <name>”; nigdy nie uruchamiaj narzędzi AUR z sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Wskazówka: „{tool} help install” pokazuje tylko wiersze dotyczące jednego polecenia."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Krótki przewodnik: „sudo” jest potrzebne do instalacji lub usuwania; wyszukiwanie i wyświetlanie list go nie wymagają."
+
+msgid "Command not found: {cmd}"
+msgstr "Nie znaleziono polecenia: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Skrypty Debiana tylko rejestrują repozytorium APT i profil AppArmor dla Ubuntu; nie są tu potrzebne."
 

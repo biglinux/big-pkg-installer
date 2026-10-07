@@ -34,6 +34,9 @@ your menu, tracked by pacman like any other package.
   package is installed. Failures show the full log.
 - **Command-line interface** compatible with the original `debtap` options.
 - **Per-package fixes** kept as data in a TOML file, not as code.
+- **apt / dnf command translator.** Commands typed out of habit (`apt install`,
+  `dnf upgrade`, `dpkg -i`…) are translated: the equivalent pacman and pamac
+  commands are shown, then the right one runs.
 
 ## Requirements
 
@@ -109,6 +112,39 @@ debtap-mod -P app_amd64.deb                      # export ./app-deb/PKGBUILD
 
 The old `-u`, `-s` and `-w` options are accepted for compatibility and ignored.
 No local database needs to be updated any more.
+
+## apt / dnf command translator
+
+People coming from Debian, Ubuntu, Mint or Fedora type the commands they know.
+debtap-mod installs `apt`, `apt-get`, `apt-cache`, `apt-mark`, `dpkg`, `dnf`
+and `yum` in `/usr/local/bin`. Instead of failing, each command shows its
+pacman/pamac equivalent and then runs it:
+
+```text
+$ apt install vlc
+ apt → pacman   This system uses pacman, not apt.
+   You typed:   apt install vlc
+   Equivalent:  sudo pacman -S vlc
+   With pamac:  pamac install vlc
+
+ Running: pamac install vlc
+```
+
+- `apt help` / `dnf help` prints a full, colored cheat sheet (apt or dnf →
+  pacman → pamac). The table adapts to the terminal width.
+- `apt help purge` shows only the rows about one command.
+- `apt install ./app.deb` and `dpkg -i app.deb` convert the file with debtap-mod.
+- `apt update` and `dnf check-update` only check for updates (`pamac
+  checkupdates`). Running `pacman -Sy` alone can cause partial upgrades.
+- Changes run through pamac as a regular user, or through pacman when
+  already root (`sudo apt …`).
+- `dpkg --compare-versions` and `dpkg --print-architecture` answer silently,
+  as installer scripts expect.
+- The panel goes to stderr, so pipes such as `apt list --installed | grep vlc`
+  keep working. Colors are disabled when the output is not a terminal or
+  `NO_COLOR` is set.
+- If a real `apt`, `dnf` or `dpkg` is installed in `/usr/bin`, it is used
+  instead of the translator.
 
 ## How it works
 
@@ -188,6 +224,7 @@ Project layout:
 
 ```text
 usr/bin/                       launchers (debtap-mod, debtap-gui, gdebi-gtk)
+usr/local/bin/                 apt, apt-get, apt-cache, apt-mark, dpkg, dnf, yum
 usr/share/debtap-mod/debtap_mod/
     debfile.py                 .deb reader and safe extraction
     layout.py                  filesystem hierarchy normalization
@@ -196,6 +233,7 @@ usr/share/debtap-mod/debtap_mod/
     scripts.py                 maintainer scripts -> .install
     pkgbuild.py                PKGBUILD generation and makepkg
     installer.py               conflict check, installation, verification
+    pkgcompat.py               apt/dnf/dpkg command translator
     converter.py               conversion pipeline
     cli.py                     command-line interface
     gui/                       GTK4 + libadwaita interface

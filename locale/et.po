@@ -367,6 +367,222 @@ msgstr "makepkg ebaõnnestus väljumiskoodiga {code}"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg lõpetas, kuid ei loonud ühtegi paketti"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "“{typed}” värskendab ainult paketiloendit. Siin kontrollib turvaline vaste uuendusi, installimata midagi; nende paigaldamiseks kasuta “{upgrade}”."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Ära kunagi käivita ainult “pacman -Sy”: loendi värskendamine ilma süsteemi uuendamata võib süsteemi rikkuda."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch ei uuenda üksikuid pakette; kogu süsteemi uuendatakse korraga."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Ütle, milline pakett paigaldada, näiteks: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr ".rpm-paketid on mõeldud Fedorale/openSUSE-le ja neid ei saa siia paigaldada."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Otsi programmi hoidlatest (pamac search), Flathubist või AppImage'ina."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac leiab programme ka AUR-ist ja Flatpakist: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "debtap-mod teisendab .deb-paketid natiivseteks pacmani pakettideks."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Käivita see käsk tavakasutajana (ilma sudota)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Ütle, milline pakett eemaldada, näiteks: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n kustutab ka seadistusfailid, mille pakett kausta /etc paigaldas."
+
+msgid "There are no orphan packages to remove."
+msgstr "Eemaldatavaid orbpakette pole."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Ütle, mida otsida, näiteks: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Ütle, milline pakett, näiteks: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Pakett pole paigaldatud; loend pärineb hoidla failide andmebaasist."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Ütle, milline fail, näiteks: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Faili pole selles süsteemis; otsin hoidla failide andmebaasist."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Archil põhinevatel süsteemidel pole lisatavaid PPA-sid ega lisahoidlaid. Kogukonna programmid tulevad AUR-ist."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Otsi käsuga “pamac search --aur <name>” ja paigalda käsuga “pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Et paketti ei uuendataks, lisa see faili /etc/pacman.conf valikusse IgnorePkg."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "Käsul “{command}” pole siin otsest vastet."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Käivita “{tool} help”, et näha käske, mida see süsteem mõistab."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Ütle, milline .deb-fail paigaldada, näiteks: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "See süsteem kasutab pacmani, mitte {tool}."
+
+msgid "You typed:"
+msgstr "Sisestasid:"
+
+msgid "Equivalent:"
+msgstr "Vaste:"
+
+msgid "With pamac:"
+msgstr "Pamaciga:"
+
+msgid "Running:"
+msgstr "Käivitan:"
+
+msgid "Update everything"
+msgstr "Uuenda kõik"
+
+msgid "Check for updates"
+msgstr "Otsi uuendusi"
+
+msgid "Install a program"
+msgstr "Paigalda programm"
+
+msgid "Install a downloaded file"
+msgstr "Paigalda allalaaditud fail"
+
+msgid "Install a .deb file here"
+msgstr "Paigalda siin .deb-fail"
+
+msgid "Reinstall"
+msgstr "Paigalda uuesti"
+
+msgid "Remove a program"
+msgstr "Eemalda programm"
+
+msgid "Remove + dependencies"
+msgstr "Eemalda + sõltuvused"
+
+msgid "Remove + configuration"
+msgstr "Eemalda + seadistus"
+
+msgid "Remove orphans (unused)"
+msgstr "Eemalda orvud (kasutamata)"
+
+msgid "Search to install"
+msgstr "Otsi paigaldamiseks"
+
+msgid "Details (available)"
+msgstr "Üksikasjad (saadaval)"
+
+msgid "Details (installed)"
+msgstr "Üksikasjad (paigaldatud)"
+
+msgid "List everything available"
+msgstr "Loetle kõik saadaolev"
+
+msgid "List installed"
+msgstr "Loetle paigaldatud"
+
+msgid "Search installed"
+msgstr "Otsi paigaldatute seast"
+
+msgid "Files of a package"
+msgstr "Paketi failid"
+
+msgid "Which package owns a file?"
+msgstr "Milline pakett fail omab?"
+
+msgid "What can be upgraded"
+msgstr "Mida saab uuendada"
+
+msgid "Installed by you"
+msgstr "Sinu paigaldatud"
+
+msgid "Dependencies of a package"
+msgstr "Paketi sõltuvused"
+
+msgid "Who depends on a package"
+msgstr "Kes paketist sõltub"
+
+msgid "Clean the download cache"
+msgstr "Puhasta allalaadimiste vahemälu"
+
+msgid "Add a repository / PPA"
+msgstr "Lisa hoidla / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Käskude tõlkija: {family} (Debian, Ubuntu, Mint, Fedora) pacmaniks ja pamaciks (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Mõlemad teevad sama tööd: paigaldavad, uuendavad ja eemaldavad programme. Muutuvad vaid käsud."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Võid jätkata {tool}-käskude sisestamist: need tõlgitakse ja käivitatakse pamaci või pacmaniga."
+
+msgid "No command matches “{topic}”."
+msgstr "Ükski käsk ei vasta päringule “{topic}”."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Kõigi käskude nägemiseks käivita “{tool} help”."
+
+msgid "What you want to do"
+msgstr "Mida soovid teha"
+
+msgid "Differences that catch people"
+msgstr "Erinevused, mis üllatavad"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update värskendab ainult loendit; apt upgrade paigaldab."
+
+msgid "In pacman, -Syu does both together."
+msgstr "Pacmanis teeb -Syu mõlemat korraga."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Väldi ainult “pacman -Sy” kasutamist: see võib süsteemi rikkuda."
+
+msgid "Package types"
+msgstr "Paketitüübid"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt kasutab .deb-faile, dnf .rpm-e, pacman .pkg.tar.zst-e."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb-failid teisendatakse ja paigaldatakse debtap-modiga (või topeltklõpsuga)."
+
+msgid "Programs from the community"
+msgstr "Kogukonna programmid"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR täidab PPA-de ja COPR-i rolli."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Kasuta “pamac build <name>”; ära kunagi käivita AUR-i abilisi sudoga."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Näpunäide: “{tool} help install” näitab ainult ühe käsu ridu."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Kiirviide: paigaldamiseks või eemaldamiseks on vaja “sudo”; otsimiseks ja loetlemiseks mitte."
+
+msgid "Command not found: {cmd}"
+msgstr "Käsku ei leitud: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debiani skriptid ainult registreerivad Ubuntu jaoks APT-hoidla ja AppArmori profiili; siin neid vaja ei ole."
 

@@ -367,6 +367,222 @@ msgstr "makepkg mislykkedes med afslutningskode {code}"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg blev færdig, men lavede ingen pakke"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "“{typed}” opdaterer kun pakkelisten. Her kontrollerer den sikre ækvivalent for opdateringer uden at installere noget; brug “{upgrade}” for at installere dem."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Kør aldrig “pacman -Sy” alene: at opdatere listen uden at opgradere kan ødelægge systemet."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch opgraderer ikke enkelte pakker; hele systemet opgraderes samlet."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Angiv hvilken pakke der skal installeres, for eksempel: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr ".rpm-pakker er lavet til Fedora/openSUSE og kan ikke installeres her."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Led efter programmet i arkiverne (pamac search), på Flathub eller som AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac finder også programmer i AUR og Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb-pakker konverteres til native pacman-pakker af debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Kør denne kommando som almindelig bruger (uden sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Angiv hvilken pakke der skal fjernes, for eksempel: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n sletter også de konfigurationsfiler, som pakken installerede i /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "Der er ingen forældreløse pakker at fjerne."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Angiv hvad der skal søges efter, for eksempel: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Angiv hvilken pakke, for eksempel: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Pakken er ikke installeret; listen kommer fra arkivets fildatabase."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Angiv hvilken fil, for eksempel: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Filen findes ikke på dette system; der søges i arkivets fildatabase."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Arch-baserede systemer har ingen PPA'er eller ekstra arkiver at tilføje. Programmer fra fællesskabet kommer fra AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Søg med “pamac search --aur <name>” og installér med “pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "For at forhindre en pakke i at blive opgraderet, tilføj den til IgnorePkg i /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "“{command}” har ingen direkte ækvivalent her."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Kør “{tool} help” for at se de kommandoer, dette system forstår."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Angiv hvilken .deb-fil der skal installeres, for eksempel: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Dette system bruger pacman, ikke {tool}."
+
+msgid "You typed:"
+msgstr "Du skrev:"
+
+msgid "Equivalent:"
+msgstr "Ækvivalent:"
+
+msgid "With pamac:"
+msgstr "Med pamac:"
+
+msgid "Running:"
+msgstr "Kører:"
+
+msgid "Update everything"
+msgstr "Opdatér alt"
+
+msgid "Check for updates"
+msgstr "Søg efter opdateringer"
+
+msgid "Install a program"
+msgstr "Installér et program"
+
+msgid "Install a downloaded file"
+msgstr "Installér en downloadet fil"
+
+msgid "Install a .deb file here"
+msgstr "Installér en .deb-fil her"
+
+msgid "Reinstall"
+msgstr "Geninstallér"
+
+msgid "Remove a program"
+msgstr "Fjern et program"
+
+msgid "Remove + dependencies"
+msgstr "Fjern + afhængigheder"
+
+msgid "Remove + configuration"
+msgstr "Fjern + konfiguration"
+
+msgid "Remove orphans (unused)"
+msgstr "Fjern forældreløse (ubrugte)"
+
+msgid "Search to install"
+msgstr "Søg for at installere"
+
+msgid "Details (available)"
+msgstr "Detaljer (tilgængelig)"
+
+msgid "Details (installed)"
+msgstr "Detaljer (installeret)"
+
+msgid "List everything available"
+msgstr "Vis alt tilgængeligt"
+
+msgid "List installed"
+msgstr "Vis installerede"
+
+msgid "Search installed"
+msgstr "Søg i installerede"
+
+msgid "Files of a package"
+msgstr "Filer i en pakke"
+
+msgid "Which package owns a file?"
+msgstr "Hvilken pakke ejer en fil?"
+
+msgid "What can be upgraded"
+msgstr "Hvad kan opgraderes"
+
+msgid "Installed by you"
+msgstr "Installeret af dig"
+
+msgid "Dependencies of a package"
+msgstr "Afhængigheder for en pakke"
+
+msgid "Who depends on a package"
+msgstr "Hvem afhænger af en pakke"
+
+msgid "Clean the download cache"
+msgstr "Ryd download-cachen"
+
+msgid "Add a repository / PPA"
+msgstr "Tilføj et arkiv / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Kommandooversætter: {family} (Debian, Ubuntu, Mint, Fedora) til pacman og pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Begge udfører det samme job: installere, opdatere og fjerne programmer. Kun kommandoerne er anderledes."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Du kan blive ved med at skrive {tool}-kommandoer: de oversættes og køres med pamac eller pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "Ingen kommando matcher “{topic}”."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Kør “{tool} help” for at se alle kommandoer."
+
+msgid "What you want to do"
+msgstr "Hvad vil du gøre"
+
+msgid "Differences that catch people"
+msgstr "Forskelle der overrasker"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update opdaterer kun listen; apt upgrade installerer."
+
+msgid "In pacman, -Syu does both together."
+msgstr "I pacman gør -Syu begge dele på én gang."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Undgå “pacman -Sy” alene: det kan ødelægge systemet."
+
+msgid "Package types"
+msgstr "Pakketyper"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt bruger .deb-filer, dnf bruger .rpm, pacman bruger .pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb-filer konverteres og installeres med debtap-mod (eller et dobbeltklik)."
+
+msgid "Programs from the community"
+msgstr "Programmer fra fællesskabet"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR spiller rollen som PPA'er og COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Brug “pamac build <name>”; kør aldrig AUR-hjælpere med sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Tip: “{tool} help install” viser kun linjerne om én kommando."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Hurtig reference: “sudo” er nødvendig for at installere eller fjerne; søgning og visning kræver det ikke."
+
+msgid "Command not found: {cmd}"
+msgstr "Kommando ikke fundet: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debian-scripts registrerer kun et APT-arkiv og en AppArmor-profil til Ubuntu; de er ikke nødvendige her."
 

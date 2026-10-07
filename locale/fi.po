@@ -367,6 +367,222 @@ msgstr "makepkg epäonnistui poistumiskoodilla {code}"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg valmistui, mutta ei tuottanut pakettia"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "“{typed}” vain päivittää pakettiluettelon. Tässä turvallinen vastine tarkistaa päivitykset asentamatta mitään; asenna ne komennolla “{upgrade}”."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Älä koskaan suorita pelkkää “pacman -Sy”: luettelon päivittäminen ilman järjestelmän päivittämistä voi rikkoa järjestelmän."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch ei päivitä yksittäisiä paketteja; koko järjestelmä päivitetään yhdessä."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Kerro, mikä paketti asennetaan, esimerkiksi: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr ".rpm-paketit on tehty Fedoralle/openSUSElle, eikä niitä voi asentaa tähän."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Etsi ohjelmaa ohjelmistovarastoista (pamac search), Flathubista tai AppImagena."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac löytää ohjelmia myös AUR:sta ja Flatpakista: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "debtap-mod muuntaa .deb-paketit natiiveiksi pacman-paketeiksi."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Suorita tämä komento tavallisena käyttäjänä (ilman sudoa)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Kerro, mikä paketti poistetaan, esimerkiksi: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n poistaa myös ne asetustiedostot, jotka paketti asensi hakemistoon /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "Poistettavia orporaketteja ei ole."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Kerro, mitä etsitään, esimerkiksi: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Kerro, mikä paketti, esimerkiksi: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Pakettia ei ole asennettu; luettelo tulee ohjelmistovaraston tiedostotietokannasta."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Kerro, mikä tiedosto, esimerkiksi: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Tiedostoa ei ole tässä järjestelmässä; haetaan ohjelmistovaraston tiedostotietokannasta."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Archiin perustuvissa järjestelmissä ei ole PPA-lähteitä eikä lisättäviä ohjelmistovarastoja. Yhteisön ohjelmat tulevat AUR:sta."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Hae komennolla “pamac search --aur <name>” ja asenna komennolla “pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Estä paketin päivittäminen lisäämällä se IgnorePkg-asetukseen tiedostossa /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "Komennolla “{command}” ei ole tässä suoraa vastinetta."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Suorita “{tool} help” nähdäksesi komennot, jotka tämä järjestelmä ymmärtää."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Kerro, mikä .deb-tiedosto asennetaan, esimerkiksi: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Tämä järjestelmä käyttää pacmania, ei {tool}-komentoa."
+
+msgid "You typed:"
+msgstr "Kirjoitit:"
+
+msgid "Equivalent:"
+msgstr "Vastine:"
+
+msgid "With pamac:"
+msgstr "Pamacilla:"
+
+msgid "Running:"
+msgstr "Suoritetaan:"
+
+msgid "Update everything"
+msgstr "Päivitä kaikki"
+
+msgid "Check for updates"
+msgstr "Tarkista päivitykset"
+
+msgid "Install a program"
+msgstr "Asenna ohjelma"
+
+msgid "Install a downloaded file"
+msgstr "Asenna ladattu tiedosto"
+
+msgid "Install a .deb file here"
+msgstr "Asenna .deb-tiedosto tässä"
+
+msgid "Reinstall"
+msgstr "Asenna uudelleen"
+
+msgid "Remove a program"
+msgstr "Poista ohjelma"
+
+msgid "Remove + dependencies"
+msgstr "Poista + riippuvuudet"
+
+msgid "Remove + configuration"
+msgstr "Poista + asetukset"
+
+msgid "Remove orphans (unused)"
+msgstr "Poista orvot (käyttämättömät)"
+
+msgid "Search to install"
+msgstr "Hae asennettavaksi"
+
+msgid "Details (available)"
+msgstr "Tiedot (saatavilla)"
+
+msgid "Details (installed)"
+msgstr "Tiedot (asennettu)"
+
+msgid "List everything available"
+msgstr "Luettele kaikki saatavilla oleva"
+
+msgid "List installed"
+msgstr "Luettele asennetut"
+
+msgid "Search installed"
+msgstr "Hae asennetuista"
+
+msgid "Files of a package"
+msgstr "Paketin tiedostot"
+
+msgid "Which package owns a file?"
+msgstr "Mikä paketti omistaa tiedoston?"
+
+msgid "What can be upgraded"
+msgstr "Mitä voi päivittää"
+
+msgid "Installed by you"
+msgstr "Itse asentamasi"
+
+msgid "Dependencies of a package"
+msgstr "Paketin riippuvuudet"
+
+msgid "Who depends on a package"
+msgstr "Mikä riippuu paketista"
+
+msgid "Clean the download cache"
+msgstr "Tyhjennä latausvälimuisti"
+
+msgid "Add a repository / PPA"
+msgstr "Lisää ohjelmistovarasto / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Komentojen kääntäjä: {family} (Debian, Ubuntu, Mint, Fedora) pacmaniksi ja pamaciksi (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Molemmat tekevät saman työn: asentavat, päivittävät ja poistavat ohjelmia. Vain komennot eroavat."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Voit jatkaa {tool}-komentojen kirjoittamista: ne käännetään ja suoritetaan pamacilla tai pacmanilla."
+
+msgid "No command matches “{topic}”."
+msgstr "Mikään komento ei vastaa hakua “{topic}”."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Suorita “{tool} help” nähdäksesi kaikki komennot."
+
+msgid "What you want to do"
+msgstr "Mitä haluat tehdä"
+
+msgid "Differences that catch people"
+msgstr "Eroavaisuudet, jotka yllättävät"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update vain päivittää luettelon; apt upgrade asentaa."
+
+msgid "In pacman, -Syu does both together."
+msgstr "Pacmanissa -Syu tekee molemmat yhdessä."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Vältä pelkkää “pacman -Sy”: se voi rikkoa järjestelmän."
+
+msgid "Package types"
+msgstr "Pakettityypit"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt käyttää .deb-tiedostoja, dnf .rpm-tiedostoja ja pacman .pkg.tar.zst-tiedostoja."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb-tiedostot muunnetaan ja asennetaan debtap-modilla (tai kaksoisnapsautuksella)."
+
+msgid "Programs from the community"
+msgstr "Yhteisön ohjelmat"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR on PPA-lähteiden ja COPR:n vastine."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Käytä komentoa “pamac build <name>”; älä koskaan suorita AUR-apuohjelmia sudolla."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Vinkki: “{tool} help install” näyttää vain yhden komennon rivit."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Pikaohje: asentamiseen tai poistamiseen tarvitaan “sudo”; hakuun ja luetteloimiseen ei."
+
+msgid "Command not found: {cmd}"
+msgstr "Komentoa ei löydy: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debian-skriptit vain rekisteröivät APT-ohjelmistolähteen ja AppArmor-profiilin Ubuntua varten; niitä ei tarvita täällä."
 

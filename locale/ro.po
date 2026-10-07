@@ -368,6 +368,222 @@ msgstr "makepkg a eșuat cu codul de ieșire {code}"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg s-a încheiat, dar nu a produs niciun pachet"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "„{typed}” doar reîmprospătează lista de pachete. Aici echivalentul sigur verifică actualizările fără a instala nimic; pentru a le instala, folosiți „{upgrade}”."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Nu rulați niciodată „pacman -Sy” singur: reîmprospătarea fără actualizare poate strica sistemul."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch nu actualizează pachete individuale; întregul sistem este actualizat împreună."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Spuneți ce pachet să se instaleze, de exemplu: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr "Pachetele .rpm sunt făcute pentru Fedora/openSUSE și nu pot fi instalate aici."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Căutați programul în depozite (pamac search), pe Flathub sau ca AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac găsește programe și în AUR și Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "Pachetele .deb sunt convertite în pachete pacman native de debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Rulați această comandă ca utilizator obișnuit (fără sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Spuneți ce pachet să se elimine, de exemplu: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n șterge și fișierele de configurare instalate de pachet în /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "Nu există pachete orfane de eliminat."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Spuneți ce să se caute, de exemplu: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Spuneți ce pachet, de exemplu: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Pachetul nu este instalat; lista provine din baza de date de fișiere a depozitului."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Spuneți ce fișier, de exemplu: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Fișierul nu există pe acest sistem; se caută în baza de date de fișiere a depozitului."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Sistemele bazate pe Arch nu au PPA-uri sau depozite suplimentare de adăugat. Programele comunității provin din AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Căutați cu „pamac search --aur <name>” și instalați cu „pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Pentru a împiedica actualizarea unui pachet, adăugați-l în IgnorePkg din /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "„{command}” nu are un echivalent direct aici."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Rulați „{tool} help” pentru a vedea comenzile înțelese de acest sistem."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Spuneți ce fișier .deb să se instaleze, de exemplu: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Acest sistem folosește pacman, nu {tool}."
+
+msgid "You typed:"
+msgstr "Ați tastat:"
+
+msgid "Equivalent:"
+msgstr "Echivalent:"
+
+msgid "With pamac:"
+msgstr "Cu pamac:"
+
+msgid "Running:"
+msgstr "Se execută:"
+
+msgid "Update everything"
+msgstr "Actualizează tot"
+
+msgid "Check for updates"
+msgstr "Verifică actualizările"
+
+msgid "Install a program"
+msgstr "Instalează un program"
+
+msgid "Install a downloaded file"
+msgstr "Instalează un fișier descărcat"
+
+msgid "Install a .deb file here"
+msgstr "Instalează aici un fișier .deb"
+
+msgid "Reinstall"
+msgstr "Reinstalează"
+
+msgid "Remove a program"
+msgstr "Elimină un program"
+
+msgid "Remove + dependencies"
+msgstr "Elimină + dependențe"
+
+msgid "Remove + configuration"
+msgstr "Elimină + configurare"
+
+msgid "Remove orphans (unused)"
+msgstr "Elimină orfanele (nefolosite)"
+
+msgid "Search to install"
+msgstr "Caută pentru instalare"
+
+msgid "Details (available)"
+msgstr "Detalii (disponibil)"
+
+msgid "Details (installed)"
+msgstr "Detalii (instalat)"
+
+msgid "List everything available"
+msgstr "Listează tot ce e disponibil"
+
+msgid "List installed"
+msgstr "Listează instalatele"
+
+msgid "Search installed"
+msgstr "Caută în cele instalate"
+
+msgid "Files of a package"
+msgstr "Fișierele unui pachet"
+
+msgid "Which package owns a file?"
+msgstr "Ce pachet deține un fișier?"
+
+msgid "What can be upgraded"
+msgstr "Ce se poate actualiza"
+
+msgid "Installed by you"
+msgstr "Instalate de dumneavoastră"
+
+msgid "Dependencies of a package"
+msgstr "Dependențele unui pachet"
+
+msgid "Who depends on a package"
+msgstr "Cine depinde de un pachet"
+
+msgid "Clean the download cache"
+msgstr "Curăță memoria cache de descărcare"
+
+msgid "Add a repository / PPA"
+msgstr "Adaugă un depozit / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Traducător de comenzi: {family} (Debian, Ubuntu, Mint, Fedora) în pacman și pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Ambele fac aceeași treabă: instalează, actualizează și elimină programe. Se schimbă doar comenzile."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Puteți continua să tastați comenzi {tool}: sunt traduse și rulate cu pamac sau pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "Nicio comandă nu corespunde cu „{topic}”."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Rulați „{tool} help” pentru a vedea toate comenzile."
+
+msgid "What you want to do"
+msgstr "Ce doriți să faceți"
+
+msgid "Differences that catch people"
+msgstr "Diferențe care păcălesc"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update doar reîmprospătează lista; apt upgrade instalează."
+
+msgid "In pacman, -Syu does both together."
+msgstr "În pacman, -Syu face ambele deodată."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Evitați „pacman -Sy” singur: poate strica sistemul."
+
+msgid "Package types"
+msgstr "Tipuri de pachete"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt folosește fișiere .deb, dnf folosește .rpm, pacman folosește .pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr "Fișierele .deb sunt convertite și instalate cu debtap-mod (sau printr-un dublu clic)."
+
+msgid "Programs from the community"
+msgstr "Programe ale comunității"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR joacă rolul PPA-urilor și al COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Folosiți „pamac build <name>”; nu rulați niciodată asistenții AUR cu sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Sfat: „{tool} help install” arată doar liniile despre o singură comandă."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Referință rapidă: „sudo” este necesar pentru instalare sau eliminare; căutarea și listarea nu îl cer."
+
+msgid "Command not found: {cmd}"
+msgstr "Comandă negăsită: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Scripturile Debian doar înregistrează un depozit APT și un profil AppArmor pentru Ubuntu; nu sunt necesare aici."
 

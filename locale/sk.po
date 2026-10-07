@@ -368,6 +368,222 @@ msgstr "makepkg zlyhal s kódom {code}"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg skončil, ale nevytvoril žiadny balík"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "„{typed}“ iba obnoví zoznam balíkov. Bezpečný ekvivalent tu skontroluje aktualizácie bez inštalácie; na ich inštaláciu použite „{upgrade}“."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Nikdy nespúšťajte samotný „pacman -Sy“: obnovenie bez aktualizácie môže poškodiť systém."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch neaktualizuje jednotlivé balíky; celý systém sa aktualizuje naraz."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Uveďte, ktorý balík nainštalovať, napríklad: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr "Balíky .rpm sú určené pre Fedoru/openSUSE a nedajú sa tu nainštalovať."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Hľadajte program v repozitároch (pamac search), na Flathube alebo ako AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac nájde programy aj v AUR a Flatpaku: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "Balíky .deb sa pomocou debtap-mod prevedú na natívne balíky pacman."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Spustite tento príkaz ako bežný používateľ (bez sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Uveďte, ktorý balík odstrániť, napríklad: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n odstráni aj konfiguračné súbory, ktoré balík nainštaloval do /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "Nie sú žiadne osirelé balíky na odstránenie."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Uveďte, čo hľadať, napríklad: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Uveďte, ktorý balík, napríklad: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Balík nie je nainštalovaný; zoznam pochádza z databázy súborov repozitára."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Uveďte, ktorý súbor, napríklad: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Súbor sa v tomto systéme nenachádza; prehľadáva sa databáza súborov repozitára."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Systémy založené na Arch nemajú PPA ani ďalšie repozitáre na pridanie. Programy od komunity pochádzajú z AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Hľadajte pomocou „pamac search --aur <name>“ a inštalujte pomocou „pamac build <name>“."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Aby sa balík neaktualizoval, pridajte ho do IgnorePkg v /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "„{command}“ tu nemá priamy ekvivalent."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Spustite „{tool} help“ a zobrazia sa príkazy, ktorým tento systém rozumie."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Uveďte, ktorý súbor .deb nainštalovať, napríklad: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Tento systém používa pacman, nie {tool}."
+
+msgid "You typed:"
+msgstr "Zadali ste:"
+
+msgid "Equivalent:"
+msgstr "Ekvivalent:"
+
+msgid "With pamac:"
+msgstr "S pamac:"
+
+msgid "Running:"
+msgstr "Spúšťa sa:"
+
+msgid "Update everything"
+msgstr "Aktualizovať všetko"
+
+msgid "Check for updates"
+msgstr "Skontrolovať aktualizácie"
+
+msgid "Install a program"
+msgstr "Nainštalovať program"
+
+msgid "Install a downloaded file"
+msgstr "Nainštalovať stiahnutý súbor"
+
+msgid "Install a .deb file here"
+msgstr "Nainštalovať súbor .deb odtiaľto"
+
+msgid "Reinstall"
+msgstr "Preinštalovať"
+
+msgid "Remove a program"
+msgstr "Odstrániť program"
+
+msgid "Remove + dependencies"
+msgstr "Odstrániť + závislosti"
+
+msgid "Remove + configuration"
+msgstr "Odstrániť + konfiguráciu"
+
+msgid "Remove orphans (unused)"
+msgstr "Odstrániť osirelé (nepoužívané)"
+
+msgid "Search to install"
+msgstr "Hľadať na inštaláciu"
+
+msgid "Details (available)"
+msgstr "Podrobnosti (dostupné)"
+
+msgid "Details (installed)"
+msgstr "Podrobnosti (nainštalované)"
+
+msgid "List everything available"
+msgstr "Zobraziť všetko dostupné"
+
+msgid "List installed"
+msgstr "Zobraziť nainštalované"
+
+msgid "Search installed"
+msgstr "Hľadať v nainštalovaných"
+
+msgid "Files of a package"
+msgstr "Súbory balíka"
+
+msgid "Which package owns a file?"
+msgstr "Ktorý balík vlastní súbor?"
+
+msgid "What can be upgraded"
+msgstr "Čo sa dá aktualizovať"
+
+msgid "Installed by you"
+msgstr "Nainštalované vami"
+
+msgid "Dependencies of a package"
+msgstr "Závislosti balíka"
+
+msgid "Who depends on a package"
+msgstr "Kto závisí od balíka"
+
+msgid "Clean the download cache"
+msgstr "Vyčistiť vyrovnávaciu pamäť sťahovania"
+
+msgid "Add a repository / PPA"
+msgstr "Pridať repozitár / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Prekladač príkazov: {family} (Debian, Ubuntu, Mint, Fedora) na pacman a pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Oba robia to isté: inštalujú, aktualizujú a odstraňujú programy. Líšia sa iba príkazy."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Príkazy {tool} môžete písať ďalej: preložia sa a spustia pomocou pamac alebo pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "Žiadny príkaz nezodpovedá „{topic}“."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Spustite „{tool} help“ a zobrazia sa všetky príkazy."
+
+msgid "What you want to do"
+msgstr "Čo chcete urobiť"
+
+msgid "Differences that catch people"
+msgstr "Rozdiely, na ktorých sa ľudia zaseknú"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update iba obnoví zoznam; apt upgrade inštaluje."
+
+msgid "In pacman, -Syu does both together."
+msgstr "V pacman robí -Syu obe veci naraz."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Vyhnite sa samotnému „pacman -Sy“: môže poškodiť systém."
+
+msgid "Package types"
+msgstr "Typy balíkov"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt používa súbory .deb, dnf používa .rpm, pacman používa .pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr "Súbory .deb sa prevedú a nainštalujú pomocou debtap-mod (alebo dvojitým kliknutím)."
+
+msgid "Programs from the community"
+msgstr "Programy od komunity"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR zastáva úlohu PPA a COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Použite „pamac build <name>“; pomocníkov AUR nikdy nespúšťajte so sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Tip: „{tool} help install“ zobrazí iba riadky o jednom príkaze."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Rýchly prehľad: „sudo“ je potrebné na inštaláciu alebo odstránenie; na vyhľadávanie a zobrazenie zoznamu nie."
+
+msgid "Command not found: {cmd}"
+msgstr "Príkaz sa nenašiel: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Skripty Debianu iba registrujú repozitár APT a profil AppArmor pre Ubuntu; tu nie sú potrebné."
 

@@ -367,6 +367,222 @@ msgstr "makepkg mistókst með lokunarkóðanum {code}"
 msgid "makepkg finished but produced no package"
 msgstr "makepkg lauk en bjó ekki til neinn pakka"
 
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "„{typed}“ uppfærir aðeins pakkalistann. Hér athugar öruggi samsvarandi valkosturinn hvort uppfærslur séu til án þess að setja neitt upp; til að setja þær upp notaðu „{upgrade}“."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Keyrðu aldrei „pacman -Sy“ eitt og sér: að endurnýja án þess að uppfæra getur skemmt kerfið."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch uppfærir ekki staka pakka; allt kerfið er uppfært í einu."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Tilgreindu hvaða pakka á að setja upp, til dæmis: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr ".rpm pakkar eru gerðir fyrir Fedora/openSUSE og ekki hægt að setja þá upp hér."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Leitaðu að forritinu í pakkasöfnunum (pamac search), á Flathub eða sem AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac finnur líka forrit í AUR og Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb pökkum er breytt í innbyggða pacman pakka með debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Keyrðu þessa skipun sem venjulegur notandi (án sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Tilgreindu hvaða pakka á að fjarlægja, til dæmis: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n eyðir líka stillingarskrám sem pakkinn setti upp í /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "Engir munaðarlausir pakkar til að fjarlægja."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Tilgreindu hvað á að leita að, til dæmis: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Tilgreindu hvaða pakka, til dæmis: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Pakkinn er ekki uppsettur; listinn kemur úr skráagagnagrunni pakkasafnsins."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Tilgreindu hvaða skrá, til dæmis: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Skráin er ekki á þessu kerfi; leita í skráagagnagrunni pakkasafnsins."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Kerfi byggð á Arch hafa enga PPA eða aukapakkasöfn til að bæta við. Forrit frá samfélaginu koma úr AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Leitaðu með „pamac search --aur <name>“ og settu upp með „pamac build <name>“."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Til að koma í veg fyrir að pakki sé uppfærður skaltu bæta honum við IgnorePkg í /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "„{command}“ á sér enga beina samsvörun hér."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Keyrðu „{tool} help“ til að sjá skipanirnar sem þetta kerfi skilur."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Tilgreindu hvaða .deb skrá á að setja upp, til dæmis: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Þetta kerfi notar pacman, ekki {tool}."
+
+msgid "You typed:"
+msgstr "Þú skrifaðir:"
+
+msgid "Equivalent:"
+msgstr "Samsvarandi:"
+
+msgid "With pamac:"
+msgstr "Með pamac:"
+
+msgid "Running:"
+msgstr "Keyri:"
+
+msgid "Update everything"
+msgstr "Uppfæra allt"
+
+msgid "Check for updates"
+msgstr "Athuga með uppfærslur"
+
+msgid "Install a program"
+msgstr "Setja upp forrit"
+
+msgid "Install a downloaded file"
+msgstr "Setja upp niðurhalaða skrá"
+
+msgid "Install a .deb file here"
+msgstr "Setja upp .deb skrá hér"
+
+msgid "Reinstall"
+msgstr "Setja aftur upp"
+
+msgid "Remove a program"
+msgstr "Fjarlægja forrit"
+
+msgid "Remove + dependencies"
+msgstr "Fjarlægja + ósjálfstæði"
+
+msgid "Remove + configuration"
+msgstr "Fjarlægja + stillingar"
+
+msgid "Remove orphans (unused)"
+msgstr "Fjarlægja munaðarlausa (ónotaða)"
+
+msgid "Search to install"
+msgstr "Leita til að setja upp"
+
+msgid "Details (available)"
+msgstr "Nánar (í boði)"
+
+msgid "Details (installed)"
+msgstr "Nánar (uppsett)"
+
+msgid "List everything available"
+msgstr "Sýna allt sem er í boði"
+
+msgid "List installed"
+msgstr "Sýna uppsett"
+
+msgid "Search installed"
+msgstr "Leita í uppsettu"
+
+msgid "Files of a package"
+msgstr "Skrár pakka"
+
+msgid "Which package owns a file?"
+msgstr "Hvaða pakki á skrána?"
+
+msgid "What can be upgraded"
+msgstr "Hvað er hægt að uppfæra"
+
+msgid "Installed by you"
+msgstr "Sett upp af þér"
+
+msgid "Dependencies of a package"
+msgstr "Forsendur pakka"
+
+msgid "Who depends on a package"
+msgstr "Hverjir þurfa pakka"
+
+msgid "Clean the download cache"
+msgstr "Hreinsa niðurhalsgeymslu"
+
+msgid "Add a repository / PPA"
+msgstr "Bæta við pakkasafni / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Skipanaþýðandi: {family} (Debian, Ubuntu, Mint, Fedora) yfir í pacman og pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Bæði vinna sama verk: setja upp, uppfæra og fjarlægja forrit. Aðeins skipanirnar breytast."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Þú getur haldið áfram að skrifa {tool} skipanir: þær eru þýddar og keyrðar með pamac eða pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "Engin skipun passar við „{topic}“."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Keyrðu „{tool} help“ til að sjá allar skipanir."
+
+msgid "What you want to do"
+msgstr "Hvað þú vilt gera"
+
+msgid "Differences that catch people"
+msgstr "Munur sem kemur fólki í opna skjöldu"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update uppfærir aðeins listann; apt upgrade setur upp."
+
+msgid "In pacman, -Syu does both together."
+msgstr "Í pacman gerir -Syu hvort tveggja í einu."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Forðastu „pacman -Sy“ eitt og sér: það getur skemmt kerfið."
+
+msgid "Package types"
+msgstr "Tegundir pakka"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt notar .deb skrár, dnf notar .rpm, pacman notar .pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb skrám er breytt og þær settar upp með debtap-mod (eða með tvísmelli)."
+
+msgid "Programs from the community"
+msgstr "Forrit frá samfélaginu"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR gegnir hlutverki PPA og COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Notaðu „pamac build <name>“; keyrðu aldrei AUR-hjálparforrit með sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Ábending: „{tool} help install“ sýnir aðeins línurnar um eina skipun."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Stutt yfirlit: „sudo“ þarf til að setja upp eða fjarlægja; leit og listar þurfa þess ekki."
+
+msgid "Command not found: {cmd}"
+msgstr "Skipun fannst ekki: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debian-skrifturnar skrá aðeins APT-hugbúnaðarsafn og AppArmor-snið fyrir Ubuntu; þeirra er ekki þörf hér."
 

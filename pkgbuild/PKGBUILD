@@ -7,11 +7,12 @@ pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL-2.0-or-later')
 url="https://github.com/biglinux/debtap-mod"
-pkgdesc="Convert and install .deb packages (GTK4 + libadwaita interface)"
+pkgdesc="Convert and install .deb packages, and translate apt/dnf/dpkg commands to pacman"
 source=("git+https://github.com/biglinux/debtap-mod.git")
 md5sums=(SKIP)
 depends=(
     'pacman'          # makepkg, pacman, vercmp, pacman-conf
+    'pacman-contrib'  # checkupdates, pactree (apt/dnf translator)
     'fakeroot'
     'zstd'
     'libarchive'      # bsdtar, used by makepkg
@@ -23,6 +24,9 @@ depends=(
 )
 optdepends=('pamac-gtk: open native packages suggested by the installer')
 checkdepends=('python-pytest')
+# /usr/local/bin/{apt,apt-get,dnf,yum} moved here from biglinux-improve-compatibility;
+# older builds of that package still ship them.
+conflicts=('biglinux-improve-compatibility<26.10.07')
 
 check() {
     if [ -d "${srcdir}/${pkgname}/${pkgname}" ]; then
