@@ -12,20 +12,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Send Hooks BigLinux Build Package
         shell: bash
+        env:
+          WEBHOOK_TOKEN: ${{ secrets.WEBHOOK_TOKEN }}
         run: |
           if grep -q biglinux-package-template pkgbuild/PKGBUILD; then
             echo "Template package: nothing to build."
             exit 0
           fi
+          if [ -z "$WEBHOOK_TOKEN" ]; then
+            echo "::error::The WEBHOOK_TOKEN secret is not available to this workflow."
+            exit 1
+          fi
           payload='{"event_type": "${{ github.repository }}", "client_payload": { "branch": "${{ github.ref_name }}", "url": "https://github.com/${{ github.repository }}"}}'
+          failed=0
           for builder in build-package build-package-ARM; do
-            curl -fsS -X POST \
-              -H "Accept: application/json" \
-              -H "Authorization: token ${{ secrets.WEBHOOK_TOKEN }}" \
+            code=$(curl -sS -o response.json -w '%{http_code}' -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: token $WEBHOOK_TOKEN" \
               --data "$payload" \
-              "https://api.github.com/repos/BigLinux-Package-Build/$builder/dispatches"
+              "https://api.github.com/repos/BigLinux-Package-Build/$builder/dispatches")
+            if [ "$code" = "204" ]; then
+              echo "$builder: build requested (HTTP $code)"
+            else
+              failed=1
+              echo "::error::$builder: dispatch rejected (HTTP $code): $(cat response.json)"
+              case "$code" in
+                401) echo "::error::WEBHOOK_TOKEN is invalid or expired." ;;
+                403|404) echo "::error::WEBHOOK_TOKEN has no access to BigLinux-Package-Build/$builder (needs repo scope)." ;;
+              esac
+            fi
           done
+          exit $failed
