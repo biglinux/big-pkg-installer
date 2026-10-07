@@ -1,64 +1,590 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* A telepítés során fellépő hibajelzések általában nem akadályozzák meg a program helyes működését."
-msgid "Read before proceeding with the installation:"
-msgstr "Olvassa el a telepítés megkezdése előtt:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"Preferáld a natív csomagokat, amelyeket a BigLinux, Manjaro, Arch vagy más, a <span "
-"color='#CC2222'>.pkg.tar</span> formátummal kompatibilis Linux rendszerekhez készítettek.\n"
-"\n"
-"Egy másik lehetőség, hogy olyan programokat használj, amelyeket bármely Linux rendszerhez "
-"készítettek, általában <span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> "
-"vagy <span color='#CC2222'>.flatpak</span> formátumban.\n"
-"\n"
-"Ha a program nem érhető el a fenti formátumokban, a <span color='#CC2222'>.deb</span> fájl "
-"átkonvertálható <span color='#CC2222'>.pkg.tar</span> formátumra, és telepíthető ezen a rendszeren. "
-"Azonban a telepítés nem biztos, hogy helyesen működik."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Ez a rendszer a <span color='#CC2222'>.pkg.tar</span> csomagformátumot használja, de a fájl "
-"<span color='#CC2222'>.deb</span> formátumban van.\n"
-"\n"
-"Szeretné folytatni a telepítést?</big>"
-msgid "Install & Review Config Files"
-msgstr "Telepítés és konfigurációs fájlok áttekintése"
-msgid "Install"
-msgstr "Telepítés"
-msgid "Close"
-msgstr "Bezárás"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Extracting package data"
+msgstr "Csomagadatok kibontása"
+
+msgid "Adapting the directory layout"
+msgstr "A könyvtárszerkezet átalakítása"
+
+msgid "Resolving dependencies"
+msgstr "Függőségek feloldása"
+
+msgid "Converting maintainer scripts"
+msgstr "Karbantartói szkriptek átalakítása"
+
+msgid "Building the pacman package"
+msgstr "A pacman csomag építése"
+
+msgid "Warning:"
+msgstr "Figyelmeztetés:"
+
+msgid "Error:"
+msgstr "Hiba:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Egy .deb csomag átalakítása pacman csomaggá és telepítése."
+
+msgid "the .deb file"
+msgstr "a .deb fájl"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "ne tegyen fel kérdéseket, de nyissa meg a telepítőszkriptet átnézésre"
+
+msgid "do not ask any question"
+msgstr "ne tegyen fel kérdéseket"
+
+msgid "only build the package, do not install it"
+msgstr "csak építse meg a csomagot, ne telepítse"
+
+msgid "keep the built package in DIR"
+msgstr "az elkészült csomag megtartása a DIR könyvtárban"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "PKGBUILD írása a .deb mellé is"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "csak PKGBUILD írása, építés nélkül"
+
+msgid "{question} [y/N] "
+msgstr "{question} [i/N] "
+
+msgid "yes"
+msgstr "igen"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "a debtap-mod-nak már nincs szüksége helyi adatbázisra; nincs mit frissíteni."
+
+msgid "no .deb file given"
+msgstr "nincs megadva .deb fájl"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "a -s és -w kapcsolók elavultak, és figyelmen kívül lettek hagyva"
+
+msgid "Installed size: {size}"
+msgstr "Telepített méret: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "A PKGBUILD ide lett írva: {path}"
+
+msgid "cancelled"
+msgstr "megszakítva"
+
+msgid "Package {file} built"
+msgstr "A(z) {file} csomag elkészült"
+
+msgid "Menu entries: {names}"
+msgstr "Menübejegyzések: {names}"
+
+msgid "Package saved to {path}"
+msgstr "A csomag mentve ide: {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "néhány fájl más telepített csomagokhoz tartozik; először távolítsa el őket:"
+
+msgid "Install script that will run as root:"
+msgstr "Telepítőszkript, amely rootként fog futni:"
+
+msgid "Install {name} now?"
+msgstr "Telepíti most: {name}?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "a pacman nem tudta telepíteni a csomagot (kilépési kód: {code})"
+
+msgid "{name} installed successfully"
+msgstr "A(z) {name} telepítése sikerült"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Keresse ezt az alkalmazásmenüben: {names}."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Ez a csomag a(z) {deb_arch} architektúrára készült, de ez a számítógép {host}; itt nem fog futni."
+
+msgid "Extracting {name}…"
+msgstr "{name} kibontása…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Figyelmen kívül hagyott nem biztonságos vagy speciális bejegyzések: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Duplikált fájl megtartva a /usr könyvtárból: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Függőségek keresése…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "{count} más rendszerre vagy architektúrára készült bináris figyelmen kívül hagyva."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "A tárolókban nem található könyvtárak: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Debian-függőségek, amelyeknek itt nincs megfelelője: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Más csomagok tulajdonában lévő fájlok: {list}"
+
+msgid "Building the package…"
+msgstr "A csomag építése…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "A fájl nem Debian-csomag (hiányzik az ar fejléc)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "A Debian-csomag csonka vagy sérült."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Nem támogatott tömörítés a(z) {name} elemben."
+
+msgid "File not found: {path}"
+msgstr "A fájl nem található: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "A fájl nem Debian-csomag (hiányzik a debian-binary)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "A Debian-csomagban nincs control vagy data archívum."
+
+msgid "The Debian package has no control file."
+msgstr "A Debian-csomagban nincs control fájl."
+
+msgid "The control file has no Package or Version field."
+msgstr "A control fájlból hiányzik a Package vagy a Version mező."
+
 msgid "Install .deb package"
 msgstr ".deb csomag telepítése"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Fájl átalakítása, kérjük várjon. Ez néhány percet igénybe vehet..."
-msgid "Done!"
-msgstr "Kész!"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Debian-csomagokat alakít át natív pacman csomagokká, és telepíti őket."
+
+msgid "Extracting files"
+msgstr "Fájlok kibontása"
+
+msgid "Adapting folders to this system"
+msgstr "Mappák igazítása ehhez a rendszerhez"
+
+msgid "Finding dependencies"
+msgstr "Függőségek keresése"
+
+msgid "Preparing installation scripts"
+msgstr "Telepítőszkriptek előkészítése"
+
+msgid "Building the package"
+msgstr "A csomag építése"
+
+msgid "Waiting for authorization"
+msgstr "Várakozás a jogosultságra"
+
+msgid "Installing"
+msgstr "Telepítés"
+
+msgid "About"
+msgstr "Névjegy"
+
+msgid "Main menu"
+msgstr "Főmenü"
+
+msgid "Choose a .deb file…"
+msgstr "Válasszon egy .deb fájlt…"
+
+msgid "Install a .deb package"
+msgstr "Egy .deb csomag telepítése"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Nyisson meg egy Debian-csomagot, vagy húzza ide. A rendszer natív csomaggá alakítja és telepíti."
+
+msgid "Details"
+msgstr "Részletek"
+
+msgid "Cancel"
+msgstr "Mégse"
+
+msgid "Prefer native packages when available"
+msgstr "Natív csomagok előnyben részesítése, ha elérhetők"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "A rendszertárolókból, a Flatpakből vagy AppImage-ből származó programok általában jobban működnek. Az átalakított .deb csomagok nem biztos, hogy tökéletesen működnek."
+
+msgid "“{name}” is available in the repositories"
+msgstr "A(z) „{name}” elérhető a tárolókban"
+
+msgid "Installing the native package is recommended."
+msgstr "A natív csomag telepítése ajánlott."
+
+msgid "Open"
+msgstr "Megnyitás"
+
+msgid "Package"
+msgstr "Csomag"
+
+msgid "Version"
+msgstr "Verzió"
+
+msgid "Architecture"
+msgstr "Architektúra"
+
+msgid "Installed size"
+msgstr "Telepített méret"
+
+msgid "Maintainer"
+msgstr "Karbantartó"
+
+msgid "Website"
+msgstr "Weboldal"
+
+msgid "Description"
+msgstr "Leírás"
+
+msgid "Review before installing"
+msgstr "Áttekintés telepítés előtt"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "A függőségek és a rendszergazdaként futó szkriptek megjelenítése"
+
+msgid "Install"
+msgstr "Telepítés"
+
+msgid "Ready to install"
+msgstr "Készen áll a telepítésre"
+
+msgid "Check what will be installed."
+msgstr "Ellenőrizze, mi fog települni."
+
+msgid "Package name on this system"
+msgstr "Csomagnév ezen a rendszeren"
+
+msgid "Package size"
+msgstr "Csomagméret"
+
+msgid "Applications menu"
+msgstr "Alkalmazásmenü"
+
+msgid "No menu entry"
+msgstr "Nincs menübejegyzés"
+
+msgid "Warnings"
+msgstr "Figyelmeztetések"
+
+msgid "Notes"
+msgstr "Megjegyzések"
+
+msgid "Dependencies"
+msgstr "Függőségek"
+
+msgid "Required"
+msgstr "Kötelező"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} csomag"
+msgstr[1] "{n} csomag"
+
+msgid "will be downloaded"
+msgstr "letöltésre kerül"
+
+msgid "Optional"
+msgstr "Választható"
+
+msgid "Scripts"
+msgstr "Szkriptek"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "A Debian-csomag ezen parancsai rendszergazdaként futnak a telepítés során."
+
+msgid "Open {name}"
+msgstr "{name} megnyitása"
+
+msgid "Copy details"
+msgstr "Részletek másolása"
+
+msgid "Close"
+msgstr "Bezárás"
+
+msgid "This file cannot be installed"
+msgstr "Ez a fájl nem telepíthető"
+
+msgid "Choose a .deb file"
+msgstr "Válasszon egy .deb fájlt"
+
+msgid "Debian packages"
+msgstr "Debian-csomagok"
+
+msgid "Type your password in the window that will appear."
+msgstr "Írja be a jelszavát a megjelenő ablakban."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "A hiányzó függőségek letöltődnek a tárolókból."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "A fájlok tömörítése folyamatban, ez eltarthat egy percig."
+
+msgid "The package could not be converted"
+msgstr "A csomagot nem sikerült átalakítani"
+
+msgid "Cancelled"
+msgstr "Megszakítva"
+
+msgid "{name} is installed"
+msgstr "A(z) {name} telepítve van"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "A(z) {name} csomag telepítve lett. Nincs bejegyzése az alkalmazásmenüben."
+
+msgid "Installation complete"
+msgstr "A telepítés befejeződött"
+
+msgid "Authorization was not granted"
+msgstr "A jogosultság megadása nem történt meg"
+
+msgid "The installation failed"
+msgstr "A telepítés sikertelen volt"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "A pacman hibát jelzett (kód: {code}). Nyissa meg a részleteket, hogy lássa, mi történt."
+
+msgid "The application could not be started"
+msgstr "Az alkalmazást nem sikerült elindítani"
+
+msgid "Copied"
+msgstr "Másolva"
+
+msgid "Please wait until the installation finishes"
+msgstr "Várjon, amíg a telepítés befejeződik"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "a makepkg nem futtatható rootként; a debtap-mod-ot normál felhasználóként futtassa."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "a makepkg sikertelen volt, kilépési kód: {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "a makepkg befejeződött, de nem hozott létre csomagot"
+
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "A(z) “{typed}” csak a csomaglistát frissíti. Itt a biztonságos megfelelő telepítés nélkül ellenőrzi a frissítéseket; a telepítésükhöz használja a(z) “{upgrade}” parancsot."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Soha ne futtassa egyedül a “pacman -Sy” parancsot: a frissítés nélküli listafrissítés tönkreteheti a rendszert."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Az Arch nem frissít egyes csomagokat; a teljes rendszert együtt frissíti."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Adja meg, melyik csomagot telepítse, például: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr "Az .rpm csomagok Fedora/openSUSE rendszerre készültek, itt nem telepíthetők."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Keresse a programot a tárolókban (pamac search), a Flathubon vagy AppImage formában."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "A pamac az AUR-ban és a Flatpakban is talál programokat: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "A .deb csomagokat a debtap-mod natív pacman csomagokká alakítja."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Futtassa ezt a parancsot hétköznapi felhasználóként (sudo nélkül)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Adja meg, melyik csomagot távolítsa el, például: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "A -n törli a csomag által az /etc könyvtárba telepített beállítófájlokat is."
+
+msgid "There are no orphan packages to remove."
+msgstr "Nincs eltávolítható árva csomag."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Adja meg, mire keressen, például: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Adja meg, melyik csomagot, például: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "A csomag nincs telepítve; a lista a tárolók fájladatbázisából származik."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Adja meg, melyik fájlt, például: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "A fájl nincs ezen a rendszeren; keresés a tárolók fájladatbázisában."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Az Arch-alapú rendszereken nincsenek PPA-k vagy hozzáadható extra tárolók. A közösségi programok az AUR-ból érkeznek."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Keressen így: “pamac search --aur <name>”, telepítsen így: “pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Ha meg akarja akadályozni egy csomag frissítését, adja hozzá az IgnorePkg listához az /etc/pacman.conf fájlban."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "A(z) “{command}” parancsnak itt nincs közvetlen megfelelője."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Futtassa a “{tool} help” parancsot a rendszer által értett parancsok megtekintéséhez."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Adja meg, melyik .deb fájlt telepítse, például: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Ez a rendszer pacmant használ, nem {tool} eszközt."
+
+msgid "You typed:"
+msgstr "Ezt írta be:"
+
+msgid "Equivalent:"
+msgstr "Megfelelő:"
+
+msgid "With pamac:"
+msgstr "Pamac-kal:"
+
+msgid "Running:"
+msgstr "Futtatás:"
+
+msgid "Update everything"
+msgstr "Minden frissítése"
+
+msgid "Check for updates"
+msgstr "Frissítések keresése"
+
+msgid "Install a program"
+msgstr "Program telepítése"
+
+msgid "Install a downloaded file"
+msgstr "Letöltött fájl telepítése"
+
+msgid "Install a .deb file here"
+msgstr "Itt egy .deb fájl telepítése"
+
+msgid "Reinstall"
+msgstr "Újratelepítés"
+
+msgid "Remove a program"
+msgstr "Program eltávolítása"
+
+msgid "Remove + dependencies"
+msgstr "Eltávolítás + függőségek"
+
+msgid "Remove + configuration"
+msgstr "Eltávolítás + beállítások"
+
+msgid "Remove orphans (unused)"
+msgstr "Árva csomagok eltávolítása (nem használt)"
+
+msgid "Search to install"
+msgstr "Keresés telepítéshez"
+
+msgid "Details (available)"
+msgstr "Részletek (elérhető)"
+
+msgid "Details (installed)"
+msgstr "Részletek (telepített)"
+
+msgid "List everything available"
+msgstr "Az összes elérhető felsorolása"
+
+msgid "List installed"
+msgstr "Telepítettek felsorolása"
+
+msgid "Search installed"
+msgstr "Keresés a telepítettek közt"
+
+msgid "Files of a package"
+msgstr "Csomag fájljai"
+
+msgid "Which package owns a file?"
+msgstr "Melyik csomaghoz tartozik a fájl?"
+
+msgid "What can be upgraded"
+msgstr "Mi frissíthető"
+
+msgid "Installed by you"
+msgstr "Ön által telepítettek"
+
+msgid "Dependencies of a package"
+msgstr "Csomag függőségei"
+
+msgid "Who depends on a package"
+msgstr "Mi függ a csomagtól"
+
+msgid "Clean the download cache"
+msgstr "Letöltési gyorsítótár törlése"
+
+msgid "Add a repository / PPA"
+msgstr "Tároló / PPA hozzáadása"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Parancsfordító: {family} (Debian, Ubuntu, Mint, Fedora) parancsokból pacman és pamac (Arch, BigLinux, Manjaro) parancsok"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Mindkettő ugyanazt csinálja: programokat telepít, frissít és távolít el. Csak a parancsok mások."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Továbbra is begépelheti a {tool} parancsokat: lefordítja és pamac vagy pacman segítségével futtatja őket."
+
+msgid "No command matches “{topic}”."
+msgstr "Egyetlen parancs sem felel meg a(z) “{topic}” kifejezésnek."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Futtassa a “{tool} help” parancsot az összes parancs megtekintéséhez."
+
+msgid "What you want to do"
+msgstr "Mit szeretne tenni"
+
+msgid "Differences that catch people"
+msgstr "Félrevezető különbségek"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "Az apt update csak a listát frissíti; az apt upgrade telepít."
+
+msgid "In pacman, -Syu does both together."
+msgstr "A pacmanban a -Syu mindkettőt egyszerre végzi."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Kerülje az önmagában használt “pacman -Sy” parancsot: tönkreteheti a rendszert."
+
+msgid "Package types"
+msgstr "Csomagtípusok"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "Az apt .deb fájlokat, a dnf .rpm fájlokat, a pacman .pkg.tar.zst fájlokat használ."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr "A .deb fájlokat a debtap-mod alakítja át és telepíti (vagy dupla kattintással)."
+
+msgid "Programs from the community"
+msgstr "Közösségi programok"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "Az AUR a PPA-k és a COPR szerepét tölti be."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Használja a “pamac build <name>” parancsot; AUR-segédeszközöket soha ne futtasson sudo-val."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Tipp: a “{tool} help install” csak az egy parancsról szóló sorokat mutatja."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Gyors áttekintés: telepítéshez és eltávolításhoz “sudo” kell; kereséshez és listázáshoz nem."
+
+msgid "Command not found: {cmd}"
+msgstr "A parancs nem található: {cmd}"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "A Debian-szkriptek csak egy APT-tárolót és egy AppArmor-profilt regisztrálnak Ubuntuhoz; itt nincs rájuk szükség."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "A(z) {script} szkript egy APT-tárolót állít be; ennek a résznek nincs hatása ezen a rendszeren."

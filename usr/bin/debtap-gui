@@ -1,45 +1,7 @@
 #!/bin/bash
-
-#Translation
-export TEXTDOMAINDIR="/usr/share/locale"
-export TEXTDOMAIN=debtap-mod
-
-debfile="$1"
-Alert=$"* Error alerts during installation generally do not prevent the program from working correctly."
-
-set +H
-use_root=$(yad --form --image="/usr/share/pixmaps/deb.svg" --geometry=720x400  --form  --field=$"Read before proceeding with the installation:":TXT $"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with the <span color='#CC2222'>.pkg.tar</span> format.
-
-Another option is to use programs made for any Linux system, usually in <span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span color='#CC2222'>.flatpak</span> format.
-
-If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, the installation may not work correctly."  --field="<span color='#CC2222'>$Alert</span>:LBL" \
---text $"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in <span color='#CC2222'>.deb</span> format.
-
-Do you wish to proceed with the installation?</big>
-" \
---button=$"Install & Review Config Files"!gtk-preferences:1 \
---button=$"Install"!gtk-apply:2 \
---button=$"Close"!gtk-cancel:3 \
---center --on-top --borders=20 --title=$"Install .deb package" \
---window-icon="/usr/share/pixmaps/debian-logo.png"
-
-)
-
-        yadresult=$?
-
-        set -H
-
-        if [ "$yadresult" = "1" ]; then
-            debtap-mod -q "$debfile" | zenity --progress --pulsate --no-cancel --auto-close --text $"Converting file, please wait. This may take a few minutes..."
-            zenity --info --text $"Done!"
-        fi
-
-    
-        if [ "$yadresult" = "2" ]; then
-            debtap-mod -Q "$debfile" | zenity --progress --pulsate --no-cancel --auto-close --text $"Converting file, please wait. This may take a few minutes..."
-            zenity --info --text $"Done!"
-        fi
-
-        if [ "$yadresult" = "3" ]; then
-            exit
-        fi
+# Graphical installer for .deb packages (GTK4 + libadwaita).
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+APP_DIR="$SCRIPT_DIR/../share/debtap-mod"
+[[ -d "$APP_DIR/debtap_mod" ]] || APP_DIR="/usr/share/debtap-mod"
+export PYTHONPATH="$APP_DIR${PYTHONPATH:+:$PYTHONPATH}"
+exec -a debtap-gui python3 -m debtap_mod.gui "$@"

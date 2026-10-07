@@ -1,79 +1,590 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid ""
-"* Error alerts during installation generally do not prevent the program from "
-"working correctly."
-msgstr ""
-"* Error alerts during installation generally do not prevent the program from "
-"working correctly."
+msgid "Extracting package data"
+msgstr "Extracting package data"
 
-msgid "Read before proceeding with the installation:"
-msgstr "Read before proceeding with the installation:"
+msgid "Adapting the directory layout"
+msgstr "Adapting the directory layout"
 
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux "
-"systems compatible with the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in "
-"<span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, "
-"or <span color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span "
-"color='#CC2222'>.deb</span> file can be converted to <span color='#CC2222'>."
-"pkg.tar</span> and installed on this system. However, the installation may "
-"not work correctly."
-msgstr ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux "
-"systems compatible with the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in "
-"<span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, "
-"or <span color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span "
-"color='#CC2222'>.deb</span> file can be converted to <span color='#CC2222'>."
-"pkg.tar</span> and installed on this system. However, the installation may "
-"not work correctly."
+msgid "Resolving dependencies"
+msgstr "Resolving dependencies"
 
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package "
-"format, but the file is in <span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package "
-"format, but the file is in <span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
+msgid "Converting maintainer scripts"
+msgstr "Converting maintainer scripts"
 
-msgid "Install & Review Config Files"
-msgstr "Install & Review Config Files"
+msgid "Building the pacman package"
+msgstr "Building the pacman package"
 
-msgid "Install"
-msgstr "Install"
+msgid "Warning:"
+msgstr "Warning:"
 
-msgid "Close"
-msgstr "Close"
+msgid "Error:"
+msgstr "Error:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Convert a .deb package into a pacman package and install it."
+
+msgid "the .deb file"
+msgstr "the .deb file"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "do not ask questions, but open the install script for review"
+
+msgid "do not ask any question"
+msgstr "do not ask any question"
+
+msgid "only build the package, do not install it"
+msgstr "only build the package, do not install it"
+
+msgid "keep the built package in DIR"
+msgstr "keep the built package in DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "also write a PKGBUILD next to the .deb"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "only write a PKGBUILD, do not build"
+
+msgid "{question} [y/N] "
+msgstr "{question} [y/N] "
+
+msgid "yes"
+msgstr "yes"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod no longer needs a local database; nothing to update."
+
+msgid "no .deb file given"
+msgstr "no .deb file given"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "the -s and -w options are obsolete and were ignored"
+
+msgid "Installed size: {size}"
+msgstr "Installed size: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD written to {path}"
+
+msgid "cancelled"
+msgstr "cancelled"
+
+msgid "Package {file} built"
+msgstr "Package {file} built"
+
+msgid "Menu entries: {names}"
+msgstr "Menu entries: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Package saved to {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "some files belong to other installed packages; remove them first:"
+
+msgid "Install script that will run as root:"
+msgstr "Install script that will run as root:"
+
+msgid "Install {name} now?"
+msgstr "Install {name} now?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman could not install the package (exit code {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} installed successfully"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Look for {names} in the applications menu."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+
+msgid "Extracting {name}…"
+msgstr "Extracting {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Ignored unsafe or special entries: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Duplicate file kept from /usr: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Looking for dependencies…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Ignored {count} binaries built for other systems or architectures."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Libraries not found in the repositories: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Debian dependencies without an equivalent here: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Files already owned by other packages: {list}"
+
+msgid "Building the package…"
+msgstr "Building the package…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "The file is not a Debian package (missing ar header)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "The Debian package is truncated or corrupted."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Unsupported compression in member {name}."
+
+msgid "File not found: {path}"
+msgstr "File not found: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "The file is not a Debian package (debian-binary missing)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "The Debian package has no control or data archive."
+
+msgid "The Debian package has no control file."
+msgstr "The Debian package has no control file."
+
+msgid "The control file has no Package or Version field."
+msgstr "The control file has no Package or Version field."
 
 msgid "Install .deb package"
 msgstr "Install .deb package"
 
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Converting file, please wait. This may take a few minutes..."
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Converts Debian packages into native pacman packages and installs them."
 
-msgid "Done!"
-msgstr "Done!"
+msgid "Extracting files"
+msgstr "Extracting files"
+
+msgid "Adapting folders to this system"
+msgstr "Adapting folders to this system"
+
+msgid "Finding dependencies"
+msgstr "Finding dependencies"
+
+msgid "Preparing installation scripts"
+msgstr "Preparing installation scripts"
+
+msgid "Building the package"
+msgstr "Building the package"
+
+msgid "Waiting for authorization"
+msgstr "Waiting for authorization"
+
+msgid "Installing"
+msgstr "Installing"
+
+msgid "About"
+msgstr "About"
+
+msgid "Main menu"
+msgstr "Main menu"
+
+msgid "Choose a .deb file…"
+msgstr "Choose a .deb file…"
+
+msgid "Install a .deb package"
+msgstr "Install a .deb package"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Prefer native packages when available"
+msgstr "Prefer native packages when available"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+
+msgid "“{name}” is available in the repositories"
+msgstr "“{name}” is available in the repositories"
+
+msgid "Installing the native package is recommended."
+msgstr "Installing the native package is recommended."
+
+msgid "Open"
+msgstr "Open"
+
+msgid "Package"
+msgstr "Package"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Architecture"
+msgstr "Architecture"
+
+msgid "Installed size"
+msgstr "Installed size"
+
+msgid "Maintainer"
+msgstr "Maintainer"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Review before installing"
+msgstr "Review before installing"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Show the dependencies and the scripts that will run as administrator"
+
+msgid "Install"
+msgstr "Install"
+
+msgid "Ready to install"
+msgstr "Ready to install"
+
+msgid "Check what will be installed."
+msgstr "Check what will be installed."
+
+msgid "Package name on this system"
+msgstr "Package name on this system"
+
+msgid "Package size"
+msgstr "Package size"
+
+msgid "Applications menu"
+msgstr "Applications menu"
+
+msgid "No menu entry"
+msgstr "No menu entry"
+
+msgid "Warnings"
+msgstr "Warnings"
+
+msgid "Notes"
+msgstr "Notes"
+
+msgid "Dependencies"
+msgstr "Dependencies"
+
+msgid "Required"
+msgstr "Required"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} package"
+msgstr[1] "{n} packages"
+
+msgid "will be downloaded"
+msgstr "will be downloaded"
+
+msgid "Optional"
+msgstr "Optional"
+
+msgid "Scripts"
+msgstr "Scripts"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "These commands from the Debian package run as administrator during installation."
+
+msgid "Open {name}"
+msgstr "Open {name}"
+
+msgid "Copy details"
+msgstr "Copy details"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "This file cannot be installed"
+msgstr "This file cannot be installed"
+
+msgid "Choose a .deb file"
+msgstr "Choose a .deb file"
+
+msgid "Debian packages"
+msgstr "Debian packages"
+
+msgid "Type your password in the window that will appear."
+msgstr "Type your password in the window that will appear."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Missing dependencies are downloaded from the repositories."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Compressing the files, this may take a minute."
+
+msgid "The package could not be converted"
+msgstr "The package could not be converted"
+
+msgid "Cancelled"
+msgstr "Cancelled"
+
+msgid "{name} is installed"
+msgstr "{name} is installed"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "The package {name} was installed. It has no entry in the applications menu."
+
+msgid "Installation complete"
+msgstr "Installation complete"
+
+msgid "Authorization was not granted"
+msgstr "Authorization was not granted"
+
+msgid "The installation failed"
+msgstr "The installation failed"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman returned an error (code {code}). Open the details to see what happened."
+
+msgid "The application could not be started"
+msgstr "The application could not be started"
+
+msgid "Copied"
+msgstr "Copied"
+
+msgid "Please wait until the installation finishes"
+msgstr "Please wait until the installation finishes"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg cannot run as root; run debtap-mod as a regular user."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg failed with exit code {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg finished but produced no package"
+
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch does not upgrade single packages; the whole system is upgraded together."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Tell which package to install, for example: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac also finds programs in the AUR and Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb packages are converted into native pacman packages by debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Run this command as a regular user (without sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Tell which package to remove, for example: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n also deletes the configuration files the package installed in /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "There are no orphan packages to remove."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Tell what to search for, for example: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Tell which package, for example: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "The package is not installed; the list comes from the repository file database."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Tell which file, for example: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "The file is not on this system; searching the repository file database."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "“{command}” has no direct equivalent here."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Run “{tool} help” to see the commands this system understands."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Tell which .deb file to install, for example: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "This system uses pacman, not {tool}."
+
+msgid "You typed:"
+msgstr "You typed:"
+
+msgid "Equivalent:"
+msgstr "Equivalent:"
+
+msgid "With pamac:"
+msgstr "With pamac:"
+
+msgid "Running:"
+msgstr "Running:"
+
+msgid "Update everything"
+msgstr "Update everything"
+
+msgid "Check for updates"
+msgstr "Check for updates"
+
+msgid "Install a program"
+msgstr "Install a program"
+
+msgid "Install a downloaded file"
+msgstr "Install a downloaded file"
+
+msgid "Install a .deb file here"
+msgstr "Install a .deb file here"
+
+msgid "Reinstall"
+msgstr "Reinstall"
+
+msgid "Remove a program"
+msgstr "Remove a program"
+
+msgid "Remove + dependencies"
+msgstr "Remove + dependencies"
+
+msgid "Remove + configuration"
+msgstr "Remove + configuration"
+
+msgid "Remove orphans (unused)"
+msgstr "Remove orphans (unused)"
+
+msgid "Search to install"
+msgstr "Search to install"
+
+msgid "Details (available)"
+msgstr "Details (available)"
+
+msgid "Details (installed)"
+msgstr "Details (installed)"
+
+msgid "List everything available"
+msgstr "List everything available"
+
+msgid "List installed"
+msgstr "List installed"
+
+msgid "Search installed"
+msgstr "Search installed"
+
+msgid "Files of a package"
+msgstr "Files of a package"
+
+msgid "Which package owns a file?"
+msgstr "Which package owns a file?"
+
+msgid "What can be upgraded"
+msgstr "What can be upgraded"
+
+msgid "Installed by you"
+msgstr "Installed by you"
+
+msgid "Dependencies of a package"
+msgstr "Dependencies of a package"
+
+msgid "Who depends on a package"
+msgstr "Who depends on a package"
+
+msgid "Clean the download cache"
+msgstr "Clean the download cache"
+
+msgid "Add a repository / PPA"
+msgstr "Add a repository / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Both do the same job: install, update and remove programs. Only the commands change."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "No command matches “{topic}”."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Run “{tool} help” to see every command."
+
+msgid "What you want to do"
+msgstr "What you want to do"
+
+msgid "Differences that catch people"
+msgstr "Differences that catch people"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update only refreshes the list; apt upgrade installs."
+
+msgid "In pacman, -Syu does both together."
+msgstr "In pacman, -Syu does both together."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Avoid “pacman -Sy” alone: it can break the system."
+
+msgid "Package types"
+msgstr "Package types"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb files are converted and installed with debtap-mod (or a double click)."
+
+msgid "Programs from the community"
+msgstr "Programs from the community"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "The AUR plays the role of PPAs and COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Use “pamac build <name>”; never run AUR helpers with sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Tip: “{tool} help install” shows only the lines about one command."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+
+msgid "Command not found: {cmd}"
+msgstr "Command not found: {cmd}"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "The {script} script configures an APT repository; that part has no effect on this system."

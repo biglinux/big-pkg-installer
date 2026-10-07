@@ -1,15 +1,41 @@
 # Maintainer: Bruno Goncalves <bigbruno@gmail.com>
+# Maintainer: Tales A. Mendonça <talesam@gmail.com>
 
 pkgname=debtap-mod
 pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 arch=('any')
-license=('GPL')
+license=('GPL-2.0-or-later')
 url="https://github.com/biglinux/debtap-mod"
-pkgdesc="Convert and install .deb packages"
+pkgdesc="Convert and install .deb packages, and translate apt/dnf/dpkg commands to pacman"
 source=("git+https://github.com/biglinux/debtap-mod.git")
 md5sums=(SKIP)
-depends=('yad' 'namcap' 'pamac-gtk' 'zenity' 'fakeroot')
+depends=(
+    'pacman'          # makepkg, pacman, vercmp, pacman-conf
+    'pacman-contrib'  # checkupdates, pactree (apt/dnf translator)
+    'fakeroot'
+    'zstd'
+    'libarchive'      # bsdtar, used by makepkg
+    'polkit'          # pkexec
+    'python>=3.14'
+    'python-gobject'
+    'gtk4'
+    'libadwaita'
+)
+optdepends=('pamac-gtk: open native packages suggested by the installer')
+checkdepends=('python-pytest')
+# /usr/local/bin/{apt,apt-get,dnf,yum} moved here from biglinux-improve-compatibility;
+# older builds of that package still ship them.
+conflicts=('biglinux-improve-compatibility<26.10.07')
+
+check() {
+    if [ -d "${srcdir}/${pkgname}/${pkgname}" ]; then
+        cd "${srcdir}/${pkgname}/${pkgname}"
+    else
+        cd "${srcdir}/${pkgname}"
+    fi
+    PYTHONDONTWRITEBYTECODE=1 pytest -q -p no:cacheprovider -m "not slow"
+}
 
 package() {
     # Verify default folder
@@ -19,19 +45,18 @@ package() {
         InternalDir="${srcdir}/${pkgname}"
     fi
 
-
     # Copy files
     if [ -d "${InternalDir}/usr" ]; then
-        cp -r "${InternalDir}/usr" "${pkgdir}/"
+        cp -a "${InternalDir}/usr" "${pkgdir}/"
     fi
 
     if [ -d "${InternalDir}/etc" ]; then
-        cp -r "${InternalDir}/etc" "${pkgdir}/"
+        cp -a "${InternalDir}/etc" "${pkgdir}/"
     fi
 
     if [ -d "${InternalDir}/opt" ]; then
-        cp -r "${InternalDir}/opt" "${pkgdir}/"
+        cp -a "${InternalDir}/opt" "${pkgdir}/"
     fi
+
+    find "${pkgdir}" -name '__pycache__' -type d -prune -exec rm -rf {} +
 }
-
-

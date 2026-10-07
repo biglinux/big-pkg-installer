@@ -1,62 +1,589 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* インストール中のエラーアラートは、通常、プログラムが正しく動作するのを妨げることはありません。"
-msgid "Read before proceeding with the installation:"
-msgstr "インストールを進める前にお読みください："
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"ネイティブパッケージを優先してください。BigLinux、Manjaro、Arch、または他のLinuxシステムに対応した<span "
-"color='#CC2222'>.pkg.tar</span>形式のものです。\n"
-"\n"
-"別のオプションは、通常<span color='#CC2222'>.run</span>、<span color='#CC2222'>.appimage</span>、または<span "
-"color='#CC2222'>.flatpak</span>形式で作成された、任意のLinuxシステム用のプログラムを使用することです。\n"
-"\n"
-"上記の形式でプログラムが利用できない場合、<span color='#CC2222'>.deb</span>ファイルを<span "
-"color='#CC2222'>.pkg.tar</span>に変換して、このシステムにインストールすることができます。ただし、インストールが正しく機能しない可能性があります。"
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>このシステムは<span color='#CC2222'>.pkg.tar</span>パッケージ形式を使用していますが、ファイルは<span "
-"color='#CC2222'>.deb</span>形式です。\n"
-"\n"
-"インストールを続行しますか？</big>"
-msgid "Install & Review Config Files"
-msgstr "設定ファイルのインストールとレビュー"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Extracting package data"
+msgstr "パッケージデータを展開しています"
+
+msgid "Adapting the directory layout"
+msgstr "ディレクトリ構成を調整しています"
+
+msgid "Resolving dependencies"
+msgstr "依存関係を解決しています"
+
+msgid "Converting maintainer scripts"
+msgstr "メンテナースクリプトを変換しています"
+
+msgid "Building the pacman package"
+msgstr "pacman パッケージをビルドしています"
+
+msgid "Warning:"
+msgstr "警告:"
+
+msgid "Error:"
+msgstr "エラー:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr ".deb パッケージを pacman パッケージに変換してインストールします。"
+
+msgid "the .deb file"
+msgstr ".deb ファイル"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "質問せず、インストールスクリプトを開いて確認できるようにする"
+
+msgid "do not ask any question"
+msgstr "質問をしない"
+
+msgid "only build the package, do not install it"
+msgstr "パッケージのビルドのみ行い、インストールしない"
+
+msgid "keep the built package in DIR"
+msgstr "ビルドしたパッケージを DIR に保存する"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr ".deb と同じ場所に PKGBUILD も書き出す"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "PKGBUILD の書き出しのみ行い、ビルドしない"
+
+msgid "{question} [y/N] "
+msgstr "{question} [y/N] "
+
+msgid "yes"
+msgstr "y"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod はローカルデータベースを必要としなくなりました。更新するものはありません。"
+
+msgid "no .deb file given"
+msgstr ".deb ファイルが指定されていません"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "-s と -w オプションは廃止されたため、無視されました"
+
+msgid "Installed size: {size}"
+msgstr "インストールサイズ: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD を {path} に書き出しました"
+
+msgid "cancelled"
+msgstr "キャンセルしました"
+
+msgid "Package {file} built"
+msgstr "パッケージ {file} をビルドしました"
+
+msgid "Menu entries: {names}"
+msgstr "メニューエントリ: {names}"
+
+msgid "Package saved to {path}"
+msgstr "パッケージを {path} に保存しました"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "一部のファイルは他のインストール済みパッケージに属しています。先にそれらを削除してください:"
+
+msgid "Install script that will run as root:"
+msgstr "root として実行されるインストールスクリプト:"
+
+msgid "Install {name} now?"
+msgstr "今すぐ {name} をインストールしますか?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman はパッケージをインストールできませんでした (終了コード {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} を正常にインストールしました"
+
+msgid "Look for {names} in the applications menu."
+msgstr "アプリケーションメニューで {names} を探してください。"
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "このパッケージは {deb_arch} 向けにビルドされていますが、このコンピューターは {host} です。ここでは実行できません。"
+
+msgid "Extracting {name}…"
+msgstr "{name} を展開しています…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "安全でない、または特殊なエントリを無視しました: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "/usr から重複ファイルを保持しました: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "依存関係を調べています…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "他のシステムまたはアーキテクチャ向けのバイナリを {count} 個無視しました。"
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "リポジトリに見つからないライブラリ: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "このシステムに対応するものがない Debian の依存関係: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "すでに他のパッケージが所有しているファイル: {list}"
+
+msgid "Building the package…"
+msgstr "パッケージをビルドしています…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "このファイルは Debian パッケージではありません (ar ヘッダーがありません)。"
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Debian パッケージが途切れているか、壊れています。"
+
+msgid "Unsupported compression in member {name}."
+msgstr "メンバー {name} の圧縮形式には対応していません。"
+
+msgid "File not found: {path}"
+msgstr "ファイルが見つかりません: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "このファイルは Debian パッケージではありません (debian-binary がありません)。"
+
+msgid "The Debian package has no control or data archive."
+msgstr "この Debian パッケージには control アーカイブまたは data アーカイブがありません。"
+
+msgid "The Debian package has no control file."
+msgstr "この Debian パッケージには control ファイルがありません。"
+
+msgid "The control file has no Package or Version field."
+msgstr "control ファイルに Package または Version フィールドがありません。"
+
+msgid "Install .deb package"
+msgstr ".deb パッケージをインストール"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Debian パッケージをネイティブの pacman パッケージに変換してインストールします。"
+
+msgid "Extracting files"
+msgstr "ファイルを展開中"
+
+msgid "Adapting folders to this system"
+msgstr "フォルダーをこのシステムに合わせて調整中"
+
+msgid "Finding dependencies"
+msgstr "依存関係を検索中"
+
+msgid "Preparing installation scripts"
+msgstr "インストールスクリプトを準備中"
+
+msgid "Building the package"
+msgstr "パッケージをビルド中"
+
+msgid "Waiting for authorization"
+msgstr "認証を待っています"
+
+msgid "Installing"
+msgstr "インストール中"
+
+msgid "About"
+msgstr "このアプリについて"
+
+msgid "Main menu"
+msgstr "メインメニュー"
+
+msgid "Choose a .deb file…"
+msgstr ".deb ファイルを選択…"
+
+msgid "Install a .deb package"
+msgstr ".deb パッケージをインストール"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Debian パッケージを開くか、ここにドロップしてください。このシステム用のネイティブパッケージに変換してインストールします。"
+
+msgid "Details"
+msgstr "詳細"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Prefer native packages when available"
+msgstr "ネイティブパッケージを優先する"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "システムリポジトリ、Flatpak、AppImage のプログラムのほうが、通常はよく動作します。変換した .deb パッケージは完全には動作しない場合があります。"
+
+msgid "“{name}” is available in the repositories"
+msgstr "「{name}」はリポジトリにあります"
+
+msgid "Installing the native package is recommended."
+msgstr "ネイティブパッケージのインストールをおすすめします。"
+
+msgid "Open"
+msgstr "開く"
+
+msgid "Package"
+msgstr "パッケージ"
+
+msgid "Version"
+msgstr "バージョン"
+
+msgid "Architecture"
+msgstr "アーキテクチャ"
+
+msgid "Installed size"
+msgstr "インストールサイズ"
+
+msgid "Maintainer"
+msgstr "メンテナー"
+
+msgid "Website"
+msgstr "ウェブサイト"
+
+msgid "Description"
+msgstr "説明"
+
+msgid "Review before installing"
+msgstr "インストール前に確認"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "依存関係と、管理者として実行されるスクリプトを表示します"
+
 msgid "Install"
 msgstr "インストール"
+
+msgid "Ready to install"
+msgstr "インストールの準備完了"
+
+msgid "Check what will be installed."
+msgstr "インストールされる内容を確認してください。"
+
+msgid "Package name on this system"
+msgstr "このシステムでのパッケージ名"
+
+msgid "Package size"
+msgstr "パッケージサイズ"
+
+msgid "Applications menu"
+msgstr "アプリケーションメニュー"
+
+msgid "No menu entry"
+msgstr "メニューエントリなし"
+
+msgid "Warnings"
+msgstr "警告"
+
+msgid "Notes"
+msgstr "メモ"
+
+msgid "Dependencies"
+msgstr "依存関係"
+
+msgid "Required"
+msgstr "必須"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} 個のパッケージ"
+
+msgid "will be downloaded"
+msgstr "ダウンロードされます"
+
+msgid "Optional"
+msgstr "オプション"
+
+msgid "Scripts"
+msgstr "スクリプト"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Debian パッケージのこれらのコマンドは、インストール中に管理者として実行されます。"
+
+msgid "Open {name}"
+msgstr "{name} を開く"
+
+msgid "Copy details"
+msgstr "詳細をコピー"
+
 msgid "Close"
 msgstr "閉じる"
-msgid "Install .deb package"
-msgstr ".debパッケージをインストールする"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "ファイルを変換中です。しばらくお待ちください。数分かかる場合があります..."
-msgid "Done!"
-msgstr "完了！"
+
+msgid "This file cannot be installed"
+msgstr "このファイルはインストールできません"
+
+msgid "Choose a .deb file"
+msgstr ".deb ファイルを選択"
+
+msgid "Debian packages"
+msgstr "Debian パッケージ"
+
+msgid "Type your password in the window that will appear."
+msgstr "表示されるウィンドウにパスワードを入力してください。"
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "不足している依存関係はリポジトリからダウンロードされます。"
+
+msgid "Compressing the files, this may take a minute."
+msgstr "ファイルを圧縮しています。1 分ほどかかる場合があります。"
+
+msgid "The package could not be converted"
+msgstr "パッケージを変換できませんでした"
+
+msgid "Cancelled"
+msgstr "キャンセルしました"
+
+msgid "{name} is installed"
+msgstr "{name} はインストール済みです"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "パッケージ {name} をインストールしました。アプリケーションメニューにエントリはありません。"
+
+msgid "Installation complete"
+msgstr "インストールが完了しました"
+
+msgid "Authorization was not granted"
+msgstr "認証が許可されませんでした"
+
+msgid "The installation failed"
+msgstr "インストールに失敗しました"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman がエラーを返しました (コード {code})。詳細を開いて状況を確認してください。"
+
+msgid "The application could not be started"
+msgstr "アプリケーションを起動できませんでした"
+
+msgid "Copied"
+msgstr "コピーしました"
+
+msgid "Please wait until the installation finishes"
+msgstr "インストールが終わるまでお待ちください"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg は root として実行できません。debtap-mod は一般ユーザーとして実行してください。"
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg が終了コード {code} で失敗しました"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg は終了しましたが、パッケージが作成されませんでした"
+
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "「{typed}」はパッケージリストを更新するだけです。ここでは、何もインストールせずに更新を確認する安全な同等コマンドを使います。インストールするには「{upgrade}」を使ってください。"
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "「pacman -Sy」を単独で実行しないでください。アップグレードせずにリストだけ更新すると、システムが壊れる可能性があります。"
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch では個別のパッケージだけをアップグレードしません。システム全体をまとめてアップグレードします。"
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "インストールするパッケージを指定してください。例: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr ".rpm パッケージは Fedora/openSUSE 用のため、ここではインストールできません。"
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "リポジトリ(pamac search)、Flathub、または AppImage でプログラムを探してください。"
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac は AUR と Flatpak のプログラムも検索できます: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb パッケージは debtap-mod によってネイティブの pacman パッケージに変換されます。"
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "このコマンドは一般ユーザーで実行してください(sudo なし)。"
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "削除するパッケージを指定してください。例: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n は、パッケージが /etc にインストールした設定ファイルも削除します。"
+
+msgid "There are no orphan packages to remove."
+msgstr "削除する孤立パッケージはありません。"
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "検索する内容を指定してください。例: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "パッケージを指定してください。例: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "パッケージはインストールされていません。一覧はリポジトリのファイルデータベースから取得しています。"
+
+msgid "Tell which file, for example: {example}"
+msgstr "ファイルを指定してください。例: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "このシステムにファイルがありません。リポジトリのファイルデータベースを検索します。"
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Arch 系システムには、追加する PPA や追加リポジトリはありません。コミュニティのプログラムは AUR から入手します。"
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "「pamac search --aur <name>」で検索し、「pamac build <name>」でインストールします。"
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "パッケージをアップグレードさせないようにするには、/etc/pacman.conf の IgnorePkg に追加します。"
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "「{command}」に直接対応するコマンドはありません。"
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "「{tool} help」を実行すると、このシステムが理解するコマンドを確認できます。"
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "インストールする .deb ファイルを指定してください。例: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "このシステムでは {tool} ではなく pacman を使います。"
+
+msgid "You typed:"
+msgstr "入力したコマンド:"
+
+msgid "Equivalent:"
+msgstr "同等のコマンド:"
+
+msgid "With pamac:"
+msgstr "pamac の場合:"
+
+msgid "Running:"
+msgstr "実行中:"
+
+msgid "Update everything"
+msgstr "すべて更新"
+
+msgid "Check for updates"
+msgstr "更新を確認"
+
+msgid "Install a program"
+msgstr "プログラムをインストール"
+
+msgid "Install a downloaded file"
+msgstr "ダウンロードしたファイルをインストール"
+
+msgid "Install a .deb file here"
+msgstr "この .deb ファイルをインストール"
+
+msgid "Reinstall"
+msgstr "再インストール"
+
+msgid "Remove a program"
+msgstr "プログラムを削除"
+
+msgid "Remove + dependencies"
+msgstr "削除 + 依存関係"
+
+msgid "Remove + configuration"
+msgstr "削除 + 設定"
+
+msgid "Remove orphans (unused)"
+msgstr "孤立パッケージを削除(未使用)"
+
+msgid "Search to install"
+msgstr "インストール用に検索"
+
+msgid "Details (available)"
+msgstr "詳細(未インストール)"
+
+msgid "Details (installed)"
+msgstr "詳細(インストール済み)"
+
+msgid "List everything available"
+msgstr "利用可能なものを一覧表示"
+
+msgid "List installed"
+msgstr "インストール済みを一覧表示"
+
+msgid "Search installed"
+msgstr "インストール済みを検索"
+
+msgid "Files of a package"
+msgstr "パッケージのファイル"
+
+msgid "Which package owns a file?"
+msgstr "ファイルの所有パッケージは?"
+
+msgid "What can be upgraded"
+msgstr "アップグレード可能なもの"
+
+msgid "Installed by you"
+msgstr "自分でインストールしたもの"
+
+msgid "Dependencies of a package"
+msgstr "パッケージの依存関係"
+
+msgid "Who depends on a package"
+msgstr "パッケージに依存するもの"
+
+msgid "Clean the download cache"
+msgstr "ダウンロードキャッシュを削除"
+
+msgid "Add a repository / PPA"
+msgstr "リポジトリ / PPA を追加"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "コマンド変換: {family}(Debian、Ubuntu、Mint、Fedora)から pacman と pamac(Arch、BigLinux、Manjaro)へ"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "どちらもプログラムのインストール、更新、削除という同じ役割を果たします。違うのはコマンドだけです。"
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "これまでどおり {tool} コマンドを入力できます。pamac または pacman に変換されて実行されます。"
+
+msgid "No command matches “{topic}”."
+msgstr "「{topic}」に一致するコマンドはありません。"
+
+msgid "Run “{tool} help” to see every command."
+msgstr "「{tool} help」を実行すると、すべてのコマンドを確認できます。"
+
+msgid "What you want to do"
+msgstr "やりたいこと"
+
+msgid "Differences that catch people"
+msgstr "つまずきやすい違い"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update はリストを更新するだけで、apt upgrade がインストールします。"
+
+msgid "In pacman, -Syu does both together."
+msgstr "pacman では -Syu で両方を一度に行います。"
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "「pacman -Sy」を単独で使うのは避けてください。システムが壊れる可能性があります。"
+
+msgid "Package types"
+msgstr "パッケージの種類"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt は .deb、dnf は .rpm、pacman は .pkg.tar.zst を使います。"
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb ファイルは debtap-mod(またはダブルクリック)で変換してインストールします。"
+
+msgid "Programs from the community"
+msgstr "コミュニティのプログラム"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR は PPA や COPR の役割を果たします。"
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "「pamac build <name>」を使ってください。AUR ヘルパーを sudo で実行しないでください。"
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "ヒント: 「{tool} help install」で、1 つのコマンドに関する行だけを表示します。"
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "クイックリファレンス: インストールや削除には「sudo」が必要です。検索や一覧表示には不要です。"
+
+msgid "Command not found: {cmd}"
+msgstr "コマンドが見つかりません: {cmd}"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "この Debian スクリプトは Ubuntu 向けに APT リポジトリと AppArmor プロファイルを登録するだけなので、ここでは不要です。"
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "{script} スクリプトは APT リポジトリを設定しますが、その部分はこのシステムでは効果がありません。"

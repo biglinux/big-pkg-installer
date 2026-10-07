@@ -1,66 +1,590 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr ""
-"* Οι ειδοποιήσεις σφάλματος κατά την εγκατάσταση γενικά δεν εμποδίζουν το πρόγραμμα να λειτουργεί "
-"σωστά."
-msgid "Read before proceeding with the installation:"
-msgstr "Διαβάστε πριν προχωρήσετε με την εγκατάσταση:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"Προτιμήστε εγγενή πακέτα, κατασκευασμένα για το BigLinux, Manjaro, Arch ή άλλα συστήματα Linux "
-"συμβατά με τη μορφή <span color='#CC2222'>.pkg.tar</span>.\n"
-"\n"
-"Μια άλλη επιλογή είναι να χρησιμοποιήσετε προγράμματα που έχουν κατασκευαστεί για οποιοδήποτε "
-"σύστημα Linux, συνήθως σε μορφή <span color='#CC2222'>.run</span>, <span "
-"color='#CC2222'>.appimage</span> ή <span color='#CC2222'>.flatpak</span>.\n"
-"\n"
-"Εάν το πρόγραμμα δεν είναι διαθέσιμο στις παραπάνω μορφές, το αρχείο <span "
-"color='#CC2222'>.deb</span> μπορεί να μετατραπεί σε <span color='#CC2222'>.pkg.tar</span> και να "
-"εγκατασταθεί σε αυτό το σύστημα. Ωστόσο, η εγκατάσταση ενδέχεται να μην λειτουργήσει σωστά."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Αυτό το σύστημα χρησιμοποιεί τη μορφή πακέτου <span color='#CC2222'>.pkg.tar</span>, αλλά το "
-"αρχείο είναι σε μορφή <span color='#CC2222'>.deb</span>.\n"
-"\n"
-"Θέλετε να προχωρήσετε με την εγκατάσταση;</big>"
-msgid "Install & Review Config Files"
-msgstr "Εγκατάσταση και Ανασκόπηση Αρχείων Ρυθμίσεων"
-msgid "Install"
-msgstr "Εγκατάσταση"
-msgid "Close"
-msgstr "Κλείσιμο"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Extracting package data"
+msgstr "Εξαγωγή δεδομένων πακέτου"
+
+msgid "Adapting the directory layout"
+msgstr "Προσαρμογή της δομής καταλόγων"
+
+msgid "Resolving dependencies"
+msgstr "Επίλυση εξαρτήσεων"
+
+msgid "Converting maintainer scripts"
+msgstr "Μετατροπή των σεναρίων συντηρητή"
+
+msgid "Building the pacman package"
+msgstr "Δημιουργία του πακέτου pacman"
+
+msgid "Warning:"
+msgstr "Προειδοποίηση:"
+
+msgid "Error:"
+msgstr "Σφάλμα:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Μετατρέπει ένα πακέτο .deb σε πακέτο pacman και το εγκαθιστά."
+
+msgid "the .deb file"
+msgstr "το αρχείο .deb"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "χωρίς ερωτήσεις, αλλά άνοιγμα του σεναρίου εγκατάστασης για έλεγχο"
+
+msgid "do not ask any question"
+msgstr "χωρίς καμία ερώτηση"
+
+msgid "only build the package, do not install it"
+msgstr "μόνο δημιουργία του πακέτου, χωρίς εγκατάσταση"
+
+msgid "keep the built package in DIR"
+msgstr "διατήρηση του πακέτου που δημιουργήθηκε στο DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "εγγραφή και ενός PKGBUILD δίπλα στο .deb"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "μόνο εγγραφή ενός PKGBUILD, χωρίς δημιουργία"
+
+msgid "{question} [y/N] "
+msgstr "{question} [ν/Ο] "
+
+msgid "yes"
+msgstr "ναι"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "το debtap-mod δεν χρειάζεται πλέον τοπική βάση δεδομένων· δεν υπάρχει κάτι για ενημέρωση."
+
+msgid "no .deb file given"
+msgstr "δεν δόθηκε αρχείο .deb"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "οι επιλογές -s και -w έχουν καταργηθεί και αγνοήθηκαν"
+
+msgid "Installed size: {size}"
+msgstr "Εγκατεστημένο μέγεθος: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "Το PKGBUILD γράφτηκε στο {path}"
+
+msgid "cancelled"
+msgstr "ακυρώθηκε"
+
+msgid "Package {file} built"
+msgstr "Το πακέτο {file} δημιουργήθηκε"
+
+msgid "Menu entries: {names}"
+msgstr "Καταχωρίσεις μενού: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Το πακέτο αποθηκεύτηκε στο {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "ορισμένα αρχεία ανήκουν σε άλλα εγκατεστημένα πακέτα· αφαιρέστε τα πρώτα:"
+
+msgid "Install script that will run as root:"
+msgstr "Σενάριο εγκατάστασης που θα εκτελεστεί ως root:"
+
+msgid "Install {name} now?"
+msgstr "Εγκατάσταση του {name} τώρα;"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "Το pacman δεν μπόρεσε να εγκαταστήσει το πακέτο (κωδικός εξόδου {code})"
+
+msgid "{name} installed successfully"
+msgstr "Το {name} εγκαταστάθηκε με επιτυχία"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Αναζητήστε {names} στο μενού εφαρμογών."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Αυτό το πακέτο δημιουργήθηκε για {deb_arch}, αλλά αυτός ο υπολογιστής είναι {host}· δεν θα λειτουργήσει εδώ."
+
+msgid "Extracting {name}…"
+msgstr "Εξαγωγή του {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Αγνοήθηκαν μη ασφαλείς ή ειδικές εγγραφές: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Διατηρήθηκε διπλότυπο αρχείο από το /usr: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Αναζήτηση εξαρτήσεων…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Αγνοήθηκαν {count} εκτελέσιμα που δημιουργήθηκαν για άλλα συστήματα ή αρχιτεκτονικές."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Βιβλιοθήκες που δεν βρέθηκαν στα αποθετήρια: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Εξαρτήσεις Debian χωρίς αντίστοιχο εδώ: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Αρχεία που ανήκουν ήδη σε άλλα πακέτα: {list}"
+
+msgid "Building the package…"
+msgstr "Δημιουργία του πακέτου…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "Το αρχείο δεν είναι πακέτο Debian (λείπει η κεφαλίδα ar)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Το πακέτο Debian είναι κομμένο ή κατεστραμμένο."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Μη υποστηριζόμενη συμπίεση στο μέλος {name}."
+
+msgid "File not found: {path}"
+msgstr "Το αρχείο δεν βρέθηκε: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "Το αρχείο δεν είναι πακέτο Debian (λείπει το debian-binary)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "Το πακέτο Debian δεν έχει αρχείο control ή data."
+
+msgid "The Debian package has no control file."
+msgstr "Το πακέτο Debian δεν έχει αρχείο control."
+
+msgid "The control file has no Package or Version field."
+msgstr "Το αρχείο control δεν έχει πεδίο Package ή Version."
+
 msgid "Install .deb package"
 msgstr "Εγκατάσταση πακέτου .deb"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Μετατροπή αρχείου, παρακαλώ περιμένετε. Αυτό μπορεί να διαρκέσει μερικά λεπτά..."
-msgid "Done!"
-msgstr "Ολοκληρώθηκε!"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Μετατρέπει πακέτα Debian σε εγγενή πακέτα pacman και τα εγκαθιστά."
+
+msgid "Extracting files"
+msgstr "Εξαγωγή αρχείων"
+
+msgid "Adapting folders to this system"
+msgstr "Προσαρμογή φακέλων σε αυτό το σύστημα"
+
+msgid "Finding dependencies"
+msgstr "Εύρεση εξαρτήσεων"
+
+msgid "Preparing installation scripts"
+msgstr "Προετοιμασία σεναρίων εγκατάστασης"
+
+msgid "Building the package"
+msgstr "Δημιουργία του πακέτου"
+
+msgid "Waiting for authorization"
+msgstr "Αναμονή για εξουσιοδότηση"
+
+msgid "Installing"
+msgstr "Εγκατάσταση"
+
+msgid "About"
+msgstr "Σχετικά"
+
+msgid "Main menu"
+msgstr "Κύριο μενού"
+
+msgid "Choose a .deb file…"
+msgstr "Επιλογή αρχείου .deb…"
+
+msgid "Install a .deb package"
+msgstr "Εγκατάσταση πακέτου .deb"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Ανοίξτε ένα πακέτο Debian ή αφήστε το εδώ. Θα μετατραπεί σε εγγενές πακέτο για αυτό το σύστημα και θα εγκατασταθεί."
+
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgid "Prefer native packages when available"
+msgstr "Προτίμηση εγγενών πακέτων όταν είναι διαθέσιμα"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Τα προγράμματα από τα αποθετήρια του συστήματος, το Flatpak ή το AppImage συνήθως λειτουργούν καλύτερα. Τα μετατρεπόμενα πακέτα .deb μπορεί να μη λειτουργούν τέλεια."
+
+msgid "“{name}” is available in the repositories"
+msgstr "Το «{name}» είναι διαθέσιμο στα αποθετήρια"
+
+msgid "Installing the native package is recommended."
+msgstr "Συνιστάται η εγκατάσταση του εγγενούς πακέτου."
+
+msgid "Open"
+msgstr "Άνοιγμα"
+
+msgid "Package"
+msgstr "Πακέτο"
+
+msgid "Version"
+msgstr "Έκδοση"
+
+msgid "Architecture"
+msgstr "Αρχιτεκτονική"
+
+msgid "Installed size"
+msgstr "Εγκατεστημένο μέγεθος"
+
+msgid "Maintainer"
+msgstr "Συντηρητής"
+
+msgid "Website"
+msgstr "Ιστότοπος"
+
+msgid "Description"
+msgstr "Περιγραφή"
+
+msgid "Review before installing"
+msgstr "Έλεγχος πριν την εγκατάσταση"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Εμφάνιση των εξαρτήσεων και των σεναρίων που θα εκτελεστούν ως διαχειριστής"
+
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+msgid "Ready to install"
+msgstr "Έτοιμο για εγκατάσταση"
+
+msgid "Check what will be installed."
+msgstr "Ελέγξτε τι θα εγκατασταθεί."
+
+msgid "Package name on this system"
+msgstr "Όνομα πακέτου σε αυτό το σύστημα"
+
+msgid "Package size"
+msgstr "Μέγεθος πακέτου"
+
+msgid "Applications menu"
+msgstr "Μενού εφαρμογών"
+
+msgid "No menu entry"
+msgstr "Καμία καταχώριση μενού"
+
+msgid "Warnings"
+msgstr "Προειδοποιήσεις"
+
+msgid "Notes"
+msgstr "Σημειώσεις"
+
+msgid "Dependencies"
+msgstr "Εξαρτήσεις"
+
+msgid "Required"
+msgstr "Απαιτούμενες"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} πακέτο"
+msgstr[1] "{n} πακέτα"
+
+msgid "will be downloaded"
+msgstr "θα γίνει λήψη"
+
+msgid "Optional"
+msgstr "Προαιρετικές"
+
+msgid "Scripts"
+msgstr "Σενάρια"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Αυτές οι εντολές από το πακέτο Debian εκτελούνται ως διαχειριστής κατά την εγκατάσταση."
+
+msgid "Open {name}"
+msgstr "Άνοιγμα του {name}"
+
+msgid "Copy details"
+msgstr "Αντιγραφή λεπτομερειών"
+
+msgid "Close"
+msgstr "Κλείσιμο"
+
+msgid "This file cannot be installed"
+msgstr "Αυτό το αρχείο δεν μπορεί να εγκατασταθεί"
+
+msgid "Choose a .deb file"
+msgstr "Επιλογή αρχείου .deb"
+
+msgid "Debian packages"
+msgstr "Πακέτα Debian"
+
+msgid "Type your password in the window that will appear."
+msgstr "Πληκτρολογήστε τον κωδικό πρόσβασής σας στο παράθυρο που θα εμφανιστεί."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Οι εξαρτήσεις που λείπουν λαμβάνονται από τα αποθετήρια."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Γίνεται συμπίεση των αρχείων, αυτό μπορεί να διαρκέσει ένα λεπτό."
+
+msgid "The package could not be converted"
+msgstr "Δεν ήταν δυνατή η μετατροπή του πακέτου"
+
+msgid "Cancelled"
+msgstr "Ακυρώθηκε"
+
+msgid "{name} is installed"
+msgstr "Το {name} είναι εγκατεστημένο"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "Το πακέτο {name} εγκαταστάθηκε. Δεν έχει καταχώριση στο μενού εφαρμογών."
+
+msgid "Installation complete"
+msgstr "Η εγκατάσταση ολοκληρώθηκε"
+
+msgid "Authorization was not granted"
+msgstr "Η εξουσιοδότηση δεν δόθηκε"
+
+msgid "The installation failed"
+msgstr "Η εγκατάσταση απέτυχε"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "Το pacman επέστρεψε σφάλμα (κωδικός {code}). Ανοίξτε τις λεπτομέρειες για να δείτε τι συνέβη."
+
+msgid "The application could not be started"
+msgstr "Δεν ήταν δυνατή η εκκίνηση της εφαρμογής"
+
+msgid "Copied"
+msgstr "Αντιγράφηκε"
+
+msgid "Please wait until the installation finishes"
+msgstr "Περιμένετε μέχρι να ολοκληρωθεί η εγκατάσταση"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "Το makepkg δεν μπορεί να εκτελεστεί ως root· εκτελέστε το debtap-mod ως απλός χρήστης."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "Το makepkg απέτυχε με κωδικό εξόδου {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "Το makepkg ολοκληρώθηκε αλλά δεν παρήγαγε πακέτο"
+
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "Το «{typed}» ανανεώνει μόνο τη λίστα πακέτων. Εδώ το ασφαλές ισοδύναμο ελέγχει για ενημερώσεις χωρίς να εγκαταστήσει τίποτα· για να τις εγκαταστήσετε, χρησιμοποιήστε το «{upgrade}»."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "Μην εκτελείτε ποτέ το «pacman -Sy» μόνο του: η ανανέωση χωρίς αναβάθμιση μπορεί να χαλάσει το σύστημα."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Το Arch δεν αναβαθμίζει μεμονωμένα πακέτα· ολόκληρο το σύστημα αναβαθμίζεται μαζί."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "Πείτε ποιο πακέτο να εγκατασταθεί, για παράδειγμα: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr "Τα πακέτα .rpm φτιάχνονται για Fedora/openSUSE και δεν μπορούν να εγκατασταθούν εδώ."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "Αναζητήστε το πρόγραμμα στα αποθετήρια (pamac search), στο Flathub ή ως AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "Το pamac βρίσκει προγράμματα και στο AUR και στο Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "Τα πακέτα .deb μετατρέπονται σε εγγενή πακέτα pacman από το debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "Εκτελέστε αυτή την εντολή ως απλός χρήστης (χωρίς sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "Πείτε ποιο πακέτο να αφαιρεθεί, για παράδειγμα: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "Το -n διαγράφει επίσης τα αρχεία ρυθμίσεων που εγκατέστησε το πακέτο στο /etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "Δεν υπάρχουν ορφανά πακέτα για αφαίρεση."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "Πείτε τι να αναζητηθεί, για παράδειγμα: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "Πείτε ποιο πακέτο, για παράδειγμα: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "Το πακέτο δεν είναι εγκατεστημένο· η λίστα προέρχεται από τη βάση δεδομένων αρχείων του αποθετηρίου."
+
+msgid "Tell which file, for example: {example}"
+msgstr "Πείτε ποιο αρχείο, για παράδειγμα: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "Το αρχείο δεν υπάρχει σε αυτό το σύστημα· γίνεται αναζήτηση στη βάση δεδομένων αρχείων του αποθετηρίου."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "Τα συστήματα βασισμένα στο Arch δεν έχουν PPA ή πρόσθετα αποθετήρια για προσθήκη. Τα προγράμματα της κοινότητας προέρχονται από το AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "Αναζητήστε με «pamac search --aur <name>» και εγκαταστήστε με «pamac build <name>»."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "Για να μην αναβαθμίζεται ένα πακέτο, προσθέστε το στο IgnorePkg στο /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "Το «{command}» δεν έχει άμεσο ισοδύναμο εδώ."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "Εκτελέστε «{tool} help» για να δείτε τις εντολές που καταλαβαίνει αυτό το σύστημα."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "Πείτε ποιο αρχείο .deb να εγκατασταθεί, για παράδειγμα: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "Αυτό το σύστημα χρησιμοποιεί pacman, όχι {tool}."
+
+msgid "You typed:"
+msgstr "Πληκτρολογήσατε:"
+
+msgid "Equivalent:"
+msgstr "Ισοδύναμο:"
+
+msgid "With pamac:"
+msgstr "Με pamac:"
+
+msgid "Running:"
+msgstr "Εκτέλεση:"
+
+msgid "Update everything"
+msgstr "Ενημέρωση όλων"
+
+msgid "Check for updates"
+msgstr "Έλεγχος για ενημερώσεις"
+
+msgid "Install a program"
+msgstr "Εγκατάσταση προγράμματος"
+
+msgid "Install a downloaded file"
+msgstr "Εγκατάσταση ληφθέντος αρχείου"
+
+msgid "Install a .deb file here"
+msgstr "Εγκατάσταση αρχείου .deb εδώ"
+
+msgid "Reinstall"
+msgstr "Επανεγκατάσταση"
+
+msgid "Remove a program"
+msgstr "Αφαίρεση προγράμματος"
+
+msgid "Remove + dependencies"
+msgstr "Αφαίρεση + εξαρτήσεις"
+
+msgid "Remove + configuration"
+msgstr "Αφαίρεση + ρυθμίσεις"
+
+msgid "Remove orphans (unused)"
+msgstr "Αφαίρεση ορφανών (αχρησιμοποίητα)"
+
+msgid "Search to install"
+msgstr "Αναζήτηση για εγκατάσταση"
+
+msgid "Details (available)"
+msgstr "Λεπτομέρειες (διαθέσιμο)"
+
+msgid "Details (installed)"
+msgstr "Λεπτομέρειες (εγκατεστημένο)"
+
+msgid "List everything available"
+msgstr "Λίστα όλων των διαθέσιμων"
+
+msgid "List installed"
+msgstr "Λίστα εγκατεστημένων"
+
+msgid "Search installed"
+msgstr "Αναζήτηση στα εγκατεστημένα"
+
+msgid "Files of a package"
+msgstr "Αρχεία ενός πακέτου"
+
+msgid "Which package owns a file?"
+msgstr "Ποιο πακέτο κατέχει ένα αρχείο;"
+
+msgid "What can be upgraded"
+msgstr "Τι μπορεί να αναβαθμιστεί"
+
+msgid "Installed by you"
+msgstr "Εγκατεστημένα από εσάς"
+
+msgid "Dependencies of a package"
+msgstr "Εξαρτήσεις ενός πακέτου"
+
+msgid "Who depends on a package"
+msgstr "Ποιοι εξαρτώνται από ένα πακέτο"
+
+msgid "Clean the download cache"
+msgstr "Εκκαθάριση της προσωρινής μνήμης λήψεων"
+
+msgid "Add a repository / PPA"
+msgstr "Προσθήκη αποθετηρίου / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "Μεταφραστής εντολών: {family} (Debian, Ubuntu, Mint, Fedora) σε pacman και pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "Και τα δύο κάνουν την ίδια δουλειά: εγκατάσταση, ενημέρωση και αφαίρεση προγραμμάτων. Αλλάζουν μόνο οι εντολές."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "Μπορείτε να συνεχίσετε να πληκτρολογείτε εντολές {tool}: μεταφράζονται και εκτελούνται με pamac ή pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "Καμία εντολή δεν ταιριάζει με «{topic}»."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "Εκτελέστε «{tool} help» για να δείτε όλες τις εντολές."
+
+msgid "What you want to do"
+msgstr "Τι θέλετε να κάνετε"
+
+msgid "Differences that catch people"
+msgstr "Διαφορές που μπερδεύουν"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "Το apt update ανανεώνει μόνο τη λίστα· το apt upgrade εγκαθιστά."
+
+msgid "In pacman, -Syu does both together."
+msgstr "Στο pacman, το -Syu κάνει και τα δύο μαζί."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "Αποφύγετε το «pacman -Sy» μόνο του: μπορεί να χαλάσει το σύστημα."
+
+msgid "Package types"
+msgstr "Τύποι πακέτων"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "Το apt χρησιμοποιεί αρχεία .deb, το dnf χρησιμοποιεί .rpm, το pacman χρησιμοποιεί .pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr "Τα αρχεία .deb μετατρέπονται και εγκαθίστανται με το debtap-mod (ή με διπλό κλικ)."
+
+msgid "Programs from the community"
+msgstr "Προγράμματα της κοινότητας"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "Το AUR παίζει το ρόλο των PPA και COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "Χρησιμοποιήστε «pamac build <name>»· μην εκτελείτε ποτέ βοηθούς AUR με sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "Συμβουλή: το «{tool} help install» δείχνει μόνο τις γραμμές για μία εντολή."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "Γρήγορη αναφορά: το «sudo» χρειάζεται για εγκατάσταση ή αφαίρεση· η αναζήτηση και η λίστα όχι."
+
+msgid "Command not found: {cmd}"
+msgstr "Η εντολή δεν βρέθηκε: {cmd}"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Τα σενάρια του Debian απλώς καταχωρούν ένα αποθετήριο APT και ένα προφίλ AppArmor για το Ubuntu· δεν χρειάζονται εδώ."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "Το σενάριο {script} ρυθμίζει ένα αποθετήριο APT· αυτό το μέρος δεν έχει κανένα αποτέλεσμα σε αυτό το σύστημα."

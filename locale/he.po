@@ -1,63 +1,590 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* התראות שגיאה במהלך ההתקנה בדרך כלל אינן מונעות מהתוכנית לפעול כראוי."
-msgid "Read before proceeding with the installation:"
-msgstr "קרא לפני שתמשיך עם ההתקנה:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"מומלץ להשתמש בחבילות מקומיות, שנבנו עבור BigLinux, Manjaro, Arch או מערכות לינוקס אחרות התואמות "
-"לפורמט <span color='#CC2222'>.pkg.tar</span>.\n"
-"\n"
-"אפשרות נוספת היא להשתמש בתוכניות שנעשו עבור כל מערכת לינוקס, בדרך כלל בפורמט <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> או <span "
-"color='#CC2222'>.flatpak</span>.\n"
-"\n"
-"אם התוכנית אינה זמינה בפורמטים הנ\"ל, ניתן להמיר את קובץ <span color='#CC2222'>.deb</span> ל-<span "
-"color='#CC2222'>.pkg.tar</span> ולהתקין אותו על מערכת זו. עם זאת, ההתקנה עשויה לא לעבוד כראוי."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>מערכת זו משתמשת בפורמט החבילה <span color='#CC2222'>.pkg.tar</span>, אך הקובץ נמצא בפורמט "
-"<span color='#CC2222'>.deb</span>.\n"
-"\n"
-"האם ברצונך להמשיך בהתקנה?</big>"
-msgid "Install & Review Config Files"
-msgstr "התקן ובחן קבצי תצורה"
-msgid "Install"
-msgstr "התקן"
-msgid "Close"
-msgstr "סגור"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Extracting package data"
+msgstr "מחלץ את נתוני החבילה"
+
+msgid "Adapting the directory layout"
+msgstr "מתאים את מבנה התיקיות"
+
+msgid "Resolving dependencies"
+msgstr "פותר תלויות"
+
+msgid "Converting maintainer scripts"
+msgstr "ממיר את סקריפטי המתחזק"
+
+msgid "Building the pacman package"
+msgstr "בונה את חבילת pacman"
+
+msgid "Warning:"
+msgstr "אזהרה:"
+
+msgid "Error:"
+msgstr "שגיאה:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "ממיר חבילת .deb לחבילת pacman ומתקין אותה."
+
+msgid "the .deb file"
+msgstr "קובץ ה-.deb"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "לא לשאול שאלות, אבל לפתוח את סקריפט ההתקנה לבדיקה"
+
+msgid "do not ask any question"
+msgstr "לא לשאול שום שאלה"
+
+msgid "only build the package, do not install it"
+msgstr "רק לבנות את החבילה, בלי להתקין אותה"
+
+msgid "keep the built package in DIR"
+msgstr "לשמור את החבילה שנבנתה ב-DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "לכתוב גם PKGBUILD לצד קובץ ה-.deb"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "לכתוב PKGBUILD בלבד, בלי לבנות"
+
+msgid "{question} [y/N] "
+msgstr "{question} [כ/ל] "
+
+msgid "yes"
+msgstr "כן"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod כבר לא צריך מסד נתונים מקומי; אין מה לעדכן."
+
+msgid "no .deb file given"
+msgstr "לא צוין קובץ .deb"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "האפשרויות ‎-s ו-‎-w מיושנות והן הוזנחו"
+
+msgid "Installed size: {size}"
+msgstr "גודל מותקן: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD נכתב אל {path}"
+
+msgid "cancelled"
+msgstr "בוטל"
+
+msgid "Package {file} built"
+msgstr "החבילה {file} נבנתה"
+
+msgid "Menu entries: {names}"
+msgstr "פריטי תפריט: {names}"
+
+msgid "Package saved to {path}"
+msgstr "החבילה נשמרה ב-{path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "חלק מהקבצים שייכים לחבילות מותקנות אחרות; יש להסיר אותם קודם:"
+
+msgid "Install script that will run as root:"
+msgstr "סקריפט ההתקנה שירוץ כ-root:"
+
+msgid "Install {name} now?"
+msgstr "להתקין את {name} עכשיו?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman לא הצליח להתקין את החבילה (קוד יציאה {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} הותקנה בהצלחה"
+
+msgid "Look for {names} in the applications menu."
+msgstr "חפשו את {names} בתפריט היישומים."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "חבילה זו נבנתה עבור {deb_arch}, אבל המחשב הזה הוא {host}; היא לא תרוץ כאן."
+
+msgid "Extracting {name}…"
+msgstr "מחלץ את {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "רשומות לא בטוחות או מיוחדות הוזנחו: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "קובץ כפול נשמר מתוך /usr‎: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "מחפש תלויות…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "{count} קבצים בינאריים שנבנו עבור מערכות או ארכיטקטורות אחרות הוזנחו."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "ספריות שלא נמצאו במאגרים: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "תלויות Debian ללא מקבילה כאן: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "קבצים שכבר שייכים לחבילות אחרות: {list}"
+
+msgid "Building the package…"
+msgstr "בונה את החבילה…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "הקובץ אינו חבילת Debian (כותרת ar חסרה)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "חבילת Debian קטועה או פגומה."
+
+msgid "Unsupported compression in member {name}."
+msgstr "דחיסה לא נתמכת ברכיב {name}."
+
+msgid "File not found: {path}"
+msgstr "הקובץ לא נמצא: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "הקובץ אינו חבילת Debian (debian-binary חסר)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "בחבילת Debian אין ארכיון control או data."
+
+msgid "The Debian package has no control file."
+msgstr "בחבילת Debian אין קובץ control."
+
+msgid "The control file has no Package or Version field."
+msgstr "בקובץ control אין שדה Package או Version."
+
 msgid "Install .deb package"
-msgstr "התקן חבילת .deb"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "ממיר קובץ, אנא המתן. זה עשוי לקחת כמה דקות..."
-msgid "Done!"
-msgstr "בוצע!"
+msgstr "התקנת חבילת .deb"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "ממיר חבילות Debian לחבילות pacman מקוריות ומתקין אותן."
+
+msgid "Extracting files"
+msgstr "מחלץ קבצים"
+
+msgid "Adapting folders to this system"
+msgstr "מתאים תיקיות למערכת הזו"
+
+msgid "Finding dependencies"
+msgstr "מחפש תלויות"
+
+msgid "Preparing installation scripts"
+msgstr "מכין סקריפטי התקנה"
+
+msgid "Building the package"
+msgstr "בונה את החבילה"
+
+msgid "Waiting for authorization"
+msgstr "ממתין לאישור"
+
+msgid "Installing"
+msgstr "מתקין"
+
+msgid "About"
+msgstr "אודות"
+
+msgid "Main menu"
+msgstr "תפריט ראשי"
+
+msgid "Choose a .deb file…"
+msgstr "בחירת קובץ .deb…"
+
+msgid "Install a .deb package"
+msgstr "התקנת חבילת .deb"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "פתחו חבילת Debian או גררו אותה לכאן. היא תומר לחבילה מקורית של המערכת הזו ותותקן."
+
+msgid "Details"
+msgstr "פרטים"
+
+msgid "Cancel"
+msgstr "ביטול"
+
+msgid "Prefer native packages when available"
+msgstr "להעדיף חבילות מקוריות כשהן זמינות"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "תוכנות ממאגרי המערכת, Flatpak או AppImage בדרך כלל עובדות טוב יותר. חבילות .deb שהומרו עשויות שלא לעבוד בצורה מושלמת."
+
+msgid "“{name}” is available in the repositories"
+msgstr "“{name}” זמינה במאגרים"
+
+msgid "Installing the native package is recommended."
+msgstr "מומלץ להתקין את החבילה המקורית."
+
+msgid "Open"
+msgstr "פתיחה"
+
+msgid "Package"
+msgstr "חבילה"
+
+msgid "Version"
+msgstr "גרסה"
+
+msgid "Architecture"
+msgstr "ארכיטקטורה"
+
+msgid "Installed size"
+msgstr "גודל מותקן"
+
+msgid "Maintainer"
+msgstr "מתחזק"
+
+msgid "Website"
+msgstr "אתר"
+
+msgid "Description"
+msgstr "תיאור"
+
+msgid "Review before installing"
+msgstr "בדיקה לפני ההתקנה"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "מציג את התלויות ואת הסקריפטים שירוצו כמנהל"
+
+msgid "Install"
+msgstr "התקנה"
+
+msgid "Ready to install"
+msgstr "מוכן להתקנה"
+
+msgid "Check what will be installed."
+msgstr "בדקו מה עומד להיות מותקן."
+
+msgid "Package name on this system"
+msgstr "שם החבילה במערכת הזו"
+
+msgid "Package size"
+msgstr "גודל החבילה"
+
+msgid "Applications menu"
+msgstr "תפריט היישומים"
+
+msgid "No menu entry"
+msgstr "אין פריט בתפריט"
+
+msgid "Warnings"
+msgstr "אזהרות"
+
+msgid "Notes"
+msgstr "הערות"
+
+msgid "Dependencies"
+msgstr "תלויות"
+
+msgid "Required"
+msgstr "נדרשות"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} חבילה"
+msgstr[1] "{n} חבילות"
+
+msgid "will be downloaded"
+msgstr "יורדו"
+
+msgid "Optional"
+msgstr "אופציונליות"
+
+msgid "Scripts"
+msgstr "סקריפטים"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "הפקודות האלה מחבילת Debian רצות כמנהל במהלך ההתקנה."
+
+msgid "Open {name}"
+msgstr "פתיחת {name}"
+
+msgid "Copy details"
+msgstr "העתקת הפרטים"
+
+msgid "Close"
+msgstr "סגירה"
+
+msgid "This file cannot be installed"
+msgstr "לא ניתן להתקין את הקובץ הזה"
+
+msgid "Choose a .deb file"
+msgstr "בחירת קובץ .deb"
+
+msgid "Debian packages"
+msgstr "חבילות Debian"
+
+msgid "Type your password in the window that will appear."
+msgstr "הקלידו את הסיסמה בחלון שיופיע."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "תלויות חסרות מורדות מהמאגרים."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "דוחס את הקבצים, זה עשוי לקחת דקה."
+
+msgid "The package could not be converted"
+msgstr "לא ניתן היה להמיר את החבילה"
+
+msgid "Cancelled"
+msgstr "בוטל"
+
+msgid "{name} is installed"
+msgstr "{name} מותקנת"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "החבילה {name} הותקנה. אין לה פריט בתפריט היישומים."
+
+msgid "Installation complete"
+msgstr "ההתקנה הושלמה"
+
+msgid "Authorization was not granted"
+msgstr "ההרשאה לא ניתנה"
+
+msgid "The installation failed"
+msgstr "ההתקנה נכשלה"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman החזיר שגיאה (קוד {code}). פתחו את הפרטים כדי לראות מה קרה."
+
+msgid "The application could not be started"
+msgstr "לא ניתן היה להפעיל את היישום"
+
+msgid "Copied"
+msgstr "הועתק"
+
+msgid "Please wait until the installation finishes"
+msgstr "אנא המתינו עד לסיום ההתקנה"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg לא יכול לרוץ כ-root; הריצו את debtap-mod כמשתמש רגיל."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg נכשל עם קוד יציאה {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg הסתיים אך לא יצר חבילה"
+
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr "“{typed}” רק מרענן את רשימת החבילות. כאן המקבילה הבטוחה בודקת אם יש עדכונים בלי להתקין דבר; כדי להתקין אותם יש להשתמש ב-“{upgrade}”."
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr "אסור להריץ את “pacman -Sy” לבדו: רענון הרשימה בלי שדרוג המערכת עלול לשבור אותה."
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr "Arch אינה משדרגת חבילות בודדות; כל המערכת משודרגת יחד."
+
+msgid "Tell which package to install, for example: {example}"
+msgstr "יש לציין איזו חבילה להתקין, לדוגמה: {example}"
+
+msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
+msgstr "חבילות .rpm נוצרו עבור Fedora/openSUSE ולא ניתן להתקין אותן כאן."
+
+msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
+msgstr "חפשו את התוכנה במאגרים (pamac search), ב-Flathub או כ-AppImage."
+
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr "pamac מוצא תוכנות גם ב-AUR וב-Flatpak: {cmd}"
+
+msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgstr "חבילות .deb מומרות לחבילות pacman מקוריות על ידי debtap-mod."
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr "יש להריץ פקודה זו כמשתמש רגיל (בלי sudo)."
+
+msgid "Tell which package to remove, for example: {example}"
+msgstr "יש לציין איזו חבילה להסיר, לדוגמה: {example}"
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr "-n מוחק גם את קובצי התצורה שהחבילה התקינה ב-/etc."
+
+msgid "There are no orphan packages to remove."
+msgstr "אין חבילות יתומות להסרה."
+
+msgid "Tell what to search for, for example: {example}"
+msgstr "יש לציין מה לחפש, לדוגמה: {example}"
+
+msgid "Tell which package, for example: {example}"
+msgstr "יש לציין איזו חבילה, לדוגמה: {example}"
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr "החבילה אינה מותקנת; הרשימה מגיעה ממסד הנתונים של קובצי המאגר."
+
+msgid "Tell which file, for example: {example}"
+msgstr "יש לציין איזה קובץ, לדוגמה: {example}"
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr "הקובץ אינו קיים במערכת זו; מחפש במסד הנתונים של קובצי המאגר."
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr "במערכות מבוססות Arch אין PPAs או מאגרים נוספים להוסיף. תוכנות מהקהילה מגיעות מ-AUR."
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr "חפשו באמצעות “pamac search --aur <name>” והתקינו באמצעות “pamac build <name>”."
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr "כדי למנוע שדרוג של חבילה, יש להוסיף אותה ל-IgnorePkg בקובץ /etc/pacman.conf."
+
+msgid "“{command}” has no direct equivalent here."
+msgstr "ל-“{command}” אין מקבילה ישירה כאן."
+
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr "הריצו “{tool} help” כדי לראות את הפקודות שהמערכת הזו מבינה."
+
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr "יש לציין איזה קובץ .deb להתקין, לדוגמה: {example}"
+
+msgid "This system uses pacman, not {tool}."
+msgstr "מערכת זו משתמשת ב-pacman, לא ב-{tool}."
+
+msgid "You typed:"
+msgstr "הקלדת:"
+
+msgid "Equivalent:"
+msgstr "מקבילה:"
+
+msgid "With pamac:"
+msgstr "עם pamac:"
+
+msgid "Running:"
+msgstr "מריץ:"
+
+msgid "Update everything"
+msgstr "עדכון הכול"
+
+msgid "Check for updates"
+msgstr "בדיקת עדכונים"
+
+msgid "Install a program"
+msgstr "התקנת תוכנה"
+
+msgid "Install a downloaded file"
+msgstr "התקנת קובץ שהורד"
+
+msgid "Install a .deb file here"
+msgstr "התקנת קובץ .deb כאן"
+
+msgid "Reinstall"
+msgstr "התקנה מחדש"
+
+msgid "Remove a program"
+msgstr "הסרת תוכנה"
+
+msgid "Remove + dependencies"
+msgstr "הסרה + תלויות"
+
+msgid "Remove + configuration"
+msgstr "הסרה + תצורה"
+
+msgid "Remove orphans (unused)"
+msgstr "הסרת יתומות (שאינן בשימוש)"
+
+msgid "Search to install"
+msgstr "חיפוש להתקנה"
+
+msgid "Details (available)"
+msgstr "פרטים (זמין)"
+
+msgid "Details (installed)"
+msgstr "פרטים (מותקן)"
+
+msgid "List everything available"
+msgstr "רשימת כל הזמינות"
+
+msgid "List installed"
+msgstr "רשימת המותקנות"
+
+msgid "Search installed"
+msgstr "חיפוש בין המותקנות"
+
+msgid "Files of a package"
+msgstr "קובצי חבילה"
+
+msgid "Which package owns a file?"
+msgstr "איזו חבילה מחזיקה בקובץ?"
+
+msgid "What can be upgraded"
+msgstr "מה ניתן לשדרג"
+
+msgid "Installed by you"
+msgstr "הותקנו על ידיך"
+
+msgid "Dependencies of a package"
+msgstr "תלויות של חבילה"
+
+msgid "Who depends on a package"
+msgstr "מי תלוי בחבילה"
+
+msgid "Clean the download cache"
+msgstr "ניקוי מטמון ההורדות"
+
+msgid "Add a repository / PPA"
+msgstr "הוספת מאגר / PPA"
+
+msgid "(AUR)"
+msgstr "(AUR)"
+
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr "מתרגם פקודות: {family} (Debian, Ubuntu, Mint, Fedora) ל-pacman ול-pamac (Arch, BigLinux, Manjaro)"
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr "שניהם עושים אותה עבודה: התקנה, עדכון והסרה של תוכנות. רק הפקודות משתנות."
+
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr "אפשר להמשיך להקליד פקודות {tool}: הן מתורגמות ורצות באמצעות pamac או pacman."
+
+msgid "No command matches “{topic}”."
+msgstr "אין פקודה שתואמת את “{topic}”."
+
+msgid "Run “{tool} help” to see every command."
+msgstr "הריצו “{tool} help” כדי לראות את כל הפקודות."
+
+msgid "What you want to do"
+msgstr "מה ברצונך לעשות"
+
+msgid "Differences that catch people"
+msgstr "הבדלים שמפתיעים"
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr "apt update רק מרענן את הרשימה; apt upgrade מתקין."
+
+msgid "In pacman, -Syu does both together."
+msgstr "ב-pacman, -Syu עושה את שניהם יחד."
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr "הימנעו מהרצת “pacman -Sy” לבדו: זה עלול לשבור את המערכת."
+
+msgid "Package types"
+msgstr "סוגי חבילות"
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr "apt משתמש בקובצי .deb, dnf משתמש ב-.rpm, ו-pacman משתמש ב-.pkg.tar.zst."
+
+msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgstr "קובצי .deb מומרים ומותקנים באמצעות debtap-mod (או בלחיצה כפולה)."
+
+msgid "Programs from the community"
+msgstr "תוכנות מהקהילה"
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr "AUR ממלא את תפקידם של PPAs ושל COPR."
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr "השתמשו ב-“pamac build <name>”; לעולם אל תריצו עוזרי AUR עם sudo."
+
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr "טיפ: “{tool} help install” מציג רק את השורות של פקודה אחת."
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr "עזר מהיר: נדרש “sudo” כדי להתקין או להסיר; חיפוש ורישום אינם דורשים אותו."
+
+msgid "Command not found: {cmd}"
+msgstr "הפקודה לא נמצאה: {cmd}"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "סקריפטי Debian רק רושמים מאגר APT ופרופיל AppArmor עבור Ubuntu; הם אינם נחוצים כאן."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "הסקריפט {script} מגדיר מאגר APT; לחלק הזה אין השפעה על המערכת הזו."
