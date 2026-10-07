@@ -252,9 +252,19 @@ ruff check usr tests
 
 ### Translations
 
-User-facing strings use gettext (domain `debtap-mod`). The CI workflow
-regenerates `locale/debtap-mod.pot` and updates the catalogs for every
-language on each push.
+User-facing strings use gettext (domain `debtap-mod`). Catalogs for 28
+languages live in `locale/`, and the compiled `.mo` files in `usr/share/locale/`.
+After changing strings, regenerate the template and compile the catalogs:
+
+```sh
+xgettext --package-name=debtap-mod --no-location -L Python -k_ -kngettext:1,2 \
+    -o locale/debtap-mod.pot $(find usr/share/debtap-mod -name '*.py')
+for po in locale/*.po; do
+    lang=$(basename "$po" .po)
+    msgmerge -U "$po" locale/debtap-mod.pot
+    msgfmt -o "usr/share/locale/$lang/LC_MESSAGES/debtap-mod.mo" "$po"
+done
+```
 
 ## Credits
 
