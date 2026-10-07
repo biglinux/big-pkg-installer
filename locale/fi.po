@@ -1,65 +1,374 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* Asennuksen aikana ilmenevät virheilmoitukset eivät yleensä estä ohjelmaa toimimasta oikein."
-msgid "Read before proceeding with the installation:"
-msgstr "Lue ennen asennuksen aloittamista:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"Suosi natiivi paketteja, jotka on rakennettu BigLinuxille, Manjarolle, Archille tai muille "
-"Linux-järjestelmille, jotka ovat yhteensopivia <span color='#CC2222'>.pkg.tar</span> -muodon "
-"kanssa.\n"
-"\n"
-"Toinen vaihtoehto on käyttää ohjelmia, jotka on tehty mille tahansa Linux-järjestelmälle, yleensä "
-"<span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> tai <span "
-"color='#CC2222'>.flatpak</span> -muodossa.\n"
-"\n"
-"Jos ohjelmaa ei ole saatavilla yllä olevissa muodoissa, <span color='#CC2222'>.deb</span> -tiedosto "
-"voidaan muuntaa <span color='#CC2222'>.pkg.tar</span> -muotoon ja asentaa tälle järjestelmälle. "
-"Asennus ei kuitenkaan välttämättä toimi oikein."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Tämä järjestelmä käyttää <span color='#CC2222'>.pkg.tar</span> pakettimuotoa, mutta tiedosto "
-"on <span color='#CC2222'>.deb</span> muodossa.\n"
-"\n"
-"Haluatko jatkaa asennusta?</big>"
-msgid "Install & Review Config Files"
-msgstr "Asenna ja tarkista asetustiedostot"
-msgid "Install"
-msgstr "Asenna"
-msgid "Close"
-msgstr "Sulje"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Extracting package data"
+msgstr "Puretaan paketin tietoja"
+
+msgid "Adapting the directory layout"
+msgstr "Mukautetaan hakemistorakennetta"
+
+msgid "Resolving dependencies"
+msgstr "Ratkaistaan riippuvuuksia"
+
+msgid "Converting maintainer scripts"
+msgstr "Muunnetaan ylläpitäjän skriptejä"
+
+msgid "Building the pacman package"
+msgstr "Rakennetaan pacman-pakettia"
+
+msgid "Warning:"
+msgstr "Varoitus:"
+
+msgid "Error:"
+msgstr "Virhe:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Muuntaa .deb-paketin pacman-paketiksi ja asentaa sen."
+
+msgid "the .deb file"
+msgstr ".deb-tiedosto"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "avaa asennusskripti tarkistettavaksi, mutta älä kysy mitään"
+
+msgid "do not ask any question"
+msgstr "älä kysy mitään"
+
+msgid "only build the package, do not install it"
+msgstr "vain rakenna paketti, älä asenna sitä"
+
+msgid "keep the built package in DIR"
+msgstr "säilytä rakennettu paketti hakemistossa DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "kirjoita myös PKGBUILD .deb-tiedoston viereen"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "kirjoita vain PKGBUILD, älä rakenna"
+
+msgid "{question} [y/N] "
+msgstr "{question} [k/E] "
+
+msgid "yes"
+msgstr "kyllä"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod ei enää tarvitse paikallista tietokantaa; ei päivitettävää."
+
+msgid "no .deb file given"
+msgstr "ei annettua .deb-tiedostoa"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "valitsimet -s ja -w ovat vanhentuneita ja ne ohitettiin"
+
+msgid "Installed size: {size}"
+msgstr "Asennuskoko: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD kirjoitettu kohteeseen {path}"
+
+msgid "cancelled"
+msgstr "peruttu"
+
+msgid "Package {file} built"
+msgstr "Paketti {file} rakennettu"
+
+msgid "Menu entries: {names}"
+msgstr "Valikkokohteet: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Paketti tallennettu kohteeseen {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "jotkin tiedostot kuuluvat muille asennetuille paketeille; poista ne ensin:"
+
+msgid "Install script that will run as root:"
+msgstr "Asennusskripti, joka suoritetaan root-käyttäjänä:"
+
+msgid "Install {name} now?"
+msgstr "Asennetaanko {name} nyt?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman ei voinut asentaa pakettia (poistumiskoodi {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} asennettiin onnistuneesti"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Etsi {names} sovellusvalikosta."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Tämä paketti on rakennettu arkkitehtuurille {deb_arch}, mutta tämä tietokone on {host}; se ei toimi täällä."
+
+msgid "Extracting {name}…"
+msgstr "Puretaan {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Ohitettiin vaaralliset tai erikoiset kohteet: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Kaksoiskappale säilytetty hakemistosta /usr: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Etsitään riippuvuuksia…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Ohitettiin {count} muille järjestelmille tai arkkitehtuureille rakennettua binääritiedostoa."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Kirjastoja ei löytynyt ohjelmistolähteistä: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Debian-riippuvuudet, joille ei ole vastinetta täällä: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Tiedostot, jotka kuuluvat jo muille paketeille: {list}"
+
+msgid "Building the package…"
+msgstr "Rakennetaan pakettia…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "Tiedosto ei ole Debian-paketti (ar-otsake puuttuu)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Debian-paketti on katkennut tai vioittunut."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Pakkausta ei tueta jäsenelle {name}."
+
+msgid "File not found: {path}"
+msgstr "Tiedostoa ei löytynyt: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "Tiedosto ei ole Debian-paketti (debian-binary puuttuu)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "Debian-paketissa ei ole control- tai data-arkistoa."
+
+msgid "The Debian package has no control file."
+msgstr "Debian-paketissa ei ole control-tiedostoa."
+
+msgid "The control file has no Package or Version field."
+msgstr "Control-tiedostossa ei ole kenttää Package tai Version."
+
 msgid "Install .deb package"
 msgstr "Asenna .deb-paketti"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Tiedoston muuntaminen, ole hyvä ja odota. Tämä saattaa kestää muutaman minuutin..."
-msgid "Done!"
-msgstr "Valmis!"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Muuntaa Debian-paketit natiiveiksi pacman-paketeiksi ja asentaa ne."
+
+msgid "Extracting files"
+msgstr "Puretaan tiedostoja"
+
+msgid "Adapting folders to this system"
+msgstr "Mukautetaan kansioita tähän järjestelmään"
+
+msgid "Finding dependencies"
+msgstr "Etsitään riippuvuuksia"
+
+msgid "Preparing installation scripts"
+msgstr "Valmistellaan asennusskriptejä"
+
+msgid "Building the package"
+msgstr "Rakennetaan pakettia"
+
+msgid "Waiting for authorization"
+msgstr "Odotetaan valtuutusta"
+
+msgid "Installing"
+msgstr "Asennetaan"
+
+msgid "About"
+msgstr "Tietoja"
+
+msgid "Main menu"
+msgstr "Päävalikko"
+
+msgid "Choose a .deb file…"
+msgstr "Valitse .deb-tiedosto…"
+
+msgid "Install a .deb package"
+msgstr "Asenna .deb-paketti"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Avaa Debian-paketti tai pudota se tähän. Se muunnetaan tämän järjestelmän natiiviksi paketiksi ja asennetaan."
+
+msgid "Details"
+msgstr "Tiedot"
+
+msgid "Cancel"
+msgstr "Peruuta"
+
+msgid "Prefer native packages when available"
+msgstr "Suosi natiivipaketteja, kun niitä on saatavilla"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Järjestelmän ohjelmistolähteiden, Flatpakin tai AppImagen ohjelmat toimivat yleensä paremmin. Muunnetut .deb-paketit eivät välttämättä toimi täydellisesti."
+
+msgid "“{name}” is available in the repositories"
+msgstr "”{name}” on saatavilla ohjelmistolähteistä"
+
+msgid "Installing the native package is recommended."
+msgstr "Natiivipaketin asentamista suositellaan."
+
+msgid "Open"
+msgstr "Avaa"
+
+msgid "Package"
+msgstr "Paketti"
+
+msgid "Version"
+msgstr "Versio"
+
+msgid "Architecture"
+msgstr "Arkkitehtuuri"
+
+msgid "Installed size"
+msgstr "Asennuskoko"
+
+msgid "Maintainer"
+msgstr "Ylläpitäjä"
+
+msgid "Website"
+msgstr "Verkkosivusto"
+
+msgid "Description"
+msgstr "Kuvaus"
+
+msgid "Review before installing"
+msgstr "Tarkista ennen asennusta"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Näyttää riippuvuudet ja skriptit, jotka suoritetaan järjestelmänvalvojana"
+
+msgid "Install"
+msgstr "Asenna"
+
+msgid "Ready to install"
+msgstr "Valmis asennettavaksi"
+
+msgid "Check what will be installed."
+msgstr "Tarkista, mitä asennetaan."
+
+msgid "Package name on this system"
+msgstr "Paketin nimi tässä järjestelmässä"
+
+msgid "Package size"
+msgstr "Paketin koko"
+
+msgid "Applications menu"
+msgstr "Sovellusvalikko"
+
+msgid "No menu entry"
+msgstr "Ei valikkokohdetta"
+
+msgid "Warnings"
+msgstr "Varoitukset"
+
+msgid "Notes"
+msgstr "Huomautukset"
+
+msgid "Dependencies"
+msgstr "Riippuvuudet"
+
+msgid "Required"
+msgstr "Pakolliset"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} paketti"
+msgstr[1] "{n} pakettia"
+
+msgid "will be downloaded"
+msgstr "ladataan"
+
+msgid "Optional"
+msgstr "Valinnaiset"
+
+msgid "Scripts"
+msgstr "Skriptit"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Nämä Debian-paketin komennot suoritetaan järjestelmänvalvojana asennuksen aikana."
+
+msgid "Open {name}"
+msgstr "Avaa {name}"
+
+msgid "Copy details"
+msgstr "Kopioi tiedot"
+
+msgid "Close"
+msgstr "Sulje"
+
+msgid "This file cannot be installed"
+msgstr "Tätä tiedostoa ei voi asentaa"
+
+msgid "Choose a .deb file"
+msgstr "Valitse .deb-tiedosto"
+
+msgid "Debian packages"
+msgstr "Debian-paketit"
+
+msgid "Type your password in the window that will appear."
+msgstr "Kirjoita salasanasi näkyviin tulevaan ikkunaan."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Puuttuvat riippuvuudet ladataan ohjelmistolähteistä."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Pakataan tiedostoja, tämä voi kestää hetken."
+
+msgid "The package could not be converted"
+msgstr "Pakettia ei voitu muuntaa"
+
+msgid "Cancelled"
+msgstr "Peruttu"
+
+msgid "{name} is installed"
+msgstr "{name} on asennettu"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "Paketti {name} asennettiin. Sillä ei ole kohdetta sovellusvalikossa."
+
+msgid "Installation complete"
+msgstr "Asennus valmis"
+
+msgid "Authorization was not granted"
+msgstr "Valtuutusta ei myönnetty"
+
+msgid "The installation failed"
+msgstr "Asennus epäonnistui"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman palautti virheen (koodi {code}). Avaa tiedot nähdäksesi, mitä tapahtui."
+
+msgid "The application could not be started"
+msgstr "Sovellusta ei voitu käynnistää"
+
+msgid "Copied"
+msgstr "Kopioitu"
+
+msgid "Please wait until the installation finishes"
+msgstr "Odota, kunnes asennus on valmis"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg ei voi toimia root-käyttäjänä; suorita debtap-mod tavallisena käyttäjänä."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg epäonnistui poistumiskoodilla {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg valmistui, mutta ei tuottanut pakettia"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Debian-skriptit vain rekisteröivät APT-ohjelmistolähteen ja AppArmor-profiilin Ubuntua varten; niitä ei tarvita täällä."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "Skripti {script} määrittää APT-ohjelmistolähteen; tällä osalla ei ole vaikutusta tähän järjestelmään."

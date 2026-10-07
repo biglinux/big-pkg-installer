@@ -1,66 +1,374 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr ""
-"* Gli avvisi di errore durante l'installazione generalmente non impediscono al programma di "
-"funzionare correttamente."
-msgid "Read before proceeding with the installation:"
-msgstr "Leggi prima di procedere con l'installazione:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"Preferisci pacchetti nativi, costruiti per BigLinux, Manjaro, Arch o altri sistemi Linux "
-"compatibili con il formato <span color='#CC2222'>.pkg.tar</span>.\n"
-"\n"
-"Un'altra opzione è utilizzare programmi realizzati per qualsiasi sistema Linux, solitamente in "
-"formato <span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> o <span "
-"color='#CC2222'>.flatpak</span>.\n"
-"\n"
-"Se il programma non è disponibile nei formati sopra, il file <span color='#CC2222'>.deb</span> può "
-"essere convertito in <span color='#CC2222'>.pkg.tar</span> e installato su questo sistema. "
-"Tuttavia, l'installazione potrebbe non funzionare correttamente."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Questo sistema utilizza il formato pacchetto <span color='#CC2222'>.pkg.tar</span>, ma il file "
-"è in formato <span color='#CC2222'>.deb</span>.\n"
-"\n"
-"Desideri procedere con l'installazione?</big>"
-msgid "Install & Review Config Files"
-msgstr "Installa e rivedi i file di configurazione"
-msgid "Install"
-msgstr "Installa"
-msgid "Close"
-msgstr "Chiudi"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Extracting package data"
+msgstr "Estrazione dei dati del pacchetto"
+
+msgid "Adapting the directory layout"
+msgstr "Adattamento della struttura delle cartelle"
+
+msgid "Resolving dependencies"
+msgstr "Risoluzione delle dipendenze"
+
+msgid "Converting maintainer scripts"
+msgstr "Conversione degli script del manutentore"
+
+msgid "Building the pacman package"
+msgstr "Creazione del pacchetto pacman"
+
+msgid "Warning:"
+msgstr "Avviso:"
+
+msgid "Error:"
+msgstr "Errore:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Converte un pacchetto .deb in un pacchetto pacman e lo installa."
+
+msgid "the .deb file"
+msgstr "il file .deb"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "non fare domande, ma apri lo script di installazione per la revisione"
+
+msgid "do not ask any question"
+msgstr "non fare alcuna domanda"
+
+msgid "only build the package, do not install it"
+msgstr "crea solo il pacchetto, senza installarlo"
+
+msgid "keep the built package in DIR"
+msgstr "conserva il pacchetto creato in DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "scrivi anche un PKGBUILD accanto al .deb"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "scrivi solo un PKGBUILD, senza creare il pacchetto"
+
+msgid "{question} [y/N] "
+msgstr "{question} [s/N] "
+
+msgid "yes"
+msgstr "sì"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod non ha più bisogno di un database locale; niente da aggiornare."
+
+msgid "no .deb file given"
+msgstr "nessun file .deb indicato"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "le opzioni -s e -w sono obsolete e sono state ignorate"
+
+msgid "Installed size: {size}"
+msgstr "Dimensione installata: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD scritto in {path}"
+
+msgid "cancelled"
+msgstr "annullato"
+
+msgid "Package {file} built"
+msgstr "Pacchetto {file} creato"
+
+msgid "Menu entries: {names}"
+msgstr "Voci di menu: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Pacchetto salvato in {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "alcuni file appartengono ad altri pacchetti installati; rimuovili prima:"
+
+msgid "Install script that will run as root:"
+msgstr "Script di installazione che verrà eseguito come root:"
+
+msgid "Install {name} now?"
+msgstr "Installare {name} adesso?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman non è riuscito a installare il pacchetto (codice di uscita {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} installato correttamente"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Cerca {names} nel menu delle applicazioni."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Questo pacchetto è stato creato per {deb_arch} ma questo computer è {host}; qui non funzionerà."
+
+msgid "Extracting {name}…"
+msgstr "Estrazione di {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Voci non sicure o speciali ignorate: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "File duplicato mantenuto da /usr: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Ricerca delle dipendenze…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Ignorati {count} binari creati per altri sistemi o architetture."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Librerie non trovate nei repository: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Dipendenze Debian senza equivalente qui: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "File già appartenenti ad altri pacchetti: {list}"
+
+msgid "Building the package…"
+msgstr "Creazione del pacchetto…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "Il file non è un pacchetto Debian (intestazione ar mancante)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Il pacchetto Debian è troncato o danneggiato."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Compressione non supportata nel membro {name}."
+
+msgid "File not found: {path}"
+msgstr "File non trovato: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "Il file non è un pacchetto Debian (debian-binary mancante)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "Il pacchetto Debian non contiene l'archivio control o data."
+
+msgid "The Debian package has no control file."
+msgstr "Il pacchetto Debian non contiene il file control."
+
+msgid "The control file has no Package or Version field."
+msgstr "Il file control non ha il campo Package o Version."
+
 msgid "Install .deb package"
 msgstr "Installa pacchetto .deb"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Conversione del file, attendere prego. Questo potrebbe richiedere alcuni minuti..."
-msgid "Done!"
-msgstr "Fatto!"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Converte i pacchetti Debian in pacchetti pacman nativi e li installa."
+
+msgid "Extracting files"
+msgstr "Estrazione dei file"
+
+msgid "Adapting folders to this system"
+msgstr "Adattamento delle cartelle a questo sistema"
+
+msgid "Finding dependencies"
+msgstr "Ricerca delle dipendenze"
+
+msgid "Preparing installation scripts"
+msgstr "Preparazione degli script di installazione"
+
+msgid "Building the package"
+msgstr "Creazione del pacchetto"
+
+msgid "Waiting for authorization"
+msgstr "In attesa di autorizzazione"
+
+msgid "Installing"
+msgstr "Installazione"
+
+msgid "About"
+msgstr "Informazioni"
+
+msgid "Main menu"
+msgstr "Menu principale"
+
+msgid "Choose a .deb file…"
+msgstr "Scegli un file .deb…"
+
+msgid "Install a .deb package"
+msgstr "Installa un pacchetto .deb"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Apri un pacchetto Debian o trascinalo qui. Verrà convertito in un pacchetto nativo per questo sistema e installato."
+
+msgid "Details"
+msgstr "Dettagli"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Prefer native packages when available"
+msgstr "Preferisci i pacchetti nativi quando disponibili"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "I programmi dai repository di sistema, Flatpak o AppImage di solito funzionano meglio. I pacchetti .deb convertiti potrebbero non funzionare perfettamente."
+
+msgid "“{name}” is available in the repositories"
+msgstr "«{name}» è disponibile nei repository"
+
+msgid "Installing the native package is recommended."
+msgstr "Si consiglia di installare il pacchetto nativo."
+
+msgid "Open"
+msgstr "Apri"
+
+msgid "Package"
+msgstr "Pacchetto"
+
+msgid "Version"
+msgstr "Versione"
+
+msgid "Architecture"
+msgstr "Architettura"
+
+msgid "Installed size"
+msgstr "Dimensione installata"
+
+msgid "Maintainer"
+msgstr "Manutentore"
+
+msgid "Website"
+msgstr "Sito web"
+
+msgid "Description"
+msgstr "Descrizione"
+
+msgid "Review before installing"
+msgstr "Controlla prima di installare"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Mostra le dipendenze e gli script che verranno eseguiti come amministratore"
+
+msgid "Install"
+msgstr "Installa"
+
+msgid "Ready to install"
+msgstr "Pronto per l'installazione"
+
+msgid "Check what will be installed."
+msgstr "Controlla cosa verrà installato."
+
+msgid "Package name on this system"
+msgstr "Nome del pacchetto su questo sistema"
+
+msgid "Package size"
+msgstr "Dimensione del pacchetto"
+
+msgid "Applications menu"
+msgstr "Menu delle applicazioni"
+
+msgid "No menu entry"
+msgstr "Nessuna voce di menu"
+
+msgid "Warnings"
+msgstr "Avvisi"
+
+msgid "Notes"
+msgstr "Note"
+
+msgid "Dependencies"
+msgstr "Dipendenze"
+
+msgid "Required"
+msgstr "Obbligatorie"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} pacchetto"
+msgstr[1] "{n} pacchetti"
+
+msgid "will be downloaded"
+msgstr "verrà scaricato"
+
+msgid "Optional"
+msgstr "Opzionali"
+
+msgid "Scripts"
+msgstr "Script"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Questi comandi del pacchetto Debian vengono eseguiti come amministratore durante l'installazione."
+
+msgid "Open {name}"
+msgstr "Apri {name}"
+
+msgid "Copy details"
+msgstr "Copia dettagli"
+
+msgid "Close"
+msgstr "Chiudi"
+
+msgid "This file cannot be installed"
+msgstr "Questo file non può essere installato"
+
+msgid "Choose a .deb file"
+msgstr "Scegli un file .deb"
+
+msgid "Debian packages"
+msgstr "Pacchetti Debian"
+
+msgid "Type your password in the window that will appear."
+msgstr "Digita la tua password nella finestra che apparirà."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Le dipendenze mancanti vengono scaricate dai repository."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Compressione dei file in corso, potrebbe richiedere un minuto."
+
+msgid "The package could not be converted"
+msgstr "Impossibile convertire il pacchetto"
+
+msgid "Cancelled"
+msgstr "Annullato"
+
+msgid "{name} is installed"
+msgstr "{name} è installato"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "Il pacchetto {name} è stato installato. Non ha una voce nel menu delle applicazioni."
+
+msgid "Installation complete"
+msgstr "Installazione completata"
+
+msgid "Authorization was not granted"
+msgstr "Autorizzazione non concessa"
+
+msgid "The installation failed"
+msgstr "Installazione non riuscita"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman ha restituito un errore (codice {code}). Apri i dettagli per vedere cosa è successo."
+
+msgid "The application could not be started"
+msgstr "Impossibile avviare l'applicazione"
+
+msgid "Copied"
+msgstr "Copiato"
+
+msgid "Please wait until the installation finishes"
+msgstr "Attendi il termine dell'installazione"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg non può essere eseguito come root; esegui debtap-mod come utente normale."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg non è riuscito, codice di uscita {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg è terminato ma non ha prodotto alcun pacchetto"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Gli script Debian si limitano a registrare un repository APT e un profilo AppArmor per Ubuntu; qui non servono."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "Lo script {script} configura un repository APT; quella parte non ha effetto su questo sistema."

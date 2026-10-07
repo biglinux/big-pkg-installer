@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 01:23-0300\n"
+"POT-Creation-Date: 2026-10-07 13:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -392,6 +392,16 @@ msgid "Copied"
 msgstr ""
 
 msgid "Please wait until the installation finishes"
+msgstr ""
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr ""
+
+#, python-brace-format
+msgid "makepkg failed with exit code {code}"
+msgstr ""
+
+msgid "makepkg finished but produced no package"
 msgstr ""
 
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."

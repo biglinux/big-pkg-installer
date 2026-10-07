@@ -1,54 +1,374 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* Villur við uppsetningu hindra almennt ekki forritið í að virka rétt."
-msgid "Read before proceeding with the installation:"
-msgstr "Lestu áður en haldið er áfram með uppsetninguna:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr "Fyrirgefðu, ég get ekki aðstoðað við það."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Þetta kerfi notar <span color='#CC2222'>.pkg.tar</span> pakkafyrirkomulag, en skráin er í "
-"<span color='#CC2222'>.deb</span> fyrirkomulagi.\n"
-"\n"
-"Viltu halda áfram með uppsetninguna?</big>"
-msgid "Install & Review Config Files"
-msgstr "Setja upp og skoða stillingarskrár"
+"Plural-Forms: nplurals=2; plural=(n%10!=1 || n%100==11);\n"
+
+msgid "Extracting package data"
+msgstr "Dreg út gögn pakkans"
+
+msgid "Adapting the directory layout"
+msgstr "Aðlaga möppuskipan"
+
+msgid "Resolving dependencies"
+msgstr "Leysi úr kröfum"
+
+msgid "Converting maintainer scripts"
+msgstr "Breyti viðhaldsskriftum"
+
+msgid "Building the pacman package"
+msgstr "Smíða pacman-pakka"
+
+msgid "Warning:"
+msgstr "Aðvörun:"
+
+msgid "Error:"
+msgstr "Villa:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Breyta .deb-pakka í pacman-pakka og setja hann upp."
+
+msgid "the .deb file"
+msgstr ".deb-skráin"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "ekki spyrja spurninga, en opna uppsetningarskriftuna til yfirferðar"
+
+msgid "do not ask any question"
+msgstr "ekki spyrja neinna spurninga"
+
+msgid "only build the package, do not install it"
+msgstr "aðeins smíða pakkann, ekki setja hann upp"
+
+msgid "keep the built package in DIR"
+msgstr "geyma smíðaða pakkann í DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "skrifa einnig PKGBUILD við hlið .deb-skrárinnar"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "aðeins skrifa PKGBUILD, ekki smíða"
+
+msgid "{question} [y/N] "
+msgstr "{question} [j/N] "
+
+msgid "yes"
+msgstr "já"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod þarf ekki lengur staðbundinn gagnagrunn; ekkert til að uppfæra."
+
+msgid "no .deb file given"
+msgstr "engin .deb-skrá gefin"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "valkostirnir -s og -w eru úreltir og voru hunsaðir"
+
+msgid "Installed size: {size}"
+msgstr "Uppsett stærð: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD skrifað í {path}"
+
+msgid "cancelled"
+msgstr "hætt við"
+
+msgid "Package {file} built"
+msgstr "Pakkinn {file} er smíðaður"
+
+msgid "Menu entries: {names}"
+msgstr "Valmyndarfærslur: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Pakki vistaður í {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "sumar skrár tilheyra öðrum uppsettum pökkum; fjarlægðu þær fyrst:"
+
+msgid "Install script that will run as root:"
+msgstr "Uppsetningarskrifta sem keyrir sem root:"
+
+msgid "Install {name} now?"
+msgstr "Setja upp {name} núna?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman gat ekki sett pakkann upp (lokunarkóði {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} var sett upp"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Leitaðu að {names} í forritavalmyndinni."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Þessi pakki var smíðaður fyrir {deb_arch} en þessi tölva er {host}; hann mun ekki keyra hér."
+
+msgid "Extracting {name}…"
+msgstr "Dreg út {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Óöruggum eða sérstökum færslum var sleppt: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Tvítekin skrá geymd úr /usr: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Leita að kröfum…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Hunsaði {count} keyrsluskrár sem eru smíðaðar fyrir önnur kerfi eða arkitektúra."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Safnskrár fundust ekki í hugbúnaðarsöfnunum: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Debian-kröfur án samsvörunar hér: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Skrár sem aðrir pakkar eiga nú þegar: {list}"
+
+msgid "Building the package…"
+msgstr "Smíða pakkann…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "Skráin er ekki Debian-pakki (ar-haus vantar)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Debian-pakkinn er styttur eða skemmdur."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Óstudd þjöppun í hlutanum {name}."
+
+msgid "File not found: {path}"
+msgstr "Skrá fannst ekki: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "Skráin er ekki Debian-pakki (debian-binary vantar)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "Debian-pakkinn hefur ekkert control- eða data-skjalasafn."
+
+msgid "The Debian package has no control file."
+msgstr "Debian-pakkinn hefur enga control-skrá."
+
+msgid "The control file has no Package or Version field."
+msgstr "Control-skráin hefur hvorki Package- né Version-reit."
+
+msgid "Install .deb package"
+msgstr "Setja upp .deb-pakka"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Breytir Debian-pökkum í innfædda pacman-pakka og setur þá upp."
+
+msgid "Extracting files"
+msgstr "Dreg út skrár"
+
+msgid "Adapting folders to this system"
+msgstr "Aðlaga möppur að þessu kerfi"
+
+msgid "Finding dependencies"
+msgstr "Finn kröfur"
+
+msgid "Preparing installation scripts"
+msgstr "Undirbý uppsetningarskriftur"
+
+msgid "Building the package"
+msgstr "Smíða pakkann"
+
+msgid "Waiting for authorization"
+msgstr "Bíð eftir heimild"
+
+msgid "Installing"
+msgstr "Set upp"
+
+msgid "About"
+msgstr "Um forritið"
+
+msgid "Main menu"
+msgstr "Aðalvalmynd"
+
+msgid "Choose a .deb file…"
+msgstr "Veldu .deb-skrá…"
+
+msgid "Install a .deb package"
+msgstr "Setja upp .deb-pakka"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Opnaðu Debian-pakka eða slepptu honum hér. Honum verður breytt í innfæddan pakka fyrir þetta kerfi og hann settur upp."
+
+msgid "Details"
+msgstr "Nánar"
+
+msgid "Cancel"
+msgstr "Hætta við"
+
+msgid "Prefer native packages when available"
+msgstr "Kjósa innfædda pakka þegar þeir standa til boða"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Forrit úr hugbúnaðarsöfnum kerfisins, Flatpak eða AppImage virka yfirleitt betur. Umbreyttir .deb-pakkar virka kannski ekki fullkomlega."
+
+msgid "“{name}” is available in the repositories"
+msgstr "„{name}“ er í boði í hugbúnaðarsöfnunum"
+
+msgid "Installing the native package is recommended."
+msgstr "Mælt er með að setja upp innfædda pakkann."
+
+msgid "Open"
+msgstr "Opna"
+
+msgid "Package"
+msgstr "Pakki"
+
+msgid "Version"
+msgstr "Útgáfa"
+
+msgid "Architecture"
+msgstr "Arkitektúr"
+
+msgid "Installed size"
+msgstr "Uppsett stærð"
+
+msgid "Maintainer"
+msgstr "Umsjónarmaður"
+
+msgid "Website"
+msgstr "Vefsvæði"
+
+msgid "Description"
+msgstr "Lýsing"
+
+msgid "Review before installing"
+msgstr "Yfirfara áður en sett er upp"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Sýna kröfurnar og skriftur sem keyra sem kerfisstjóri"
+
 msgid "Install"
 msgstr "Setja upp"
+
+msgid "Ready to install"
+msgstr "Tilbúið til uppsetningar"
+
+msgid "Check what will be installed."
+msgstr "Athugaðu hvað verður sett upp."
+
+msgid "Package name on this system"
+msgstr "Heiti pakkans á þessu kerfi"
+
+msgid "Package size"
+msgstr "Stærð pakka"
+
+msgid "Applications menu"
+msgstr "Forritavalmynd"
+
+msgid "No menu entry"
+msgstr "Engin valmyndarfærsla"
+
+msgid "Warnings"
+msgstr "Aðvaranir"
+
+msgid "Notes"
+msgstr "Athugasemdir"
+
+msgid "Dependencies"
+msgstr "Kröfur"
+
+msgid "Required"
+msgstr "Nauðsynlegt"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} pakki"
+msgstr[1] "{n} pakkar"
+
+msgid "will be downloaded"
+msgstr "verður sótt"
+
+msgid "Optional"
+msgstr "Valfrjálst"
+
+msgid "Scripts"
+msgstr "Skriftur"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Þessar skipanir úr Debian-pakkanum keyra sem kerfisstjóri við uppsetningu."
+
+msgid "Open {name}"
+msgstr "Opna {name}"
+
+msgid "Copy details"
+msgstr "Afrita nánari upplýsingar"
+
 msgid "Close"
-msgstr "Lokaðu"
-msgid "Install .deb package"
-msgstr "Settu .deb pakkann."
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Breyting skráar, vinsamlegast bíðu. Þetta gæti tekið nokkrar mínútur..."
-msgid "Done!"
-msgstr "Farið!"
+msgstr "Loka"
+
+msgid "This file cannot be installed"
+msgstr "Ekki er hægt að setja þessa skrá upp"
+
+msgid "Choose a .deb file"
+msgstr "Veldu .deb-skrá"
+
+msgid "Debian packages"
+msgstr "Debian-pakkar"
+
+msgid "Type your password in the window that will appear."
+msgstr "Sláðu inn lykilorðið þitt í glugganum sem birtist."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Kröfur sem vantar eru sóttar úr hugbúnaðarsöfnunum."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Þjappa skrám, þetta getur tekið eina mínútu."
+
+msgid "The package could not be converted"
+msgstr "Ekki tókst að breyta pakkanum"
+
+msgid "Cancelled"
+msgstr "Hætt við"
+
+msgid "{name} is installed"
+msgstr "{name} er uppsett"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "Pakkinn {name} var settur upp. Hann hefur enga færslu í forritavalmyndinni."
+
+msgid "Installation complete"
+msgstr "Uppsetningu lokið"
+
+msgid "Authorization was not granted"
+msgstr "Heimild fékkst ekki"
+
+msgid "The installation failed"
+msgstr "Uppsetningin mistókst"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman skilaði villu (kóði {code}). Opnaðu nánari upplýsingar til að sjá hvað gerðist."
+
+msgid "The application could not be started"
+msgstr "Ekki tókst að ræsa forritið"
+
+msgid "Copied"
+msgstr "Afritað"
+
+msgid "Please wait until the installation finishes"
+msgstr "Bíddu þar til uppsetningu lýkur"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg getur ekki keyrt sem root; keyrðu debtap-mod sem venjulegur notandi."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg mistókst með lokunarkóðanum {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg lauk en bjó ekki til neinn pakka"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Debian-skrifturnar skrá aðeins APT-hugbúnaðarsafn og AppArmor-snið fyrir Ubuntu; þeirra er ekki þörf hér."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "Skriftan {script} stillir APT-hugbúnaðarsafn; sá hluti hefur engin áhrif á þetta kerfi."

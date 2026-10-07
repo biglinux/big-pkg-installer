@@ -1,62 +1,373 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* 설치 중 오류 알림은 일반적으로 프로그램이 올바르게 작동하는 것을 방해하지 않습니다."
-msgid "Read before proceeding with the installation:"
-msgstr "설치 진행 전에 읽어보세요:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"네이티브 패키지를 선호하며, BigLinux, Manjaro, Arch 또는 <span color='#CC2222'>.pkg.tar</span> 형식과 호환되는 기타 리눅스 "
-"시스템을 위해 빌드된 패키지를 사용하세요.\n"
-"\n"
-"또 다른 옵션은 일반적으로 <span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> 또는 <span "
-"color='#CC2222'>.flatpak</span> 형식으로 제작된 모든 리눅스 시스템용 프로그램을 사용하는 것입니다.\n"
-"\n"
-"위의 형식으로 프로그램을 사용할 수 없는 경우, <span color='#CC2222'>.deb</span> 파일을 <span "
-"color='#CC2222'>.pkg.tar</span>로 변환하여 이 시스템에 설치할 수 있습니다. 그러나 설치가 제대로 작동하지 않을 수 있습니다."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>이 시스템은 <span color='#CC2222'>.pkg.tar</span> 패키지 형식을 사용하지만, 파일은 <span "
-"color='#CC2222'>.deb</span> 형식입니다.\n"
-"\n"
-"설치를 진행하시겠습니까?</big>"
-msgid "Install & Review Config Files"
-msgstr "설치 및 구성 파일 검토"
-msgid "Install"
-msgstr "설치하다"
-msgid "Close"
-msgstr "닫기"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Extracting package data"
+msgstr "패키지 데이터 추출 중"
+
+msgid "Adapting the directory layout"
+msgstr "디렉터리 구조 조정 중"
+
+msgid "Resolving dependencies"
+msgstr "의존성 확인 중"
+
+msgid "Converting maintainer scripts"
+msgstr "관리자 스크립트 변환 중"
+
+msgid "Building the pacman package"
+msgstr "pacman 패키지 빌드 중"
+
+msgid "Warning:"
+msgstr "경고:"
+
+msgid "Error:"
+msgstr "오류:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr ".deb 패키지를 pacman 패키지로 변환하고 설치합니다."
+
+msgid "the .deb file"
+msgstr ".deb 파일"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "질문하지 않고 검토할 수 있도록 설치 스크립트를 엽니다"
+
+msgid "do not ask any question"
+msgstr "질문하지 않음"
+
+msgid "only build the package, do not install it"
+msgstr "패키지를 빌드만 하고 설치하지 않음"
+
+msgid "keep the built package in DIR"
+msgstr "빌드한 패키지를 DIR에 보관"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr ".deb 옆에 PKGBUILD도 함께 저장"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "PKGBUILD만 저장하고 빌드하지 않음"
+
+msgid "{question} [y/N] "
+msgstr "{question} [y/N] "
+
+msgid "yes"
+msgstr "y"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod는 더 이상 로컬 데이터베이스가 필요하지 않습니다. 업데이트할 것이 없습니다."
+
+msgid "no .deb file given"
+msgstr ".deb 파일이 지정되지 않았습니다"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "-s 및 -w 옵션은 더 이상 사용되지 않으며 무시되었습니다"
+
+msgid "Installed size: {size}"
+msgstr "설치 크기: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD를 {path}에 저장했습니다"
+
+msgid "cancelled"
+msgstr "취소됨"
+
+msgid "Package {file} built"
+msgstr "패키지 {file} 빌드 완료"
+
+msgid "Menu entries: {names}"
+msgstr "메뉴 항목: {names}"
+
+msgid "Package saved to {path}"
+msgstr "패키지를 {path}에 저장했습니다"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "일부 파일이 이미 설치된 다른 패키지에 속해 있습니다. 먼저 해당 패키지를 제거하세요:"
+
+msgid "Install script that will run as root:"
+msgstr "root로 실행될 설치 스크립트:"
+
+msgid "Install {name} now?"
+msgstr "지금 {name}을(를) 설치하시겠습니까?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman이 패키지를 설치하지 못했습니다 (종료 코드 {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name}이(가) 성공적으로 설치되었습니다"
+
+msgid "Look for {names} in the applications menu."
+msgstr "응용 프로그램 메뉴에서 {names}을(를) 찾아보세요."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "이 패키지는 {deb_arch}용으로 빌드되었지만 이 컴퓨터는 {host}입니다. 여기서는 실행되지 않습니다."
+
+msgid "Extracting {name}…"
+msgstr "{name} 추출 중…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "안전하지 않거나 특수한 항목을 무시했습니다: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "/usr의 중복 파일을 유지했습니다: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "의존성을 찾는 중…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "다른 시스템 또는 아키텍처용으로 빌드된 바이너리 {count}개를 무시했습니다."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "저장소에서 찾을 수 없는 라이브러리: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "이 시스템에 대응하는 항목이 없는 Debian 의존성: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "이미 다른 패키지가 소유한 파일: {list}"
+
+msgid "Building the package…"
+msgstr "패키지 빌드 중…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "이 파일은 Debian 패키지가 아닙니다 (ar 헤더가 없습니다)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Debian 패키지가 잘렸거나 손상되었습니다."
+
+msgid "Unsupported compression in member {name}."
+msgstr "멤버 {name}의 압축 방식은 지원되지 않습니다."
+
+msgid "File not found: {path}"
+msgstr "파일을 찾을 수 없습니다: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "이 파일은 Debian 패키지가 아닙니다 (debian-binary가 없습니다)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "이 Debian 패키지에는 control 또는 data 아카이브가 없습니다."
+
+msgid "The Debian package has no control file."
+msgstr "이 Debian 패키지에는 control 파일이 없습니다."
+
+msgid "The control file has no Package or Version field."
+msgstr "control 파일에 Package 또는 Version 필드가 없습니다."
+
 msgid "Install .deb package"
 msgstr ".deb 패키지 설치"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "파일 변환 중입니다. 잠시 기다려 주십시오. 몇 분 정도 소요될 수 있습니다..."
-msgid "Done!"
-msgstr "완료!"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Debian 패키지를 네이티브 pacman 패키지로 변환하고 설치합니다."
+
+msgid "Extracting files"
+msgstr "파일 추출 중"
+
+msgid "Adapting folders to this system"
+msgstr "이 시스템에 맞게 폴더 조정 중"
+
+msgid "Finding dependencies"
+msgstr "의존성 찾는 중"
+
+msgid "Preparing installation scripts"
+msgstr "설치 스크립트 준비 중"
+
+msgid "Building the package"
+msgstr "패키지 빌드 중"
+
+msgid "Waiting for authorization"
+msgstr "인증을 기다리는 중"
+
+msgid "Installing"
+msgstr "설치 중"
+
+msgid "About"
+msgstr "정보"
+
+msgid "Main menu"
+msgstr "주 메뉴"
+
+msgid "Choose a .deb file…"
+msgstr ".deb 파일 선택…"
+
+msgid "Install a .deb package"
+msgstr ".deb 패키지 설치"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Debian 패키지를 열거나 여기에 끌어다 놓으세요. 이 시스템용 네이티브 패키지로 변환되어 설치됩니다."
+
+msgid "Details"
+msgstr "세부 정보"
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Prefer native packages when available"
+msgstr "가능하면 네이티브 패키지 우선"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "시스템 저장소, Flatpak 또는 AppImage의 프로그램이 대체로 더 잘 작동합니다. 변환된 .deb 패키지는 완벽하게 작동하지 않을 수 있습니다."
+
+msgid "“{name}” is available in the repositories"
+msgstr "“{name}”을(를) 저장소에서 설치할 수 있습니다"
+
+msgid "Installing the native package is recommended."
+msgstr "네이티브 패키지를 설치하는 것을 권장합니다."
+
+msgid "Open"
+msgstr "열기"
+
+msgid "Package"
+msgstr "패키지"
+
+msgid "Version"
+msgstr "버전"
+
+msgid "Architecture"
+msgstr "아키텍처"
+
+msgid "Installed size"
+msgstr "설치 크기"
+
+msgid "Maintainer"
+msgstr "관리자"
+
+msgid "Website"
+msgstr "웹사이트"
+
+msgid "Description"
+msgstr "설명"
+
+msgid "Review before installing"
+msgstr "설치 전 검토"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "관리자 권한으로 실행될 의존성과 스크립트를 표시합니다"
+
+msgid "Install"
+msgstr "설치"
+
+msgid "Ready to install"
+msgstr "설치 준비 완료"
+
+msgid "Check what will be installed."
+msgstr "설치될 내용을 확인하세요."
+
+msgid "Package name on this system"
+msgstr "이 시스템의 패키지 이름"
+
+msgid "Package size"
+msgstr "패키지 크기"
+
+msgid "Applications menu"
+msgstr "응용 프로그램 메뉴"
+
+msgid "No menu entry"
+msgstr "메뉴 항목 없음"
+
+msgid "Warnings"
+msgstr "경고"
+
+msgid "Notes"
+msgstr "참고"
+
+msgid "Dependencies"
+msgstr "의존성"
+
+msgid "Required"
+msgstr "필수"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "패키지 {n}개"
+
+msgid "will be downloaded"
+msgstr "다운로드됩니다"
+
+msgid "Optional"
+msgstr "선택"
+
+msgid "Scripts"
+msgstr "스크립트"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Debian 패키지의 이 명령들은 설치 중에 관리자 권한으로 실행됩니다."
+
+msgid "Open {name}"
+msgstr "{name} 열기"
+
+msgid "Copy details"
+msgstr "세부 정보 복사"
+
+msgid "Close"
+msgstr "닫기"
+
+msgid "This file cannot be installed"
+msgstr "이 파일은 설치할 수 없습니다"
+
+msgid "Choose a .deb file"
+msgstr ".deb 파일 선택"
+
+msgid "Debian packages"
+msgstr "Debian 패키지"
+
+msgid "Type your password in the window that will appear."
+msgstr "나타나는 창에 암호를 입력하세요."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "없는 의존성은 저장소에서 다운로드됩니다."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "파일을 압축하는 중입니다. 1분 정도 걸릴 수 있습니다."
+
+msgid "The package could not be converted"
+msgstr "패키지를 변환할 수 없습니다"
+
+msgid "Cancelled"
+msgstr "취소됨"
+
+msgid "{name} is installed"
+msgstr "{name}이(가) 설치되어 있습니다"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "패키지 {name}이(가) 설치되었습니다. 응용 프로그램 메뉴에 항목이 없습니다."
+
+msgid "Installation complete"
+msgstr "설치 완료"
+
+msgid "Authorization was not granted"
+msgstr "인증이 허용되지 않았습니다"
+
+msgid "The installation failed"
+msgstr "설치하지 못했습니다"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman에서 오류가 발생했습니다 (코드 {code}). 세부 정보를 열어 무슨 일이 있었는지 확인하세요."
+
+msgid "The application could not be started"
+msgstr "응용 프로그램을 시작할 수 없습니다"
+
+msgid "Copied"
+msgstr "복사됨"
+
+msgid "Please wait until the installation finishes"
+msgstr "설치가 끝날 때까지 기다려 주세요"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg는 root로 실행할 수 없습니다. debtap-mod를 일반 사용자로 실행하세요."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg가 종료 코드 {code}(으)로 실패했습니다"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg가 끝났지만 패키지가 생성되지 않았습니다"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Debian 스크립트는 Ubuntu용 APT 저장소와 AppArmor 프로필만 등록하므로 여기서는 필요하지 않습니다."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "{script} 스크립트가 APT 저장소를 설정하지만, 해당 부분은 이 시스템에서 효과가 없습니다."

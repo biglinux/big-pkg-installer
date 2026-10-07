@@ -1,64 +1,375 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* Chybová upozornění během instalace obvykle nebrání správnému fungování programu."
-msgid "Read before proceeding with the installation:"
-msgstr "Přečtěte si před pokračováním s instalací:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"Preferujte nativní balíčky, které byly vytvořeny pro BigLinux, Manjaro, Arch nebo jiné linuxové "
-"systémy kompatibilní s formátem <span color='#CC2222'>.pkg.tar</span>.\n"
-"\n"
-"Další možností je použít programy určené pro jakýkoli linuxový systém, obvykle ve formátu <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> nebo <span "
-"color='#CC2222'>.flatpak</span>.\n"
-"\n"
-"Pokud program není k dispozici v uvedených formátech, může být soubor <span "
-"color='#CC2222'>.deb</span> převeden na <span color='#CC2222'>.pkg.tar</span> a nainstalován na "
-"tomto systému. Instalace však nemusí fungovat správně."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Tento systém používá formát balíčku <span color='#CC2222'>.pkg.tar</span>, ale soubor je ve "
-"formátu <span color='#CC2222'>.deb</span>.\n"
-"\n"
-"Přejete si pokračovat v instalaci?</big>"
-msgid "Install & Review Config Files"
-msgstr "Nainstalujte a zkontrolujte konfigurační soubory"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Extracting package data"
+msgstr "Rozbalování dat balíčku"
+
+msgid "Adapting the directory layout"
+msgstr "Přizpůsobení struktury adresářů"
+
+msgid "Resolving dependencies"
+msgstr "Zjišťování závislostí"
+
+msgid "Converting maintainer scripts"
+msgstr "Převod skriptů správce balíčku"
+
+msgid "Building the pacman package"
+msgstr "Sestavování balíčku pacman"
+
+msgid "Warning:"
+msgstr "Upozornění:"
+
+msgid "Error:"
+msgstr "Chyba:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Převede balíček .deb na balíček pacman a nainstaluje ho."
+
+msgid "the .deb file"
+msgstr "soubor .deb"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "neptat se na nic, ale otevřít instalační skript ke kontrole"
+
+msgid "do not ask any question"
+msgstr "neptat se na nic"
+
+msgid "only build the package, do not install it"
+msgstr "pouze sestavit balíček, neinstalovat ho"
+
+msgid "keep the built package in DIR"
+msgstr "ponechat sestavený balíček v DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "zapsat také PKGBUILD vedle souboru .deb"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "pouze zapsat PKGBUILD, nesestavovat"
+
+msgid "{question} [y/N] "
+msgstr "{question} [a/N] "
+
+msgid "yes"
+msgstr "ano"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod už nepotřebuje místní databázi; není co aktualizovat."
+
+msgid "no .deb file given"
+msgstr "není zadán žádný soubor .deb"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "přepínače -s a -w jsou zastaralé a byly ignorovány"
+
+msgid "Installed size: {size}"
+msgstr "Velikost po instalaci: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD zapsán do {path}"
+
+msgid "cancelled"
+msgstr "zrušeno"
+
+msgid "Package {file} built"
+msgstr "Balíček {file} byl sestaven"
+
+msgid "Menu entries: {names}"
+msgstr "Položky nabídky: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Balíček uložen do {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "některé soubory patří jiným nainstalovaným balíčkům; nejprve je odstraňte:"
+
+msgid "Install script that will run as root:"
+msgstr "Instalační skript, který se spustí jako root:"
+
+msgid "Install {name} now?"
+msgstr "Nainstalovat {name} nyní?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman nedokázal balíček nainstalovat (návratový kód {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} byl úspěšně nainstalován"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Hledejte {names} v nabídce aplikací."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Tento balíček byl sestaven pro {deb_arch}, ale tento počítač je {host}; zde nepoběží."
+
+msgid "Extracting {name}…"
+msgstr "Rozbalování {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Ignorované nebezpečné nebo speciální položky: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Duplicitní soubor ponechán z /usr: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Hledání závislostí…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Ignorováno {count} binárních souborů sestavených pro jiné systémy nebo architektury."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Knihovny nenalezené v repozitářích: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Závislosti Debianu bez ekvivalentu zde: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Soubory, které už patří jiným balíčkům: {list}"
+
+msgid "Building the package…"
+msgstr "Sestavování balíčku…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "Soubor není balíček Debianu (chybí hlavička ar)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Balíček Debianu je zkrácený nebo poškozený."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Nepodporovaná komprese v části {name}."
+
+msgid "File not found: {path}"
+msgstr "Soubor nenalezen: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "Soubor není balíček Debianu (chybí debian-binary)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "Balíček Debianu neobsahuje archiv control ani data."
+
+msgid "The Debian package has no control file."
+msgstr "Balíček Debianu neobsahuje soubor control."
+
+msgid "The control file has no Package or Version field."
+msgstr "Soubor control neobsahuje pole Package ani Version."
+
+msgid "Install .deb package"
+msgstr "Instalace balíčku .deb"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Převádí balíčky Debianu na nativní balíčky pacman a instaluje je."
+
+msgid "Extracting files"
+msgstr "Rozbalování souborů"
+
+msgid "Adapting folders to this system"
+msgstr "Přizpůsobení složek tomuto systému"
+
+msgid "Finding dependencies"
+msgstr "Hledání závislostí"
+
+msgid "Preparing installation scripts"
+msgstr "Příprava instalačních skriptů"
+
+msgid "Building the package"
+msgstr "Sestavování balíčku"
+
+msgid "Waiting for authorization"
+msgstr "Čekání na ověření"
+
+msgid "Installing"
+msgstr "Instalace"
+
+msgid "About"
+msgstr "O aplikaci"
+
+msgid "Main menu"
+msgstr "Hlavní nabídka"
+
+msgid "Choose a .deb file…"
+msgstr "Vybrat soubor .deb…"
+
+msgid "Install a .deb package"
+msgstr "Instalace balíčku .deb"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Otevřete balíček Debianu nebo ho sem přetáhněte. Bude převeden na nativní balíček pro tento systém a nainstalován."
+
+msgid "Details"
+msgstr "Podrobnosti"
+
+msgid "Cancel"
+msgstr "Zrušit"
+
+msgid "Prefer native packages when available"
+msgstr "Upřednostňovat nativní balíčky, pokud jsou dostupné"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Programy ze systémových repozitářů, Flatpaku nebo AppImage obvykle fungují lépe. Převedené balíčky .deb nemusí fungovat dokonale."
+
+msgid "“{name}” is available in the repositories"
+msgstr "„{name}“ je dostupný v repozitářích"
+
+msgid "Installing the native package is recommended."
+msgstr "Doporučujeme nainstalovat nativní balíček."
+
+msgid "Open"
+msgstr "Otevřít"
+
+msgid "Package"
+msgstr "Balíček"
+
+msgid "Version"
+msgstr "Verze"
+
+msgid "Architecture"
+msgstr "Architektura"
+
+msgid "Installed size"
+msgstr "Velikost po instalaci"
+
+msgid "Maintainer"
+msgstr "Správce balíčku"
+
+msgid "Website"
+msgstr "Webové stránky"
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Review before installing"
+msgstr "Kontrola před instalací"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Zobrazit závislosti a skripty, které se spustí s právy správce"
+
 msgid "Install"
 msgstr "Nainstalovat"
+
+msgid "Ready to install"
+msgstr "Připraveno k instalaci"
+
+msgid "Check what will be installed."
+msgstr "Zkontrolujte, co se nainstaluje."
+
+msgid "Package name on this system"
+msgstr "Název balíčku v tomto systému"
+
+msgid "Package size"
+msgstr "Velikost balíčku"
+
+msgid "Applications menu"
+msgstr "Nabídka aplikací"
+
+msgid "No menu entry"
+msgstr "Žádná položka v nabídce"
+
+msgid "Warnings"
+msgstr "Upozornění"
+
+msgid "Notes"
+msgstr "Poznámky"
+
+msgid "Dependencies"
+msgstr "Závislosti"
+
+msgid "Required"
+msgstr "Povinné"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} balíček"
+msgstr[1] "{n} balíčky"
+msgstr[2] "{n} balíčků"
+
+msgid "will be downloaded"
+msgstr "bude staženo"
+
+msgid "Optional"
+msgstr "Volitelné"
+
+msgid "Scripts"
+msgstr "Skripty"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Tyto příkazy z balíčku Debianu se při instalaci spouštějí s právy správce."
+
+msgid "Open {name}"
+msgstr "Otevřít {name}"
+
+msgid "Copy details"
+msgstr "Kopírovat podrobnosti"
+
 msgid "Close"
 msgstr "Zavřít"
-msgid "Install .deb package"
-msgstr "Nainstalujte balíček .deb"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Převádím soubor, prosím čekejte. Může to trvat několik minut..."
-msgid "Done!"
-msgstr "Hotovo!"
+
+msgid "This file cannot be installed"
+msgstr "Tento soubor nelze nainstalovat"
+
+msgid "Choose a .deb file"
+msgstr "Vybrat soubor .deb"
+
+msgid "Debian packages"
+msgstr "Balíčky Debianu"
+
+msgid "Type your password in the window that will appear."
+msgstr "Zadejte heslo v okně, které se zobrazí."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Chybějící závislosti se stáhnou z repozitářů."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Soubory se komprimují, může to chvíli trvat."
+
+msgid "The package could not be converted"
+msgstr "Balíček se nepodařilo převést"
+
+msgid "Cancelled"
+msgstr "Zrušeno"
+
+msgid "{name} is installed"
+msgstr "{name} je nainstalován"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "Balíček {name} byl nainstalován. Nemá položku v nabídce aplikací."
+
+msgid "Installation complete"
+msgstr "Instalace dokončena"
+
+msgid "Authorization was not granted"
+msgstr "Ověření nebylo uděleno"
+
+msgid "The installation failed"
+msgstr "Instalace selhala"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman vrátil chybu (kód {code}). Co se stalo, zjistíte v podrobnostech."
+
+msgid "The application could not be started"
+msgstr "Aplikaci se nepodařilo spustit"
+
+msgid "Copied"
+msgstr "Zkopírováno"
+
+msgid "Please wait until the installation finishes"
+msgstr "Počkejte, dokud instalace neskončí"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg nelze spustit jako root; spusťte debtap-mod jako běžný uživatel."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg selhal s návratovým kódem {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg skončil, ale nevytvořil žádný balíček"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Skripty Debianu pouze registrují repozitář APT a profil AppArmor pro Ubuntu; zde nejsou potřeba."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "Skript {script} nastavuje repozitář APT; tato část na tomto systému nemá žádný účinek."

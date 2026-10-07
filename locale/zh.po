@@ -1,60 +1,373 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* 安装期间的错误警报通常不会阻止程序正常运行。"
-msgid "Read before proceeding with the installation:"
-msgstr "在继续安装之前请阅读："
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"首选本地软件包，适用于 BigLinux、Manjaro、Arch 或其他与 <span color='#CC2222'>.pkg.tar</span> 格式兼容的 Linux 系统。\n"
-"\n"
-"另一个选项是使用为任何 Linux 系统制作的程序，通常为 <span color='#CC2222'>.run</span>、<span "
-"color='#CC2222'>.appimage</span> 或 <span color='#CC2222'>.flatpak</span> 格式。\n"
-"\n"
-"如果程序不提供上述格式，可以将 <span color='#CC2222'>.deb</span> 文件转换为 <span color='#CC2222'>.pkg.tar</span> "
-"并在此系统上安装。然而，安装可能无法正常工作。"
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>该系统使用<span color='#CC2222'>.pkg.tar</span>软件包格式，但文件为<span color='#CC2222'>.deb</span>格式。\n"
-"\n"
-"您是否希望继续安装？</big>"
-msgid "Install & Review Config Files"
-msgstr "安装和审查配置文件"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Extracting package data"
+msgstr "正在提取软件包数据"
+
+msgid "Adapting the directory layout"
+msgstr "正在调整目录结构"
+
+msgid "Resolving dependencies"
+msgstr "正在解析依赖关系"
+
+msgid "Converting maintainer scripts"
+msgstr "正在转换维护者脚本"
+
+msgid "Building the pacman package"
+msgstr "正在构建 pacman 软件包"
+
+msgid "Warning:"
+msgstr "警告:"
+
+msgid "Error:"
+msgstr "错误:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "将 .deb 软件包转换为 pacman 软件包并安装。"
+
+msgid "the .deb file"
+msgstr ".deb 文件"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "不提问，但打开安装脚本供检查"
+
+msgid "do not ask any question"
+msgstr "不提任何问题"
+
+msgid "only build the package, do not install it"
+msgstr "仅构建软件包，不安装"
+
+msgid "keep the built package in DIR"
+msgstr "将构建的软件包保存到 DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "同时在 .deb 旁边写入 PKGBUILD"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "仅写入 PKGBUILD，不构建"
+
+msgid "{question} [y/N] "
+msgstr "{question} [y/N] "
+
+msgid "yes"
+msgstr "y"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod 不再需要本地数据库，无需更新。"
+
+msgid "no .deb file given"
+msgstr "未指定 .deb 文件"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "-s 和 -w 选项已废弃，已被忽略"
+
+msgid "Installed size: {size}"
+msgstr "安装后大小: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD 已写入 {path}"
+
+msgid "cancelled"
+msgstr "已取消"
+
+msgid "Package {file} built"
+msgstr "软件包 {file} 已构建"
+
+msgid "Menu entries: {names}"
+msgstr "菜单项: {names}"
+
+msgid "Package saved to {path}"
+msgstr "软件包已保存到 {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "部分文件属于其他已安装的软件包，请先将其移除:"
+
+msgid "Install script that will run as root:"
+msgstr "将以 root 身份运行的安装脚本:"
+
+msgid "Install {name} now?"
+msgstr "现在安装 {name} 吗？"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman 无法安装该软件包（退出代码 {code}）"
+
+msgid "{name} installed successfully"
+msgstr "{name} 已成功安装"
+
+msgid "Look for {names} in the applications menu."
+msgstr "请在应用程序菜单中查找 {names}。"
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "此软件包是为 {deb_arch} 构建的，但这台计算机是 {host}，无法在此运行。"
+
+msgid "Extracting {name}…"
+msgstr "正在提取 {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "已忽略不安全或特殊的条目: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "保留了来自 /usr 的重复文件: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "正在查找依赖项…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "已忽略 {count} 个为其他系统或架构构建的二进制文件。"
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "在软件仓库中找不到的库: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "在此系统中没有对应项的 Debian 依赖项: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "已被其他软件包拥有的文件: {list}"
+
+msgid "Building the package…"
+msgstr "正在构建软件包…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "该文件不是 Debian 软件包（缺少 ar 头）。"
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Debian 软件包被截断或已损坏。"
+
+msgid "Unsupported compression in member {name}."
+msgstr "不支持成员 {name} 的压缩格式。"
+
+msgid "File not found: {path}"
+msgstr "找不到文件: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "该文件不是 Debian 软件包（缺少 debian-binary）。"
+
+msgid "The Debian package has no control or data archive."
+msgstr "该 Debian 软件包没有 control 或 data 归档。"
+
+msgid "The Debian package has no control file."
+msgstr "该 Debian 软件包没有 control 文件。"
+
+msgid "The control file has no Package or Version field."
+msgstr "control 文件缺少 Package 或 Version 字段。"
+
+msgid "Install .deb package"
+msgstr "安装 .deb 软件包"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "将 Debian 软件包转换为原生 pacman 软件包并安装。"
+
+msgid "Extracting files"
+msgstr "正在提取文件"
+
+msgid "Adapting folders to this system"
+msgstr "正在使文件夹适配此系统"
+
+msgid "Finding dependencies"
+msgstr "正在查找依赖项"
+
+msgid "Preparing installation scripts"
+msgstr "正在准备安装脚本"
+
+msgid "Building the package"
+msgstr "正在构建软件包"
+
+msgid "Waiting for authorization"
+msgstr "正在等待授权"
+
+msgid "Installing"
+msgstr "正在安装"
+
+msgid "About"
+msgstr "关于"
+
+msgid "Main menu"
+msgstr "主菜单"
+
+msgid "Choose a .deb file…"
+msgstr "选择 .deb 文件…"
+
+msgid "Install a .deb package"
+msgstr "安装 .deb 软件包"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "打开 Debian 软件包或将其拖放到此处。它将被转换为适用于此系统的原生软件包并安装。"
+
+msgid "Details"
+msgstr "详细信息"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Prefer native packages when available"
+msgstr "优先使用原生软件包"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "来自系统软件源、Flatpak 或 AppImage 的程序通常运行得更好。转换后的 .deb 软件包可能无法完美运行。"
+
+msgid "“{name}” is available in the repositories"
+msgstr "软件源中提供“{name}”"
+
+msgid "Installing the native package is recommended."
+msgstr "建议安装原生软件包。"
+
+msgid "Open"
+msgstr "打开"
+
+msgid "Package"
+msgstr "软件包"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Architecture"
+msgstr "架构"
+
+msgid "Installed size"
+msgstr "安装后大小"
+
+msgid "Maintainer"
+msgstr "维护者"
+
+msgid "Website"
+msgstr "网站"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Review before installing"
+msgstr "安装前检查"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "显示依赖项以及将以管理员身份运行的脚本"
+
 msgid "Install"
 msgstr "安装"
+
+msgid "Ready to install"
+msgstr "准备安装"
+
+msgid "Check what will be installed."
+msgstr "请检查将要安装的内容。"
+
+msgid "Package name on this system"
+msgstr "此系统上的软件包名称"
+
+msgid "Package size"
+msgstr "软件包大小"
+
+msgid "Applications menu"
+msgstr "应用程序菜单"
+
+msgid "No menu entry"
+msgstr "无菜单项"
+
+msgid "Warnings"
+msgstr "警告"
+
+msgid "Notes"
+msgstr "备注"
+
+msgid "Dependencies"
+msgstr "依赖项"
+
+msgid "Required"
+msgstr "必需"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} 个软件包"
+
+msgid "will be downloaded"
+msgstr "将被下载"
+
+msgid "Optional"
+msgstr "可选"
+
+msgid "Scripts"
+msgstr "脚本"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Debian 软件包中的这些命令将在安装期间以管理员身份运行。"
+
+msgid "Open {name}"
+msgstr "打开 {name}"
+
+msgid "Copy details"
+msgstr "复制详细信息"
+
 msgid "Close"
 msgstr "关闭"
-msgid "Install .deb package"
-msgstr "安装 .deb 包"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "正在转换文件，请稍候。这可能需要几分钟..."
-msgid "Done!"
-msgstr "完成！"
+
+msgid "This file cannot be installed"
+msgstr "无法安装此文件"
+
+msgid "Choose a .deb file"
+msgstr "选择 .deb 文件"
+
+msgid "Debian packages"
+msgstr "Debian 软件包"
+
+msgid "Type your password in the window that will appear."
+msgstr "请在弹出的窗口中输入密码。"
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "缺少的依赖项将从软件源下载。"
+
+msgid "Compressing the files, this may take a minute."
+msgstr "正在压缩文件，这可能需要一分钟。"
+
+msgid "The package could not be converted"
+msgstr "无法转换该软件包"
+
+msgid "Cancelled"
+msgstr "已取消"
+
+msgid "{name} is installed"
+msgstr "{name} 已安装"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "软件包 {name} 已安装，但它在应用程序菜单中没有条目。"
+
+msgid "Installation complete"
+msgstr "安装完成"
+
+msgid "Authorization was not granted"
+msgstr "未获得授权"
+
+msgid "The installation failed"
+msgstr "安装失败"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman 返回了错误（代码 {code}）。打开详细信息查看发生了什么。"
+
+msgid "The application could not be started"
+msgstr "无法启动该应用程序"
+
+msgid "Copied"
+msgstr "已复制"
+
+msgid "Please wait until the installation finishes"
+msgstr "请等待安装完成"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg 不能以 root 身份运行；请以普通用户身份运行 debtap-mod。"
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg 失败，退出代码 {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg 已结束，但没有生成软件包"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "这些 Debian 脚本只为 Ubuntu 注册 APT 软件源和 AppArmor 配置文件，此处不需要。"
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "脚本 {script} 会配置 APT 软件源；该部分在此系统上不起作用。"

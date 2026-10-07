@@ -1,64 +1,374 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: no\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* Feilmeldinger under installasjonen hindrer vanligvis ikke programmet fra å fungere korrekt."
-msgid "Read before proceeding with the installation:"
-msgstr "Les før du fortsetter med installasjonen:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"Foretre native pakker, bygget for BigLinux, Manjaro, Arch eller andre Linux-systemer som er "
-"kompatible med <span color='#CC2222'>.pkg.tar</span>-formatet.\n"
-"\n"
-"Et annet alternativ er å bruke programmer laget for ethvert Linux-system, vanligvis i <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> eller <span "
-"color='#CC2222'>.flatpak</span>-format.\n"
-"\n"
-"Hvis programmet ikke er tilgjengelig i formatene ovenfor, kan <span "
-"color='#CC2222'>.deb</span>-filen konverteres til <span color='#CC2222'>.pkg.tar</span> og "
-"installeres på dette systemet. Imidlertid kan installasjonen hende ikke fungere korrekt."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Dette systemet bruker <span color='#CC2222'>.pkg.tar</span> pakkeformat, men filen er i <span "
-"color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Ønsker du å fortsette med installasjonen?</big>"
-msgid "Install & Review Config Files"
-msgstr "Installer og vurder konfigurasjonsfiler"
-msgid "Install"
-msgstr "Installer"
-msgid "Close"
-msgstr "Lukk"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Extracting package data"
+msgstr "Pakker ut pakkedata"
+
+msgid "Adapting the directory layout"
+msgstr "Tilpasser mappestrukturen"
+
+msgid "Resolving dependencies"
+msgstr "Løser avhengigheter"
+
+msgid "Converting maintainer scripts"
+msgstr "Konverterer vedlikeholdsskript"
+
+msgid "Building the pacman package"
+msgstr "Bygger pacman-pakken"
+
+msgid "Warning:"
+msgstr "Advarsel:"
+
+msgid "Error:"
+msgstr "Feil:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Konverter en .deb-pakke til en pacman-pakke og installer den."
+
+msgid "the .deb file"
+msgstr ".deb-filen"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "ikke still spørsmål, men åpne installasjonsskriptet for gjennomgang"
+
+msgid "do not ask any question"
+msgstr "ikke still noen spørsmål"
+
+msgid "only build the package, do not install it"
+msgstr "bare bygg pakken, ikke installer den"
+
+msgid "keep the built package in DIR"
+msgstr "behold den bygde pakken i DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "skriv også en PKGBUILD ved siden av .deb-filen"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "bare skriv en PKGBUILD, ikke bygg"
+
+msgid "{question} [y/N] "
+msgstr "{question} [j/N] "
+
+msgid "yes"
+msgstr "ja"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod trenger ikke lenger en lokal database; ingenting å oppdatere."
+
+msgid "no .deb file given"
+msgstr "ingen .deb-fil oppgitt"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "valgene -s og -w er foreldet og ble ignorert"
+
+msgid "Installed size: {size}"
+msgstr "Installert størrelse: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD skrevet til {path}"
+
+msgid "cancelled"
+msgstr "avbrutt"
+
+msgid "Package {file} built"
+msgstr "Pakken {file} er bygget"
+
+msgid "Menu entries: {names}"
+msgstr "Menyoppføringer: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Pakken er lagret i {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "noen filer tilhører andre installerte pakker; fjern dem først:"
+
+msgid "Install script that will run as root:"
+msgstr "Installasjonsskript som kjøres som root:"
+
+msgid "Install {name} now?"
+msgstr "Installere {name} nå?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman kunne ikke installere pakken (avslutningskode {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} ble installert"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Se etter {names} i programmenyen."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Denne pakken er bygget for {deb_arch}, men denne datamaskinen er {host}; den vil ikke kjøre her."
+
+msgid "Extracting {name}…"
+msgstr "Pakker ut {name} …"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Ignorerte usikre eller spesielle oppføringer: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Duplisert fil beholdt fra /usr: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Ser etter avhengigheter …"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Ignorerte {count} binærfiler bygget for andre systemer eller arkitekturer."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Biblioteker som ikke finnes i pakkebrønnene: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Debian-avhengigheter uten tilsvarende her: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Filer som allerede eies av andre pakker: {list}"
+
+msgid "Building the package…"
+msgstr "Bygger pakken …"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "Filen er ikke en Debian-pakke (ar-header mangler)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Debian-pakken er avkortet eller skadet."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Komprimeringen støttes ikke i medlem {name}."
+
+msgid "File not found: {path}"
+msgstr "Finner ikke filen: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "Filen er ikke en Debian-pakke (debian-binary mangler)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "Debian-pakken har ikke noe control- eller data-arkiv."
+
+msgid "The Debian package has no control file."
+msgstr "Debian-pakken har ingen control-fil."
+
+msgid "The control file has no Package or Version field."
+msgstr "Control-filen har ikke feltet Package eller Version."
+
 msgid "Install .deb package"
 msgstr "Installer .deb-pakke"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Konverterer fil, vennligst vent. Dette kan ta noen minutter..."
-msgid "Done!"
-msgstr "Ferdig!"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Konverterer Debian-pakker til egne pacman-pakker og installerer dem."
+
+msgid "Extracting files"
+msgstr "Pakker ut filer"
+
+msgid "Adapting folders to this system"
+msgstr "Tilpasser mapper til dette systemet"
+
+msgid "Finding dependencies"
+msgstr "Finner avhengigheter"
+
+msgid "Preparing installation scripts"
+msgstr "Forbereder installasjonsskript"
+
+msgid "Building the package"
+msgstr "Bygger pakken"
+
+msgid "Waiting for authorization"
+msgstr "Venter på godkjenning"
+
+msgid "Installing"
+msgstr "Installerer"
+
+msgid "About"
+msgstr "Om"
+
+msgid "Main menu"
+msgstr "Hovedmeny"
+
+msgid "Choose a .deb file…"
+msgstr "Velg en .deb-fil …"
+
+msgid "Install a .deb package"
+msgstr "Installer en .deb-pakke"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Åpne en Debian-pakke eller slipp den her. Den blir konvertert til en egen pakke for dette systemet og installert."
+
+msgid "Details"
+msgstr "Detaljer"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Prefer native packages when available"
+msgstr "Foretrekk egne pakker når de finnes"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Programmer fra systemets pakkebrønner, Flatpak eller AppImage fungerer vanligvis bedre. Konverterte .deb-pakker fungerer kanskje ikke perfekt."
+
+msgid "“{name}” is available in the repositories"
+msgstr "«{name}» er tilgjengelig i pakkebrønnene"
+
+msgid "Installing the native package is recommended."
+msgstr "Det anbefales å installere den egne pakken."
+
+msgid "Open"
+msgstr "Åpne"
+
+msgid "Package"
+msgstr "Pakke"
+
+msgid "Version"
+msgstr "Versjon"
+
+msgid "Architecture"
+msgstr "Arkitektur"
+
+msgid "Installed size"
+msgstr "Installert størrelse"
+
+msgid "Maintainer"
+msgstr "Vedlikeholder"
+
+msgid "Website"
+msgstr "Nettsted"
+
+msgid "Description"
+msgstr "Beskrivelse"
+
+msgid "Review before installing"
+msgstr "Se over før installering"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Vis avhengighetene og skriptene som kjøres som administrator"
+
+msgid "Install"
+msgstr "Installer"
+
+msgid "Ready to install"
+msgstr "Klar til å installere"
+
+msgid "Check what will be installed."
+msgstr "Sjekk hva som blir installert."
+
+msgid "Package name on this system"
+msgstr "Pakkenavn på dette systemet"
+
+msgid "Package size"
+msgstr "Pakkestørrelse"
+
+msgid "Applications menu"
+msgstr "Programmeny"
+
+msgid "No menu entry"
+msgstr "Ingen menyoppføring"
+
+msgid "Warnings"
+msgstr "Advarsler"
+
+msgid "Notes"
+msgstr "Merknader"
+
+msgid "Dependencies"
+msgstr "Avhengigheter"
+
+msgid "Required"
+msgstr "Påkrevd"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} pakke"
+msgstr[1] "{n} pakker"
+
+msgid "will be downloaded"
+msgstr "lastes ned"
+
+msgid "Optional"
+msgstr "Valgfritt"
+
+msgid "Scripts"
+msgstr "Skript"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Disse kommandoene fra Debian-pakken kjøres som administrator under installeringen."
+
+msgid "Open {name}"
+msgstr "Åpne {name}"
+
+msgid "Copy details"
+msgstr "Kopier detaljer"
+
+msgid "Close"
+msgstr "Lukk"
+
+msgid "This file cannot be installed"
+msgstr "Denne filen kan ikke installeres"
+
+msgid "Choose a .deb file"
+msgstr "Velg en .deb-fil"
+
+msgid "Debian packages"
+msgstr "Debian-pakker"
+
+msgid "Type your password in the window that will appear."
+msgstr "Skriv inn passordet ditt i vinduet som dukker opp."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Manglende avhengigheter lastes ned fra pakkebrønnene."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Komprimerer filene. Dette kan ta et minutt."
+
+msgid "The package could not be converted"
+msgstr "Pakken kunne ikke konverteres"
+
+msgid "Cancelled"
+msgstr "Avbrutt"
+
+msgid "{name} is installed"
+msgstr "{name} er installert"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "Pakken {name} ble installert. Den har ingen oppføring i programmenyen."
+
+msgid "Installation complete"
+msgstr "Installeringen er fullført"
+
+msgid "Authorization was not granted"
+msgstr "Godkjenning ble ikke gitt"
+
+msgid "The installation failed"
+msgstr "Installeringen mislyktes"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman returnerte en feil (kode {code}). Åpne detaljene for å se hva som skjedde."
+
+msgid "The application could not be started"
+msgstr "Programmet kunne ikke startes"
+
+msgid "Copied"
+msgstr "Kopiert"
+
+msgid "Please wait until the installation finishes"
+msgstr "Vent til installeringen er ferdig"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg kan ikke kjøres som root; kjør debtap-mod som vanlig bruker."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg mislyktes med avslutningskode {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg ble ferdig, men lagde ingen pakke"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Debian-skriptene registrerer bare et APT-arkiv og en AppArmor-profil for Ubuntu; de trengs ikke her."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "Skriptet {script} setter opp et APT-arkiv; den delen har ingen effekt på dette systemet."

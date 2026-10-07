@@ -1,64 +1,374 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* Kurulum sırasında hata uyarıları genellikle programın doğru çalışmasını engellemez."
-msgid "Read before proceeding with the installation:"
-msgstr "Kuruluma geçmeden önce okuyun:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"Yerel paketleri tercih edin, BigLinux, Manjaro, Arch veya <span color='#CC2222'>.pkg.tar</span> "
-"formatıyla uyumlu diğer Linux sistemleri için oluşturulmuş.\n"
-"\n"
-"Diğer bir seçenek, genellikle <span color='#CC2222'>.run</span>, <span "
-"color='#CC2222'>.appimage</span> veya <span color='#CC2222'>.flatpak</span> formatında olan "
-"herhangi bir Linux sistemi için yapılmış programları kullanmaktır.\n"
-"\n"
-"Eğer program yukarıdaki formatlarda mevcut değilse, <span color='#CC2222'>.deb</span> dosyası <span "
-"color='#CC2222'>.pkg.tar</span> formatına dönüştürülebilir ve bu sisteme kurulabilir. Ancak, "
-"kurulum doğru çalışmayabilir."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Bu sistem <span color='#CC2222'>.pkg.tar</span> paket formatını kullanıyor, ancak dosya <span "
-"color='#CC2222'>.deb</span> formatında.\n"
-"\n"
-"Kuruluma devam etmek istiyor musunuz?</big>"
-msgid "Install & Review Config Files"
-msgstr "Yapılandırma Dosyalarını Yükle ve İncele"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Extracting package data"
+msgstr "Paket verileri çıkarılıyor"
+
+msgid "Adapting the directory layout"
+msgstr "Dizin yapısı uyarlanıyor"
+
+msgid "Resolving dependencies"
+msgstr "Bağımlılıklar çözümleniyor"
+
+msgid "Converting maintainer scripts"
+msgstr "Bakımcı betikleri dönüştürülüyor"
+
+msgid "Building the pacman package"
+msgstr "pacman paketi derleniyor"
+
+msgid "Warning:"
+msgstr "Uyarı:"
+
+msgid "Error:"
+msgstr "Hata:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Bir .deb paketini pacman paketine dönüştürür ve kurar."
+
+msgid "the .deb file"
+msgstr ".deb dosyası"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "soru sorma, ancak kurulum betiğini incelemek için aç"
+
+msgid "do not ask any question"
+msgstr "hiçbir soru sorma"
+
+msgid "only build the package, do not install it"
+msgstr "yalnızca paketi derle, kurma"
+
+msgid "keep the built package in DIR"
+msgstr "derlenen paketi DIR içinde sakla"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr ".deb dosyasının yanına bir PKGBUILD de yaz"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "yalnızca bir PKGBUILD yaz, derleme"
+
+msgid "{question} [y/N] "
+msgstr "{question} [e/H] "
+
+msgid "yes"
+msgstr "evet"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod artık yerel bir veritabanına ihtiyaç duymaz; güncellenecek bir şey yok."
+
+msgid "no .deb file given"
+msgstr ".deb dosyası verilmedi"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "-s ve -w seçenekleri artık kullanılmıyor ve yok sayıldı"
+
+msgid "Installed size: {size}"
+msgstr "Kurulu boyut: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD {path} konumuna yazıldı"
+
+msgid "cancelled"
+msgstr "iptal edildi"
+
+msgid "Package {file} built"
+msgstr "{file} paketi derlendi"
+
+msgid "Menu entries: {names}"
+msgstr "Menü girdileri: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Paket {path} konumuna kaydedildi"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "bazı dosyalar kurulu diğer paketlere ait; önce bunları kaldırın:"
+
+msgid "Install script that will run as root:"
+msgstr "root olarak çalışacak kurulum betiği:"
+
+msgid "Install {name} now?"
+msgstr "{name} şimdi kurulsun mu?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman paketi kuramadı (çıkış kodu {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} başarıyla kuruldu"
+
+msgid "Look for {names} in the applications menu."
+msgstr "{names} uygulamasını uygulama menüsünde arayın."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Bu paket {deb_arch} için derlenmiş ancak bu bilgisayar {host}; burada çalışmaz."
+
+msgid "Extracting {name}…"
+msgstr "{name} çıkarılıyor…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Güvensiz veya özel girdiler yok sayıldı: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "/usr içindeki yinelenen dosya korundu: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Bağımlılıklar aranıyor…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Diğer sistemler veya mimariler için derlenmiş {count} ikili dosya yok sayıldı."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Kitaplıklar depolarda bulunamadı: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Burada karşılığı olmayan Debian bağımlılıkları: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Zaten diğer paketlere ait olan dosyalar: {list}"
+
+msgid "Building the package…"
+msgstr "Paket derleniyor…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "Dosya bir Debian paketi değil (ar başlığı eksik)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Debian paketi kesilmiş veya bozuk."
+
+msgid "Unsupported compression in member {name}."
+msgstr "{name} üyesinde desteklenmeyen sıkıştırma."
+
+msgid "File not found: {path}"
+msgstr "Dosya bulunamadı: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "Dosya bir Debian paketi değil (debian-binary eksik)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "Debian paketinde control veya data arşivi yok."
+
+msgid "The Debian package has no control file."
+msgstr "Debian paketinde control dosyası yok."
+
+msgid "The control file has no Package or Version field."
+msgstr "control dosyasında Package veya Version alanı yok."
+
+msgid "Install .deb package"
+msgstr ".deb paketini kur"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Debian paketlerini yerel pacman paketlerine dönüştürür ve kurar."
+
+msgid "Extracting files"
+msgstr "Dosyalar çıkarılıyor"
+
+msgid "Adapting folders to this system"
+msgstr "Klasörler bu sisteme uyarlanıyor"
+
+msgid "Finding dependencies"
+msgstr "Bağımlılıklar bulunuyor"
+
+msgid "Preparing installation scripts"
+msgstr "Kurulum betikleri hazırlanıyor"
+
+msgid "Building the package"
+msgstr "Paket derleniyor"
+
+msgid "Waiting for authorization"
+msgstr "Yetkilendirme bekleniyor"
+
+msgid "Installing"
+msgstr "Kuruluyor"
+
+msgid "About"
+msgstr "Hakkında"
+
+msgid "Main menu"
+msgstr "Ana menü"
+
+msgid "Choose a .deb file…"
+msgstr ".deb dosyası seç…"
+
+msgid "Install a .deb package"
+msgstr "Bir .deb paketi kur"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Bir Debian paketi açın veya buraya bırakın. Bu sistem için yerel bir pakete dönüştürülüp kurulacak."
+
+msgid "Details"
+msgstr "Ayrıntılar"
+
+msgid "Cancel"
+msgstr "İptal"
+
+msgid "Prefer native packages when available"
+msgstr "Varsa yerel paketleri tercih et"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Sistem depolarındaki programlar, Flatpak veya AppImage genellikle daha iyi çalışır. Dönüştürülen .deb paketleri kusursuz çalışmayabilir."
+
+msgid "“{name}” is available in the repositories"
+msgstr "“{name}” depolarda mevcut"
+
+msgid "Installing the native package is recommended."
+msgstr "Yerel paketi kurmanız önerilir."
+
+msgid "Open"
+msgstr "Aç"
+
+msgid "Package"
+msgstr "Paket"
+
+msgid "Version"
+msgstr "Sürüm"
+
+msgid "Architecture"
+msgstr "Mimari"
+
+msgid "Installed size"
+msgstr "Kurulu boyut"
+
+msgid "Maintainer"
+msgstr "Bakımcı"
+
+msgid "Website"
+msgstr "Web sitesi"
+
+msgid "Description"
+msgstr "Açıklama"
+
+msgid "Review before installing"
+msgstr "Kurmadan önce gözden geçir"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Bağımlılıkları ve yönetici olarak çalışacak betikleri göster"
+
 msgid "Install"
-msgstr "Kurulum"
+msgstr "Kur"
+
+msgid "Ready to install"
+msgstr "Kurulmaya hazır"
+
+msgid "Check what will be installed."
+msgstr "Nelerin kurulacağını kontrol edin."
+
+msgid "Package name on this system"
+msgstr "Bu sistemdeki paket adı"
+
+msgid "Package size"
+msgstr "Paket boyutu"
+
+msgid "Applications menu"
+msgstr "Uygulama menüsü"
+
+msgid "No menu entry"
+msgstr "Menü girdisi yok"
+
+msgid "Warnings"
+msgstr "Uyarılar"
+
+msgid "Notes"
+msgstr "Notlar"
+
+msgid "Dependencies"
+msgstr "Bağımlılıklar"
+
+msgid "Required"
+msgstr "Gerekli"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} paket"
+msgstr[1] "{n} paket"
+
+msgid "will be downloaded"
+msgstr "indirilecek"
+
+msgid "Optional"
+msgstr "İsteğe bağlı"
+
+msgid "Scripts"
+msgstr "Betikler"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Debian paketindeki bu komutlar kurulum sırasında yönetici olarak çalışır."
+
+msgid "Open {name}"
+msgstr "{name} uygulamasını aç"
+
+msgid "Copy details"
+msgstr "Ayrıntıları kopyala"
+
 msgid "Close"
 msgstr "Kapat"
-msgid "Install .deb package"
-msgstr ".deb paketini yükle"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Dosya dönüştürülüyor, lütfen bekleyin. Bu birkaç dakika sürebilir..."
-msgid "Done!"
-msgstr "Tamam!"
+
+msgid "This file cannot be installed"
+msgstr "Bu dosya kurulamaz"
+
+msgid "Choose a .deb file"
+msgstr ".deb dosyası seçin"
+
+msgid "Debian packages"
+msgstr "Debian paketleri"
+
+msgid "Type your password in the window that will appear."
+msgstr "Parolanızı görünecek pencereye yazın."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Eksik bağımlılıklar depolardan indirilir."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Dosyalar sıkıştırılıyor, bu bir dakika sürebilir."
+
+msgid "The package could not be converted"
+msgstr "Paket dönüştürülemedi"
+
+msgid "Cancelled"
+msgstr "İptal edildi"
+
+msgid "{name} is installed"
+msgstr "{name} kuruldu"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "{name} paketi kuruldu. Uygulama menüsünde girdisi yok."
+
+msgid "Installation complete"
+msgstr "Kurulum tamamlandı"
+
+msgid "Authorization was not granted"
+msgstr "Yetkilendirme verilmedi"
+
+msgid "The installation failed"
+msgstr "Kurulum başarısız oldu"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman bir hata döndürdü (kod {code}). Ne olduğunu görmek için ayrıntıları açın."
+
+msgid "The application could not be started"
+msgstr "Uygulama başlatılamadı"
+
+msgid "Copied"
+msgstr "Kopyalandı"
+
+msgid "Please wait until the installation finishes"
+msgstr "Lütfen kurulum bitene kadar bekleyin"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg root olarak çalışamaz; debtap-mod'u normal bir kullanıcı olarak çalıştırın."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg {code} çıkış koduyla başarısız oldu"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg bitti ancak hiç paket üretmedi"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Debian betikleri yalnızca Ubuntu için bir APT deposu ve bir AppArmor profili kaydeder; burada gerekli değildir."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "{script} betiği bir APT deposu yapılandırır; bu kısmın bu sistemde bir etkisi yoktur."

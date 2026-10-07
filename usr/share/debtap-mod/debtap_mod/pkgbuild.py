@@ -8,6 +8,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from . import PROJECT_URL
+from .i18n import _
 from .layout import merge_rules
 from .version import PacmanVersion
 
@@ -136,7 +137,7 @@ def run_makepkg(
     cancelled: Callable[[], bool] | None = None,
 ) -> Path:
     if os.geteuid() == 0:
-        raise BuildError("makepkg cannot run as root; run debtap-mod as a regular user.")
+        raise BuildError(_("makepkg cannot run as root; run debtap-mod as a regular user."))
     outdir = workdir / "out"
     outdir.mkdir(exist_ok=True)
     conf = workdir / "makepkg.conf"
@@ -164,8 +165,8 @@ def run_makepkg(
             proc.terminate()
     proc.wait()
     if proc.returncode != 0:
-        raise BuildError(f"makepkg failed with exit code {proc.returncode}", "".join(output))
+        raise BuildError(_("makepkg failed with exit code {code}").format(code=proc.returncode), "".join(output))
     packages = sorted(outdir.glob("*.pkg.tar*"))
     if not packages:
-        raise BuildError("makepkg finished but produced no package", "".join(output))
+        raise BuildError(_("makepkg finished but produced no package"), "".join(output))
     return packages[0]

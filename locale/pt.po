@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -357,6 +357,15 @@ msgstr "Copiado"
 
 msgid "Please wait until the installation finishes"
 msgstr "Aguarde o fim da instalação"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "O makepkg não pode ser executado como root; execute o debtap-mod como usuário comum."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "O makepkg falhou com o código de saída {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "O makepkg terminou, mas não gerou nenhum pacote"
 
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Os scripts Debian só registram um repositório APT e um perfil AppArmor para o Ubuntu; não são necessários aqui."

@@ -1,64 +1,375 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: attranslate\n"
-msgid "* Error alerts during installation generally do not prevent the program from working correctly."
-msgstr "* Alerta de eroare în timpul instalării, în general, nu împiedică programul să funcționeze corect."
-msgid "Read before proceeding with the installation:"
-msgstr "Citiți înainte de a continua cu instalarea:"
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux systems compatible with "
-"the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in <span "
-"color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, or <span "
-"color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span color='#CC2222'>.deb</span> file "
-"can be converted to <span color='#CC2222'>.pkg.tar</span> and installed on this system. However, "
-"the installation may not work correctly."
-msgstr ""
-"Preferă pachete native, construite pentru BigLinux, Manjaro, Arch sau alte sisteme Linux "
-"compatibile cu formatul <span color='#CC2222'>.pkg.tar</span>.\n"
-"\n"
-"O altă opțiune este să folosești programe create pentru orice sistem Linux, de obicei în format "
-"<span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span> sau <span "
-"color='#CC2222'>.flatpak</span>.\n"
-"\n"
-"Dacă programul nu este disponibil în formatele de mai sus, fișierul <span "
-"color='#CC2222'>.deb</span> poate fi convertit în <span color='#CC2222'>.pkg.tar</span> și instalat "
-"pe acest sistem. Cu toate acestea, instalarea s-ar putea să nu funcționeze corect."
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package format, but the file is in "
-"<span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>Acest sistem folosește formatul de pachet <span color='#CC2222'>.pkg.tar</span>, dar fișierul "
-"este în format <span color='#CC2222'>.deb</span>.\n"
-"\n"
-"Doriți să continuați cu instalarea?</big>"
-msgid "Install & Review Config Files"
-msgstr "Instalare și Revizuire Fișiere Configurare"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+
+msgid "Extracting package data"
+msgstr "Se extrag datele pachetului"
+
+msgid "Adapting the directory layout"
+msgstr "Se adaptează structura directoarelor"
+
+msgid "Resolving dependencies"
+msgstr "Se rezolvă dependențele"
+
+msgid "Converting maintainer scripts"
+msgstr "Se convertesc scripturile de întreținere"
+
+msgid "Building the pacman package"
+msgstr "Se construiește pachetul pacman"
+
+msgid "Warning:"
+msgstr "Avertisment:"
+
+msgid "Error:"
+msgstr "Eroare:"
+
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Convertește un pachet .deb într-un pachet pacman și îl instalează."
+
+msgid "the .deb file"
+msgstr "fișierul .deb"
+
+msgid "do not ask questions, but open the install script for review"
+msgstr "nu pune întrebări, dar deschide scriptul de instalare pentru verificare"
+
+msgid "do not ask any question"
+msgstr "nu pune nicio întrebare"
+
+msgid "only build the package, do not install it"
+msgstr "doar construiește pachetul, nu îl instala"
+
+msgid "keep the built package in DIR"
+msgstr "păstrează pachetul construit în DIR"
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "scrie și un PKGBUILD lângă fișierul .deb"
+
+msgid "only write a PKGBUILD, do not build"
+msgstr "doar scrie un PKGBUILD, nu construi"
+
+msgid "{question} [y/N] "
+msgstr "{question} [d/N] "
+
+msgid "yes"
+msgstr "da"
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod nu mai are nevoie de o bază de date locală; nu e nimic de actualizat."
+
+msgid "no .deb file given"
+msgstr "niciun fișier .deb specificat"
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "opțiunile -s și -w sunt depășite și au fost ignorate"
+
+msgid "Installed size: {size}"
+msgstr "Dimensiune instalată: {size}"
+
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD scris în {path}"
+
+msgid "cancelled"
+msgstr "anulat"
+
+msgid "Package {file} built"
+msgstr "Pachetul {file} a fost construit"
+
+msgid "Menu entries: {names}"
+msgstr "Intrări de meniu: {names}"
+
+msgid "Package saved to {path}"
+msgstr "Pachet salvat în {path}"
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "unele fișiere aparțin altor pachete instalate; eliminați-le mai întâi:"
+
+msgid "Install script that will run as root:"
+msgstr "Scriptul de instalare care va rula ca root:"
+
+msgid "Install {name} now?"
+msgstr "Instalați {name} acum?"
+
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman nu a putut instala pachetul (cod de ieșire {code})"
+
+msgid "{name} installed successfully"
+msgstr "{name} a fost instalat cu succes"
+
+msgid "Look for {names} in the applications menu."
+msgstr "Căutați {names} în meniul de aplicații."
+
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "Acest pachet a fost construit pentru {deb_arch}, dar acest calculator este {host}; nu va rula aici."
+
+msgid "Extracting {name}…"
+msgstr "Se extrage {name}…"
+
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Intrări nesigure sau speciale ignorate: {list}"
+
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Fișier duplicat păstrat din /usr: /{path}"
+
+msgid "Looking for dependencies…"
+msgstr "Se caută dependențe…"
+
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "{count} fișiere binare construite pentru alte sisteme sau arhitecturi au fost ignorate."
+
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Biblioteci negăsite în depozite: {list}"
+
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Dependențe Debian fără echivalent aici: {list}"
+
+msgid "Files already owned by other packages: {list}"
+msgstr "Fișiere deținute deja de alte pachete: {list}"
+
+msgid "Building the package…"
+msgstr "Se construiește pachetul…"
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "Fișierul nu este un pachet Debian (lipsește antetul ar)."
+
+msgid "The Debian package is truncated or corrupted."
+msgstr "Pachetul Debian este trunchiat sau corupt."
+
+msgid "Unsupported compression in member {name}."
+msgstr "Compresie neacceptată în membrul {name}."
+
+msgid "File not found: {path}"
+msgstr "Fișierul nu a fost găsit: {path}"
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "Fișierul nu este un pachet Debian (lipsește debian-binary)."
+
+msgid "The Debian package has no control or data archive."
+msgstr "Pachetul Debian nu conține arhiva control sau data."
+
+msgid "The Debian package has no control file."
+msgstr "Pachetul Debian nu conține fișierul control."
+
+msgid "The control file has no Package or Version field."
+msgstr "Fișierul control nu are câmpul Package sau Version."
+
+msgid "Install .deb package"
+msgstr "Instalează un pachet .deb"
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Convertește pachetele Debian în pachete pacman native și le instalează."
+
+msgid "Extracting files"
+msgstr "Se extrag fișierele"
+
+msgid "Adapting folders to this system"
+msgstr "Se adaptează dosarele la acest sistem"
+
+msgid "Finding dependencies"
+msgstr "Se caută dependențele"
+
+msgid "Preparing installation scripts"
+msgstr "Se pregătesc scripturile de instalare"
+
+msgid "Building the package"
+msgstr "Se construiește pachetul"
+
+msgid "Waiting for authorization"
+msgstr "Se așteaptă autorizarea"
+
+msgid "Installing"
+msgstr "Se instalează"
+
+msgid "About"
+msgstr "Despre"
+
+msgid "Main menu"
+msgstr "Meniu principal"
+
+msgid "Choose a .deb file…"
+msgstr "Alegeți un fișier .deb…"
+
+msgid "Install a .deb package"
+msgstr "Instalați un pachet .deb"
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Deschideți un pachet Debian sau trageți-l aici. Va fi convertit într-un pachet nativ pentru acest sistem și instalat."
+
+msgid "Details"
+msgstr "Detalii"
+
+msgid "Cancel"
+msgstr "Anulează"
+
+msgid "Prefer native packages when available"
+msgstr "Preferă pachetele native când sunt disponibile"
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Programele din depozitele sistemului, Flatpak sau AppImage funcționează de obicei mai bine. Pachetele .deb convertite pot să nu funcționeze perfect."
+
+msgid "“{name}” is available in the repositories"
+msgstr "„{name}” este disponibil în depozite"
+
+msgid "Installing the native package is recommended."
+msgstr "Se recomandă instalarea pachetului nativ."
+
+msgid "Open"
+msgstr "Deschide"
+
+msgid "Package"
+msgstr "Pachet"
+
+msgid "Version"
+msgstr "Versiune"
+
+msgid "Architecture"
+msgstr "Arhitectură"
+
+msgid "Installed size"
+msgstr "Dimensiune instalată"
+
+msgid "Maintainer"
+msgstr "Întreținător"
+
+msgid "Website"
+msgstr "Site web"
+
+msgid "Description"
+msgstr "Descriere"
+
+msgid "Review before installing"
+msgstr "Verificați înainte de instalare"
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Arată dependențele și scripturile care vor rula ca administrator"
+
 msgid "Install"
-msgstr "Instalare"
+msgstr "Instalează"
+
+msgid "Ready to install"
+msgstr "Gata de instalare"
+
+msgid "Check what will be installed."
+msgstr "Verificați ce va fi instalat."
+
+msgid "Package name on this system"
+msgstr "Numele pachetului pe acest sistem"
+
+msgid "Package size"
+msgstr "Dimensiunea pachetului"
+
+msgid "Applications menu"
+msgstr "Meniul de aplicații"
+
+msgid "No menu entry"
+msgstr "Fără intrare în meniu"
+
+msgid "Warnings"
+msgstr "Avertismente"
+
+msgid "Notes"
+msgstr "Note"
+
+msgid "Dependencies"
+msgstr "Dependențe"
+
+msgid "Required"
+msgstr "Necesare"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} pachet"
+msgstr[1] "{n} pachete"
+msgstr[2] "{n} de pachete"
+
+msgid "will be downloaded"
+msgstr "vor fi descărcate"
+
+msgid "Optional"
+msgstr "Opționale"
+
+msgid "Scripts"
+msgstr "Scripturi"
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "Aceste comenzi din pachetul Debian rulează ca administrator în timpul instalării."
+
+msgid "Open {name}"
+msgstr "Deschide {name}"
+
+msgid "Copy details"
+msgstr "Copiază detaliile"
+
 msgid "Close"
 msgstr "Închide"
-msgid "Install .deb package"
-msgstr "Instalați pachetul .deb"
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Conversie fișier, vă rugăm să așteptați. Acest lucru poate dura câteva minute..."
-msgid "Done!"
-msgstr "Finalizat!"
+
+msgid "This file cannot be installed"
+msgstr "Acest fișier nu poate fi instalat"
+
+msgid "Choose a .deb file"
+msgstr "Alegeți un fișier .deb"
+
+msgid "Debian packages"
+msgstr "Pachete Debian"
+
+msgid "Type your password in the window that will appear."
+msgstr "Introduceți parola în fereastra care va apărea."
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Dependențele lipsă sunt descărcate din depozite."
+
+msgid "Compressing the files, this may take a minute."
+msgstr "Se comprimă fișierele, poate dura un minut."
+
+msgid "The package could not be converted"
+msgstr "Pachetul nu a putut fi convertit"
+
+msgid "Cancelled"
+msgstr "Anulat"
+
+msgid "{name} is installed"
+msgstr "{name} este instalat"
+
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "Pachetul {name} a fost instalat. Nu are intrare în meniul de aplicații."
+
+msgid "Installation complete"
+msgstr "Instalare finalizată"
+
+msgid "Authorization was not granted"
+msgstr "Autorizarea nu a fost acordată"
+
+msgid "The installation failed"
+msgstr "Instalarea a eșuat"
+
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman a returnat o eroare (cod {code}). Deschideți detaliile pentru a vedea ce s-a întâmplat."
+
+msgid "The application could not be started"
+msgstr "Aplicația nu a putut fi pornită"
+
+msgid "Copied"
+msgstr "Copiat"
+
+msgid "Please wait until the installation finishes"
+msgstr "Așteptați până se termină instalarea"
+
+msgid "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr "makepkg nu poate rula ca root; rulați debtap-mod ca utilizator obișnuit."
+
+msgid "makepkg failed with exit code {code}"
+msgstr "makepkg a eșuat cu codul de ieșire {code}"
+
+msgid "makepkg finished but produced no package"
+msgstr "makepkg s-a încheiat, dar nu a produs niciun pachet"
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "Scripturile Debian doar înregistrează un depozit APT și un profil AppArmor pentru Ubuntu; nu sunt necesare aici."
+
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "Scriptul {script} configurează un depozit APT; acea parte nu are efect pe acest sistem."
