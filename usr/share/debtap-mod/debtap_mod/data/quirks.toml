@@ -1,0 +1,84 @@
+# Per-package adjustments, matched against the Debian package name
+# (shell-style wildcards allowed).
+#
+# Keys:
+#   name             pacman package name (default: "<debian name>-deb")
+#   elf_deps         false = do not add dependencies found in ELF files
+#   clear_depends    true = drop every dependency found automatically
+#   add_depends      extra dependencies
+#   remove_depends   dependencies to drop (wildcards allowed)
+#   skip_scripts     true, or a list of maintainer scripts not to run
+#   remove_files     paths (wildcards allowed) deleted from the package
+#   post_install     shell lines appended to post_install/post_upgrade
+#   note             message shown to the user
+#   [[quirk.add_file]]       path, content, mode
+#   [[quirk.replace]]        path, search, replace
+
+[[quirk]]
+match = "chatgpt"
+skip_scripts = true
+remove_files = ["etc/apparmor.d/chatgpt"]
+note = "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+
+[[quirk]]
+match = "warsaw"
+name = "warsaw-deb"
+elf_deps = false
+remove_depends = ["java-runtime"]
+add_depends = ["libcurl-gnutls"]
+
+[[quirk]]
+match = "pje-office"
+name = "pje-office-deb"
+clear_depends = true
+
+[[quirk.add_file]]
+path = "usr/bin/pjeOffice"
+mode = 0o755
+content = """#!/bin/bash
+exec /usr/share/pje-office/pjeOffice.sh /usr/share/pje-office/pjeOffice.jar "$@"
+"""
+
+[[quirk]]
+match = "shodo"
+name = "shodo-deb"
+add_depends = ["jre8-openjdk"]
+
+[[quirk.replace]]
+path = "usr/share/shodo/shortcuts/shodo.desktop"
+search = "Exec=java"
+replace = "Exec=/usr/lib/jvm/java-8-openjdk/jre/bin/java"
+
+[[quirk]]
+match = "neoid-desktop"
+clear_depends = true
+remove_files = [
+    "usr/share/neoid-desktop/jre/lib/amd64/libfreetype.so",
+    "usr/share/neoid-desktop/jre/lib/amd64/libfreetype.so.6",
+]
+
+[[quirk]]
+match = "serproid-desktop"
+clear_depends = true
+remove_files = [
+    "usr/share/serproid-desktop/jre/lib/amd64/libfreetype.so",
+    "usr/share/serproid-desktop/jre/lib/amd64/libfreetype.so.6",
+]
+
+[[quirk]]
+match = "bricscad*"
+post_install = "chmod -R 777 /var/bricsys 2>/dev/null || true"
+
+[[quirk]]
+match = "mobirise"
+clear_depends = true
+
+[[quirk]]
+match = "bjeps2xx"
+add_depends = ["ccid", "pcsc-tools", "perl-gtk3"]
+
+[[quirk]]
+match = "safesignidentityclient"
+name = "safesignidentityclient-deb"
+add_depends = ["xdg-utils", "libmspack", "ccid"]
+remove_depends = ["teamspeak3"]

@@ -4,58 +4,399 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
-msgid   ""
-msgstr  "Project-Id-Version: debtap-mod\n"
-        "Report-Msgid-Bugs-To: \n"
-        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-        "Language-Team: LANGUAGE <LL@li.org>\n"
-        "Language: \n"
-        "MIME-Version: 1.0\n"
-        "Content-Type: text/plain; charset=CHARSET\n"
-        "Content-Transfer-Encoding: 8bit\n"
+msgid ""
+msgstr ""
+"Project-Id-Version: debtap-mod\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 01:23-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-msgid   "* Error alerts during installation generally do not prevent the "
-        "program from working correctly."
-msgstr  ""
+msgid "Extracting package data"
+msgstr ""
 
-msgid   "Read before proceeding with the installation:"
-msgstr  ""
+msgid "Adapting the directory layout"
+msgstr ""
 
-msgid   "Prefer native packages, built for BigLinux, Manjaro, Arch, or other "
-        "Linux systems compatible with the <span color='#CC2222'>.pkg.tar</"
-        "span> format.\n"
-        "\n"
-        "Another option is to use programs made for any Linux system, usually "
-        "in <span color='#CC2222'>.run</span>, <span color='#CC2222'>."
-        "appimage</span>, or <span color='#CC2222'>.flatpak</span> format.\n"
-        "\n"
-        "If the program is not available in the formats above, the <span "
-        "color='#CC2222'>.deb</span> file can be converted to <span "
-        "color='#CC2222'>.pkg.tar</span> and installed on this system. "
-        "However, the installation may not work correctly."
-msgstr  ""
+msgid "Resolving dependencies"
+msgstr ""
 
-msgid   "<big>This system uses the <span color='#CC2222'>.pkg.tar</span> "
-        "package format, but the file is in <span color='#CC2222'>.deb</span> "
-        "format.\n"
-        "\n"
-        "Do you wish to proceed with the installation?</big>\n"
-msgstr  ""
+msgid "Converting maintainer scripts"
+msgstr ""
 
-msgid   "Install & Review Config Files"
-msgstr  ""
+msgid "Building the pacman package"
+msgstr ""
 
-msgid   "Install"
-msgstr  ""
+msgid "Warning:"
+msgstr ""
 
-msgid   "Close"
-msgstr  ""
+msgid "Error:"
+msgstr ""
 
-msgid   "Install .deb package"
-msgstr  ""
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr ""
 
-msgid   "Converting file, please wait. This may take a few minutes..."
-msgstr  ""
+msgid "the .deb file"
+msgstr ""
 
-msgid   "Done!"
-msgstr  ""
+msgid "do not ask questions, but open the install script for review"
+msgstr ""
+
+msgid "do not ask any question"
+msgstr ""
+
+msgid "only build the package, do not install it"
+msgstr ""
+
+msgid "keep the built package in DIR"
+msgstr ""
+
+msgid "also write a PKGBUILD next to the .deb"
+msgstr ""
+
+msgid "only write a PKGBUILD, do not build"
+msgstr ""
+
+#, python-brace-format
+msgid "{question} [y/N] "
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr ""
+
+msgid "no .deb file given"
+msgstr ""
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr ""
+
+#, python-brace-format
+msgid "Installed size: {size}"
+msgstr ""
+
+#, python-brace-format
+msgid "PKGBUILD written to {path}"
+msgstr ""
+
+msgid "cancelled"
+msgstr ""
+
+#, python-brace-format
+msgid "Package {file} built"
+msgstr ""
+
+#, python-brace-format
+msgid "Menu entries: {names}"
+msgstr ""
+
+#, python-brace-format
+msgid "Package saved to {path}"
+msgstr ""
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr ""
+
+msgid "Install script that will run as root:"
+msgstr ""
+
+#, python-brace-format
+msgid "Install {name} now?"
+msgstr ""
+
+#, python-brace-format
+msgid "pacman could not install the package (exit code {code})"
+msgstr ""
+
+#, python-brace-format
+msgid "{name} installed successfully"
+msgstr ""
+
+#, python-brace-format
+msgid "Look for {names} in the applications menu."
+msgstr ""
+
+#, python-brace-format
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr ""
+
+#, python-brace-format
+msgid "Extracting {name}…"
+msgstr ""
+
+#, python-brace-format
+msgid "Ignored unsafe or special entries: {list}"
+msgstr ""
+
+#, python-brace-format
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr ""
+
+msgid "Looking for dependencies…"
+msgstr ""
+
+#, python-brace-format
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr ""
+
+#, python-brace-format
+msgid "Libraries not found in the repositories: {list}"
+msgstr ""
+
+#, python-brace-format
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr ""
+
+#, python-brace-format
+msgid "Files already owned by other packages: {list}"
+msgstr ""
+
+msgid "Building the package…"
+msgstr ""
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr ""
+
+msgid "The Debian package is truncated or corrupted."
+msgstr ""
+
+#, python-brace-format
+msgid "Unsupported compression in member {name}."
+msgstr ""
+
+#, python-brace-format
+msgid "File not found: {path}"
+msgstr ""
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr ""
+
+msgid "The Debian package has no control or data archive."
+msgstr ""
+
+msgid "The Debian package has no control file."
+msgstr ""
+
+msgid "The control file has no Package or Version field."
+msgstr ""
+
+msgid "Install .deb package"
+msgstr ""
+
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr ""
+
+msgid "Extracting files"
+msgstr ""
+
+msgid "Adapting folders to this system"
+msgstr ""
+
+msgid "Finding dependencies"
+msgstr ""
+
+msgid "Preparing installation scripts"
+msgstr ""
+
+msgid "Building the package"
+msgstr ""
+
+msgid "Waiting for authorization"
+msgstr ""
+
+msgid "Installing"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "Main menu"
+msgstr ""
+
+msgid "Choose a .deb file…"
+msgstr ""
+
+msgid "Install a .deb package"
+msgstr ""
+
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Prefer native packages when available"
+msgstr ""
+
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr ""
+
+#, python-brace-format
+msgid "“{name}” is available in the repositories"
+msgstr ""
+
+msgid "Installing the native package is recommended."
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Package"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Architecture"
+msgstr ""
+
+msgid "Installed size"
+msgstr ""
+
+msgid "Maintainer"
+msgstr ""
+
+msgid "Website"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Review before installing"
+msgstr ""
+
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Ready to install"
+msgstr ""
+
+msgid "Check what will be installed."
+msgstr ""
+
+msgid "Package name on this system"
+msgstr ""
+
+msgid "Package size"
+msgstr ""
+
+msgid "Applications menu"
+msgstr ""
+
+msgid "No menu entry"
+msgstr ""
+
+msgid "Warnings"
+msgstr ""
+
+msgid "Notes"
+msgstr ""
+
+msgid "Dependencies"
+msgstr ""
+
+msgid "Required"
+msgstr ""
+
+#, python-brace-format
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "will be downloaded"
+msgstr ""
+
+msgid "Optional"
+msgstr ""
+
+msgid "Scripts"
+msgstr ""
+
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr ""
+
+#, python-brace-format
+msgid "Open {name}"
+msgstr ""
+
+msgid "Copy details"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "This file cannot be installed"
+msgstr ""
+
+msgid "Choose a .deb file"
+msgstr ""
+
+msgid "Debian packages"
+msgstr ""
+
+msgid "Type your password in the window that will appear."
+msgstr ""
+
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr ""
+
+msgid "Compressing the files, this may take a minute."
+msgstr ""
+
+msgid "The package could not be converted"
+msgstr ""
+
+msgid "Cancelled"
+msgstr ""
+
+#, python-brace-format
+msgid "{name} is installed"
+msgstr ""
+
+#, python-brace-format
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr ""
+
+msgid "Installation complete"
+msgstr ""
+
+msgid "Authorization was not granted"
+msgstr ""
+
+msgid "The installation failed"
+msgstr ""
+
+#, python-brace-format
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr ""
+
+msgid "The application could not be started"
+msgstr ""
+
+msgid "Copied"
+msgstr ""
+
+msgid "Please wait until the installation finishes"
+msgstr ""
+
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr ""
+
+#, python-brace-format
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr ""
