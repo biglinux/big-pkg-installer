@@ -1,79 +1,650 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# English translations for debtap-mod package.
+# Copyright (C) 2026 THE debtap-mod'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the debtap-mod package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Automatically generated, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid ""
-"* Error alerts during installation generally do not prevent the program from "
-"working correctly."
-msgstr ""
-"* Error alerts during installation generally do not prevent the program from "
-"working correctly."
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 17
+msgid "Extracting package data"
+msgstr "Extracting package data"
 
-msgid "Read before proceeding with the installation:"
-msgstr "Read before proceeding with the installation:"
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 18
+msgid "Adapting the directory layout"
+msgstr "Adapting the directory layout"
 
-msgid ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux "
-"systems compatible with the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in "
-"<span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, "
-"or <span color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span "
-"color='#CC2222'>.deb</span> file can be converted to <span color='#CC2222'>."
-"pkg.tar</span> and installed on this system. However, the installation may "
-"not work correctly."
-msgstr ""
-"Prefer native packages, built for BigLinux, Manjaro, Arch, or other Linux "
-"systems compatible with the <span color='#CC2222'>.pkg.tar</span> format.\n"
-"\n"
-"Another option is to use programs made for any Linux system, usually in "
-"<span color='#CC2222'>.run</span>, <span color='#CC2222'>.appimage</span>, "
-"or <span color='#CC2222'>.flatpak</span> format.\n"
-"\n"
-"If the program is not available in the formats above, the <span "
-"color='#CC2222'>.deb</span> file can be converted to <span color='#CC2222'>."
-"pkg.tar</span> and installed on this system. However, the installation may "
-"not work correctly."
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 19
+msgid "Resolving dependencies"
+msgstr "Resolving dependencies"
 
-msgid ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package "
-"format, but the file is in <span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
-msgstr ""
-"<big>This system uses the <span color='#CC2222'>.pkg.tar</span> package "
-"format, but the file is in <span color='#CC2222'>.deb</span> format.\n"
-"\n"
-"Do you wish to proceed with the installation?</big>\n"
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 20
+msgid "Converting maintainer scripts"
+msgstr "Converting maintainer scripts"
 
-msgid "Install & Review Config Files"
-msgstr "Install & Review Config Files"
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 21
+msgid "Building the pacman package"
+msgstr "Building the pacman package"
 
-msgid "Install"
-msgstr "Install"
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 36
+msgid "Warning:"
+msgstr "Warning:"
 
-msgid "Close"
-msgstr "Close"
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 40
+msgid "Error:"
+msgstr "Error:"
 
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 55
+msgid "Convert a .deb package into a pacman package and install it."
+msgstr "Convert a .deb package into a pacman package and install it."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 57
+msgid "the .deb file"
+msgstr "the .deb file"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 58
+msgid "do not ask questions, but open the install script for review"
+msgstr "do not ask questions, but open the install script for review"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 59
+msgid "do not ask any question"
+msgstr "do not ask any question"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 60
+msgid "only build the package, do not install it"
+msgstr "only build the package, do not install it"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 61
+msgid "keep the built package in DIR"
+msgstr "keep the built package in DIR"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 62
+msgid "also write a PKGBUILD next to the .deb"
+msgstr "also write a PKGBUILD next to the .deb"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 63
+msgid "only write a PKGBUILD, do not build"
+msgstr "only write a PKGBUILD, do not build"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 73
+#, python-brace-format
+msgid "{question} [y/N] "
+msgstr "{question} [y/N] "
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 77
+msgid "yes"
+msgstr "yes"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 91
+msgid "debtap-mod no longer needs a local database; nothing to update."
+msgstr "debtap-mod no longer needs a local database; nothing to update."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 95
+msgid "no .deb file given"
+msgstr "no .deb file given"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 98
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr "the -s and -w options are obsolete and were ignored"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 110
+#, python-brace-format
+msgid "Installed size: {size}"
+msgstr "Installed size: {size}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 126
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 171
+#, python-brace-format
+msgid "PKGBUILD written to {path}"
+msgstr "PKGBUILD written to {path}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 142
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 145
+msgid "cancelled"
+msgstr "cancelled"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 157
+#, python-brace-format
+msgid "Package {file} built"
+msgstr "Package {file} built"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 169
+#, python-brace-format
+msgid "Menu entries: {names}"
+msgstr "Menu entries: {names}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 177
+#, python-brace-format
+msgid "Package saved to {path}"
+msgstr "Package saved to {path}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 182
+msgid "some files belong to other installed packages; remove them first:"
+msgstr "some files belong to other installed packages; remove them first:"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 195
+msgid "Install script that will run as root:"
+msgstr "Install script that will run as root:"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 197
+#, python-brace-format
+msgid "Install {name} now?"
+msgstr "Install {name} now?"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 203
+#, python-brace-format
+msgid "pacman could not install the package (exit code {code})"
+msgstr "pacman could not install the package (exit code {code})"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 205
+#, python-brace-format
+msgid "{name} installed successfully"
+msgstr "{name} installed successfully"
+
+#
+# #-#-#-#-#  debtap-mod.pot (debtap-mod)  #-#-#-#-#
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 207
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 465
+#, python-brace-format
+msgid "Look for {names} in the applications menu."
+msgstr "Look for {names} in the applications menu."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/scripts.py, line: 185
+#, python-brace-format
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr "The {script} script configures an APT repository; that part has no effect on this system."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/quirks.py, line: 19
+msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgstr "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 63
+msgid "The file is not a Debian package (missing ar header)."
+msgstr "The file is not a Debian package (missing ar header)."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 69
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 74
+msgid "The Debian package is truncated or corrupted."
+msgstr "The Debian package is truncated or corrupted."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 91
+#, python-brace-format
+msgid "Unsupported compression in member {name}."
+msgstr "Unsupported compression in member {name}."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 172
+#, python-brace-format
+msgid "File not found: {path}"
+msgstr "File not found: {path}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 176
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr "The file is not a Debian package (debian-binary missing)."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 180
+msgid "The Debian package has no control or data archive."
+msgstr "The Debian package has no control or data archive."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 196
+msgid "The Debian package has no control file."
+msgstr "The Debian package has no control file."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 199
+msgid "The control file has no Package or Version field."
+msgstr "The control file has no Package or Version field."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 112
+#, python-brace-format
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 167
+#, python-brace-format
+msgid "Extracting {name}…"
+msgstr "Extracting {name}…"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 171
+#, python-brace-format
+msgid "Ignored unsafe or special entries: {list}"
+msgstr "Ignored unsafe or special entries: {list}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 180
+#, python-brace-format
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr "Duplicate file kept from /usr: /{path}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 197
+msgid "Looking for dependencies…"
+msgstr "Looking for dependencies…"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 206
+#, python-brace-format
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr "Ignored {count} binaries built for other systems or architectures."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 212
+#, python-brace-format
+msgid "Libraries not found in the repositories: {list}"
+msgstr "Libraries not found in the repositories: {list}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 216
+#, python-brace-format
+msgid "Debian dependencies without an equivalent here: {list}"
+msgstr "Debian dependencies without an equivalent here: {list}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 255
+#, python-brace-format
+msgid "Files already owned by other packages: {list}"
+msgstr "Files already owned by other packages: {list}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/converter.py, line: 263
+msgid "Building the package…"
+msgstr "Building the package…"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 15
+msgid "Extracting files"
+msgstr "Extracting files"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 16
+msgid "Adapting folders to this system"
+msgstr "Adapting folders to this system"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 17
+msgid "Finding dependencies"
+msgstr "Finding dependencies"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 18
+msgid "Preparing installation scripts"
+msgstr "Preparing installation scripts"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 19
+msgid "Building the package"
+msgstr "Building the package"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 20
+msgid "Waiting for authorization"
+msgstr "Waiting for authorization"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 21
+msgid "Installing"
+msgstr "Installing"
+
+#
+# #-#-#-#-#  debtap-mod.pot (debtap-mod)  #-#-#-#-#
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 70
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/app.py, line: 13
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/app.py, line: 40
 msgid "Install .deb package"
 msgstr "Install .deb package"
 
-msgid "Converting file, please wait. This may take a few minutes..."
-msgstr "Converting file, please wait. This may take a few minutes..."
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 73
+msgid "About"
+msgstr "About"
 
-msgid "Done!"
-msgstr "Done!"
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 74
+msgid "Main menu"
+msgstr "Main menu"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 92
+msgid "Choose a .deb file…"
+msgstr "Choose a .deb file…"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 98
+msgid "Install a .deb package"
+msgstr "Install a .deb package"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 99
+msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgstr "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 113
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 169
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 301
+msgid "Details"
+msgstr "Details"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 115
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 270
+msgid "Cancel"
+msgstr "Cancel"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 150
+msgid "Prefer native packages when available"
+msgstr "Prefer native packages when available"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 151
+msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgstr "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 158
+#, python-brace-format
+msgid "“{name}” is available in the repositories"
+msgstr "“{name}” is available in the repositories"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 159
+msgid "Installing the native package is recommended."
+msgstr "Installing the native package is recommended."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 163
+msgid "Open"
+msgstr "Open"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 170
+msgid "Package"
+msgstr "Package"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 171
+msgid "Version"
+msgstr "Version"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 172
+msgid "Architecture"
+msgstr "Architecture"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 173
+msgid "Installed size"
+msgstr "Installed size"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 174
+msgid "Maintainer"
+msgstr "Maintainer"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 177
+msgid "Website"
+msgstr "Website"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 185
+msgid "Description"
+msgstr "Description"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 191
+msgid "Review before installing"
+msgstr "Review before installing"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 192
+msgid "Show the dependencies and the scripts that will run as administrator"
+msgstr "Show the dependencies and the scripts that will run as administrator"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 197
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 273
+msgid "Install"
+msgstr "Install"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 218
+msgid "Ready to install"
+msgstr "Ready to install"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 219
+msgid "Check what will be installed."
+msgstr "Check what will be installed."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 222
+msgid "Package name on this system"
+msgstr "Package name on this system"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 224
+msgid "Package size"
+msgstr "Package size"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 226
+msgid "Applications menu"
+msgstr "Applications menu"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 226
+msgid "No menu entry"
+msgstr "No menu entry"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 230
+msgid "Warnings"
+msgstr "Warnings"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 232
+msgid "Notes"
+msgstr "Notes"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 234
+msgid "Dependencies"
+msgstr "Dependencies"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 236
+msgid "Required"
+msgstr "Required"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 237
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 249
+#, python-brace-format
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} package"
+msgstr[1] "{n} packages"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 243
+msgid "will be downloaded"
+msgstr "will be downloaded"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 248
+msgid "Optional"
+msgstr "Optional"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 261
+msgid "Scripts"
+msgstr "Scripts"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 262
+msgid "These commands from the Debian package run as administrator during installation."
+msgstr "These commands from the Debian package run as administrator during installation."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 293
+#, python-brace-format
+msgid "Open {name}"
+msgstr "Open {name}"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 302
+msgid "Copy details"
+msgstr "Copy details"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 306
+msgid "Close"
+msgstr "Close"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 321
+msgid "This file cannot be installed"
+msgstr "This file cannot be installed"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 327
+msgid "Choose a .deb file"
+msgstr "Choose a .deb file"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 328
+msgid "Debian packages"
+msgstr "Debian packages"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 367
+msgid "Type your password in the window that will appear."
+msgstr "Type your password in the window that will appear."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 369
+msgid "Missing dependencies are downloaded from the repositories."
+msgstr "Missing dependencies are downloaded from the repositories."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 371
+msgid "Compressing the files, this may take a minute."
+msgstr "Compressing the files, this may take a minute."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 409
+msgid "The package could not be converted"
+msgstr "The package could not be converted"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 415
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 466
+#, python-brace-format
+msgid "{name} is installed"
+msgstr "{name} is installed"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 468
+#, python-brace-format
+msgid "The package {name} was installed. It has no entry in the applications menu."
+msgstr "The package {name} was installed. It has no entry in the applications menu."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 469
+msgid "Installation complete"
+msgstr "Installation complete"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 473
+msgid "Authorization was not granted"
+msgstr "Authorization was not granted"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 479
+msgid "The installation failed"
+msgstr "The installation failed"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 480
+#, python-brace-format
+msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgstr "pacman returned an error (code {code}). Open the details to see what happened."
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 492
+msgid "The application could not be started"
+msgstr "The application could not be started"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 503
+msgid "Copied"
+msgstr "Copied"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 507
+msgid "Please wait until the installation finishes"
+msgstr "Please wait until the installation finishes"
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/app.py, line: 47
+msgid "Converts Debian packages into native pacman packages and installs them."
+msgstr "Converts Debian packages into native pacman packages and installs them."
