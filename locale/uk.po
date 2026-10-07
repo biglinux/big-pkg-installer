@@ -4,588 +4,395 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-
 msgid "Extracting package data"
 msgstr "Видобування даних пакунка"
-
 msgid "Adapting the directory layout"
 msgstr "Адаптація структури каталогів"
-
 msgid "Resolving dependencies"
 msgstr "Визначення залежностей"
-
 msgid "Converting maintainer scripts"
 msgstr "Перетворення скриптів супровідника"
-
 msgid "Building the pacman package"
 msgstr "Збирання пакунка pacman"
-
 msgid "Warning:"
 msgstr "Попередження:"
-
 msgid "Error:"
 msgstr "Помилка:"
-
 msgid "Convert a .deb package into a pacman package and install it."
 msgstr "Перетворити пакунок .deb на пакунок pacman і встановити його."
-
 msgid "the .deb file"
 msgstr "файл .deb"
-
 msgid "do not ask questions, but open the install script for review"
 msgstr "не ставити запитань, але відкрити скрипт встановлення для перегляду"
-
 msgid "do not ask any question"
 msgstr "не ставити жодних запитань"
-
 msgid "only build the package, do not install it"
 msgstr "лише зібрати пакунок, не встановлювати його"
-
 msgid "keep the built package in DIR"
 msgstr "зберегти зібраний пакунок у DIR"
-
 msgid "also write a PKGBUILD next to the .deb"
 msgstr "також записати PKGBUILD поруч із .deb"
-
 msgid "only write a PKGBUILD, do not build"
 msgstr "лише записати PKGBUILD, не збирати"
-
 msgid "{question} [y/N] "
 msgstr "{question} [т/Н] "
-
 msgid "yes"
 msgstr "так"
-
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod більше не потребує локальної бази даних; оновлювати нічого."
-
 msgid "no .deb file given"
 msgstr "не вказано файл .deb"
-
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "параметри -s і -w застарілі та були проігноровані"
-
 msgid "Installed size: {size}"
 msgstr "Розмір після встановлення: {size}"
-
 msgid "PKGBUILD written to {path}"
 msgstr "PKGBUILD записано до {path}"
-
 msgid "cancelled"
 msgstr "скасовано"
-
 msgid "Package {file} built"
 msgstr "Пакунок {file} зібрано"
-
 msgid "Menu entries: {names}"
 msgstr "Пункти меню: {names}"
-
 msgid "Package saved to {path}"
 msgstr "Пакунок збережено до {path}"
-
 msgid "some files belong to other installed packages; remove them first:"
 msgstr "деякі файли належать іншим встановленим пакункам; спершу вилучіть їх:"
-
 msgid "Install script that will run as root:"
 msgstr "Скрипт встановлення, який буде запущено від імені root:"
-
 msgid "Install {name} now?"
 msgstr "Встановити {name} зараз?"
-
 msgid "pacman could not install the package (exit code {code})"
 msgstr "pacman не зміг встановити пакунок (код виходу {code})"
-
 msgid "{name} installed successfully"
 msgstr "{name} успішно встановлено"
-
 msgid "Look for {names} in the applications menu."
 msgstr "Шукайте {names} у меню застосунків."
-
 msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
 msgstr "Цей пакунок зібрано для {deb_arch}, але цей комп’ютер має архітектуру {host}; тут він не запуститься."
-
 msgid "Extracting {name}…"
 msgstr "Видобування {name}…"
-
 msgid "Ignored unsafe or special entries: {list}"
 msgstr "Проігноровано небезпечні або спеціальні записи: {list}"
-
 msgid "Duplicate file kept from /usr: /{path}"
 msgstr "Дубльований файл залишено з /usr: /{path}"
-
 msgid "Looking for dependencies…"
 msgstr "Пошук залежностей…"
-
 msgid "Ignored {count} binaries built for other systems or architectures."
 msgstr "Проігноровано виконуваних файлів для інших систем або архітектур: {count}."
-
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Бібліотеки не знайдено в репозиторіях: {list}"
-
 msgid "Debian dependencies without an equivalent here: {list}"
 msgstr "Залежності Debian без відповідника тут: {list}"
-
 msgid "Files already owned by other packages: {list}"
 msgstr "Файли, які вже належать іншим пакункам: {list}"
-
 msgid "Building the package…"
 msgstr "Збирання пакунка…"
-
 msgid "The file is not a Debian package (missing ar header)."
 msgstr "Файл не є пакунком Debian (бракує заголовка ar)."
-
 msgid "The Debian package is truncated or corrupted."
 msgstr "Пакунок Debian обрізано або пошкоджено."
-
 msgid "Unsupported compression in member {name}."
 msgstr "Непідтримуване стиснення в елементі {name}."
-
 msgid "File not found: {path}"
 msgstr "Файл не знайдено: {path}"
-
 msgid "The file is not a Debian package (debian-binary missing)."
 msgstr "Файл не є пакунком Debian (бракує debian-binary)."
-
 msgid "The Debian package has no control or data archive."
 msgstr "У пакунку Debian немає архіву control або data."
-
 msgid "The Debian package has no control file."
 msgstr "У пакунку Debian немає файлу control."
-
 msgid "The control file has no Package or Version field."
 msgstr "У файлі control немає поля Package або Version."
-
 msgid "Install .deb package"
 msgstr "Встановити пакунок .deb"
-
 msgid "Converts Debian packages into native pacman packages and installs them."
 msgstr "Перетворює пакунки Debian на рідні пакунки pacman і встановлює їх."
-
 msgid "Extracting files"
 msgstr "Видобування файлів"
-
 msgid "Adapting folders to this system"
 msgstr "Адаптація тек до цієї системи"
-
 msgid "Finding dependencies"
 msgstr "Пошук залежностей"
-
 msgid "Preparing installation scripts"
 msgstr "Підготовка скриптів встановлення"
-
 msgid "Building the package"
 msgstr "Збирання пакунка"
-
 msgid "Waiting for authorization"
 msgstr "Очікування авторизації"
-
 msgid "Installing"
 msgstr "Встановлення"
-
 msgid "About"
 msgstr "Про програму"
-
 msgid "Main menu"
 msgstr "Головне меню"
-
 msgid "Choose a .deb file…"
 msgstr "Вибрати файл .deb…"
-
 msgid "Install a .deb package"
 msgstr "Встановити пакунок .deb"
-
 msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
 msgstr "Відкрийте пакунок Debian або перетягніть його сюди. Його буде перетворено на рідний пакунок для цієї системи та встановлено."
-
 msgid "Details"
 msgstr "Подробиці"
-
 msgid "Cancel"
 msgstr "Скасувати"
-
 msgid "Prefer native packages when available"
 msgstr "Надавати перевагу рідним пакункам, якщо вони є"
-
 msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
 msgstr "Програми із системних репозиторіїв, Flatpak або AppImage зазвичай працюють краще. Перетворені пакунки .deb можуть працювати не ідеально."
-
 msgid "“{name}” is available in the repositories"
 msgstr "«{name}» доступний у репозиторіях"
-
 msgid "Installing the native package is recommended."
 msgstr "Рекомендовано встановити рідний пакунок."
-
 msgid "Open"
 msgstr "Відкрити"
-
 msgid "Package"
 msgstr "Пакунок"
-
 msgid "Version"
 msgstr "Версія"
-
 msgid "Architecture"
 msgstr "Архітектура"
-
 msgid "Installed size"
 msgstr "Розмір після встановлення"
-
 msgid "Maintainer"
 msgstr "Супровідник"
-
 msgid "Website"
 msgstr "Вебсайт"
-
 msgid "Description"
 msgstr "Опис"
-
 msgid "Review before installing"
 msgstr "Перевірити перед встановленням"
-
 msgid "Show the dependencies and the scripts that will run as administrator"
 msgstr "Показати залежності та скрипти, які виконуватимуться від імені адміністратора"
-
 msgid "Install"
 msgstr "Встановити"
-
 msgid "Ready to install"
 msgstr "Готово до встановлення"
-
 msgid "Check what will be installed."
 msgstr "Перевірте, що буде встановлено."
-
 msgid "Package name on this system"
 msgstr "Назва пакунка в цій системі"
-
 msgid "Package size"
 msgstr "Розмір пакунка"
-
 msgid "Applications menu"
 msgstr "Меню застосунків"
-
 msgid "No menu entry"
 msgstr "Немає пункту меню"
-
 msgid "Warnings"
 msgstr "Попередження"
-
 msgid "Notes"
 msgstr "Примітки"
-
 msgid "Dependencies"
 msgstr "Залежності"
-
 msgid "Required"
 msgstr "Обов’язкові"
-
 msgid "{n} package"
 msgid_plural "{n} packages"
 msgstr[0] "{n} пакунок"
 msgstr[1] "{n} пакунки"
 msgstr[2] "{n} пакунків"
-
 msgid "will be downloaded"
 msgstr "буде завантажено"
-
 msgid "Optional"
 msgstr "Необов’язкові"
-
 msgid "Scripts"
 msgstr "Скрипти"
-
 msgid "These commands from the Debian package run as administrator during installation."
 msgstr "Ці команди з пакунка Debian виконуються від імені адміністратора під час встановлення."
-
 msgid "Open {name}"
 msgstr "Відкрити {name}"
-
 msgid "Copy details"
 msgstr "Копіювати подробиці"
-
 msgid "Close"
 msgstr "Закрити"
-
 msgid "This file cannot be installed"
 msgstr "Цей файл неможливо встановити"
-
 msgid "Choose a .deb file"
 msgstr "Виберіть файл .deb"
-
 msgid "Debian packages"
 msgstr "Пакунки Debian"
-
 msgid "Type your password in the window that will appear."
 msgstr "Введіть пароль у вікні, що з’явиться."
-
 msgid "Missing dependencies are downloaded from the repositories."
 msgstr "Відсутні залежності завантажуються з репозиторіїв."
-
 msgid "Compressing the files, this may take a minute."
 msgstr "Стиснення файлів, це може тривати хвилину."
-
 msgid "The package could not be converted"
 msgstr "Не вдалося перетворити пакунок"
-
 msgid "Cancelled"
 msgstr "Скасовано"
-
 msgid "{name} is installed"
 msgstr "{name} встановлено"
-
 msgid "The package {name} was installed. It has no entry in the applications menu."
 msgstr "Пакунок {name} встановлено. Він не має пункту в меню застосунків."
-
 msgid "Installation complete"
 msgstr "Встановлення завершено"
-
 msgid "Authorization was not granted"
 msgstr "Авторизацію не надано"
-
 msgid "The installation failed"
 msgstr "Не вдалося встановити"
-
 msgid "pacman returned an error (code {code}). Open the details to see what happened."
 msgstr "pacman повернув помилку (код {code}). Відкрийте подробиці, щоб побачити, що сталося."
-
 msgid "The application could not be started"
 msgstr "Не вдалося запустити застосунок"
-
 msgid "Copied"
 msgstr "Скопійовано"
-
 msgid "Please wait until the installation finishes"
 msgstr "Зачекайте, доки завершиться встановлення"
-
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg не може працювати від імені root; запускайте debtap-mod як звичайний користувач."
-
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg завершився помилкою з кодом {code}"
-
 msgid "makepkg finished but produced no package"
 msgstr "makepkg завершився, але не створив жодного пакунка"
-
 msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
 msgstr "«{typed}» лише оновлює список пакунків. Тут безпечний еквівалент перевіряє наявність оновлень, нічого не встановлюючи; щоб їх встановити, скористайтеся «{upgrade}»."
-
 msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
 msgstr "Ніколи не запускайте «pacman -Sy» окремо: оновлення списку без оновлення системи може її зламати."
-
 msgid "Arch does not upgrade single packages; the whole system is upgraded together."
 msgstr "Arch не оновлює окремі пакунки; уся система оновлюється разом."
-
 msgid "Tell which package to install, for example: {example}"
 msgstr "Вкажіть, який пакунок встановити, наприклад: {example}"
-
 msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
 msgstr "Пакунки .rpm призначені для Fedora/openSUSE і не можуть бути встановлені тут."
-
 msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
 msgstr "Шукайте програму в репозиторіях (pamac search), на Flathub або як AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac також знаходить програми в AUR і Flatpak: {cmd}"
-
 msgid ".deb packages are converted into native pacman packages by debtap-mod."
 msgstr "Пакунки .deb перетворюються на рідні пакунки pacman за допомогою debtap-mod."
-
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Виконайте цю команду як звичайний користувач (без sudo)."
-
 msgid "Tell which package to remove, for example: {example}"
 msgstr "Вкажіть, який пакунок видалити, наприклад: {example}"
-
 msgid "-n also deletes the configuration files the package installed in /etc."
 msgstr "-n також видаляє файли конфігурації, які пакунок встановив у /etc."
-
 msgid "There are no orphan packages to remove."
 msgstr "Немає осиротілих пакунків для видалення."
-
 msgid "Tell what to search for, for example: {example}"
 msgstr "Вкажіть, що шукати, наприклад: {example}"
-
 msgid "Tell which package, for example: {example}"
 msgstr "Вкажіть, який пакунок, наприклад: {example}"
-
 msgid "The package is not installed; the list comes from the repository file database."
 msgstr "Пакунок не встановлено; список взято з бази даних файлів репозиторію."
-
 msgid "Tell which file, for example: {example}"
 msgstr "Вкажіть, який файл, наприклад: {example}"
-
 msgid "The file is not on this system; searching the repository file database."
 msgstr "Файлу немає в цій системі; пошук у базі даних файлів репозиторію."
-
 msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
 msgstr "У системах на основі Arch немає PPA чи додаткових репозиторіїв для додавання. Програми від спільноти беруться з AUR."
-
 msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
 msgstr "Шукайте за допомогою «pamac search --aur <name>» і встановлюйте за допомогою «pamac build <name>»."
-
 msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
 msgstr "Щоб пакунок не оновлювався, додайте його до IgnorePkg у /etc/pacman.conf."
-
 msgid "“{command}” has no direct equivalent here."
 msgstr "Для «{command}» тут немає прямого еквівалента."
-
 msgid "Run “{tool} help” to see the commands this system understands."
 msgstr "Виконайте «{tool} help», щоб побачити команди, які розуміє ця система."
-
 msgid "Tell which .deb file to install, for example: {example}"
 msgstr "Вкажіть, який файл .deb встановити, наприклад: {example}"
-
 msgid "This system uses pacman, not {tool}."
 msgstr "Ця система використовує pacman, а не {tool}."
-
 msgid "You typed:"
 msgstr "Ви ввели:"
-
 msgid "Equivalent:"
 msgstr "Еквівалент:"
-
 msgid "With pamac:"
 msgstr "З pamac:"
-
 msgid "Running:"
 msgstr "Виконується:"
-
 msgid "Update everything"
 msgstr "Оновити все"
-
 msgid "Check for updates"
 msgstr "Перевірити оновлення"
-
 msgid "Install a program"
 msgstr "Встановити програму"
-
 msgid "Install a downloaded file"
 msgstr "Встановити завантажений файл"
-
 msgid "Install a .deb file here"
 msgstr "Встановити файл .deb звідси"
-
 msgid "Reinstall"
 msgstr "Перевстановити"
-
 msgid "Remove a program"
 msgstr "Видалити програму"
-
 msgid "Remove + dependencies"
 msgstr "Видалити + залежності"
-
 msgid "Remove + configuration"
 msgstr "Видалити + конфігурацію"
-
 msgid "Remove orphans (unused)"
 msgstr "Видалити осиротілі (невикористані)"
-
 msgid "Search to install"
 msgstr "Шукати для встановлення"
-
 msgid "Details (available)"
 msgstr "Подробиці (доступні)"
-
 msgid "Details (installed)"
 msgstr "Подробиці (встановлені)"
-
 msgid "List everything available"
 msgstr "Показати все доступне"
-
 msgid "List installed"
 msgstr "Показати встановлені"
-
 msgid "Search installed"
 msgstr "Шукати серед встановлених"
-
 msgid "Files of a package"
 msgstr "Файли пакунка"
-
 msgid "Which package owns a file?"
 msgstr "Якому пакунку належить файл?"
-
 msgid "What can be upgraded"
 msgstr "Що можна оновити"
-
 msgid "Installed by you"
 msgstr "Встановлено вами"
-
 msgid "Dependencies of a package"
 msgstr "Залежності пакунка"
-
 msgid "Who depends on a package"
 msgstr "Хто залежить від пакунка"
-
 msgid "Clean the download cache"
 msgstr "Очистити кеш завантажень"
-
 msgid "Add a repository / PPA"
 msgstr "Додати репозиторій / PPA"
-
 msgid "(AUR)"
 msgstr "(AUR)"
-
 msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
 msgstr "Перекладач команд: {family} (Debian, Ubuntu, Mint, Fedora) у pacman і pamac (Arch, BigLinux, Manjaro)"
-
 msgid "Both do the same job: install, update and remove programs. Only the commands change."
 msgstr "Обидва роблять те саме: встановлюють, оновлюють і видаляють програми. Відрізняються лише команди."
-
 msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
 msgstr "Ви можете й далі вводити команди {tool}: вони перекладаються і виконуються за допомогою pamac або pacman."
-
 msgid "No command matches “{topic}”."
 msgstr "Жодна команда не відповідає «{topic}»."
-
 msgid "Run “{tool} help” to see every command."
 msgstr "Виконайте «{tool} help», щоб побачити всі команди."
-
 msgid "What you want to do"
 msgstr "Що ви хочете зробити"
-
 msgid "Differences that catch people"
 msgstr "Відмінності, на яких спотикаються"
-
 msgid "apt update only refreshes the list; apt upgrade installs."
 msgstr "apt update лише оновлює список; apt upgrade встановлює."
-
 msgid "In pacman, -Syu does both together."
 msgstr "У pacman -Syu робить і те, і те разом."
-
 msgid "Avoid “pacman -Sy” alone: it can break the system."
 msgstr "Уникайте «pacman -Sy» окремо: це може зламати систему."
-
 msgid "Package types"
 msgstr "Типи пакунків"
-
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt використовує файли .deb, dnf — .rpm, pacman — .pkg.tar.zst."
-
 msgid ".deb files are converted and installed with debtap-mod (or a double click)."
 msgstr "Файли .deb перетворюються та встановлюються за допомогою debtap-mod (або подвійним клацанням)."
-
 msgid "Programs from the community"
 msgstr "Програми від спільноти"
-
 msgid "The AUR plays the role of PPAs and COPR."
 msgstr "AUR відіграє роль PPA і COPR."
-
 msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
 msgstr "Використовуйте «pamac build <name>»; ніколи не запускайте помічники AUR із sudo."
-
 msgid "Tip: “{tool} help install” shows only the lines about one command."
 msgstr "Порада: «{tool} help install» показує лише рядки про одну команду."
-
 msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
 msgstr "Короткий довідник: «sudo» потрібен для встановлення чи видалення; пошук і перегляд списків його не потребують."
-
 msgid "Command not found: {cmd}"
 msgstr "Команду не знайдено: {cmd}"
-
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Скрипти Debian лише реєструють репозиторій APT і профіль AppArmor для Ubuntu; тут вони не потрібні."
-
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Скрипт {script} налаштовує репозиторій APT; ця частина не має ефекту в цій системі."

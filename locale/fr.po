@@ -4,587 +4,394 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
 msgid "Extracting package data"
 msgstr "Extraction des données du paquet"
-
 msgid "Adapting the directory layout"
 msgstr "Adaptation de l’arborescence des dossiers"
-
 msgid "Resolving dependencies"
 msgstr "Résolution des dépendances"
-
 msgid "Converting maintainer scripts"
 msgstr "Conversion des scripts du mainteneur"
-
 msgid "Building the pacman package"
 msgstr "Construction du paquet pacman"
-
 msgid "Warning:"
 msgstr "Avertissement :"
-
 msgid "Error:"
 msgstr "Erreur :"
-
 msgid "Convert a .deb package into a pacman package and install it."
 msgstr "Convertit un paquet .deb en paquet pacman et l’installe."
-
 msgid "the .deb file"
 msgstr "le fichier .deb"
-
 msgid "do not ask questions, but open the install script for review"
 msgstr "ne poser aucune question, mais ouvrir le script d’installation pour relecture"
-
 msgid "do not ask any question"
 msgstr "ne poser aucune question"
-
 msgid "only build the package, do not install it"
 msgstr "construire uniquement le paquet, sans l’installer"
-
 msgid "keep the built package in DIR"
 msgstr "conserver le paquet construit dans DIR"
-
 msgid "also write a PKGBUILD next to the .deb"
 msgstr "écrire aussi un PKGBUILD à côté du .deb"
-
 msgid "only write a PKGBUILD, do not build"
 msgstr "écrire uniquement un PKGBUILD, sans construire"
-
 msgid "{question} [y/N] "
 msgstr "{question} [o/N] "
-
 msgid "yes"
 msgstr "oui"
-
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod n’a plus besoin de base de données locale ; rien à mettre à jour."
-
 msgid "no .deb file given"
 msgstr "aucun fichier .deb indiqué"
-
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "les options -s et -w sont obsolètes et ont été ignorées"
-
 msgid "Installed size: {size}"
 msgstr "Taille installée : {size}"
-
 msgid "PKGBUILD written to {path}"
 msgstr "PKGBUILD écrit dans {path}"
-
 msgid "cancelled"
 msgstr "annulé"
-
 msgid "Package {file} built"
 msgstr "Paquet {file} construit"
-
 msgid "Menu entries: {names}"
 msgstr "Entrées de menu : {names}"
-
 msgid "Package saved to {path}"
 msgstr "Paquet enregistré dans {path}"
-
 msgid "some files belong to other installed packages; remove them first:"
 msgstr "certains fichiers appartiennent à d’autres paquets installés ; supprimez-les d’abord :"
-
 msgid "Install script that will run as root:"
 msgstr "Script d’installation qui sera exécuté en tant que root :"
-
 msgid "Install {name} now?"
 msgstr "Installer {name} maintenant ?"
-
 msgid "pacman could not install the package (exit code {code})"
 msgstr "pacman n’a pas pu installer le paquet (code de sortie {code})"
-
 msgid "{name} installed successfully"
 msgstr "{name} a été installé avec succès"
-
 msgid "Look for {names} in the applications menu."
 msgstr "Cherchez {names} dans le menu des applications."
-
 msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
 msgstr "Ce paquet a été construit pour {deb_arch}, mais cet ordinateur est en {host} ; il ne fonctionnera pas ici."
-
 msgid "Extracting {name}…"
 msgstr "Extraction de {name}…"
-
 msgid "Ignored unsafe or special entries: {list}"
 msgstr "Entrées dangereuses ou spéciales ignorées : {list}"
-
 msgid "Duplicate file kept from /usr: /{path}"
 msgstr "Fichier en double conservé depuis /usr : /{path}"
-
 msgid "Looking for dependencies…"
 msgstr "Recherche des dépendances…"
-
 msgid "Ignored {count} binaries built for other systems or architectures."
 msgstr "{count} binaires construits pour d’autres systèmes ou architectures ont été ignorés."
-
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Bibliothèques introuvables dans les dépôts : {list}"
-
 msgid "Debian dependencies without an equivalent here: {list}"
 msgstr "Dépendances Debian sans équivalent ici : {list}"
-
 msgid "Files already owned by other packages: {list}"
 msgstr "Fichiers déjà fournis par d’autres paquets : {list}"
-
 msgid "Building the package…"
 msgstr "Construction du paquet…"
-
 msgid "The file is not a Debian package (missing ar header)."
 msgstr "Ce fichier n’est pas un paquet Debian (en-tête ar manquant)."
-
 msgid "The Debian package is truncated or corrupted."
 msgstr "Le paquet Debian est tronqué ou corrompu."
-
 msgid "Unsupported compression in member {name}."
 msgstr "Compression non prise en charge pour le membre {name}."
-
 msgid "File not found: {path}"
 msgstr "Fichier introuvable : {path}"
-
 msgid "The file is not a Debian package (debian-binary missing)."
 msgstr "Ce fichier n’est pas un paquet Debian (debian-binary manquant)."
-
 msgid "The Debian package has no control or data archive."
 msgstr "Le paquet Debian ne contient pas d’archive control ou data."
-
 msgid "The Debian package has no control file."
 msgstr "Le paquet Debian ne contient pas de fichier control."
-
 msgid "The control file has no Package or Version field."
 msgstr "Le fichier control n’a pas de champ Package ou Version."
-
 msgid "Install .deb package"
 msgstr "Installer un paquet .deb"
-
 msgid "Converts Debian packages into native pacman packages and installs them."
 msgstr "Convertit les paquets Debian en paquets pacman natifs et les installe."
-
 msgid "Extracting files"
 msgstr "Extraction des fichiers"
-
 msgid "Adapting folders to this system"
 msgstr "Adaptation des dossiers à ce système"
-
 msgid "Finding dependencies"
 msgstr "Recherche des dépendances"
-
 msgid "Preparing installation scripts"
 msgstr "Préparation des scripts d’installation"
-
 msgid "Building the package"
 msgstr "Construction du paquet"
-
 msgid "Waiting for authorization"
 msgstr "En attente d’autorisation"
-
 msgid "Installing"
 msgstr "Installation en cours"
-
 msgid "About"
 msgstr "À propos"
-
 msgid "Main menu"
 msgstr "Menu principal"
-
 msgid "Choose a .deb file…"
 msgstr "Choisir un fichier .deb…"
-
 msgid "Install a .deb package"
 msgstr "Installer un paquet .deb"
-
 msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
 msgstr "Ouvrez un paquet Debian ou déposez-le ici. Il sera converti en paquet natif pour ce système, puis installé."
-
 msgid "Details"
 msgstr "Détails"
-
 msgid "Cancel"
 msgstr "Annuler"
-
 msgid "Prefer native packages when available"
 msgstr "Préférer les paquets natifs lorsqu’ils sont disponibles"
-
 msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
 msgstr "Les programmes des dépôts du système, Flatpak ou AppImage fonctionnent généralement mieux. Les paquets .deb convertis peuvent ne pas fonctionner parfaitement."
-
 msgid "“{name}” is available in the repositories"
 msgstr "« {name} » est disponible dans les dépôts"
-
 msgid "Installing the native package is recommended."
 msgstr "Il est recommandé d’installer le paquet natif."
-
 msgid "Open"
 msgstr "Ouvrir"
-
 msgid "Package"
 msgstr "Paquet"
-
 msgid "Version"
 msgstr "Version"
-
 msgid "Architecture"
 msgstr "Architecture"
-
 msgid "Installed size"
 msgstr "Taille installée"
-
 msgid "Maintainer"
 msgstr "Mainteneur"
-
 msgid "Website"
 msgstr "Site web"
-
 msgid "Description"
 msgstr "Description"
-
 msgid "Review before installing"
 msgstr "Vérifier avant d’installer"
-
 msgid "Show the dependencies and the scripts that will run as administrator"
 msgstr "Affiche les dépendances et les scripts qui seront exécutés en tant qu’administrateur"
-
 msgid "Install"
 msgstr "Installer"
-
 msgid "Ready to install"
 msgstr "Prêt à installer"
-
 msgid "Check what will be installed."
 msgstr "Vérifiez ce qui sera installé."
-
 msgid "Package name on this system"
 msgstr "Nom du paquet sur ce système"
-
 msgid "Package size"
 msgstr "Taille du paquet"
-
 msgid "Applications menu"
 msgstr "Menu des applications"
-
 msgid "No menu entry"
 msgstr "Aucune entrée de menu"
-
 msgid "Warnings"
 msgstr "Avertissements"
-
 msgid "Notes"
 msgstr "Notes"
-
 msgid "Dependencies"
 msgstr "Dépendances"
-
 msgid "Required"
 msgstr "Requises"
-
 msgid "{n} package"
 msgid_plural "{n} packages"
 msgstr[0] "{n} paquet"
 msgstr[1] "{n} paquets"
-
 msgid "will be downloaded"
 msgstr "seront téléchargées"
-
 msgid "Optional"
 msgstr "Facultatives"
-
 msgid "Scripts"
 msgstr "Scripts"
-
 msgid "These commands from the Debian package run as administrator during installation."
 msgstr "Ces commandes du paquet Debian sont exécutées en tant qu’administrateur pendant l’installation."
-
 msgid "Open {name}"
 msgstr "Ouvrir {name}"
-
 msgid "Copy details"
 msgstr "Copier les détails"
-
 msgid "Close"
 msgstr "Fermer"
-
 msgid "This file cannot be installed"
 msgstr "Ce fichier ne peut pas être installé"
-
 msgid "Choose a .deb file"
 msgstr "Choisir un fichier .deb"
-
 msgid "Debian packages"
 msgstr "Paquets Debian"
-
 msgid "Type your password in the window that will appear."
 msgstr "Saisissez votre mot de passe dans la fenêtre qui va s’afficher."
-
 msgid "Missing dependencies are downloaded from the repositories."
 msgstr "Les dépendances manquantes sont téléchargées depuis les dépôts."
-
 msgid "Compressing the files, this may take a minute."
 msgstr "Compression des fichiers, cela peut prendre une minute."
-
 msgid "The package could not be converted"
 msgstr "Le paquet n’a pas pu être converti"
-
 msgid "Cancelled"
 msgstr "Annulé"
-
 msgid "{name} is installed"
 msgstr "{name} est installé"
-
 msgid "The package {name} was installed. It has no entry in the applications menu."
 msgstr "Le paquet {name} a été installé. Il n’a aucune entrée dans le menu des applications."
-
 msgid "Installation complete"
 msgstr "Installation terminée"
-
 msgid "Authorization was not granted"
 msgstr "L’autorisation n’a pas été accordée"
-
 msgid "The installation failed"
 msgstr "L’installation a échoué"
-
 msgid "pacman returned an error (code {code}). Open the details to see what happened."
 msgstr "pacman a renvoyé une erreur (code {code}). Ouvrez les détails pour voir ce qui s’est passé."
-
 msgid "The application could not be started"
 msgstr "L’application n’a pas pu être démarrée"
-
 msgid "Copied"
 msgstr "Copié"
-
 msgid "Please wait until the installation finishes"
 msgstr "Veuillez patienter jusqu’à la fin de l’installation"
-
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg ne peut pas s’exécuter en tant que root ; lancez debtap-mod en tant qu’utilisateur normal."
-
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg a échoué avec le code de sortie {code}"
-
 msgid "makepkg finished but produced no package"
 msgstr "makepkg s’est terminé mais n’a produit aucun paquet"
-
 msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
 msgstr "« {typed} » ne fait qu’actualiser la liste des paquets. Ici, l’équivalent sûr recherche les mises à jour sans rien installer ; pour les installer, utilisez « {upgrade} »."
-
 msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
 msgstr "N’exécutez jamais « pacman -Sy » seul : actualiser la liste sans mettre à jour le système peut le casser."
-
 msgid "Arch does not upgrade single packages; the whole system is upgraded together."
 msgstr "Arch ne met pas à jour les paquets isolément ; tout le système est mis à jour ensemble."
-
 msgid "Tell which package to install, for example: {example}"
 msgstr "Indiquez quel paquet installer, par exemple : {example}"
-
 msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
 msgstr "Les paquets .rpm sont conçus pour Fedora/openSUSE et ne peuvent pas être installés ici."
-
 msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
 msgstr "Cherchez le programme dans les dépôts (pamac search), sur Flathub ou sous forme d’AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac trouve aussi des programmes dans l’AUR et Flatpak : {cmd}"
-
 msgid ".deb packages are converted into native pacman packages by debtap-mod."
 msgstr "Les paquets .deb sont convertis en paquets pacman natifs par debtap-mod."
-
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Exécutez cette commande en tant qu’utilisateur normal (sans sudo)."
-
 msgid "Tell which package to remove, for example: {example}"
 msgstr "Indiquez quel paquet supprimer, par exemple : {example}"
-
 msgid "-n also deletes the configuration files the package installed in /etc."
 msgstr "-n supprime aussi les fichiers de configuration que le paquet a installés dans /etc."
-
 msgid "There are no orphan packages to remove."
 msgstr "Il n’y a aucun paquet orphelin à supprimer."
-
 msgid "Tell what to search for, for example: {example}"
 msgstr "Indiquez ce qu’il faut chercher, par exemple : {example}"
-
 msgid "Tell which package, for example: {example}"
 msgstr "Indiquez quel paquet, par exemple : {example}"
-
 msgid "The package is not installed; the list comes from the repository file database."
 msgstr "Le paquet n’est pas installé ; la liste provient de la base de données des fichiers du dépôt."
-
 msgid "Tell which file, for example: {example}"
 msgstr "Indiquez quel fichier, par exemple : {example}"
-
 msgid "The file is not on this system; searching the repository file database."
 msgstr "Le fichier n’est pas présent sur ce système ; recherche dans la base de données des fichiers du dépôt."
-
 msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
 msgstr "Les systèmes basés sur Arch n’ont ni PPA ni dépôts supplémentaires à ajouter. Les programmes de la communauté viennent de l’AUR."
-
 msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
 msgstr "Cherchez avec « pamac search --aur <name> » et installez avec « pamac build <name> »."
-
 msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
 msgstr "Pour empêcher la mise à jour d’un paquet, ajoutez-le à IgnorePkg dans /etc/pacman.conf."
-
 msgid "“{command}” has no direct equivalent here."
 msgstr "« {command} » n’a pas d’équivalent direct ici."
-
 msgid "Run “{tool} help” to see the commands this system understands."
 msgstr "Exécutez « {tool} help » pour voir les commandes comprises par ce système."
-
 msgid "Tell which .deb file to install, for example: {example}"
 msgstr "Indiquez quel fichier .deb installer, par exemple : {example}"
-
 msgid "This system uses pacman, not {tool}."
 msgstr "Ce système utilise pacman, pas {tool}."
-
 msgid "You typed:"
 msgstr "Vous avez saisi :"
-
 msgid "Equivalent:"
 msgstr "Équivalent :"
-
 msgid "With pamac:"
 msgstr "Avec pamac :"
-
 msgid "Running:"
 msgstr "Exécution :"
-
 msgid "Update everything"
 msgstr "Tout mettre à jour"
-
 msgid "Check for updates"
 msgstr "Rechercher des mises à jour"
-
 msgid "Install a program"
 msgstr "Installer un programme"
-
 msgid "Install a downloaded file"
 msgstr "Installer un fichier téléchargé"
-
 msgid "Install a .deb file here"
 msgstr "Installer un fichier .deb ici"
-
 msgid "Reinstall"
 msgstr "Réinstaller"
-
 msgid "Remove a program"
 msgstr "Supprimer un programme"
-
 msgid "Remove + dependencies"
 msgstr "Supprimer + dépendances"
-
 msgid "Remove + configuration"
 msgstr "Supprimer + configuration"
-
 msgid "Remove orphans (unused)"
 msgstr "Supprimer les orphelins (inutilisés)"
-
 msgid "Search to install"
 msgstr "Rechercher pour installer"
-
 msgid "Details (available)"
 msgstr "Détails (disponible)"
-
 msgid "Details (installed)"
 msgstr "Détails (installé)"
-
 msgid "List everything available"
 msgstr "Lister tout ce qui est disponible"
-
 msgid "List installed"
 msgstr "Lister les installés"
-
 msgid "Search installed"
 msgstr "Rechercher parmi les installés"
-
 msgid "Files of a package"
 msgstr "Fichiers d’un paquet"
-
 msgid "Which package owns a file?"
 msgstr "Quel paquet possède un fichier ?"
-
 msgid "What can be upgraded"
 msgstr "Ce qui peut être mis à jour"
-
 msgid "Installed by you"
 msgstr "Installés par vous"
-
 msgid "Dependencies of a package"
 msgstr "Dépendances d’un paquet"
-
 msgid "Who depends on a package"
 msgstr "Qui dépend d’un paquet"
-
 msgid "Clean the download cache"
 msgstr "Vider le cache de téléchargement"
-
 msgid "Add a repository / PPA"
 msgstr "Ajouter un dépôt / PPA"
-
 msgid "(AUR)"
 msgstr "(AUR)"
-
 msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
 msgstr "Traducteur de commandes : {family} (Debian, Ubuntu, Mint, Fedora) vers pacman et pamac (Arch, BigLinux, Manjaro)"
-
 msgid "Both do the same job: install, update and remove programs. Only the commands change."
 msgstr "Les deux font le même travail : installer, mettre à jour et supprimer des programmes. Seules les commandes changent."
-
 msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
 msgstr "Vous pouvez continuer à saisir des commandes {tool} : elles sont traduites et exécutées avec pamac ou pacman."
-
 msgid "No command matches “{topic}”."
 msgstr "Aucune commande ne correspond à « {topic} »."
-
 msgid "Run “{tool} help” to see every command."
 msgstr "Exécutez « {tool} help » pour voir toutes les commandes."
-
 msgid "What you want to do"
 msgstr "Ce que vous voulez faire"
-
 msgid "Differences that catch people"
 msgstr "Les différences qui piègent"
-
 msgid "apt update only refreshes the list; apt upgrade installs."
 msgstr "apt update ne fait qu’actualiser la liste ; apt upgrade installe."
-
 msgid "In pacman, -Syu does both together."
 msgstr "Avec pacman, -Syu fait les deux à la fois."
-
 msgid "Avoid “pacman -Sy” alone: it can break the system."
 msgstr "Évitez « pacman -Sy » seul : cela peut casser le système."
-
 msgid "Package types"
 msgstr "Types de paquets"
-
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt utilise des fichiers .deb, dnf des .rpm, pacman des .pkg.tar.zst."
-
 msgid ".deb files are converted and installed with debtap-mod (or a double click)."
 msgstr "Les fichiers .deb sont convertis et installés avec debtap-mod (ou par double-clic)."
-
 msgid "Programs from the community"
 msgstr "Programmes de la communauté"
-
 msgid "The AUR plays the role of PPAs and COPR."
 msgstr "L’AUR joue le rôle des PPA et de COPR."
-
 msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
 msgstr "Utilisez « pamac build <name> » ; n’exécutez jamais d’assistants AUR avec sudo."
-
 msgid "Tip: “{tool} help install” shows only the lines about one command."
 msgstr "Astuce : « {tool} help install » n’affiche que les lignes concernant une commande."
-
 msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
 msgstr "Aide-mémoire : « sudo » est nécessaire pour installer ou supprimer ; chercher et lister n’en ont pas besoin."
-
 msgid "Command not found: {cmd}"
 msgstr "Commande introuvable : {cmd}"
-
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Les scripts Debian ne font qu’enregistrer un dépôt APT et un profil AppArmor pour Ubuntu ; ils ne sont pas nécessaires ici."
-
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Le script {script} configure un dépôt APT ; cette partie n’a aucun effet sur ce système."

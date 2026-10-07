@@ -4,587 +4,394 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
 msgid "Extracting package data"
 msgstr "Puretaan paketin tietoja"
-
 msgid "Adapting the directory layout"
 msgstr "Mukautetaan hakemistorakennetta"
-
 msgid "Resolving dependencies"
 msgstr "Ratkaistaan riippuvuuksia"
-
 msgid "Converting maintainer scripts"
 msgstr "Muunnetaan ylläpitäjän skriptejä"
-
 msgid "Building the pacman package"
 msgstr "Rakennetaan pacman-pakettia"
-
 msgid "Warning:"
 msgstr "Varoitus:"
-
 msgid "Error:"
 msgstr "Virhe:"
-
 msgid "Convert a .deb package into a pacman package and install it."
 msgstr "Muuntaa .deb-paketin pacman-paketiksi ja asentaa sen."
-
 msgid "the .deb file"
 msgstr ".deb-tiedosto"
-
 msgid "do not ask questions, but open the install script for review"
 msgstr "avaa asennusskripti tarkistettavaksi, mutta älä kysy mitään"
-
 msgid "do not ask any question"
 msgstr "älä kysy mitään"
-
 msgid "only build the package, do not install it"
 msgstr "vain rakenna paketti, älä asenna sitä"
-
 msgid "keep the built package in DIR"
 msgstr "säilytä rakennettu paketti hakemistossa DIR"
-
 msgid "also write a PKGBUILD next to the .deb"
 msgstr "kirjoita myös PKGBUILD .deb-tiedoston viereen"
-
 msgid "only write a PKGBUILD, do not build"
 msgstr "kirjoita vain PKGBUILD, älä rakenna"
-
 msgid "{question} [y/N] "
 msgstr "{question} [k/E] "
-
 msgid "yes"
 msgstr "kyllä"
-
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod ei enää tarvitse paikallista tietokantaa; ei päivitettävää."
-
 msgid "no .deb file given"
 msgstr "ei annettua .deb-tiedostoa"
-
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "valitsimet -s ja -w ovat vanhentuneita ja ne ohitettiin"
-
 msgid "Installed size: {size}"
 msgstr "Asennuskoko: {size}"
-
 msgid "PKGBUILD written to {path}"
 msgstr "PKGBUILD kirjoitettu kohteeseen {path}"
-
 msgid "cancelled"
 msgstr "peruttu"
-
 msgid "Package {file} built"
 msgstr "Paketti {file} rakennettu"
-
 msgid "Menu entries: {names}"
 msgstr "Valikkokohteet: {names}"
-
 msgid "Package saved to {path}"
 msgstr "Paketti tallennettu kohteeseen {path}"
-
 msgid "some files belong to other installed packages; remove them first:"
 msgstr "jotkin tiedostot kuuluvat muille asennetuille paketeille; poista ne ensin:"
-
 msgid "Install script that will run as root:"
 msgstr "Asennusskripti, joka suoritetaan root-käyttäjänä:"
-
 msgid "Install {name} now?"
 msgstr "Asennetaanko {name} nyt?"
-
 msgid "pacman could not install the package (exit code {code})"
 msgstr "pacman ei voinut asentaa pakettia (poistumiskoodi {code})"
-
 msgid "{name} installed successfully"
 msgstr "{name} asennettiin onnistuneesti"
-
 msgid "Look for {names} in the applications menu."
 msgstr "Etsi {names} sovellusvalikosta."
-
 msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
 msgstr "Tämä paketti on rakennettu arkkitehtuurille {deb_arch}, mutta tämä tietokone on {host}; se ei toimi täällä."
-
 msgid "Extracting {name}…"
 msgstr "Puretaan {name}…"
-
 msgid "Ignored unsafe or special entries: {list}"
 msgstr "Ohitettiin vaaralliset tai erikoiset kohteet: {list}"
-
 msgid "Duplicate file kept from /usr: /{path}"
 msgstr "Kaksoiskappale säilytetty hakemistosta /usr: /{path}"
-
 msgid "Looking for dependencies…"
 msgstr "Etsitään riippuvuuksia…"
-
 msgid "Ignored {count} binaries built for other systems or architectures."
 msgstr "Ohitettiin {count} muille järjestelmille tai arkkitehtuureille rakennettua binääritiedostoa."
-
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Kirjastoja ei löytynyt ohjelmistolähteistä: {list}"
-
 msgid "Debian dependencies without an equivalent here: {list}"
 msgstr "Debian-riippuvuudet, joille ei ole vastinetta täällä: {list}"
-
 msgid "Files already owned by other packages: {list}"
 msgstr "Tiedostot, jotka kuuluvat jo muille paketeille: {list}"
-
 msgid "Building the package…"
 msgstr "Rakennetaan pakettia…"
-
 msgid "The file is not a Debian package (missing ar header)."
 msgstr "Tiedosto ei ole Debian-paketti (ar-otsake puuttuu)."
-
 msgid "The Debian package is truncated or corrupted."
 msgstr "Debian-paketti on katkennut tai vioittunut."
-
 msgid "Unsupported compression in member {name}."
 msgstr "Pakkausta ei tueta jäsenelle {name}."
-
 msgid "File not found: {path}"
 msgstr "Tiedostoa ei löytynyt: {path}"
-
 msgid "The file is not a Debian package (debian-binary missing)."
 msgstr "Tiedosto ei ole Debian-paketti (debian-binary puuttuu)."
-
 msgid "The Debian package has no control or data archive."
 msgstr "Debian-paketissa ei ole control- tai data-arkistoa."
-
 msgid "The Debian package has no control file."
 msgstr "Debian-paketissa ei ole control-tiedostoa."
-
 msgid "The control file has no Package or Version field."
 msgstr "Control-tiedostossa ei ole kenttää Package tai Version."
-
 msgid "Install .deb package"
 msgstr "Asenna .deb-paketti"
-
 msgid "Converts Debian packages into native pacman packages and installs them."
 msgstr "Muuntaa Debian-paketit natiiveiksi pacman-paketeiksi ja asentaa ne."
-
 msgid "Extracting files"
 msgstr "Puretaan tiedostoja"
-
 msgid "Adapting folders to this system"
 msgstr "Mukautetaan kansioita tähän järjestelmään"
-
 msgid "Finding dependencies"
 msgstr "Etsitään riippuvuuksia"
-
 msgid "Preparing installation scripts"
 msgstr "Valmistellaan asennusskriptejä"
-
 msgid "Building the package"
 msgstr "Rakennetaan pakettia"
-
 msgid "Waiting for authorization"
 msgstr "Odotetaan valtuutusta"
-
 msgid "Installing"
 msgstr "Asennetaan"
-
 msgid "About"
 msgstr "Tietoja"
-
 msgid "Main menu"
 msgstr "Päävalikko"
-
 msgid "Choose a .deb file…"
 msgstr "Valitse .deb-tiedosto…"
-
 msgid "Install a .deb package"
 msgstr "Asenna .deb-paketti"
-
 msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
 msgstr "Avaa Debian-paketti tai pudota se tähän. Se muunnetaan tämän järjestelmän natiiviksi paketiksi ja asennetaan."
-
 msgid "Details"
 msgstr "Tiedot"
-
 msgid "Cancel"
 msgstr "Peruuta"
-
 msgid "Prefer native packages when available"
 msgstr "Suosi natiivipaketteja, kun niitä on saatavilla"
-
 msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
 msgstr "Järjestelmän ohjelmistolähteiden, Flatpakin tai AppImagen ohjelmat toimivat yleensä paremmin. Muunnetut .deb-paketit eivät välttämättä toimi täydellisesti."
-
 msgid "“{name}” is available in the repositories"
 msgstr "”{name}” on saatavilla ohjelmistolähteistä"
-
 msgid "Installing the native package is recommended."
 msgstr "Natiivipaketin asentamista suositellaan."
-
 msgid "Open"
 msgstr "Avaa"
-
 msgid "Package"
 msgstr "Paketti"
-
 msgid "Version"
 msgstr "Versio"
-
 msgid "Architecture"
 msgstr "Arkkitehtuuri"
-
 msgid "Installed size"
 msgstr "Asennuskoko"
-
 msgid "Maintainer"
 msgstr "Ylläpitäjä"
-
 msgid "Website"
 msgstr "Verkkosivusto"
-
 msgid "Description"
 msgstr "Kuvaus"
-
 msgid "Review before installing"
 msgstr "Tarkista ennen asennusta"
-
 msgid "Show the dependencies and the scripts that will run as administrator"
 msgstr "Näyttää riippuvuudet ja skriptit, jotka suoritetaan järjestelmänvalvojana"
-
 msgid "Install"
 msgstr "Asenna"
-
 msgid "Ready to install"
 msgstr "Valmis asennettavaksi"
-
 msgid "Check what will be installed."
 msgstr "Tarkista, mitä asennetaan."
-
 msgid "Package name on this system"
 msgstr "Paketin nimi tässä järjestelmässä"
-
 msgid "Package size"
 msgstr "Paketin koko"
-
 msgid "Applications menu"
 msgstr "Sovellusvalikko"
-
 msgid "No menu entry"
 msgstr "Ei valikkokohdetta"
-
 msgid "Warnings"
 msgstr "Varoitukset"
-
 msgid "Notes"
 msgstr "Huomautukset"
-
 msgid "Dependencies"
 msgstr "Riippuvuudet"
-
 msgid "Required"
 msgstr "Pakolliset"
-
 msgid "{n} package"
 msgid_plural "{n} packages"
 msgstr[0] "{n} paketti"
 msgstr[1] "{n} pakettia"
-
 msgid "will be downloaded"
 msgstr "ladataan"
-
 msgid "Optional"
 msgstr "Valinnaiset"
-
 msgid "Scripts"
 msgstr "Skriptit"
-
 msgid "These commands from the Debian package run as administrator during installation."
 msgstr "Nämä Debian-paketin komennot suoritetaan järjestelmänvalvojana asennuksen aikana."
-
 msgid "Open {name}"
 msgstr "Avaa {name}"
-
 msgid "Copy details"
 msgstr "Kopioi tiedot"
-
 msgid "Close"
 msgstr "Sulje"
-
 msgid "This file cannot be installed"
 msgstr "Tätä tiedostoa ei voi asentaa"
-
 msgid "Choose a .deb file"
 msgstr "Valitse .deb-tiedosto"
-
 msgid "Debian packages"
 msgstr "Debian-paketit"
-
 msgid "Type your password in the window that will appear."
 msgstr "Kirjoita salasanasi näkyviin tulevaan ikkunaan."
-
 msgid "Missing dependencies are downloaded from the repositories."
 msgstr "Puuttuvat riippuvuudet ladataan ohjelmistolähteistä."
-
 msgid "Compressing the files, this may take a minute."
 msgstr "Pakataan tiedostoja, tämä voi kestää hetken."
-
 msgid "The package could not be converted"
 msgstr "Pakettia ei voitu muuntaa"
-
 msgid "Cancelled"
 msgstr "Peruttu"
-
 msgid "{name} is installed"
 msgstr "{name} on asennettu"
-
 msgid "The package {name} was installed. It has no entry in the applications menu."
 msgstr "Paketti {name} asennettiin. Sillä ei ole kohdetta sovellusvalikossa."
-
 msgid "Installation complete"
 msgstr "Asennus valmis"
-
 msgid "Authorization was not granted"
 msgstr "Valtuutusta ei myönnetty"
-
 msgid "The installation failed"
 msgstr "Asennus epäonnistui"
-
 msgid "pacman returned an error (code {code}). Open the details to see what happened."
 msgstr "pacman palautti virheen (koodi {code}). Avaa tiedot nähdäksesi, mitä tapahtui."
-
 msgid "The application could not be started"
 msgstr "Sovellusta ei voitu käynnistää"
-
 msgid "Copied"
 msgstr "Kopioitu"
-
 msgid "Please wait until the installation finishes"
 msgstr "Odota, kunnes asennus on valmis"
-
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg ei voi toimia root-käyttäjänä; suorita debtap-mod tavallisena käyttäjänä."
-
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg epäonnistui poistumiskoodilla {code}"
-
 msgid "makepkg finished but produced no package"
 msgstr "makepkg valmistui, mutta ei tuottanut pakettia"
-
 msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
 msgstr "“{typed}” vain päivittää pakettiluettelon. Tässä turvallinen vastine tarkistaa päivitykset asentamatta mitään; asenna ne komennolla “{upgrade}”."
-
 msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
 msgstr "Älä koskaan suorita pelkkää “pacman -Sy”: luettelon päivittäminen ilman järjestelmän päivittämistä voi rikkoa järjestelmän."
-
 msgid "Arch does not upgrade single packages; the whole system is upgraded together."
 msgstr "Arch ei päivitä yksittäisiä paketteja; koko järjestelmä päivitetään yhdessä."
-
 msgid "Tell which package to install, for example: {example}"
 msgstr "Kerro, mikä paketti asennetaan, esimerkiksi: {example}"
-
 msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
 msgstr ".rpm-paketit on tehty Fedoralle/openSUSElle, eikä niitä voi asentaa tähän."
-
 msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
 msgstr "Etsi ohjelmaa ohjelmistovarastoista (pamac search), Flathubista tai AppImagena."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac löytää ohjelmia myös AUR:sta ja Flatpakista: {cmd}"
-
 msgid ".deb packages are converted into native pacman packages by debtap-mod."
 msgstr "debtap-mod muuntaa .deb-paketit natiiveiksi pacman-paketeiksi."
-
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Suorita tämä komento tavallisena käyttäjänä (ilman sudoa)."
-
 msgid "Tell which package to remove, for example: {example}"
 msgstr "Kerro, mikä paketti poistetaan, esimerkiksi: {example}"
-
 msgid "-n also deletes the configuration files the package installed in /etc."
 msgstr "-n poistaa myös ne asetustiedostot, jotka paketti asensi hakemistoon /etc."
-
 msgid "There are no orphan packages to remove."
 msgstr "Poistettavia orporaketteja ei ole."
-
 msgid "Tell what to search for, for example: {example}"
 msgstr "Kerro, mitä etsitään, esimerkiksi: {example}"
-
 msgid "Tell which package, for example: {example}"
 msgstr "Kerro, mikä paketti, esimerkiksi: {example}"
-
 msgid "The package is not installed; the list comes from the repository file database."
 msgstr "Pakettia ei ole asennettu; luettelo tulee ohjelmistovaraston tiedostotietokannasta."
-
 msgid "Tell which file, for example: {example}"
 msgstr "Kerro, mikä tiedosto, esimerkiksi: {example}"
-
 msgid "The file is not on this system; searching the repository file database."
 msgstr "Tiedostoa ei ole tässä järjestelmässä; haetaan ohjelmistovaraston tiedostotietokannasta."
-
 msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
 msgstr "Archiin perustuvissa järjestelmissä ei ole PPA-lähteitä eikä lisättäviä ohjelmistovarastoja. Yhteisön ohjelmat tulevat AUR:sta."
-
 msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
 msgstr "Hae komennolla “pamac search --aur <name>” ja asenna komennolla “pamac build <name>”."
-
 msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
 msgstr "Estä paketin päivittäminen lisäämällä se IgnorePkg-asetukseen tiedostossa /etc/pacman.conf."
-
 msgid "“{command}” has no direct equivalent here."
 msgstr "Komennolla “{command}” ei ole tässä suoraa vastinetta."
-
 msgid "Run “{tool} help” to see the commands this system understands."
 msgstr "Suorita “{tool} help” nähdäksesi komennot, jotka tämä järjestelmä ymmärtää."
-
 msgid "Tell which .deb file to install, for example: {example}"
 msgstr "Kerro, mikä .deb-tiedosto asennetaan, esimerkiksi: {example}"
-
 msgid "This system uses pacman, not {tool}."
 msgstr "Tämä järjestelmä käyttää pacmania, ei {tool}-komentoa."
-
 msgid "You typed:"
 msgstr "Kirjoitit:"
-
 msgid "Equivalent:"
 msgstr "Vastine:"
-
 msgid "With pamac:"
 msgstr "Pamacilla:"
-
 msgid "Running:"
 msgstr "Suoritetaan:"
-
 msgid "Update everything"
 msgstr "Päivitä kaikki"
-
 msgid "Check for updates"
 msgstr "Tarkista päivitykset"
-
 msgid "Install a program"
 msgstr "Asenna ohjelma"
-
 msgid "Install a downloaded file"
 msgstr "Asenna ladattu tiedosto"
-
 msgid "Install a .deb file here"
 msgstr "Asenna .deb-tiedosto tässä"
-
 msgid "Reinstall"
 msgstr "Asenna uudelleen"
-
 msgid "Remove a program"
 msgstr "Poista ohjelma"
-
 msgid "Remove + dependencies"
 msgstr "Poista + riippuvuudet"
-
 msgid "Remove + configuration"
 msgstr "Poista + asetukset"
-
 msgid "Remove orphans (unused)"
 msgstr "Poista orvot (käyttämättömät)"
-
 msgid "Search to install"
 msgstr "Hae asennettavaksi"
-
 msgid "Details (available)"
 msgstr "Tiedot (saatavilla)"
-
 msgid "Details (installed)"
 msgstr "Tiedot (asennettu)"
-
 msgid "List everything available"
 msgstr "Luettele kaikki saatavilla oleva"
-
 msgid "List installed"
 msgstr "Luettele asennetut"
-
 msgid "Search installed"
 msgstr "Hae asennetuista"
-
 msgid "Files of a package"
 msgstr "Paketin tiedostot"
-
 msgid "Which package owns a file?"
 msgstr "Mikä paketti omistaa tiedoston?"
-
 msgid "What can be upgraded"
 msgstr "Mitä voi päivittää"
-
 msgid "Installed by you"
 msgstr "Itse asentamasi"
-
 msgid "Dependencies of a package"
 msgstr "Paketin riippuvuudet"
-
 msgid "Who depends on a package"
 msgstr "Mikä riippuu paketista"
-
 msgid "Clean the download cache"
 msgstr "Tyhjennä latausvälimuisti"
-
 msgid "Add a repository / PPA"
 msgstr "Lisää ohjelmistovarasto / PPA"
-
 msgid "(AUR)"
 msgstr "(AUR)"
-
 msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
 msgstr "Komentojen kääntäjä: {family} (Debian, Ubuntu, Mint, Fedora) pacmaniksi ja pamaciksi (Arch, BigLinux, Manjaro)"
-
 msgid "Both do the same job: install, update and remove programs. Only the commands change."
 msgstr "Molemmat tekevät saman työn: asentavat, päivittävät ja poistavat ohjelmia. Vain komennot eroavat."
-
 msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
 msgstr "Voit jatkaa {tool}-komentojen kirjoittamista: ne käännetään ja suoritetaan pamacilla tai pacmanilla."
-
 msgid "No command matches “{topic}”."
 msgstr "Mikään komento ei vastaa hakua “{topic}”."
-
 msgid "Run “{tool} help” to see every command."
 msgstr "Suorita “{tool} help” nähdäksesi kaikki komennot."
-
 msgid "What you want to do"
 msgstr "Mitä haluat tehdä"
-
 msgid "Differences that catch people"
 msgstr "Eroavaisuudet, jotka yllättävät"
-
 msgid "apt update only refreshes the list; apt upgrade installs."
 msgstr "apt update vain päivittää luettelon; apt upgrade asentaa."
-
 msgid "In pacman, -Syu does both together."
 msgstr "Pacmanissa -Syu tekee molemmat yhdessä."
-
 msgid "Avoid “pacman -Sy” alone: it can break the system."
 msgstr "Vältä pelkkää “pacman -Sy”: se voi rikkoa järjestelmän."
-
 msgid "Package types"
 msgstr "Pakettityypit"
-
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt käyttää .deb-tiedostoja, dnf .rpm-tiedostoja ja pacman .pkg.tar.zst-tiedostoja."
-
 msgid ".deb files are converted and installed with debtap-mod (or a double click)."
 msgstr ".deb-tiedostot muunnetaan ja asennetaan debtap-modilla (tai kaksoisnapsautuksella)."
-
 msgid "Programs from the community"
 msgstr "Yhteisön ohjelmat"
-
 msgid "The AUR plays the role of PPAs and COPR."
 msgstr "AUR on PPA-lähteiden ja COPR:n vastine."
-
 msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
 msgstr "Käytä komentoa “pamac build <name>”; älä koskaan suorita AUR-apuohjelmia sudolla."
-
 msgid "Tip: “{tool} help install” shows only the lines about one command."
 msgstr "Vinkki: “{tool} help install” näyttää vain yhden komennon rivit."
-
 msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
 msgstr "Pikaohje: asentamiseen tai poistamiseen tarvitaan “sudo”; hakuun ja luetteloimiseen ei."
-
 msgid "Command not found: {cmd}"
 msgstr "Komentoa ei löydy: {cmd}"
-
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debian-skriptit vain rekisteröivät APT-ohjelmistolähteen ja AppArmor-profiilin Ubuntua varten; niitä ei tarvita täällä."
-
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Skripti {script} määrittää APT-ohjelmistolähteen; tällä osalla ei ole vaikutusta tähän järjestelmään."

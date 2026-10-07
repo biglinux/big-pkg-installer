@@ -4,19 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
-msgid ""
-msgstr ""
-"Project-Id-Version: debtap-mod\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 14:05-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+msgid   ""
+msgstr  "Project-Id-Version: debtap-mod\n"
+        "Report-Msgid-Bugs-To: \n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+        "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #
 # File: debtap-mod/usr/share/debtap-mod/debtap_mod/cli.py, line: 17
@@ -207,6 +204,22 @@ msgid   "The Debian scripts only register an APT repository and an AppArmor "
 msgstr  ""
 
 #
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgbuild.py, line: 140
+msgid   "makepkg cannot run as root; run debtap-mod as a regular user."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgbuild.py, line: 168
+#, python-brace-format
+msgid   "makepkg failed with exit code {code}"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgbuild.py, line: 171
+msgid   "makepkg finished but produced no package"
+msgstr  ""
+
+#
 # File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 63
 msgid   "The file is not a Debian package (missing ar header)."
 msgstr  ""
@@ -224,7 +237,10 @@ msgid   "Unsupported compression in member {name}."
 msgstr  ""
 
 #
+# #-#-#-#-#  debtap-mod.pot (debtap-mod)  #-#-#-#-#
+#
 # File: debtap-mod/usr/share/debtap-mod/debtap_mod/debfile.py, line: 172
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 183
 #, python-brace-format
 msgid   "File not found: {path}"
 msgstr  ""
@@ -628,254 +644,10 @@ msgstr  ""
 msgid   "Authorization was not granted"
 msgstr  ""
 
-msgid "Please wait until the installation finishes"
-msgstr ""
-
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr ""
-
-#, python-brace-format
-msgid "makepkg failed with exit code {code}"
-msgstr ""
-
-msgid "makepkg finished but produced no package"
-msgstr ""
-
-#, python-brace-format
-msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
-msgstr ""
-
-msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
-msgstr ""
-
-msgid "Arch does not upgrade single packages; the whole system is upgraded together."
-msgstr ""
-
-#, python-brace-format
-msgid "Tell which package to install, for example: {example}"
-msgstr ""
-
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ""
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr ""
-
-#, python-brace-format
-msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
-msgstr ""
-
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ""
-
-msgid "Run this command as a regular user (without sudo)."
-msgstr ""
-
-#, python-brace-format
-msgid "Tell which package to remove, for example: {example}"
-msgstr ""
-
-msgid "-n also deletes the configuration files the package installed in /etc."
-msgstr ""
-
-msgid "There are no orphan packages to remove."
-msgstr ""
-
-#, python-brace-format
-msgid "Tell what to search for, for example: {example}"
-msgstr ""
-
-#, python-brace-format
-msgid "Tell which package, for example: {example}"
-msgstr ""
-
-msgid "The package is not installed; the list comes from the repository file database."
-msgstr ""
-
-#, python-brace-format
-msgid "Tell which file, for example: {example}"
-msgstr ""
-
-msgid "The file is not on this system; searching the repository file database."
-msgstr ""
-
-msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
-msgstr ""
-
-msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
-msgstr ""
-
-msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
-msgstr ""
-
-#, python-brace-format
-msgid "“{command}” has no direct equivalent here."
-msgstr ""
-
-#, python-brace-format
-msgid "Run “{tool} help” to see the commands this system understands."
-msgstr ""
-
-#, python-brace-format
-msgid "Tell which .deb file to install, for example: {example}"
-msgstr ""
-
-#, python-brace-format
-msgid "This system uses pacman, not {tool}."
-msgstr ""
-
-msgid "You typed:"
-msgstr ""
-
-msgid "Equivalent:"
-msgstr ""
-
-msgid "With pamac:"
-msgstr ""
-
-msgid "Running:"
-msgstr ""
-
-msgid "Update everything"
-msgstr ""
-
-msgid "Check for updates"
-msgstr ""
-
-msgid "Install a program"
-msgstr ""
-
-msgid "Install a downloaded file"
-msgstr ""
-
-msgid "Install a .deb file here"
-msgstr ""
-
-msgid "Reinstall"
-msgstr ""
-
-msgid "Remove a program"
-msgstr ""
-
-msgid "Remove + dependencies"
-msgstr ""
-
-msgid "Remove + configuration"
-msgstr ""
-
-msgid "Remove orphans (unused)"
-msgstr ""
-
-msgid "Search to install"
-msgstr ""
-
-msgid "Details (available)"
-msgstr ""
-
-msgid "Details (installed)"
-msgstr ""
-
-msgid "List everything available"
-msgstr ""
-
-msgid "List installed"
-msgstr ""
-
-msgid "Search installed"
-msgstr ""
-
-msgid "Files of a package"
-msgstr ""
-
-msgid "Which package owns a file?"
-msgstr ""
-
-msgid "What can be upgraded"
-msgstr ""
-
-msgid "Installed by you"
-msgstr ""
-
-msgid "Dependencies of a package"
-msgstr ""
-
-msgid "Who depends on a package"
-msgstr ""
-
-msgid "Clean the download cache"
-msgstr ""
-
-msgid "Add a repository / PPA"
-msgstr ""
-
-msgid "(AUR)"
-msgstr ""
-
-#, python-brace-format
-msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
-msgstr ""
-
-msgid "Both do the same job: install, update and remove programs. Only the commands change."
-msgstr ""
-
-#, python-brace-format
-msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
-msgstr ""
-
-#, python-brace-format
-msgid "No command matches “{topic}”."
-msgstr ""
-
-#, python-brace-format
-msgid "Run “{tool} help” to see every command."
-msgstr ""
-
-msgid "What you want to do"
-msgstr ""
-
-msgid "Differences that catch people"
-msgstr ""
-
-msgid "apt update only refreshes the list; apt upgrade installs."
-msgstr ""
-
-msgid "In pacman, -Syu does both together."
-msgstr ""
-
-msgid "Avoid “pacman -Sy” alone: it can break the system."
-msgstr ""
-
-msgid "Package types"
-msgstr ""
-
-msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
-msgstr ""
-
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ""
-
-msgid "Programs from the community"
-msgstr ""
-
-msgid "The AUR plays the role of PPAs and COPR."
-msgstr ""
-
-msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
-msgstr ""
-
-#, python-brace-format
-msgid "Tip: “{tool} help install” shows only the lines about one command."
-msgstr ""
-
-msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
-msgstr ""
-
-#, python-brace-format
-msgid "Command not found: {cmd}"
-msgstr ""
-
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr ""
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 479
+msgid   "The installation failed"
+msgstr  ""
 
 #
 # File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/window.py, line: 480
@@ -903,4 +675,401 @@ msgstr  ""
 # File: debtap-mod/usr/share/debtap-mod/debtap_mod/gui/app.py, line: 47
 msgid   "Converts Debian packages into native pacman packages and installs "
         "them."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 122
+#, python-brace-format
+msgid   "“{typed}” only refreshes the package list. Here the safe equivalent "
+        "checks for updates without installing anything; to install them use "
+        "“{upgrade}”."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 127
+msgid   "Never run “pacman -Sy” alone: refreshing without upgrading can break "
+        "the system."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 133
+msgid   "Arch does not upgrade single packages; the whole system is upgraded "
+        "together."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 144
+#, python-brace-format
+msgid   "Tell which package to install, for example: {example}"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 154
+msgid   ".rpm packages are made for Fedora/openSUSE and cannot be installed "
+        "here."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 155
+msgid   "Look for the program in the repositories (pamac search), on Flathub, "
+        "or as an AppImage."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 176
+#, python-brace-format
+msgid   "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 189
+msgid   ".deb packages are converted into native pacman packages by debtap-"
+        "mod."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 191
+msgid   "Run this command as a regular user (without sudo)."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 196
+#, python-brace-format
+msgid   "Tell which package to remove, for example: {example}"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 201
+msgid   "-n also deletes the configuration files the package installed in /"
+        "etc."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 221
+msgid   "There are no orphan packages to remove."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 232
+#, python-brace-format
+msgid   "Tell what to search for, for example: {example}"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 239
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 268
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 289
+#, python-brace-format
+msgid   "Tell which package, for example: {example}"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 274
+msgid   "The package is not installed; the list comes from the repository "
+        "file database."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 278
+#, python-brace-format
+msgid   "Tell which file, for example: {example}"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 285
+msgid   "The file is not on this system; searching the repository file "
+        "database."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 313
+msgid   "Arch-based systems have no PPAs or extra repositories to add. "
+        "Programs from the community come from the AUR."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 315
+msgid   "Search with “pamac search --aur <name>” and install with “pamac "
+        "build <name>”."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 321
+msgid   "To keep a package from being upgraded, add it to IgnorePkg in /etc/"
+        "pacman.conf."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 327
+#, python-brace-format
+msgid   "“{command}” has no direct equivalent here."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 328
+#, python-brace-format
+msgid   "Run “{tool} help” to see the commands this system understands."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 436
+#, python-brace-format
+msgid   "Tell which .deb file to install, for example: {example}"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 592
+#, python-brace-format
+msgid   "This system uses pacman, not {tool}."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 594
+msgid   "You typed:"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 594
+msgid   "Equivalent:"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 594
+msgid   "With pamac:"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 607
+msgid   "Running:"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 616
+msgid   "Update everything"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 618
+msgid   "Check for updates"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 620
+msgid   "Install a program"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 622
+msgid   "Install a downloaded file"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 624
+msgid   "Install a .deb file here"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 626
+msgid   "Reinstall"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 628
+msgid   "Remove a program"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 630
+msgid   "Remove + dependencies"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 632
+msgid   "Remove + configuration"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 634
+msgid   "Remove orphans (unused)"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 636
+msgid   "Search to install"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 638
+msgid   "Details (available)"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 640
+msgid   "Details (installed)"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 642
+msgid   "List everything available"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 644
+msgid   "List installed"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 646
+msgid   "Search installed"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 648
+msgid   "Files of a package"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 650
+msgid   "Which package owns a file?"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 652
+msgid   "What can be upgraded"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 654
+msgid   "Installed by you"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 656
+msgid   "Dependencies of a package"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 658
+msgid   "Who depends on a package"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 660
+msgid   "Clean the download cache"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 662
+msgid   "Add a repository / PPA"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 663
+msgid   "(AUR)"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 700
+#, python-brace-format
+msgid   "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to "
+        "pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 704
+msgid   "Both do the same job: install, update and remove programs. Only the "
+        "commands change."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 705
+#, python-brace-format
+msgid   "You can keep typing {tool} commands: they are translated and run "
+        "with pamac or pacman."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 709
+#, python-brace-format
+msgid   "No command matches “{topic}”."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 710
+#, python-brace-format
+msgid   "Run “{tool} help” to see every command."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 714
+msgid   "What you want to do"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 739
+msgid   "Differences that catch people"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 740
+msgid   "apt update only refreshes the list; apt upgrade installs."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 741
+msgid   "In pacman, -Syu does both together."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 742
+msgid   "Avoid “pacman -Sy” alone: it can break the system."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 744
+msgid   "Package types"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 745
+msgid   "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 746
+msgid   ".deb files are converted and installed with debtap-mod (or a double "
+        "click)."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 748
+msgid   "Programs from the community"
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 749
+msgid   "The AUR plays the role of PPAs and COPR."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 750
+msgid   "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 758
+#, python-brace-format
+msgid   "Tip: “{tool} help install” shows only the lines about one command."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 759
+msgid   "Quick reference: “sudo” is needed to install or remove; searching "
+        "and listing are not."
+msgstr  ""
+
+#
+# File: debtap-mod/usr/share/debtap-mod/debtap_mod/pkgcompat.py, line: 802
+#, python-brace-format
+msgid   "Command not found: {cmd}"
 msgstr  ""
