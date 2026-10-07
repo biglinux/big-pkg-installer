@@ -4,395 +4,588 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
 msgid "Extracting package data"
 msgstr "Izdvajanje podataka paketa"
+
 msgid "Adapting the directory layout"
 msgstr "Prilagodba strukture direktorija"
+
 msgid "Resolving dependencies"
 msgstr "Rješavanje ovisnosti"
+
 msgid "Converting maintainer scripts"
 msgstr "Pretvaranje skripti održavatelja"
+
 msgid "Building the pacman package"
 msgstr "Izrada pacman paketa"
+
 msgid "Warning:"
 msgstr "Upozorenje:"
+
 msgid "Error:"
 msgstr "Greška:"
+
 msgid "Convert a .deb package into a pacman package and install it."
 msgstr "Pretvorite .deb paket u pacman paket i instalirajte ga."
+
 msgid "the .deb file"
 msgstr ".deb datoteka"
+
 msgid "do not ask questions, but open the install script for review"
 msgstr "ne postavljaj pitanja, ali otvori instalacijsku skriptu na pregled"
+
 msgid "do not ask any question"
 msgstr "ne postavljaj nikakva pitanja"
+
 msgid "only build the package, do not install it"
 msgstr "samo izradi paket, ne instaliraj ga"
+
 msgid "keep the built package in DIR"
 msgstr "zadrži izrađeni paket u DIR"
+
 msgid "also write a PKGBUILD next to the .deb"
 msgstr "zapiši i PKGBUILD pored .deb datoteke"
+
 msgid "only write a PKGBUILD, do not build"
 msgstr "samo zapiši PKGBUILD, bez izrade"
+
 msgid "{question} [y/N] "
 msgstr "{question} [d/N] "
+
 msgid "yes"
 msgstr "da"
+
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod više ne treba lokalnu bazu podataka; nema se što ažurirati."
+
 msgid "no .deb file given"
 msgstr "nije zadana .deb datoteka"
+
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "opcije -s i -w su zastarjele i zanemarene su"
+
 msgid "Installed size: {size}"
 msgstr "Instalirana veličina: {size}"
+
 msgid "PKGBUILD written to {path}"
 msgstr "PKGBUILD zapisan u {path}"
+
 msgid "cancelled"
 msgstr "otkazano"
+
 msgid "Package {file} built"
 msgstr "Paket {file} je izrađen"
+
 msgid "Menu entries: {names}"
 msgstr "Stavke izbornika: {names}"
+
 msgid "Package saved to {path}"
 msgstr "Paket je spremljen u {path}"
+
 msgid "some files belong to other installed packages; remove them first:"
 msgstr "neke datoteke pripadaju drugim instaliranim paketima; prvo ih uklonite:"
+
 msgid "Install script that will run as root:"
 msgstr "Instalacijska skripta koja će se izvršiti kao root:"
+
 msgid "Install {name} now?"
 msgstr "Instalirati {name} sada?"
+
 msgid "pacman could not install the package (exit code {code})"
 msgstr "pacman nije mogao instalirati paket (izlazni kod {code})"
+
 msgid "{name} installed successfully"
 msgstr "{name} je uspješno instaliran"
+
 msgid "Look for {names} in the applications menu."
 msgstr "Potražite {names} u izborniku aplikacija."
+
 msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
 msgstr "Ovaj je paket izrađen za {deb_arch}, a ovo računalo je {host}; ovdje se neće pokrenuti."
+
 msgid "Extracting {name}…"
 msgstr "Izdvajanje {name}…"
+
 msgid "Ignored unsafe or special entries: {list}"
 msgstr "Zanemareni nesigurni ili posebni unosi: {list}"
+
 msgid "Duplicate file kept from /usr: /{path}"
 msgstr "Duplikat datoteke zadržan iz /usr: /{path}"
+
 msgid "Looking for dependencies…"
 msgstr "Traženje ovisnosti…"
+
 msgid "Ignored {count} binaries built for other systems or architectures."
 msgstr "Zanemareno binarnih datoteka izrađenih za druge sustave ili arhitekture: {count}."
+
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Biblioteke nisu pronađene u repozitorijima: {list}"
+
 msgid "Debian dependencies without an equivalent here: {list}"
 msgstr "Debian ovisnosti bez ekvivalenta ovdje: {list}"
+
 msgid "Files already owned by other packages: {list}"
 msgstr "Datoteke koje već pripadaju drugim paketima: {list}"
+
 msgid "Building the package…"
 msgstr "Izrada paketa…"
+
 msgid "The file is not a Debian package (missing ar header)."
 msgstr "Datoteka nije Debian paket (nedostaje ar zaglavlje)."
+
 msgid "The Debian package is truncated or corrupted."
 msgstr "Debian paket je skraćen ili oštećen."
+
 msgid "Unsupported compression in member {name}."
 msgstr "Nepodržana kompresija u članu {name}."
+
 msgid "File not found: {path}"
 msgstr "Datoteka nije pronađena: {path}"
+
 msgid "The file is not a Debian package (debian-binary missing)."
 msgstr "Datoteka nije Debian paket (nedostaje debian-binary)."
+
 msgid "The Debian package has no control or data archive."
 msgstr "Debian paket nema arhivu control ili data."
+
 msgid "The Debian package has no control file."
 msgstr "Debian paket nema datoteku control."
+
 msgid "The control file has no Package or Version field."
 msgstr "Datoteka control nema polje Package ili Version."
+
 msgid "Install .deb package"
 msgstr "Instaliraj .deb paket"
+
 msgid "Converts Debian packages into native pacman packages and installs them."
 msgstr "Pretvara Debian pakete u izvorne pacman pakete i instalira ih."
+
 msgid "Extracting files"
 msgstr "Izdvajanje datoteka"
+
 msgid "Adapting folders to this system"
 msgstr "Prilagodba mapa ovom sustavu"
+
 msgid "Finding dependencies"
 msgstr "Pronalaženje ovisnosti"
+
 msgid "Preparing installation scripts"
 msgstr "Priprema instalacijskih skripti"
+
 msgid "Building the package"
 msgstr "Izrada paketa"
+
 msgid "Waiting for authorization"
 msgstr "Čekanje autorizacije"
+
 msgid "Installing"
 msgstr "Instalacija"
+
 msgid "About"
 msgstr "O programu"
+
 msgid "Main menu"
 msgstr "Glavni izbornik"
+
 msgid "Choose a .deb file…"
 msgstr "Odaberite .deb datoteku…"
+
 msgid "Install a .deb package"
 msgstr "Instalirajte .deb paket"
+
 msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
 msgstr "Otvorite Debian paket ili ga ovdje ispustite. Bit će pretvoren u izvorni paket za ovaj sustav i instaliran."
+
 msgid "Details"
 msgstr "Pojedinosti"
+
 msgid "Cancel"
 msgstr "Odustani"
+
 msgid "Prefer native packages when available"
 msgstr "Radije izvorni paketi kada su dostupni"
+
 msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
 msgstr "Programi iz sistemskih repozitorija, Flatpaka ili AppImagea obično rade bolje. Pretvoreni .deb paketi možda neće raditi savršeno."
+
 msgid "“{name}” is available in the repositories"
 msgstr "„{name}“ je dostupan u repozitorijima"
+
 msgid "Installing the native package is recommended."
 msgstr "Preporučuje se instalacija izvornog paketa."
+
 msgid "Open"
 msgstr "Otvori"
+
 msgid "Package"
 msgstr "Paket"
+
 msgid "Version"
 msgstr "Verzija"
+
 msgid "Architecture"
 msgstr "Arhitektura"
+
 msgid "Installed size"
 msgstr "Instalirana veličina"
+
 msgid "Maintainer"
 msgstr "Održavatelj"
+
 msgid "Website"
 msgstr "Web-stranica"
+
 msgid "Description"
 msgstr "Opis"
+
 msgid "Review before installing"
 msgstr "Pregled prije instalacije"
+
 msgid "Show the dependencies and the scripts that will run as administrator"
 msgstr "Prikaži ovisnosti i skripte koje će se izvršiti kao administrator"
+
 msgid "Install"
 msgstr "Instaliraj"
+
 msgid "Ready to install"
 msgstr "Spremno za instalaciju"
+
 msgid "Check what will be installed."
 msgstr "Provjerite što će biti instalirano."
+
 msgid "Package name on this system"
 msgstr "Naziv paketa na ovom sustavu"
+
 msgid "Package size"
 msgstr "Veličina paketa"
+
 msgid "Applications menu"
 msgstr "Izbornik aplikacija"
+
 msgid "No menu entry"
 msgstr "Nema stavke izbornika"
+
 msgid "Warnings"
 msgstr "Upozorenja"
+
 msgid "Notes"
 msgstr "Bilješke"
+
 msgid "Dependencies"
 msgstr "Ovisnosti"
+
 msgid "Required"
 msgstr "Obavezne"
+
 msgid "{n} package"
 msgid_plural "{n} packages"
 msgstr[0] "{n} paket"
 msgstr[1] "{n} paketa"
 msgstr[2] "{n} paketa"
+
 msgid "will be downloaded"
 msgstr "bit će preuzeto"
+
 msgid "Optional"
 msgstr "Neobavezne"
+
 msgid "Scripts"
 msgstr "Skripte"
+
 msgid "These commands from the Debian package run as administrator during installation."
 msgstr "Ove naredbe iz Debian paketa izvršavaju se kao administrator tijekom instalacije."
+
 msgid "Open {name}"
 msgstr "Otvori {name}"
+
 msgid "Copy details"
 msgstr "Kopiraj pojedinosti"
+
 msgid "Close"
 msgstr "Zatvori"
+
 msgid "This file cannot be installed"
 msgstr "Ova datoteka se ne može instalirati"
+
 msgid "Choose a .deb file"
 msgstr "Odaberite .deb datoteku"
+
 msgid "Debian packages"
 msgstr "Debian paketi"
+
 msgid "Type your password in the window that will appear."
 msgstr "Unesite svoju lozinku u prozor koji će se pojaviti."
+
 msgid "Missing dependencies are downloaded from the repositories."
 msgstr "Ovisnosti koje nedostaju preuzimaju se iz repozitorija."
+
 msgid "Compressing the files, this may take a minute."
 msgstr "Sažimanje datoteka, to može potrajati minutu."
+
 msgid "The package could not be converted"
 msgstr "Paket se nije mogao pretvoriti"
+
 msgid "Cancelled"
 msgstr "Otkazano"
+
 msgid "{name} is installed"
 msgstr "{name} je instaliran"
+
 msgid "The package {name} was installed. It has no entry in the applications menu."
 msgstr "Paket {name} je instaliran. Nema stavku u izborniku aplikacija."
+
 msgid "Installation complete"
 msgstr "Instalacija je dovršena"
+
 msgid "Authorization was not granted"
 msgstr "Autorizacija nije odobrena"
+
 msgid "The installation failed"
 msgstr "Instalacija nije uspjela"
+
 msgid "pacman returned an error (code {code}). Open the details to see what happened."
 msgstr "pacman je vratio grešku (kod {code}). Otvorite pojedinosti da vidite što se dogodilo."
+
 msgid "The application could not be started"
 msgstr "Aplikacija se nije mogla pokrenuti"
+
 msgid "Copied"
 msgstr "Kopirano"
+
 msgid "Please wait until the installation finishes"
 msgstr "Pričekajte da se instalacija završi"
+
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg se ne može pokrenuti kao root; pokrenite debtap-mod kao običan korisnik."
+
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg nije uspio s izlaznim kodom {code}"
+
 msgid "makepkg finished but produced no package"
 msgstr "makepkg je završio, ali nije izradio paket"
+
 msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
 msgstr "“{typed}” samo osvježava popis paketa. Ovdje sigurni ekvivalent provjerava ima li ažuriranja bez instalacije; za njihovu instalaciju koristite “{upgrade}”."
+
 msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
 msgstr "Nikada ne pokrećite samo “pacman -Sy”: osvježavanje bez nadogradnje može pokvariti sustav."
+
 msgid "Arch does not upgrade single packages; the whole system is upgraded together."
 msgstr "Arch ne nadograđuje pojedinačne pakete; cijeli se sustav nadograđuje zajedno."
+
 msgid "Tell which package to install, for example: {example}"
 msgstr "Navedite koji paket instalirati, na primjer: {example}"
+
 msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
 msgstr ".rpm paketi su izrađeni za Fedora/openSUSE i ovdje se ne mogu instalirati."
+
 msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
 msgstr "Potražite program u repozitorijima (pamac search), na Flathubu ili kao AppImage."
+
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac pronalazi programe i u AUR-u i Flatpaku: {cmd}"
+
 msgid ".deb packages are converted into native pacman packages by debtap-mod."
 msgstr ".deb pakete debtap-mod pretvara u izvorne pacman pakete."
+
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Pokrenite ovu naredbu kao običan korisnik (bez sudo)."
+
 msgid "Tell which package to remove, for example: {example}"
 msgstr "Navedite koji paket ukloniti, na primjer: {example}"
+
 msgid "-n also deletes the configuration files the package installed in /etc."
 msgstr "-n briše i konfiguracijske datoteke koje je paket instalirao u /etc."
+
 msgid "There are no orphan packages to remove."
 msgstr "Nema osirotjelih paketa za uklanjanje."
+
 msgid "Tell what to search for, for example: {example}"
 msgstr "Navedite što tražiti, na primjer: {example}"
+
 msgid "Tell which package, for example: {example}"
 msgstr "Navedite koji paket, na primjer: {example}"
+
 msgid "The package is not installed; the list comes from the repository file database."
 msgstr "Paket nije instaliran; popis dolazi iz baze datoteka repozitorija."
+
 msgid "Tell which file, for example: {example}"
 msgstr "Navedite koju datoteku, na primjer: {example}"
+
 msgid "The file is not on this system; searching the repository file database."
 msgstr "Datoteke nema na ovom sustavu; pretražuje se baza datoteka repozitorija."
+
 msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
 msgstr "Sustavi temeljeni na Archu nemaju PPA-ove ni dodatne repozitorije za dodavanje. Programi zajednice dolaze iz AUR-a."
+
 msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
 msgstr "Tražite s “pamac search --aur <name>” i instalirajte s “pamac build <name>”."
+
 msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
 msgstr "Da paket ne bude nadograđen, dodajte ga u IgnorePkg u /etc/pacman.conf."
+
 msgid "“{command}” has no direct equivalent here."
 msgstr "“{command}” ovdje nema izravnog ekvivalenta."
+
 msgid "Run “{tool} help” to see the commands this system understands."
 msgstr "Pokrenite “{tool} help” da vidite naredbe koje ovaj sustav razumije."
+
 msgid "Tell which .deb file to install, for example: {example}"
 msgstr "Navedite koju .deb datoteku instalirati, na primjer: {example}"
+
 msgid "This system uses pacman, not {tool}."
 msgstr "Ovaj sustav koristi pacman, a ne {tool}."
+
 msgid "You typed:"
 msgstr "Upisali ste:"
+
 msgid "Equivalent:"
 msgstr "Ekvivalent:"
+
 msgid "With pamac:"
 msgstr "S pamacom:"
+
 msgid "Running:"
 msgstr "Pokretanje:"
+
 msgid "Update everything"
 msgstr "Ažuriraj sve"
+
 msgid "Check for updates"
 msgstr "Provjeri ažuriranja"
+
 msgid "Install a program"
 msgstr "Instaliraj program"
+
 msgid "Install a downloaded file"
 msgstr "Instaliraj preuzetu datoteku"
+
 msgid "Install a .deb file here"
 msgstr "Instaliraj .deb datoteku ovdje"
+
 msgid "Reinstall"
 msgstr "Ponovno instaliraj"
+
 msgid "Remove a program"
 msgstr "Ukloni program"
+
 msgid "Remove + dependencies"
 msgstr "Ukloni + ovisnosti"
+
 msgid "Remove + configuration"
 msgstr "Ukloni + konfiguraciju"
+
 msgid "Remove orphans (unused)"
 msgstr "Ukloni osirotjele (nekorištene)"
+
 msgid "Search to install"
 msgstr "Traži za instalaciju"
+
 msgid "Details (available)"
 msgstr "Detalji (dostupno)"
+
 msgid "Details (installed)"
 msgstr "Detalji (instalirano)"
+
 msgid "List everything available"
 msgstr "Prikaži sve dostupno"
+
 msgid "List installed"
 msgstr "Prikaži instalirano"
+
 msgid "Search installed"
 msgstr "Traži među instaliranima"
+
 msgid "Files of a package"
 msgstr "Datoteke paketa"
+
 msgid "Which package owns a file?"
 msgstr "Kojem paketu datoteka pripada?"
+
 msgid "What can be upgraded"
 msgstr "Što se može nadograditi"
+
 msgid "Installed by you"
 msgstr "Instalirali ste vi"
+
 msgid "Dependencies of a package"
 msgstr "Ovisnosti paketa"
+
 msgid "Who depends on a package"
 msgstr "Tko ovisi o paketu"
+
 msgid "Clean the download cache"
 msgstr "Očisti predmemoriju preuzimanja"
+
 msgid "Add a repository / PPA"
 msgstr "Dodaj repozitorij / PPA"
+
 msgid "(AUR)"
 msgstr "(AUR)"
+
 msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
 msgstr "Prevoditelj naredbi: {family} (Debian, Ubuntu, Mint, Fedora) u pacman i pamac (Arch, BigLinux, Manjaro)"
+
 msgid "Both do the same job: install, update and remove programs. Only the commands change."
 msgstr "Oboje rade isti posao: instaliraju, ažuriraju i uklanjaju programe. Mijenjaju se samo naredbe."
+
 msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
 msgstr "Možete i dalje upisivati naredbe {tool}: prevode se i izvršavaju s pamacom ili pacmanom."
+
 msgid "No command matches “{topic}”."
 msgstr "Nijedna naredba ne odgovara “{topic}”."
+
 msgid "Run “{tool} help” to see every command."
 msgstr "Pokrenite “{tool} help” da vidite sve naredbe."
+
 msgid "What you want to do"
 msgstr "Što želite učiniti"
+
 msgid "Differences that catch people"
 msgstr "Razlike koje zbunjuju"
+
 msgid "apt update only refreshes the list; apt upgrade installs."
 msgstr "apt update samo osvježava popis; apt upgrade instalira."
+
 msgid "In pacman, -Syu does both together."
 msgstr "U pacmanu -Syu radi oboje zajedno."
+
 msgid "Avoid “pacman -Sy” alone: it can break the system."
 msgstr "Izbjegavajte samo “pacman -Sy”: može pokvariti sustav."
+
 msgid "Package types"
 msgstr "Vrste paketa"
+
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt koristi .deb datoteke, dnf koristi .rpm, pacman koristi .pkg.tar.zst."
+
 msgid ".deb files are converted and installed with debtap-mod (or a double click)."
 msgstr ".deb datoteke se pretvaraju i instaliraju s debtap-mod (ili dvostrukim klikom)."
+
 msgid "Programs from the community"
 msgstr "Programi zajednice"
+
 msgid "The AUR plays the role of PPAs and COPR."
 msgstr "AUR ima ulogu PPA-ova i COPR-a."
+
 msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
 msgstr "Koristite “pamac build <name>”; nikada ne pokrećite AUR pomoćnike sa sudo."
+
 msgid "Tip: “{tool} help install” shows only the lines about one command."
 msgstr "Savjet: “{tool} help install” prikazuje samo retke o jednoj naredbi."
+
 msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
 msgstr "Brza referenca: “sudo” je potreban za instalaciju ili uklanjanje; pretraživanje i popisivanje ne trebaju ga."
+
 msgid "Command not found: {cmd}"
 msgstr "Naredba nije pronađena: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debian skripte samo registriraju APT repozitorij i AppArmor profil za Ubuntu; ovdje nisu potrebne."
+
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Skripta {script} podešava APT repozitorij; taj dio nema učinka na ovaj sustav."

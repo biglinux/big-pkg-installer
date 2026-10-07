@@ -4,394 +4,587 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 msgid "Extracting package data"
 msgstr "Paket verileri çıkarılıyor"
+
 msgid "Adapting the directory layout"
 msgstr "Dizin yapısı uyarlanıyor"
+
 msgid "Resolving dependencies"
 msgstr "Bağımlılıklar çözümleniyor"
+
 msgid "Converting maintainer scripts"
 msgstr "Bakımcı betikleri dönüştürülüyor"
+
 msgid "Building the pacman package"
 msgstr "pacman paketi derleniyor"
+
 msgid "Warning:"
 msgstr "Uyarı:"
+
 msgid "Error:"
 msgstr "Hata:"
+
 msgid "Convert a .deb package into a pacman package and install it."
 msgstr "Bir .deb paketini pacman paketine dönüştürür ve kurar."
+
 msgid "the .deb file"
 msgstr ".deb dosyası"
+
 msgid "do not ask questions, but open the install script for review"
 msgstr "soru sorma, ancak kurulum betiğini incelemek için aç"
+
 msgid "do not ask any question"
 msgstr "hiçbir soru sorma"
+
 msgid "only build the package, do not install it"
 msgstr "yalnızca paketi derle, kurma"
+
 msgid "keep the built package in DIR"
 msgstr "derlenen paketi DIR içinde sakla"
+
 msgid "also write a PKGBUILD next to the .deb"
 msgstr ".deb dosyasının yanına bir PKGBUILD de yaz"
+
 msgid "only write a PKGBUILD, do not build"
 msgstr "yalnızca bir PKGBUILD yaz, derleme"
+
 msgid "{question} [y/N] "
 msgstr "{question} [e/H] "
+
 msgid "yes"
 msgstr "evet"
+
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod artık yerel bir veritabanına ihtiyaç duymaz; güncellenecek bir şey yok."
+
 msgid "no .deb file given"
 msgstr ".deb dosyası verilmedi"
+
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "-s ve -w seçenekleri artık kullanılmıyor ve yok sayıldı"
+
 msgid "Installed size: {size}"
 msgstr "Kurulu boyut: {size}"
+
 msgid "PKGBUILD written to {path}"
 msgstr "PKGBUILD {path} konumuna yazıldı"
+
 msgid "cancelled"
 msgstr "iptal edildi"
+
 msgid "Package {file} built"
 msgstr "{file} paketi derlendi"
+
 msgid "Menu entries: {names}"
 msgstr "Menü girdileri: {names}"
+
 msgid "Package saved to {path}"
 msgstr "Paket {path} konumuna kaydedildi"
+
 msgid "some files belong to other installed packages; remove them first:"
 msgstr "bazı dosyalar kurulu diğer paketlere ait; önce bunları kaldırın:"
+
 msgid "Install script that will run as root:"
 msgstr "root olarak çalışacak kurulum betiği:"
+
 msgid "Install {name} now?"
 msgstr "{name} şimdi kurulsun mu?"
+
 msgid "pacman could not install the package (exit code {code})"
 msgstr "pacman paketi kuramadı (çıkış kodu {code})"
+
 msgid "{name} installed successfully"
 msgstr "{name} başarıyla kuruldu"
+
 msgid "Look for {names} in the applications menu."
 msgstr "{names} uygulamasını uygulama menüsünde arayın."
+
 msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
 msgstr "Bu paket {deb_arch} için derlenmiş ancak bu bilgisayar {host}; burada çalışmaz."
+
 msgid "Extracting {name}…"
 msgstr "{name} çıkarılıyor…"
+
 msgid "Ignored unsafe or special entries: {list}"
 msgstr "Güvensiz veya özel girdiler yok sayıldı: {list}"
+
 msgid "Duplicate file kept from /usr: /{path}"
 msgstr "/usr içindeki yinelenen dosya korundu: /{path}"
+
 msgid "Looking for dependencies…"
 msgstr "Bağımlılıklar aranıyor…"
+
 msgid "Ignored {count} binaries built for other systems or architectures."
 msgstr "Diğer sistemler veya mimariler için derlenmiş {count} ikili dosya yok sayıldı."
+
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Kitaplıklar depolarda bulunamadı: {list}"
+
 msgid "Debian dependencies without an equivalent here: {list}"
 msgstr "Burada karşılığı olmayan Debian bağımlılıkları: {list}"
+
 msgid "Files already owned by other packages: {list}"
 msgstr "Zaten diğer paketlere ait olan dosyalar: {list}"
+
 msgid "Building the package…"
 msgstr "Paket derleniyor…"
+
 msgid "The file is not a Debian package (missing ar header)."
 msgstr "Dosya bir Debian paketi değil (ar başlığı eksik)."
+
 msgid "The Debian package is truncated or corrupted."
 msgstr "Debian paketi kesilmiş veya bozuk."
+
 msgid "Unsupported compression in member {name}."
 msgstr "{name} üyesinde desteklenmeyen sıkıştırma."
+
 msgid "File not found: {path}"
 msgstr "Dosya bulunamadı: {path}"
+
 msgid "The file is not a Debian package (debian-binary missing)."
 msgstr "Dosya bir Debian paketi değil (debian-binary eksik)."
+
 msgid "The Debian package has no control or data archive."
 msgstr "Debian paketinde control veya data arşivi yok."
+
 msgid "The Debian package has no control file."
 msgstr "Debian paketinde control dosyası yok."
+
 msgid "The control file has no Package or Version field."
 msgstr "control dosyasında Package veya Version alanı yok."
+
 msgid "Install .deb package"
 msgstr ".deb paketini kur"
+
 msgid "Converts Debian packages into native pacman packages and installs them."
 msgstr "Debian paketlerini yerel pacman paketlerine dönüştürür ve kurar."
+
 msgid "Extracting files"
 msgstr "Dosyalar çıkarılıyor"
+
 msgid "Adapting folders to this system"
 msgstr "Klasörler bu sisteme uyarlanıyor"
+
 msgid "Finding dependencies"
 msgstr "Bağımlılıklar bulunuyor"
+
 msgid "Preparing installation scripts"
 msgstr "Kurulum betikleri hazırlanıyor"
+
 msgid "Building the package"
 msgstr "Paket derleniyor"
+
 msgid "Waiting for authorization"
 msgstr "Yetkilendirme bekleniyor"
+
 msgid "Installing"
 msgstr "Kuruluyor"
+
 msgid "About"
 msgstr "Hakkında"
+
 msgid "Main menu"
 msgstr "Ana menü"
+
 msgid "Choose a .deb file…"
 msgstr ".deb dosyası seç…"
+
 msgid "Install a .deb package"
 msgstr "Bir .deb paketi kur"
+
 msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
 msgstr "Bir Debian paketi açın veya buraya bırakın. Bu sistem için yerel bir pakete dönüştürülüp kurulacak."
+
 msgid "Details"
 msgstr "Ayrıntılar"
+
 msgid "Cancel"
 msgstr "İptal"
+
 msgid "Prefer native packages when available"
 msgstr "Varsa yerel paketleri tercih et"
+
 msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
 msgstr "Sistem depolarındaki programlar, Flatpak veya AppImage genellikle daha iyi çalışır. Dönüştürülen .deb paketleri kusursuz çalışmayabilir."
+
 msgid "“{name}” is available in the repositories"
 msgstr "“{name}” depolarda mevcut"
+
 msgid "Installing the native package is recommended."
 msgstr "Yerel paketi kurmanız önerilir."
+
 msgid "Open"
 msgstr "Aç"
+
 msgid "Package"
 msgstr "Paket"
+
 msgid "Version"
 msgstr "Sürüm"
+
 msgid "Architecture"
 msgstr "Mimari"
+
 msgid "Installed size"
 msgstr "Kurulu boyut"
+
 msgid "Maintainer"
 msgstr "Bakımcı"
+
 msgid "Website"
 msgstr "Web sitesi"
+
 msgid "Description"
 msgstr "Açıklama"
+
 msgid "Review before installing"
 msgstr "Kurmadan önce gözden geçir"
+
 msgid "Show the dependencies and the scripts that will run as administrator"
 msgstr "Bağımlılıkları ve yönetici olarak çalışacak betikleri göster"
+
 msgid "Install"
 msgstr "Kur"
+
 msgid "Ready to install"
 msgstr "Kurulmaya hazır"
+
 msgid "Check what will be installed."
 msgstr "Nelerin kurulacağını kontrol edin."
+
 msgid "Package name on this system"
 msgstr "Bu sistemdeki paket adı"
+
 msgid "Package size"
 msgstr "Paket boyutu"
+
 msgid "Applications menu"
 msgstr "Uygulama menüsü"
+
 msgid "No menu entry"
 msgstr "Menü girdisi yok"
+
 msgid "Warnings"
 msgstr "Uyarılar"
+
 msgid "Notes"
 msgstr "Notlar"
+
 msgid "Dependencies"
 msgstr "Bağımlılıklar"
+
 msgid "Required"
 msgstr "Gerekli"
+
 msgid "{n} package"
 msgid_plural "{n} packages"
 msgstr[0] "{n} paket"
 msgstr[1] "{n} paket"
+
 msgid "will be downloaded"
 msgstr "indirilecek"
+
 msgid "Optional"
 msgstr "İsteğe bağlı"
+
 msgid "Scripts"
 msgstr "Betikler"
+
 msgid "These commands from the Debian package run as administrator during installation."
 msgstr "Debian paketindeki bu komutlar kurulum sırasında yönetici olarak çalışır."
+
 msgid "Open {name}"
 msgstr "{name} uygulamasını aç"
+
 msgid "Copy details"
 msgstr "Ayrıntıları kopyala"
+
 msgid "Close"
 msgstr "Kapat"
+
 msgid "This file cannot be installed"
 msgstr "Bu dosya kurulamaz"
+
 msgid "Choose a .deb file"
 msgstr ".deb dosyası seçin"
+
 msgid "Debian packages"
 msgstr "Debian paketleri"
+
 msgid "Type your password in the window that will appear."
 msgstr "Parolanızı görünecek pencereye yazın."
+
 msgid "Missing dependencies are downloaded from the repositories."
 msgstr "Eksik bağımlılıklar depolardan indirilir."
+
 msgid "Compressing the files, this may take a minute."
 msgstr "Dosyalar sıkıştırılıyor, bu bir dakika sürebilir."
+
 msgid "The package could not be converted"
 msgstr "Paket dönüştürülemedi"
+
 msgid "Cancelled"
 msgstr "İptal edildi"
+
 msgid "{name} is installed"
 msgstr "{name} kuruldu"
+
 msgid "The package {name} was installed. It has no entry in the applications menu."
 msgstr "{name} paketi kuruldu. Uygulama menüsünde girdisi yok."
+
 msgid "Installation complete"
 msgstr "Kurulum tamamlandı"
+
 msgid "Authorization was not granted"
 msgstr "Yetkilendirme verilmedi"
+
 msgid "The installation failed"
 msgstr "Kurulum başarısız oldu"
+
 msgid "pacman returned an error (code {code}). Open the details to see what happened."
 msgstr "pacman bir hata döndürdü (kod {code}). Ne olduğunu görmek için ayrıntıları açın."
+
 msgid "The application could not be started"
 msgstr "Uygulama başlatılamadı"
+
 msgid "Copied"
 msgstr "Kopyalandı"
+
 msgid "Please wait until the installation finishes"
 msgstr "Lütfen kurulum bitene kadar bekleyin"
+
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg root olarak çalışamaz; debtap-mod'u normal bir kullanıcı olarak çalıştırın."
+
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg {code} çıkış koduyla başarısız oldu"
+
 msgid "makepkg finished but produced no package"
 msgstr "makepkg bitti ancak hiç paket üretmedi"
+
 msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
 msgstr "“{typed}” yalnızca paket listesini yeniler. Buradaki güvenli karşılığı hiçbir şey kurmadan güncellemeleri denetler; kurmak için “{upgrade}” komutunu kullanın."
+
 msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
 msgstr "“pacman -Sy” komutunu asla tek başına çalıştırmayın: yükseltmeden yenilemek sistemi bozabilir."
+
 msgid "Arch does not upgrade single packages; the whole system is upgraded together."
 msgstr "Arch tek tek paketleri yükseltmez; tüm sistem birlikte yükseltilir."
+
 msgid "Tell which package to install, for example: {example}"
 msgstr "Hangi paketin kurulacağını belirtin, örneğin: {example}"
+
 msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
 msgstr ".rpm paketleri Fedora/openSUSE için hazırlanmıştır ve burada kurulamaz."
+
 msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
 msgstr "Programı depolarda (pamac search), Flathub'da veya AppImage olarak arayın."
+
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac, AUR ve Flatpak içindeki programları da bulur: {cmd}"
+
 msgid ".deb packages are converted into native pacman packages by debtap-mod."
 msgstr ".deb paketleri debtap-mod tarafından yerel pacman paketlerine dönüştürülür."
+
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Bu komutu normal kullanıcı olarak çalıştırın (sudo olmadan)."
+
 msgid "Tell which package to remove, for example: {example}"
 msgstr "Hangi paketin kaldırılacağını belirtin, örneğin: {example}"
+
 msgid "-n also deletes the configuration files the package installed in /etc."
 msgstr "-n, paketin /etc içine kurduğu yapılandırma dosyalarını da siler."
+
 msgid "There are no orphan packages to remove."
 msgstr "Kaldırılacak yetim paket yok."
+
 msgid "Tell what to search for, for example: {example}"
 msgstr "Neyin aranacağını belirtin, örneğin: {example}"
+
 msgid "Tell which package, for example: {example}"
 msgstr "Hangi paket olduğunu belirtin, örneğin: {example}"
+
 msgid "The package is not installed; the list comes from the repository file database."
 msgstr "Paket kurulu değil; liste depo dosya veritabanından geliyor."
+
 msgid "Tell which file, for example: {example}"
 msgstr "Hangi dosya olduğunu belirtin, örneğin: {example}"
+
 msgid "The file is not on this system; searching the repository file database."
 msgstr "Dosya bu sistemde yok; depo dosya veritabanında aranıyor."
+
 msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
 msgstr "Arch tabanlı sistemlerde eklenecek PPA veya ek depo yoktur. Topluluk programları AUR'dan gelir."
+
 msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
 msgstr "“pamac search --aur <name>” ile arayın ve “pamac build <name>” ile kurun."
+
 msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
 msgstr "Bir paketin yükseltilmesini engellemek için onu /etc/pacman.conf içindeki IgnorePkg satırına ekleyin."
+
 msgid "“{command}” has no direct equivalent here."
 msgstr "“{command}” için burada doğrudan bir karşılık yok."
+
 msgid "Run “{tool} help” to see the commands this system understands."
 msgstr "Bu sistemin anladığı komutları görmek için “{tool} help” çalıştırın."
+
 msgid "Tell which .deb file to install, for example: {example}"
 msgstr "Hangi .deb dosyasının kurulacağını belirtin, örneğin: {example}"
+
 msgid "This system uses pacman, not {tool}."
 msgstr "Bu sistem {tool} değil, pacman kullanır."
+
 msgid "You typed:"
 msgstr "Yazdığınız:"
+
 msgid "Equivalent:"
 msgstr "Karşılığı:"
+
 msgid "With pamac:"
 msgstr "pamac ile:"
+
 msgid "Running:"
 msgstr "Çalıştırılıyor:"
+
 msgid "Update everything"
 msgstr "Her şeyi güncelle"
+
 msgid "Check for updates"
 msgstr "Güncellemeleri denetle"
+
 msgid "Install a program"
 msgstr "Program kur"
+
 msgid "Install a downloaded file"
 msgstr "İndirilen dosyayı kur"
+
 msgid "Install a .deb file here"
 msgstr "Buradaki .deb dosyasını kur"
+
 msgid "Reinstall"
 msgstr "Yeniden kur"
+
 msgid "Remove a program"
 msgstr "Program kaldır"
+
 msgid "Remove + dependencies"
 msgstr "Kaldır + bağımlılıklar"
+
 msgid "Remove + configuration"
 msgstr "Kaldır + yapılandırma"
+
 msgid "Remove orphans (unused)"
 msgstr "Yetimleri kaldır (kullanılmayan)"
+
 msgid "Search to install"
 msgstr "Kurmak için ara"
+
 msgid "Details (available)"
 msgstr "Ayrıntılar (kurulabilir)"
+
 msgid "Details (installed)"
 msgstr "Ayrıntılar (kurulu)"
+
 msgid "List everything available"
 msgstr "Kurulabilir her şeyi listele"
+
 msgid "List installed"
 msgstr "Kurulu olanları listele"
+
 msgid "Search installed"
 msgstr "Kurulularda ara"
+
 msgid "Files of a package"
 msgstr "Paketin dosyaları"
+
 msgid "Which package owns a file?"
 msgstr "Dosya hangi pakete ait?"
+
 msgid "What can be upgraded"
 msgstr "Nelerin yükseltilebileceği"
+
 msgid "Installed by you"
 msgstr "Sizin kurduklarınız"
+
 msgid "Dependencies of a package"
 msgstr "Paketin bağımlılıkları"
+
 msgid "Who depends on a package"
 msgstr "Pakete kimler bağımlı"
+
 msgid "Clean the download cache"
 msgstr "İndirme önbelleğini temizle"
+
 msgid "Add a repository / PPA"
 msgstr "Depo / PPA ekle"
+
 msgid "(AUR)"
 msgstr "(AUR)"
+
 msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
 msgstr "Komut çevirici: {family} (Debian, Ubuntu, Mint, Fedora) komutlarından pacman ve pamac'a (Arch, BigLinux, Manjaro)"
+
 msgid "Both do the same job: install, update and remove programs. Only the commands change."
 msgstr "İkisi de aynı işi yapar: program kurar, günceller ve kaldırır. Yalnızca komutlar değişir."
+
 msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
 msgstr "{tool} komutlarını yazmaya devam edebilirsiniz: çevrilir ve pamac veya pacman ile çalıştırılır."
+
 msgid "No command matches “{topic}”."
 msgstr "“{topic}” ile eşleşen komut yok."
+
 msgid "Run “{tool} help” to see every command."
 msgstr "Tüm komutları görmek için “{tool} help” çalıştırın."
+
 msgid "What you want to do"
 msgstr "Ne yapmak istiyorsunuz"
+
 msgid "Differences that catch people"
 msgstr "İnsanları şaşırtan farklar"
+
 msgid "apt update only refreshes the list; apt upgrade installs."
 msgstr "apt update yalnızca listeyi yeniler; apt upgrade kurar."
+
 msgid "In pacman, -Syu does both together."
 msgstr "pacman'da -Syu ikisini birlikte yapar."
+
 msgid "Avoid “pacman -Sy” alone: it can break the system."
 msgstr "“pacman -Sy” komutunu tek başına kullanmayın: sistemi bozabilir."
+
 msgid "Package types"
 msgstr "Paket türleri"
+
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt .deb dosyalarını, dnf .rpm dosyalarını, pacman .pkg.tar.zst dosyalarını kullanır."
+
 msgid ".deb files are converted and installed with debtap-mod (or a double click)."
 msgstr ".deb dosyaları debtap-mod ile (veya çift tıklayarak) dönüştürülüp kurulur."
+
 msgid "Programs from the community"
 msgstr "Topluluk programları"
+
 msgid "The AUR plays the role of PPAs and COPR."
 msgstr "AUR, PPA'ların ve COPR'nin yerini tutar."
+
 msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
 msgstr "“pamac build <name>” kullanın; AUR yardımcılarını asla sudo ile çalıştırmayın."
+
 msgid "Tip: “{tool} help install” shows only the lines about one command."
 msgstr "İpucu: “{tool} help install” yalnızca tek bir komutla ilgili satırları gösterir."
+
 msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
 msgstr "Hızlı başvuru: kurmak veya kaldırmak için “sudo” gerekir; arama ve listeleme için gerekmez."
+
 msgid "Command not found: {cmd}"
 msgstr "Komut bulunamadı: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debian betikleri yalnızca Ubuntu için bir APT deposu ve bir AppArmor profili kaydeder; burada gerekli değildir."
+
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "{script} betiği bir APT deposu yapılandırır; bu kısmın bu sistemde bir etkisi yoktur."

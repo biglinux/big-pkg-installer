@@ -4,394 +4,587 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n%10!=1 || n%100==11);\n"
+
 msgid "Extracting package data"
 msgstr "Dreg út gögn pakkans"
+
 msgid "Adapting the directory layout"
 msgstr "Aðlaga möppuskipan"
+
 msgid "Resolving dependencies"
 msgstr "Leysi úr kröfum"
+
 msgid "Converting maintainer scripts"
 msgstr "Breyti viðhaldsskriftum"
+
 msgid "Building the pacman package"
 msgstr "Smíða pacman-pakka"
+
 msgid "Warning:"
 msgstr "Aðvörun:"
+
 msgid "Error:"
 msgstr "Villa:"
+
 msgid "Convert a .deb package into a pacman package and install it."
 msgstr "Breyta .deb-pakka í pacman-pakka og setja hann upp."
+
 msgid "the .deb file"
 msgstr ".deb-skráin"
+
 msgid "do not ask questions, but open the install script for review"
 msgstr "ekki spyrja spurninga, en opna uppsetningarskriftuna til yfirferðar"
+
 msgid "do not ask any question"
 msgstr "ekki spyrja neinna spurninga"
+
 msgid "only build the package, do not install it"
 msgstr "aðeins smíða pakkann, ekki setja hann upp"
+
 msgid "keep the built package in DIR"
 msgstr "geyma smíðaða pakkann í DIR"
+
 msgid "also write a PKGBUILD next to the .deb"
 msgstr "skrifa einnig PKGBUILD við hlið .deb-skrárinnar"
+
 msgid "only write a PKGBUILD, do not build"
 msgstr "aðeins skrifa PKGBUILD, ekki smíða"
+
 msgid "{question} [y/N] "
 msgstr "{question} [j/N] "
+
 msgid "yes"
 msgstr "já"
+
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod þarf ekki lengur staðbundinn gagnagrunn; ekkert til að uppfæra."
+
 msgid "no .deb file given"
 msgstr "engin .deb-skrá gefin"
+
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "valkostirnir -s og -w eru úreltir og voru hunsaðir"
+
 msgid "Installed size: {size}"
 msgstr "Uppsett stærð: {size}"
+
 msgid "PKGBUILD written to {path}"
 msgstr "PKGBUILD skrifað í {path}"
+
 msgid "cancelled"
 msgstr "hætt við"
+
 msgid "Package {file} built"
 msgstr "Pakkinn {file} er smíðaður"
+
 msgid "Menu entries: {names}"
 msgstr "Valmyndarfærslur: {names}"
+
 msgid "Package saved to {path}"
 msgstr "Pakki vistaður í {path}"
+
 msgid "some files belong to other installed packages; remove them first:"
 msgstr "sumar skrár tilheyra öðrum uppsettum pökkum; fjarlægðu þær fyrst:"
+
 msgid "Install script that will run as root:"
 msgstr "Uppsetningarskrifta sem keyrir sem root:"
+
 msgid "Install {name} now?"
 msgstr "Setja upp {name} núna?"
+
 msgid "pacman could not install the package (exit code {code})"
 msgstr "pacman gat ekki sett pakkann upp (lokunarkóði {code})"
+
 msgid "{name} installed successfully"
 msgstr "{name} var sett upp"
+
 msgid "Look for {names} in the applications menu."
 msgstr "Leitaðu að {names} í forritavalmyndinni."
+
 msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
 msgstr "Þessi pakki var smíðaður fyrir {deb_arch} en þessi tölva er {host}; hann mun ekki keyra hér."
+
 msgid "Extracting {name}…"
 msgstr "Dreg út {name}…"
+
 msgid "Ignored unsafe or special entries: {list}"
 msgstr "Óöruggum eða sérstökum færslum var sleppt: {list}"
+
 msgid "Duplicate file kept from /usr: /{path}"
 msgstr "Tvítekin skrá geymd úr /usr: /{path}"
+
 msgid "Looking for dependencies…"
 msgstr "Leita að kröfum…"
+
 msgid "Ignored {count} binaries built for other systems or architectures."
 msgstr "Hunsaði {count} keyrsluskrár sem eru smíðaðar fyrir önnur kerfi eða arkitektúra."
+
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Safnskrár fundust ekki í hugbúnaðarsöfnunum: {list}"
+
 msgid "Debian dependencies without an equivalent here: {list}"
 msgstr "Debian-kröfur án samsvörunar hér: {list}"
+
 msgid "Files already owned by other packages: {list}"
 msgstr "Skrár sem aðrir pakkar eiga nú þegar: {list}"
+
 msgid "Building the package…"
 msgstr "Smíða pakkann…"
+
 msgid "The file is not a Debian package (missing ar header)."
 msgstr "Skráin er ekki Debian-pakki (ar-haus vantar)."
+
 msgid "The Debian package is truncated or corrupted."
 msgstr "Debian-pakkinn er styttur eða skemmdur."
+
 msgid "Unsupported compression in member {name}."
 msgstr "Óstudd þjöppun í hlutanum {name}."
+
 msgid "File not found: {path}"
 msgstr "Skrá fannst ekki: {path}"
+
 msgid "The file is not a Debian package (debian-binary missing)."
 msgstr "Skráin er ekki Debian-pakki (debian-binary vantar)."
+
 msgid "The Debian package has no control or data archive."
 msgstr "Debian-pakkinn hefur ekkert control- eða data-skjalasafn."
+
 msgid "The Debian package has no control file."
 msgstr "Debian-pakkinn hefur enga control-skrá."
+
 msgid "The control file has no Package or Version field."
 msgstr "Control-skráin hefur hvorki Package- né Version-reit."
+
 msgid "Install .deb package"
 msgstr "Setja upp .deb-pakka"
+
 msgid "Converts Debian packages into native pacman packages and installs them."
 msgstr "Breytir Debian-pökkum í innfædda pacman-pakka og setur þá upp."
+
 msgid "Extracting files"
 msgstr "Dreg út skrár"
+
 msgid "Adapting folders to this system"
 msgstr "Aðlaga möppur að þessu kerfi"
+
 msgid "Finding dependencies"
 msgstr "Finn kröfur"
+
 msgid "Preparing installation scripts"
 msgstr "Undirbý uppsetningarskriftur"
+
 msgid "Building the package"
 msgstr "Smíða pakkann"
+
 msgid "Waiting for authorization"
 msgstr "Bíð eftir heimild"
+
 msgid "Installing"
 msgstr "Set upp"
+
 msgid "About"
 msgstr "Um forritið"
+
 msgid "Main menu"
 msgstr "Aðalvalmynd"
+
 msgid "Choose a .deb file…"
 msgstr "Veldu .deb-skrá…"
+
 msgid "Install a .deb package"
 msgstr "Setja upp .deb-pakka"
+
 msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
 msgstr "Opnaðu Debian-pakka eða slepptu honum hér. Honum verður breytt í innfæddan pakka fyrir þetta kerfi og hann settur upp."
+
 msgid "Details"
 msgstr "Nánar"
+
 msgid "Cancel"
 msgstr "Hætta við"
+
 msgid "Prefer native packages when available"
 msgstr "Kjósa innfædda pakka þegar þeir standa til boða"
+
 msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
 msgstr "Forrit úr hugbúnaðarsöfnum kerfisins, Flatpak eða AppImage virka yfirleitt betur. Umbreyttir .deb-pakkar virka kannski ekki fullkomlega."
+
 msgid "“{name}” is available in the repositories"
 msgstr "„{name}“ er í boði í hugbúnaðarsöfnunum"
+
 msgid "Installing the native package is recommended."
 msgstr "Mælt er með að setja upp innfædda pakkann."
+
 msgid "Open"
 msgstr "Opna"
+
 msgid "Package"
 msgstr "Pakki"
+
 msgid "Version"
 msgstr "Útgáfa"
+
 msgid "Architecture"
 msgstr "Arkitektúr"
+
 msgid "Installed size"
 msgstr "Uppsett stærð"
+
 msgid "Maintainer"
 msgstr "Umsjónarmaður"
+
 msgid "Website"
 msgstr "Vefsvæði"
+
 msgid "Description"
 msgstr "Lýsing"
+
 msgid "Review before installing"
 msgstr "Yfirfara áður en sett er upp"
+
 msgid "Show the dependencies and the scripts that will run as administrator"
 msgstr "Sýna kröfurnar og skriftur sem keyra sem kerfisstjóri"
+
 msgid "Install"
 msgstr "Setja upp"
+
 msgid "Ready to install"
 msgstr "Tilbúið til uppsetningar"
+
 msgid "Check what will be installed."
 msgstr "Athugaðu hvað verður sett upp."
+
 msgid "Package name on this system"
 msgstr "Heiti pakkans á þessu kerfi"
+
 msgid "Package size"
 msgstr "Stærð pakka"
+
 msgid "Applications menu"
 msgstr "Forritavalmynd"
+
 msgid "No menu entry"
 msgstr "Engin valmyndarfærsla"
+
 msgid "Warnings"
 msgstr "Aðvaranir"
+
 msgid "Notes"
 msgstr "Athugasemdir"
+
 msgid "Dependencies"
 msgstr "Kröfur"
+
 msgid "Required"
 msgstr "Nauðsynlegt"
+
 msgid "{n} package"
 msgid_plural "{n} packages"
 msgstr[0] "{n} pakki"
 msgstr[1] "{n} pakkar"
+
 msgid "will be downloaded"
 msgstr "verður sótt"
+
 msgid "Optional"
 msgstr "Valfrjálst"
+
 msgid "Scripts"
 msgstr "Skriftur"
+
 msgid "These commands from the Debian package run as administrator during installation."
 msgstr "Þessar skipanir úr Debian-pakkanum keyra sem kerfisstjóri við uppsetningu."
+
 msgid "Open {name}"
 msgstr "Opna {name}"
+
 msgid "Copy details"
 msgstr "Afrita nánari upplýsingar"
+
 msgid "Close"
 msgstr "Loka"
+
 msgid "This file cannot be installed"
 msgstr "Ekki er hægt að setja þessa skrá upp"
+
 msgid "Choose a .deb file"
 msgstr "Veldu .deb-skrá"
+
 msgid "Debian packages"
 msgstr "Debian-pakkar"
+
 msgid "Type your password in the window that will appear."
 msgstr "Sláðu inn lykilorðið þitt í glugganum sem birtist."
+
 msgid "Missing dependencies are downloaded from the repositories."
 msgstr "Kröfur sem vantar eru sóttar úr hugbúnaðarsöfnunum."
+
 msgid "Compressing the files, this may take a minute."
 msgstr "Þjappa skrám, þetta getur tekið eina mínútu."
+
 msgid "The package could not be converted"
 msgstr "Ekki tókst að breyta pakkanum"
+
 msgid "Cancelled"
 msgstr "Hætt við"
+
 msgid "{name} is installed"
 msgstr "{name} er uppsett"
+
 msgid "The package {name} was installed. It has no entry in the applications menu."
 msgstr "Pakkinn {name} var settur upp. Hann hefur enga færslu í forritavalmyndinni."
+
 msgid "Installation complete"
 msgstr "Uppsetningu lokið"
+
 msgid "Authorization was not granted"
 msgstr "Heimild fékkst ekki"
+
 msgid "The installation failed"
 msgstr "Uppsetningin mistókst"
+
 msgid "pacman returned an error (code {code}). Open the details to see what happened."
 msgstr "pacman skilaði villu (kóði {code}). Opnaðu nánari upplýsingar til að sjá hvað gerðist."
+
 msgid "The application could not be started"
 msgstr "Ekki tókst að ræsa forritið"
+
 msgid "Copied"
 msgstr "Afritað"
+
 msgid "Please wait until the installation finishes"
 msgstr "Bíddu þar til uppsetningu lýkur"
+
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg getur ekki keyrt sem root; keyrðu debtap-mod sem venjulegur notandi."
+
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg mistókst með lokunarkóðanum {code}"
+
 msgid "makepkg finished but produced no package"
 msgstr "makepkg lauk en bjó ekki til neinn pakka"
+
 msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
 msgstr "„{typed}“ uppfærir aðeins pakkalistann. Hér athugar öruggi samsvarandi valkosturinn hvort uppfærslur séu til án þess að setja neitt upp; til að setja þær upp notaðu „{upgrade}“."
+
 msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
 msgstr "Keyrðu aldrei „pacman -Sy“ eitt og sér: að endurnýja án þess að uppfæra getur skemmt kerfið."
+
 msgid "Arch does not upgrade single packages; the whole system is upgraded together."
 msgstr "Arch uppfærir ekki staka pakka; allt kerfið er uppfært í einu."
+
 msgid "Tell which package to install, for example: {example}"
 msgstr "Tilgreindu hvaða pakka á að setja upp, til dæmis: {example}"
+
 msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
 msgstr ".rpm pakkar eru gerðir fyrir Fedora/openSUSE og ekki hægt að setja þá upp hér."
+
 msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
 msgstr "Leitaðu að forritinu í pakkasöfnunum (pamac search), á Flathub eða sem AppImage."
+
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac finnur líka forrit í AUR og Flatpak: {cmd}"
+
 msgid ".deb packages are converted into native pacman packages by debtap-mod."
 msgstr ".deb pökkum er breytt í innbyggða pacman pakka með debtap-mod."
+
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Keyrðu þessa skipun sem venjulegur notandi (án sudo)."
+
 msgid "Tell which package to remove, for example: {example}"
 msgstr "Tilgreindu hvaða pakka á að fjarlægja, til dæmis: {example}"
+
 msgid "-n also deletes the configuration files the package installed in /etc."
 msgstr "-n eyðir líka stillingarskrám sem pakkinn setti upp í /etc."
+
 msgid "There are no orphan packages to remove."
 msgstr "Engir munaðarlausir pakkar til að fjarlægja."
+
 msgid "Tell what to search for, for example: {example}"
 msgstr "Tilgreindu hvað á að leita að, til dæmis: {example}"
+
 msgid "Tell which package, for example: {example}"
 msgstr "Tilgreindu hvaða pakka, til dæmis: {example}"
+
 msgid "The package is not installed; the list comes from the repository file database."
 msgstr "Pakkinn er ekki uppsettur; listinn kemur úr skráagagnagrunni pakkasafnsins."
+
 msgid "Tell which file, for example: {example}"
 msgstr "Tilgreindu hvaða skrá, til dæmis: {example}"
+
 msgid "The file is not on this system; searching the repository file database."
 msgstr "Skráin er ekki á þessu kerfi; leita í skráagagnagrunni pakkasafnsins."
+
 msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
 msgstr "Kerfi byggð á Arch hafa enga PPA eða aukapakkasöfn til að bæta við. Forrit frá samfélaginu koma úr AUR."
+
 msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
 msgstr "Leitaðu með „pamac search --aur <name>“ og settu upp með „pamac build <name>“."
+
 msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
 msgstr "Til að koma í veg fyrir að pakki sé uppfærður skaltu bæta honum við IgnorePkg í /etc/pacman.conf."
+
 msgid "“{command}” has no direct equivalent here."
 msgstr "„{command}“ á sér enga beina samsvörun hér."
+
 msgid "Run “{tool} help” to see the commands this system understands."
 msgstr "Keyrðu „{tool} help“ til að sjá skipanirnar sem þetta kerfi skilur."
+
 msgid "Tell which .deb file to install, for example: {example}"
 msgstr "Tilgreindu hvaða .deb skrá á að setja upp, til dæmis: {example}"
+
 msgid "This system uses pacman, not {tool}."
 msgstr "Þetta kerfi notar pacman, ekki {tool}."
+
 msgid "You typed:"
 msgstr "Þú skrifaðir:"
+
 msgid "Equivalent:"
 msgstr "Samsvarandi:"
+
 msgid "With pamac:"
 msgstr "Með pamac:"
+
 msgid "Running:"
 msgstr "Keyri:"
+
 msgid "Update everything"
 msgstr "Uppfæra allt"
+
 msgid "Check for updates"
 msgstr "Athuga með uppfærslur"
+
 msgid "Install a program"
 msgstr "Setja upp forrit"
+
 msgid "Install a downloaded file"
 msgstr "Setja upp niðurhalaða skrá"
+
 msgid "Install a .deb file here"
 msgstr "Setja upp .deb skrá hér"
+
 msgid "Reinstall"
 msgstr "Setja aftur upp"
+
 msgid "Remove a program"
 msgstr "Fjarlægja forrit"
+
 msgid "Remove + dependencies"
 msgstr "Fjarlægja + ósjálfstæði"
+
 msgid "Remove + configuration"
 msgstr "Fjarlægja + stillingar"
+
 msgid "Remove orphans (unused)"
 msgstr "Fjarlægja munaðarlausa (ónotaða)"
+
 msgid "Search to install"
 msgstr "Leita til að setja upp"
+
 msgid "Details (available)"
 msgstr "Nánar (í boði)"
+
 msgid "Details (installed)"
 msgstr "Nánar (uppsett)"
+
 msgid "List everything available"
 msgstr "Sýna allt sem er í boði"
+
 msgid "List installed"
 msgstr "Sýna uppsett"
+
 msgid "Search installed"
 msgstr "Leita í uppsettu"
+
 msgid "Files of a package"
 msgstr "Skrár pakka"
+
 msgid "Which package owns a file?"
 msgstr "Hvaða pakki á skrána?"
+
 msgid "What can be upgraded"
 msgstr "Hvað er hægt að uppfæra"
+
 msgid "Installed by you"
 msgstr "Sett upp af þér"
+
 msgid "Dependencies of a package"
 msgstr "Forsendur pakka"
+
 msgid "Who depends on a package"
 msgstr "Hverjir þurfa pakka"
+
 msgid "Clean the download cache"
 msgstr "Hreinsa niðurhalsgeymslu"
+
 msgid "Add a repository / PPA"
 msgstr "Bæta við pakkasafni / PPA"
+
 msgid "(AUR)"
 msgstr "(AUR)"
+
 msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
 msgstr "Skipanaþýðandi: {family} (Debian, Ubuntu, Mint, Fedora) yfir í pacman og pamac (Arch, BigLinux, Manjaro)"
+
 msgid "Both do the same job: install, update and remove programs. Only the commands change."
 msgstr "Bæði vinna sama verk: setja upp, uppfæra og fjarlægja forrit. Aðeins skipanirnar breytast."
+
 msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
 msgstr "Þú getur haldið áfram að skrifa {tool} skipanir: þær eru þýddar og keyrðar með pamac eða pacman."
+
 msgid "No command matches “{topic}”."
 msgstr "Engin skipun passar við „{topic}“."
+
 msgid "Run “{tool} help” to see every command."
 msgstr "Keyrðu „{tool} help“ til að sjá allar skipanir."
+
 msgid "What you want to do"
 msgstr "Hvað þú vilt gera"
+
 msgid "Differences that catch people"
 msgstr "Munur sem kemur fólki í opna skjöldu"
+
 msgid "apt update only refreshes the list; apt upgrade installs."
 msgstr "apt update uppfærir aðeins listann; apt upgrade setur upp."
+
 msgid "In pacman, -Syu does both together."
 msgstr "Í pacman gerir -Syu hvort tveggja í einu."
+
 msgid "Avoid “pacman -Sy” alone: it can break the system."
 msgstr "Forðastu „pacman -Sy“ eitt og sér: það getur skemmt kerfið."
+
 msgid "Package types"
 msgstr "Tegundir pakka"
+
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt notar .deb skrár, dnf notar .rpm, pacman notar .pkg.tar.zst."
+
 msgid ".deb files are converted and installed with debtap-mod (or a double click)."
 msgstr ".deb skrám er breytt og þær settar upp með debtap-mod (eða með tvísmelli)."
+
 msgid "Programs from the community"
 msgstr "Forrit frá samfélaginu"
+
 msgid "The AUR plays the role of PPAs and COPR."
 msgstr "AUR gegnir hlutverki PPA og COPR."
+
 msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
 msgstr "Notaðu „pamac build <name>“; keyrðu aldrei AUR-hjálparforrit með sudo."
+
 msgid "Tip: “{tool} help install” shows only the lines about one command."
 msgstr "Ábending: „{tool} help install“ sýnir aðeins línurnar um eina skipun."
+
 msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
 msgstr "Stutt yfirlit: „sudo“ þarf til að setja upp eða fjarlægja; leit og listar þurfa þess ekki."
+
 msgid "Command not found: {cmd}"
 msgstr "Skipun fannst ekki: {cmd}"
+
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debian-skrifturnar skrá aðeins APT-hugbúnaðarsafn og AppArmor-snið fyrir Ubuntu; þeirra er ekki þörf hér."
+
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Skriftan {script} stillir APT-hugbúnaðarsafn; sá hluti hefur engin áhrif á þetta kerfi."
