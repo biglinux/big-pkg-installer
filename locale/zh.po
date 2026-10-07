@@ -4,586 +4,393 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
 msgid "Extracting package data"
 msgstr "正在提取软件包数据"
-
 msgid "Adapting the directory layout"
 msgstr "正在调整目录结构"
-
 msgid "Resolving dependencies"
 msgstr "正在解析依赖关系"
-
 msgid "Converting maintainer scripts"
 msgstr "正在转换维护者脚本"
-
 msgid "Building the pacman package"
 msgstr "正在构建 pacman 软件包"
-
 msgid "Warning:"
 msgstr "警告:"
-
 msgid "Error:"
 msgstr "错误:"
-
 msgid "Convert a .deb package into a pacman package and install it."
 msgstr "将 .deb 软件包转换为 pacman 软件包并安装。"
-
 msgid "the .deb file"
 msgstr ".deb 文件"
-
 msgid "do not ask questions, but open the install script for review"
 msgstr "不提问，但打开安装脚本供检查"
-
 msgid "do not ask any question"
 msgstr "不提任何问题"
-
 msgid "only build the package, do not install it"
 msgstr "仅构建软件包，不安装"
-
 msgid "keep the built package in DIR"
 msgstr "将构建的软件包保存到 DIR"
-
 msgid "also write a PKGBUILD next to the .deb"
 msgstr "同时在 .deb 旁边写入 PKGBUILD"
-
 msgid "only write a PKGBUILD, do not build"
 msgstr "仅写入 PKGBUILD，不构建"
-
 msgid "{question} [y/N] "
 msgstr "{question} [y/N] "
-
 msgid "yes"
 msgstr "y"
-
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod 不再需要本地数据库，无需更新。"
-
 msgid "no .deb file given"
 msgstr "未指定 .deb 文件"
-
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "-s 和 -w 选项已废弃，已被忽略"
-
 msgid "Installed size: {size}"
 msgstr "安装后大小: {size}"
-
 msgid "PKGBUILD written to {path}"
 msgstr "PKGBUILD 已写入 {path}"
-
 msgid "cancelled"
 msgstr "已取消"
-
 msgid "Package {file} built"
 msgstr "软件包 {file} 已构建"
-
 msgid "Menu entries: {names}"
 msgstr "菜单项: {names}"
-
 msgid "Package saved to {path}"
 msgstr "软件包已保存到 {path}"
-
 msgid "some files belong to other installed packages; remove them first:"
 msgstr "部分文件属于其他已安装的软件包，请先将其移除:"
-
 msgid "Install script that will run as root:"
 msgstr "将以 root 身份运行的安装脚本:"
-
 msgid "Install {name} now?"
 msgstr "现在安装 {name} 吗？"
-
 msgid "pacman could not install the package (exit code {code})"
 msgstr "pacman 无法安装该软件包（退出代码 {code}）"
-
 msgid "{name} installed successfully"
 msgstr "{name} 已成功安装"
-
 msgid "Look for {names} in the applications menu."
 msgstr "请在应用程序菜单中查找 {names}。"
-
 msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
 msgstr "此软件包是为 {deb_arch} 构建的，但这台计算机是 {host}，无法在此运行。"
-
 msgid "Extracting {name}…"
 msgstr "正在提取 {name}…"
-
 msgid "Ignored unsafe or special entries: {list}"
 msgstr "已忽略不安全或特殊的条目: {list}"
-
 msgid "Duplicate file kept from /usr: /{path}"
 msgstr "保留了来自 /usr 的重复文件: /{path}"
-
 msgid "Looking for dependencies…"
 msgstr "正在查找依赖项…"
-
 msgid "Ignored {count} binaries built for other systems or architectures."
 msgstr "已忽略 {count} 个为其他系统或架构构建的二进制文件。"
-
 msgid "Libraries not found in the repositories: {list}"
 msgstr "在软件仓库中找不到的库: {list}"
-
 msgid "Debian dependencies without an equivalent here: {list}"
 msgstr "在此系统中没有对应项的 Debian 依赖项: {list}"
-
 msgid "Files already owned by other packages: {list}"
 msgstr "已被其他软件包拥有的文件: {list}"
-
 msgid "Building the package…"
 msgstr "正在构建软件包…"
-
 msgid "The file is not a Debian package (missing ar header)."
 msgstr "该文件不是 Debian 软件包（缺少 ar 头）。"
-
 msgid "The Debian package is truncated or corrupted."
 msgstr "Debian 软件包被截断或已损坏。"
-
 msgid "Unsupported compression in member {name}."
 msgstr "不支持成员 {name} 的压缩格式。"
-
 msgid "File not found: {path}"
 msgstr "找不到文件: {path}"
-
 msgid "The file is not a Debian package (debian-binary missing)."
 msgstr "该文件不是 Debian 软件包（缺少 debian-binary）。"
-
 msgid "The Debian package has no control or data archive."
 msgstr "该 Debian 软件包没有 control 或 data 归档。"
-
 msgid "The Debian package has no control file."
 msgstr "该 Debian 软件包没有 control 文件。"
-
 msgid "The control file has no Package or Version field."
 msgstr "control 文件缺少 Package 或 Version 字段。"
-
 msgid "Install .deb package"
 msgstr "安装 .deb 软件包"
-
 msgid "Converts Debian packages into native pacman packages and installs them."
 msgstr "将 Debian 软件包转换为原生 pacman 软件包并安装。"
-
 msgid "Extracting files"
 msgstr "正在提取文件"
-
 msgid "Adapting folders to this system"
 msgstr "正在使文件夹适配此系统"
-
 msgid "Finding dependencies"
 msgstr "正在查找依赖项"
-
 msgid "Preparing installation scripts"
 msgstr "正在准备安装脚本"
-
 msgid "Building the package"
 msgstr "正在构建软件包"
-
 msgid "Waiting for authorization"
 msgstr "正在等待授权"
-
 msgid "Installing"
 msgstr "正在安装"
-
 msgid "About"
 msgstr "关于"
-
 msgid "Main menu"
 msgstr "主菜单"
-
 msgid "Choose a .deb file…"
 msgstr "选择 .deb 文件…"
-
 msgid "Install a .deb package"
 msgstr "安装 .deb 软件包"
-
 msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
 msgstr "打开 Debian 软件包或将其拖放到此处。它将被转换为适用于此系统的原生软件包并安装。"
-
 msgid "Details"
 msgstr "详细信息"
-
 msgid "Cancel"
 msgstr "取消"
-
 msgid "Prefer native packages when available"
 msgstr "优先使用原生软件包"
-
 msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
 msgstr "来自系统软件源、Flatpak 或 AppImage 的程序通常运行得更好。转换后的 .deb 软件包可能无法完美运行。"
-
 msgid "“{name}” is available in the repositories"
 msgstr "软件源中提供“{name}”"
-
 msgid "Installing the native package is recommended."
 msgstr "建议安装原生软件包。"
-
 msgid "Open"
 msgstr "打开"
-
 msgid "Package"
 msgstr "软件包"
-
 msgid "Version"
 msgstr "版本"
-
 msgid "Architecture"
 msgstr "架构"
-
 msgid "Installed size"
 msgstr "安装后大小"
-
 msgid "Maintainer"
 msgstr "维护者"
-
 msgid "Website"
 msgstr "网站"
-
 msgid "Description"
 msgstr "描述"
-
 msgid "Review before installing"
 msgstr "安装前检查"
-
 msgid "Show the dependencies and the scripts that will run as administrator"
 msgstr "显示依赖项以及将以管理员身份运行的脚本"
-
 msgid "Install"
 msgstr "安装"
-
 msgid "Ready to install"
 msgstr "准备安装"
-
 msgid "Check what will be installed."
 msgstr "请检查将要安装的内容。"
-
 msgid "Package name on this system"
 msgstr "此系统上的软件包名称"
-
 msgid "Package size"
 msgstr "软件包大小"
-
 msgid "Applications menu"
 msgstr "应用程序菜单"
-
 msgid "No menu entry"
 msgstr "无菜单项"
-
 msgid "Warnings"
 msgstr "警告"
-
 msgid "Notes"
 msgstr "备注"
-
 msgid "Dependencies"
 msgstr "依赖项"
-
 msgid "Required"
 msgstr "必需"
-
 msgid "{n} package"
 msgid_plural "{n} packages"
 msgstr[0] "{n} 个软件包"
-
 msgid "will be downloaded"
 msgstr "将被下载"
-
 msgid "Optional"
 msgstr "可选"
-
 msgid "Scripts"
 msgstr "脚本"
-
 msgid "These commands from the Debian package run as administrator during installation."
 msgstr "Debian 软件包中的这些命令将在安装期间以管理员身份运行。"
-
 msgid "Open {name}"
 msgstr "打开 {name}"
-
 msgid "Copy details"
 msgstr "复制详细信息"
-
 msgid "Close"
 msgstr "关闭"
-
 msgid "This file cannot be installed"
 msgstr "无法安装此文件"
-
 msgid "Choose a .deb file"
 msgstr "选择 .deb 文件"
-
 msgid "Debian packages"
 msgstr "Debian 软件包"
-
 msgid "Type your password in the window that will appear."
 msgstr "请在弹出的窗口中输入密码。"
-
 msgid "Missing dependencies are downloaded from the repositories."
 msgstr "缺少的依赖项将从软件源下载。"
-
 msgid "Compressing the files, this may take a minute."
 msgstr "正在压缩文件，这可能需要一分钟。"
-
 msgid "The package could not be converted"
 msgstr "无法转换该软件包"
-
 msgid "Cancelled"
 msgstr "已取消"
-
 msgid "{name} is installed"
 msgstr "{name} 已安装"
-
 msgid "The package {name} was installed. It has no entry in the applications menu."
 msgstr "软件包 {name} 已安装，但它在应用程序菜单中没有条目。"
-
 msgid "Installation complete"
 msgstr "安装完成"
-
 msgid "Authorization was not granted"
 msgstr "未获得授权"
-
 msgid "The installation failed"
 msgstr "安装失败"
-
 msgid "pacman returned an error (code {code}). Open the details to see what happened."
 msgstr "pacman 返回了错误（代码 {code}）。打开详细信息查看发生了什么。"
-
 msgid "The application could not be started"
 msgstr "无法启动该应用程序"
-
 msgid "Copied"
 msgstr "已复制"
-
 msgid "Please wait until the installation finishes"
 msgstr "请等待安装完成"
-
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg 不能以 root 身份运行；请以普通用户身份运行 debtap-mod。"
-
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg 失败，退出代码 {code}"
-
 msgid "makepkg finished but produced no package"
 msgstr "makepkg 已结束，但没有生成软件包"
-
 msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
 msgstr "“{typed}”只会刷新软件包列表。这里使用安全的等效命令来检查更新而不安装任何内容;要安装更新,请使用“{upgrade}”。"
-
 msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
 msgstr "切勿单独运行“pacman -Sy”:只刷新而不升级可能会破坏系统。"
-
 msgid "Arch does not upgrade single packages; the whole system is upgraded together."
 msgstr "Arch 不会单独升级某个软件包,而是整体升级整个系统。"
-
 msgid "Tell which package to install, for example: {example}"
 msgstr "请指定要安装的软件包,例如:{example}"
-
 msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
 msgstr ".rpm 软件包是为 Fedora/openSUSE 制作的,无法在此安装。"
-
 msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
 msgstr "请在软件仓库(pamac search)、Flathub 中查找该程序,或使用 AppImage。"
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac 也能在 AUR 和 Flatpak 中找到程序:{cmd}"
-
 msgid ".deb packages are converted into native pacman packages by debtap-mod."
 msgstr ".deb 软件包会由 debtap-mod 转换为原生 pacman 软件包。"
-
 msgid "Run this command as a regular user (without sudo)."
 msgstr "请以普通用户身份运行此命令(不使用 sudo)。"
-
 msgid "Tell which package to remove, for example: {example}"
 msgstr "请指定要卸载的软件包,例如:{example}"
-
 msgid "-n also deletes the configuration files the package installed in /etc."
 msgstr "-n 还会删除软件包安装在 /etc 中的配置文件。"
-
 msgid "There are no orphan packages to remove."
 msgstr "没有需要移除的孤立软件包。"
-
 msgid "Tell what to search for, for example: {example}"
 msgstr "请指定要搜索的内容,例如:{example}"
-
 msgid "Tell which package, for example: {example}"
 msgstr "请指定软件包,例如:{example}"
-
 msgid "The package is not installed; the list comes from the repository file database."
 msgstr "该软件包未安装;列表来自软件仓库的文件数据库。"
-
 msgid "Tell which file, for example: {example}"
 msgstr "请指定文件,例如:{example}"
-
 msgid "The file is not on this system; searching the repository file database."
 msgstr "此系统中没有该文件;正在搜索软件仓库的文件数据库。"
-
 msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
 msgstr "基于 Arch 的系统没有可添加的 PPA 或额外仓库。社区程序来自 AUR。"
-
 msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
 msgstr "使用“pamac search --aur <name>”搜索,使用“pamac build <name>”安装。"
-
 msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
 msgstr "要阻止某个软件包被升级,请将其添加到 /etc/pacman.conf 中的 IgnorePkg。"
-
 msgid "“{command}” has no direct equivalent here."
 msgstr "“{command}”在此没有直接对应的命令。"
-
 msgid "Run “{tool} help” to see the commands this system understands."
 msgstr "运行“{tool} help”可查看此系统支持的命令。"
-
 msgid "Tell which .deb file to install, for example: {example}"
 msgstr "请指定要安装的 .deb 文件,例如:{example}"
-
 msgid "This system uses pacman, not {tool}."
 msgstr "此系统使用 pacman,而不是 {tool}。"
-
 msgid "You typed:"
 msgstr "您输入的命令:"
-
 msgid "Equivalent:"
 msgstr "等效命令:"
-
 msgid "With pamac:"
 msgstr "使用 pamac:"
-
 msgid "Running:"
 msgstr "正在运行:"
-
 msgid "Update everything"
 msgstr "更新全部"
-
 msgid "Check for updates"
 msgstr "检查更新"
-
 msgid "Install a program"
 msgstr "安装程序"
-
 msgid "Install a downloaded file"
 msgstr "安装已下载的文件"
-
 msgid "Install a .deb file here"
 msgstr "安装此处的 .deb 文件"
-
 msgid "Reinstall"
 msgstr "重新安装"
-
 msgid "Remove a program"
 msgstr "卸载程序"
-
 msgid "Remove + dependencies"
 msgstr "卸载 + 依赖"
-
 msgid "Remove + configuration"
 msgstr "卸载 + 配置"
-
 msgid "Remove orphans (unused)"
 msgstr "移除孤立包(未使用)"
-
 msgid "Search to install"
 msgstr "搜索待安装项"
-
 msgid "Details (available)"
 msgstr "详情(可用)"
-
 msgid "Details (installed)"
 msgstr "详情(已安装)"
-
 msgid "List everything available"
 msgstr "列出所有可用项"
-
 msgid "List installed"
 msgstr "列出已安装项"
-
 msgid "Search installed"
 msgstr "搜索已安装项"
-
 msgid "Files of a package"
 msgstr "软件包的文件"
-
 msgid "Which package owns a file?"
 msgstr "文件属于哪个软件包?"
-
 msgid "What can be upgraded"
 msgstr "可升级的内容"
-
 msgid "Installed by you"
 msgstr "您安装的内容"
-
 msgid "Dependencies of a package"
 msgstr "软件包的依赖"
-
 msgid "Who depends on a package"
 msgstr "依赖某软件包的项"
-
 msgid "Clean the download cache"
 msgstr "清理下载缓存"
-
 msgid "Add a repository / PPA"
 msgstr "添加仓库 / PPA"
-
 msgid "(AUR)"
 msgstr "(AUR)"
-
 msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
 msgstr "命令转换器:{family}(Debian、Ubuntu、Mint、Fedora)到 pacman 和 pamac(Arch、BigLinux、Manjaro)"
-
 msgid "Both do the same job: install, update and remove programs. Only the commands change."
 msgstr "两者作用相同:安装、更新和卸载程序。只是命令不同。"
-
 msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
 msgstr "您可以继续输入 {tool} 命令:它们会被转换并通过 pamac 或 pacman 运行。"
-
 msgid "No command matches “{topic}”."
 msgstr "没有与“{topic}”匹配的命令。"
-
 msgid "Run “{tool} help” to see every command."
 msgstr "运行“{tool} help”可查看所有命令。"
-
 msgid "What you want to do"
 msgstr "您想做什么"
-
 msgid "Differences that catch people"
 msgstr "容易混淆的差异"
-
 msgid "apt update only refreshes the list; apt upgrade installs."
 msgstr "apt update 只刷新列表;apt upgrade 才会安装。"
-
 msgid "In pacman, -Syu does both together."
 msgstr "在 pacman 中,-Syu 会同时完成这两项。"
-
 msgid "Avoid “pacman -Sy” alone: it can break the system."
 msgstr "避免单独使用“pacman -Sy”:它可能会破坏系统。"
-
 msgid "Package types"
 msgstr "软件包类型"
-
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt 使用 .deb 文件,dnf 使用 .rpm,pacman 使用 .pkg.tar.zst。"
-
 msgid ".deb files are converted and installed with debtap-mod (or a double click)."
 msgstr ".deb 文件通过 debtap-mod(或双击)转换并安装。"
-
 msgid "Programs from the community"
 msgstr "社区程序"
-
 msgid "The AUR plays the role of PPAs and COPR."
 msgstr "AUR 的作用相当于 PPA 和 COPR。"
-
 msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
 msgstr "请使用“pamac build <name>”;切勿用 sudo 运行 AUR 助手。"
-
 msgid "Tip: “{tool} help install” shows only the lines about one command."
 msgstr "提示:“{tool} help install”只显示与某个命令相关的行。"
-
 msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
 msgstr "快速参考:安装或卸载需要“sudo”;搜索和列出则不需要。"
-
 msgid "Command not found: {cmd}"
 msgstr "未找到命令:{cmd}"
-
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "这些 Debian 脚本只为 Ubuntu 注册 APT 软件源和 AppArmor 配置文件，此处不需要。"
-
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "脚本 {script} 会配置 APT 软件源；该部分在此系统上不起作用。"

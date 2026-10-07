@@ -4,587 +4,394 @@ msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
 msgid "Extracting package data"
 msgstr "Extraherar paketdata"
-
 msgid "Adapting the directory layout"
 msgstr "Anpassar mappstrukturen"
-
 msgid "Resolving dependencies"
 msgstr "Löser beroenden"
-
 msgid "Converting maintainer scripts"
 msgstr "Konverterar underhållsskript"
-
 msgid "Building the pacman package"
 msgstr "Bygger pacman-paketet"
-
 msgid "Warning:"
 msgstr "Varning:"
-
 msgid "Error:"
 msgstr "Fel:"
-
 msgid "Convert a .deb package into a pacman package and install it."
 msgstr "Konvertera ett .deb-paket till ett pacman-paket och installera det."
-
 msgid "the .deb file"
 msgstr ".deb-filen"
-
 msgid "do not ask questions, but open the install script for review"
 msgstr "ställ inga frågor, men öppna installationsskriptet för granskning"
-
 msgid "do not ask any question"
 msgstr "ställ inga frågor"
-
 msgid "only build the package, do not install it"
 msgstr "bygg bara paketet, installera det inte"
-
 msgid "keep the built package in DIR"
 msgstr "behåll det byggda paketet i DIR"
-
 msgid "also write a PKGBUILD next to the .deb"
 msgstr "skriv även en PKGBUILD bredvid .deb-filen"
-
 msgid "only write a PKGBUILD, do not build"
 msgstr "skriv bara en PKGBUILD, bygg inte"
-
 msgid "{question} [y/N] "
 msgstr "{question} [j/N] "
-
 msgid "yes"
 msgstr "ja"
-
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod behöver inte längre någon lokal databas; inget att uppdatera."
-
 msgid "no .deb file given"
 msgstr "ingen .deb-fil angiven"
-
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "flaggorna -s och -w är föråldrade och ignorerades"
-
 msgid "Installed size: {size}"
 msgstr "Installerad storlek: {size}"
-
 msgid "PKGBUILD written to {path}"
 msgstr "PKGBUILD skriven till {path}"
-
 msgid "cancelled"
 msgstr "avbrutet"
-
 msgid "Package {file} built"
 msgstr "Paketet {file} har byggts"
-
 msgid "Menu entries: {names}"
 msgstr "Menyposter: {names}"
-
 msgid "Package saved to {path}"
 msgstr "Paketet sparades i {path}"
-
 msgid "some files belong to other installed packages; remove them first:"
 msgstr "vissa filer tillhör andra installerade paket; ta bort dem först:"
-
 msgid "Install script that will run as root:"
 msgstr "Installationsskript som körs som root:"
-
 msgid "Install {name} now?"
 msgstr "Installera {name} nu?"
-
 msgid "pacman could not install the package (exit code {code})"
 msgstr "pacman kunde inte installera paketet (felkod {code})"
-
 msgid "{name} installed successfully"
 msgstr "{name} har installerats"
-
 msgid "Look for {names} in the applications menu."
 msgstr "Leta efter {names} i programmenyn."
-
 msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
 msgstr "Det här paketet byggdes för {deb_arch} men den här datorn är {host}; det går inte att köra här."
-
 msgid "Extracting {name}…"
 msgstr "Extraherar {name}…"
-
 msgid "Ignored unsafe or special entries: {list}"
 msgstr "Ignorerade osäkra eller speciella poster: {list}"
-
 msgid "Duplicate file kept from /usr: /{path}"
 msgstr "Dubblettfil behölls från /usr: /{path}"
-
 msgid "Looking for dependencies…"
 msgstr "Letar efter beroenden…"
-
 msgid "Ignored {count} binaries built for other systems or architectures."
 msgstr "Ignorerade {count} binärfiler byggda för andra system eller arkitekturer."
-
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Bibliotek som inte hittades i förråden: {list}"
-
 msgid "Debian dependencies without an equivalent here: {list}"
 msgstr "Debian-beroenden utan motsvarighet här: {list}"
-
 msgid "Files already owned by other packages: {list}"
 msgstr "Filer som redan ägs av andra paket: {list}"
-
 msgid "Building the package…"
 msgstr "Bygger paketet…"
-
 msgid "The file is not a Debian package (missing ar header)."
 msgstr "Filen är inte ett Debian-paket (ar-huvud saknas)."
-
 msgid "The Debian package is truncated or corrupted."
 msgstr "Debian-paketet är trunkerat eller skadat."
-
 msgid "Unsupported compression in member {name}."
 msgstr "Komprimeringen stöds inte i delen {name}."
-
 msgid "File not found: {path}"
 msgstr "Filen hittades inte: {path}"
-
 msgid "The file is not a Debian package (debian-binary missing)."
 msgstr "Filen är inte ett Debian-paket (debian-binary saknas)."
-
 msgid "The Debian package has no control or data archive."
 msgstr "Debian-paketet saknar arkivet control eller data."
-
 msgid "The Debian package has no control file."
 msgstr "Debian-paketet saknar filen control."
-
 msgid "The control file has no Package or Version field."
 msgstr "Filen control saknar fältet Package eller Version."
-
 msgid "Install .deb package"
 msgstr "Installera .deb-paket"
-
 msgid "Converts Debian packages into native pacman packages and installs them."
 msgstr "Konverterar Debian-paket till inbyggda pacman-paket och installerar dem."
-
 msgid "Extracting files"
 msgstr "Extraherar filer"
-
 msgid "Adapting folders to this system"
 msgstr "Anpassar mappar till det här systemet"
-
 msgid "Finding dependencies"
 msgstr "Hittar beroenden"
-
 msgid "Preparing installation scripts"
 msgstr "Förbereder installationsskript"
-
 msgid "Building the package"
 msgstr "Bygger paketet"
-
 msgid "Waiting for authorization"
 msgstr "Väntar på behörighet"
-
 msgid "Installing"
 msgstr "Installerar"
-
 msgid "About"
 msgstr "Om"
-
 msgid "Main menu"
 msgstr "Huvudmeny"
-
 msgid "Choose a .deb file…"
 msgstr "Välj en .deb-fil…"
-
 msgid "Install a .deb package"
 msgstr "Installera ett .deb-paket"
-
 msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
 msgstr "Öppna ett Debian-paket eller släpp det här. Det konverteras till ett inbyggt paket för det här systemet och installeras."
-
 msgid "Details"
 msgstr "Detaljer"
-
 msgid "Cancel"
 msgstr "Avbryt"
-
 msgid "Prefer native packages when available"
 msgstr "Föredra inbyggda paket när de finns"
-
 msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
 msgstr "Program från systemets förråd, Flatpak eller AppImage fungerar oftast bättre. Konverterade .deb-paket kanske inte fungerar perfekt."
-
 msgid "“{name}” is available in the repositories"
 msgstr "”{name}” finns i förråden"
-
 msgid "Installing the native package is recommended."
 msgstr "Det rekommenderas att installera det inbyggda paketet."
-
 msgid "Open"
 msgstr "Öppna"
-
 msgid "Package"
 msgstr "Paket"
-
 msgid "Version"
 msgstr "Version"
-
 msgid "Architecture"
 msgstr "Arkitektur"
-
 msgid "Installed size"
 msgstr "Installerad storlek"
-
 msgid "Maintainer"
 msgstr "Underhållare"
-
 msgid "Website"
 msgstr "Webbplats"
-
 msgid "Description"
 msgstr "Beskrivning"
-
 msgid "Review before installing"
 msgstr "Granska före installation"
-
 msgid "Show the dependencies and the scripts that will run as administrator"
 msgstr "Visa beroendena och skripten som körs som administratör"
-
 msgid "Install"
 msgstr "Installera"
-
 msgid "Ready to install"
 msgstr "Redo att installera"
-
 msgid "Check what will be installed."
 msgstr "Kontrollera vad som kommer att installeras."
-
 msgid "Package name on this system"
 msgstr "Paketnamn på det här systemet"
-
 msgid "Package size"
 msgstr "Paketstorlek"
-
 msgid "Applications menu"
 msgstr "Programmeny"
-
 msgid "No menu entry"
 msgstr "Ingen menypost"
-
 msgid "Warnings"
 msgstr "Varningar"
-
 msgid "Notes"
 msgstr "Anmärkningar"
-
 msgid "Dependencies"
 msgstr "Beroenden"
-
 msgid "Required"
 msgstr "Obligatoriska"
-
 msgid "{n} package"
 msgid_plural "{n} packages"
 msgstr[0] "{n} paket"
 msgstr[1] "{n} paket"
-
 msgid "will be downloaded"
 msgstr "kommer att laddas ned"
-
 msgid "Optional"
 msgstr "Valfria"
-
 msgid "Scripts"
 msgstr "Skript"
-
 msgid "These commands from the Debian package run as administrator during installation."
 msgstr "Dessa kommandon från Debian-paketet körs som administratör under installationen."
-
 msgid "Open {name}"
 msgstr "Öppna {name}"
-
 msgid "Copy details"
 msgstr "Kopiera detaljer"
-
 msgid "Close"
 msgstr "Stäng"
-
 msgid "This file cannot be installed"
 msgstr "Den här filen kan inte installeras"
-
 msgid "Choose a .deb file"
 msgstr "Välj en .deb-fil"
-
 msgid "Debian packages"
 msgstr "Debian-paket"
-
 msgid "Type your password in the window that will appear."
 msgstr "Skriv ditt lösenord i fönstret som visas."
-
 msgid "Missing dependencies are downloaded from the repositories."
 msgstr "Saknade beroenden laddas ned från förråden."
-
 msgid "Compressing the files, this may take a minute."
 msgstr "Komprimerar filerna, det kan ta en minut."
-
 msgid "The package could not be converted"
 msgstr "Paketet kunde inte konverteras"
-
 msgid "Cancelled"
 msgstr "Avbrutet"
-
 msgid "{name} is installed"
 msgstr "{name} är installerat"
-
 msgid "The package {name} was installed. It has no entry in the applications menu."
 msgstr "Paketet {name} installerades. Det har ingen post i programmenyn."
-
 msgid "Installation complete"
 msgstr "Installationen är klar"
-
 msgid "Authorization was not granted"
 msgstr "Behörighet beviljades inte"
-
 msgid "The installation failed"
 msgstr "Installationen misslyckades"
-
 msgid "pacman returned an error (code {code}). Open the details to see what happened."
 msgstr "pacman returnerade ett fel (kod {code}). Öppna detaljerna för att se vad som hände."
-
 msgid "The application could not be started"
 msgstr "Programmet kunde inte startas"
-
 msgid "Copied"
 msgstr "Kopierat"
-
 msgid "Please wait until the installation finishes"
 msgstr "Vänta tills installationen är klar"
-
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg kan inte köras som root; kör debtap-mod som en vanlig användare."
-
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg misslyckades med felkod {code}"
-
 msgid "makepkg finished but produced no package"
 msgstr "makepkg avslutades men skapade inget paket"
-
 msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
 msgstr "”{typed}” uppdaterar bara paketlistan. Här kontrollerar den säkra motsvarigheten om det finns uppdateringar utan att installera något; använd ”{upgrade}” för att installera dem."
-
 msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
 msgstr "Kör aldrig enbart ”pacman -Sy”: att uppdatera listan utan att uppgradera kan förstöra systemet."
-
 msgid "Arch does not upgrade single packages; the whole system is upgraded together."
 msgstr "Arch uppgraderar inte enskilda paket; hela systemet uppgraderas tillsammans."
-
 msgid "Tell which package to install, for example: {example}"
 msgstr "Ange vilket paket som ska installeras, till exempel: {example}"
-
 msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
 msgstr ".rpm-paket är gjorda för Fedora/openSUSE och kan inte installeras här."
-
 msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
 msgstr "Leta efter programmet i förråden (pamac search), på Flathub eller som AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac hittar även program i AUR och Flatpak: {cmd}"
-
 msgid ".deb packages are converted into native pacman packages by debtap-mod."
 msgstr ".deb-paket konverteras till inbyggda pacman-paket av debtap-mod."
-
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Kör det här kommandot som vanlig användare (utan sudo)."
-
 msgid "Tell which package to remove, for example: {example}"
 msgstr "Ange vilket paket som ska tas bort, till exempel: {example}"
-
 msgid "-n also deletes the configuration files the package installed in /etc."
 msgstr "-n tar även bort de konfigurationsfiler som paketet installerade i /etc."
-
 msgid "There are no orphan packages to remove."
 msgstr "Det finns inga föräldralösa paket att ta bort."
-
 msgid "Tell what to search for, for example: {example}"
 msgstr "Ange vad du vill söka efter, till exempel: {example}"
-
 msgid "Tell which package, for example: {example}"
 msgstr "Ange vilket paket, till exempel: {example}"
-
 msgid "The package is not installed; the list comes from the repository file database."
 msgstr "Paketet är inte installerat; listan kommer från förrådets fildatabas."
-
 msgid "Tell which file, for example: {example}"
 msgstr "Ange vilken fil, till exempel: {example}"
-
 msgid "The file is not on this system; searching the repository file database."
 msgstr "Filen finns inte på det här systemet; söker i förrådets fildatabas."
-
 msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
 msgstr "Arch-baserade system har inga PPA:er eller extra förråd att lägga till. Program från gemenskapen kommer från AUR."
-
 msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
 msgstr "Sök med ”pamac search --aur <name>” och installera med ”pamac build <name>”."
-
 msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
 msgstr "Lägg till paketet i IgnorePkg i /etc/pacman.conf för att hindra det från att uppgraderas."
-
 msgid "“{command}” has no direct equivalent here."
 msgstr "”{command}” har ingen direkt motsvarighet här."
-
 msgid "Run “{tool} help” to see the commands this system understands."
 msgstr "Kör ”{tool} help” för att se vilka kommandon det här systemet förstår."
-
 msgid "Tell which .deb file to install, for example: {example}"
 msgstr "Ange vilken .deb-fil som ska installeras, till exempel: {example}"
-
 msgid "This system uses pacman, not {tool}."
 msgstr "Det här systemet använder pacman, inte {tool}."
-
 msgid "You typed:"
 msgstr "Du skrev:"
-
 msgid "Equivalent:"
 msgstr "Motsvarighet:"
-
 msgid "With pamac:"
 msgstr "Med pamac:"
-
 msgid "Running:"
 msgstr "Kör:"
-
 msgid "Update everything"
 msgstr "Uppdatera allt"
-
 msgid "Check for updates"
 msgstr "Sök efter uppdateringar"
-
 msgid "Install a program"
 msgstr "Installera ett program"
-
 msgid "Install a downloaded file"
 msgstr "Installera en nedladdad fil"
-
 msgid "Install a .deb file here"
 msgstr "Installera en .deb-fil här"
-
 msgid "Reinstall"
 msgstr "Installera om"
-
 msgid "Remove a program"
 msgstr "Ta bort ett program"
-
 msgid "Remove + dependencies"
 msgstr "Ta bort + beroenden"
-
 msgid "Remove + configuration"
 msgstr "Ta bort + inställningar"
-
 msgid "Remove orphans (unused)"
 msgstr "Ta bort föräldralösa (oanvända)"
-
 msgid "Search to install"
 msgstr "Sök för att installera"
-
 msgid "Details (available)"
 msgstr "Detaljer (tillgängliga)"
-
 msgid "Details (installed)"
 msgstr "Detaljer (installerade)"
-
 msgid "List everything available"
 msgstr "Lista allt tillgängligt"
-
 msgid "List installed"
 msgstr "Lista installerade"
-
 msgid "Search installed"
 msgstr "Sök bland installerade"
-
 msgid "Files of a package"
 msgstr "Ett pakets filer"
-
 msgid "Which package owns a file?"
 msgstr "Vilket paket äger en fil?"
-
 msgid "What can be upgraded"
 msgstr "Vad som kan uppgraderas"
-
 msgid "Installed by you"
 msgstr "Installerat av dig"
-
 msgid "Dependencies of a package"
 msgstr "Ett pakets beroenden"
-
 msgid "Who depends on a package"
 msgstr "Vilka som beror på ett paket"
-
 msgid "Clean the download cache"
 msgstr "Rensa nedladdningscachen"
-
 msgid "Add a repository / PPA"
 msgstr "Lägg till ett förråd / PPA"
-
 msgid "(AUR)"
 msgstr "(AUR)"
-
 msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
 msgstr "Kommandoöversättare: {family} (Debian, Ubuntu, Mint, Fedora) till pacman och pamac (Arch, BigLinux, Manjaro)"
-
 msgid "Both do the same job: install, update and remove programs. Only the commands change."
 msgstr "Båda gör samma sak: installerar, uppdaterar och tar bort program. Bara kommandona skiljer sig."
-
 msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
 msgstr "Du kan fortsätta skriva {tool}-kommandon: de översätts och körs med pamac eller pacman."
-
 msgid "No command matches “{topic}”."
 msgstr "Inget kommando matchar ”{topic}”."
-
 msgid "Run “{tool} help” to see every command."
 msgstr "Kör ”{tool} help” för att se alla kommandon."
-
 msgid "What you want to do"
 msgstr "Vad du vill göra"
-
 msgid "Differences that catch people"
 msgstr "Skillnader som förvirrar"
-
 msgid "apt update only refreshes the list; apt upgrade installs."
 msgstr "apt update uppdaterar bara listan; apt upgrade installerar."
-
 msgid "In pacman, -Syu does both together."
 msgstr "I pacman gör -Syu båda sakerna på en gång."
-
 msgid "Avoid “pacman -Sy” alone: it can break the system."
 msgstr "Undvik enbart ”pacman -Sy”: det kan förstöra systemet."
-
 msgid "Package types"
 msgstr "Pakettyper"
-
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt använder .deb-filer, dnf använder .rpm, pacman använder .pkg.tar.zst."
-
 msgid ".deb files are converted and installed with debtap-mod (or a double click)."
 msgstr ".deb-filer konverteras och installeras med debtap-mod (eller med dubbelklick)."
-
 msgid "Programs from the community"
 msgstr "Program från gemenskapen"
-
 msgid "The AUR plays the role of PPAs and COPR."
 msgstr "AUR fyller samma roll som PPA:er och COPR."
-
 msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
 msgstr "Använd ”pamac build <name>”; kör aldrig AUR-hjälpprogram med sudo."
-
 msgid "Tip: “{tool} help install” shows only the lines about one command."
 msgstr "Tips: ”{tool} help install” visar bara raderna om ett enda kommando."
-
 msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
 msgstr "Snabbreferens: ”sudo” behövs för att installera eller ta bort; sökning och listning kräver det inte."
-
 msgid "Command not found: {cmd}"
 msgstr "Kommandot hittades inte: {cmd}"
-
 msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
 msgstr "Debian-skripten registrerar bara ett APT-förråd och en AppArmor-profil för Ubuntu; de behövs inte här."
-
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Skriptet {script} konfigurerar ett APT-förråd; den delen har ingen effekt på det här systemet."
