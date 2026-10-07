@@ -1,0 +1,31 @@
+name: Build Package
+
+# Asks the BigLinux build servers (x86_64 and ARM) to build the package.
+# Translations are maintained in the repository; nothing is committed here.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "*" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Send Hooks BigLinux Build Package
+        shell: bash
+        run: |
+          if grep -q biglinux-package-template pkgbuild/PKGBUILD; then
+            echo "Template package: nothing to build."
+            exit 0
+          fi
+          payload='{"event_type": "${{ github.repository }}", "client_payload": { "branch": "${{ github.ref_name }}", "url": "https://github.com/${{ github.repository }}"}}'
+          for builder in build-package build-package-ARM; do
+            curl -fsS -X POST \
+              -H "Accept: application/json" \
+              -H "Authorization: token ${{ secrets.WEBHOOK_TOKEN }}" \
+              --data "$payload" \
+              "https://api.github.com/repos/BigLinux-Package-Build/$builder/dispatches"
+          done
