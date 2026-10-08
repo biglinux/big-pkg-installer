@@ -1,0 +1,803 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the big-pkg-installer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: big-pkg-installer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-08 00:43-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "Extracting package data"
+msgstr ""
+
+msgid "Adapting the directory layout"
+msgstr ""
+
+msgid "Resolving dependencies"
+msgstr ""
+
+msgid "Converting maintainer scripts"
+msgstr ""
+
+msgid "Building the pacman package"
+msgstr ""
+
+msgid "Warning:"
+msgstr ""
+
+msgid "Error:"
+msgstr ""
+
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr ""
+
+msgid "the .deb or .rpm file"
+msgstr ""
+
+msgid "do not ask questions, but open the install script for review"
+msgstr ""
+
+msgid "do not ask any question"
+msgstr ""
+
+msgid "only build the package, do not install it"
+msgstr ""
+
+msgid "keep the built package in DIR"
+msgstr ""
+
+msgid "also write a PKGBUILD next to the package file"
+msgstr ""
+
+msgid "only write a PKGBUILD, do not build"
+msgstr ""
+
+#, python-brace-format
+msgid "{question} [y/N] "
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr ""
+
+msgid "no package file given"
+msgstr ""
+
+msgid "the -s and -w options are obsolete and were ignored"
+msgstr ""
+
+#, python-brace-format
+msgid "Installed size: {size}"
+msgstr ""
+
+#, python-brace-format
+msgid "PKGBUILD written to {path}"
+msgstr ""
+
+msgid "cancelled"
+msgstr ""
+
+#, python-brace-format
+msgid "Package {file} built"
+msgstr ""
+
+#, python-brace-format
+msgid "Menu entries: {names}"
+msgstr ""
+
+#, python-brace-format
+msgid "Package saved to {path}"
+msgstr ""
+
+msgid "some files belong to other installed packages; remove them first:"
+msgstr ""
+
+msgid "Install script that will run as root:"
+msgstr ""
+
+#, python-brace-format
+msgid "Install {name} now?"
+msgstr ""
+
+#, python-brace-format
+msgid "pacman could not install the package (exit code {code})"
+msgstr ""
+
+#, python-brace-format
+msgid "{name} installed successfully"
+msgstr ""
+
+#, python-brace-format
+msgid "Look for {names} in the applications menu."
+msgstr ""
+
+#, python-brace-format
+msgid "This package was built for {deb_arch} but this computer is {host}; it will not run here."
+msgstr ""
+
+#, python-brace-format
+msgid "Extracting {name}…"
+msgstr ""
+
+#, python-brace-format
+msgid "Ignored unsafe or special entries: {list}"
+msgstr ""
+
+#, python-brace-format
+msgid "Duplicate file kept from /usr: /{path}"
+msgstr ""
+
+msgid "Looking for dependencies…"
+msgstr ""
+
+#, python-brace-format
+msgid "Ignored {count} binaries built for other systems or architectures."
+msgstr ""
+
+#, python-brace-format
+msgid "Libraries not found in the repositories: {list}"
+msgstr ""
+
+#, python-brace-format
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr ""
+
+#, python-brace-format
+msgid "Files already owned by other packages: {list}"
+msgstr ""
+
+msgid "Building the package…"
+msgstr ""
+
+msgid "The file is not a Debian package (missing ar header)."
+msgstr ""
+
+msgid "The Debian package is truncated or corrupted."
+msgstr ""
+
+#, python-brace-format
+msgid "Unsupported compression in member {name}."
+msgstr ""
+
+#, python-brace-format
+msgid "File not found: {path}"
+msgstr ""
+
+msgid "The file is not a Debian package (debian-binary missing)."
+msgstr ""
+
+msgid "The Debian package has no control or data archive."
+msgstr ""
+
+msgid "The Debian package has no control file."
+msgstr ""
+
+msgid "The control file has no Package or Version field."
+msgstr ""
+
+msgid "Package Installer"
+msgstr ""
+
+msgid "original debtap"
+msgstr ""
+
+#, python-brace-format
+msgid "About {name}"
+msgstr ""
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr ""
+
+msgid "Credits"
+msgstr ""
+
+msgid "License"
+msgstr ""
+
+msgid "Project website"
+msgstr ""
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Converted packages"
+msgstr ""
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr ""
+
+msgid "Keep a copy of the converted package"
+msgstr ""
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr ""
+
+msgid "Folder"
+msgstr ""
+
+msgid "Choose…"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Copy details"
+msgstr ""
+
+msgid "Extracting files"
+msgstr ""
+
+msgid "Adapting folders to this system"
+msgstr ""
+
+msgid "Checking dependencies"
+msgstr ""
+
+msgid "Preparing installation scripts"
+msgstr ""
+
+msgid "Building the package"
+msgstr ""
+
+msgid "Preparing the installation"
+msgstr ""
+
+#, python-brace-format
+msgid "Downloading packages ({done} of {total})"
+msgstr ""
+
+msgid "Downloading packages"
+msgstr ""
+
+msgid "Installing packages"
+msgstr ""
+
+msgid "Configuring the system"
+msgstr ""
+
+msgid "Finishing"
+msgstr ""
+
+msgid "About the Installer"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Send feedback"
+msgstr ""
+
+msgid "Report a problem"
+msgstr ""
+
+msgid "Main menu"
+msgstr ""
+
+msgid "Copied"
+msgstr ""
+
+msgid "Install a .deb or .rpm package"
+msgstr ""
+
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr ""
+
+msgid "Choose a package file…"
+msgstr ""
+
+msgid "Or drag and drop the file here"
+msgstr ""
+
+msgid "Selected package"
+msgstr ""
+
+msgid "Review the package information before continuing."
+msgstr ""
+
+#, python-brace-format
+msgid "“{name}” is available in the repositories"
+msgstr ""
+
+msgid "Installing the native package is recommended."
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Package name"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Architecture"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Maintainer"
+msgstr ""
+
+msgid "Website"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "This may take a few moments…"
+msgstr ""
+
+msgid "Dependencies"
+msgstr ""
+
+msgid "The following packages will be installed so the application works correctly."
+msgstr ""
+
+msgid "New packages to install"
+msgstr ""
+
+#, python-brace-format
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "converted from the package file"
+msgstr ""
+
+msgid "Other information"
+msgstr ""
+
+#, python-brace-format
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Package name on this system"
+msgstr ""
+
+msgid "Applications menu"
+msgstr ""
+
+msgid "No menu entry"
+msgstr ""
+
+msgid "Optional"
+msgstr ""
+
+msgid "Scripts"
+msgstr ""
+
+msgid "These commands from the package run as administrator during installation."
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Authentication required"
+msgstr ""
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr ""
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr ""
+
+msgid "Package installed successfully!"
+msgstr ""
+
+#, python-brace-format
+msgid "The package “{name}” was installed correctly on your system."
+msgstr ""
+
+#, python-brace-format
+msgid "Version {version}"
+msgstr ""
+
+msgid "Open application"
+msgstr ""
+
+msgid "Show details"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Error details"
+msgstr ""
+
+msgid "Incompatible package"
+msgstr ""
+
+#, python-brace-format
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr ""
+
+msgid "Package"
+msgstr ""
+
+msgid "Package architecture"
+msgstr ""
+
+msgid "System architecture"
+msgstr ""
+
+#, python-brace-format
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr ""
+
+msgid "This file cannot be installed"
+msgstr ""
+
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr ""
+
+msgid "Invalid file"
+msgstr ""
+
+msgid "The selected file is not a .deb or .rpm package."
+msgstr ""
+
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr ""
+
+msgid "Choose a package file"
+msgstr ""
+
+msgid "Packages (.deb, .rpm)"
+msgstr ""
+
+msgid "Preparing the package"
+msgstr ""
+
+#, python-brace-format
+msgid "Extracting files ({percent}%)"
+msgstr ""
+
+msgid "Cancelled"
+msgstr ""
+
+msgid "The package could not be converted"
+msgstr ""
+
+msgid "Dependencies are not available"
+msgstr ""
+
+msgid "Some packages this program needs were not found in the repositories."
+msgstr ""
+
+msgid "Installing the package"
+msgstr ""
+
+msgid "Preparing the installation…"
+msgstr ""
+
+msgid "Downloading and installing dependencies…"
+msgstr ""
+
+msgid "Installing packages…"
+msgstr ""
+
+msgid "Configuring the system…"
+msgstr ""
+
+msgid "Finishing…"
+msgstr ""
+
+msgid "Please wait until the installation finishes"
+msgstr ""
+
+msgid "Authorization was not granted"
+msgstr ""
+
+msgid "The installation failed"
+msgstr ""
+
+msgid "An error happened while installing the package. See the details below."
+msgstr ""
+
+msgid "The application could not be started"
+msgstr ""
+
+msgid "The RPM package is truncated or corrupted."
+msgstr ""
+
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr ""
+
+#, python-brace-format
+msgid "makepkg failed with exit code {code}"
+msgstr ""
+
+msgid "makepkg finished but produced no package"
+msgstr ""
+
+#, python-brace-format
+msgid "“{typed}” only refreshes the package list. Here the safe equivalent checks for updates without installing anything; to install them use “{upgrade}”."
+msgstr ""
+
+msgid "Never run “pacman -Sy” alone: refreshing without upgrading can break the system."
+msgstr ""
+
+msgid "Arch does not upgrade single packages; the whole system is upgraded together."
+msgstr ""
+
+#, python-brace-format
+msgid "Tell which package to install, for example: {example}"
+msgstr ""
+
+#, python-brace-format
+msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
+msgstr ""
+
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr ""
+
+msgid "Run this command as a regular user (without sudo)."
+msgstr ""
+
+#, python-brace-format
+msgid "Tell which package to remove, for example: {example}"
+msgstr ""
+
+msgid "-n also deletes the configuration files the package installed in /etc."
+msgstr ""
+
+msgid "There are no orphan packages to remove."
+msgstr ""
+
+#, python-brace-format
+msgid "Tell what to search for, for example: {example}"
+msgstr ""
+
+#, python-brace-format
+msgid "Tell which package, for example: {example}"
+msgstr ""
+
+msgid "The package is not installed; the list comes from the repository file database."
+msgstr ""
+
+#, python-brace-format
+msgid "Tell which file, for example: {example}"
+msgstr ""
+
+msgid "The file is not on this system; searching the repository file database."
+msgstr ""
+
+msgid "Arch-based systems have no PPAs or extra repositories to add. Programs from the community come from the AUR."
+msgstr ""
+
+msgid "Search with “pamac search --aur <name>” and install with “pamac build <name>”."
+msgstr ""
+
+msgid "To keep a package from being upgraded, add it to IgnorePkg in /etc/pacman.conf."
+msgstr ""
+
+#, python-brace-format
+msgid "“{command}” has no direct equivalent here."
+msgstr ""
+
+#, python-brace-format
+msgid "Run “{tool} help” to see the commands this system understands."
+msgstr ""
+
+#, python-brace-format
+msgid "Tell which .deb file to install, for example: {example}"
+msgstr ""
+
+#, python-brace-format
+msgid "This system uses pacman, not {tool}."
+msgstr ""
+
+msgid "You typed:"
+msgstr ""
+
+msgid "Equivalent:"
+msgstr ""
+
+msgid "With pamac:"
+msgstr ""
+
+msgid "Running:"
+msgstr ""
+
+msgid "Update everything"
+msgstr ""
+
+msgid "Check for updates"
+msgstr ""
+
+msgid "Install a program"
+msgstr ""
+
+msgid "Install a downloaded file"
+msgstr ""
+
+msgid "Install a native package file"
+msgstr ""
+
+msgid "Install a .deb or .rpm file here"
+msgstr ""
+
+msgid "Reinstall"
+msgstr ""
+
+msgid "Remove a program"
+msgstr ""
+
+msgid "Remove + dependencies"
+msgstr ""
+
+msgid "Remove + configuration"
+msgstr ""
+
+msgid "Remove orphans (unused)"
+msgstr ""
+
+msgid "Search to install"
+msgstr ""
+
+msgid "Details (available)"
+msgstr ""
+
+msgid "Details (installed)"
+msgstr ""
+
+msgid "List everything available"
+msgstr ""
+
+msgid "List installed"
+msgstr ""
+
+msgid "Search installed"
+msgstr ""
+
+msgid "Files of a package"
+msgstr ""
+
+msgid "Which package owns a file?"
+msgstr ""
+
+msgid "What can be upgraded"
+msgstr ""
+
+msgid "Installed by you"
+msgstr ""
+
+msgid "Dependencies of a package"
+msgstr ""
+
+msgid "Who depends on a package"
+msgstr ""
+
+msgid "Clean the download cache"
+msgstr ""
+
+msgid "Add a repository / PPA"
+msgstr ""
+
+msgid "(AUR)"
+msgstr ""
+
+#, python-brace-format
+msgid "Command translator: {family} (Debian, Ubuntu, Mint, Fedora) to pacman and pamac (Arch, BigLinux, Manjaro)"
+msgstr ""
+
+msgid "Both do the same job: install, update and remove programs. Only the commands change."
+msgstr ""
+
+#, python-brace-format
+msgid "You can keep typing {tool} commands: they are translated and run with pamac or pacman."
+msgstr ""
+
+#, python-brace-format
+msgid "No command matches “{topic}”."
+msgstr ""
+
+#, python-brace-format
+msgid "Run “{tool} help” to see every command."
+msgstr ""
+
+msgid "What you want to do"
+msgstr ""
+
+msgid "Differences that catch people"
+msgstr ""
+
+msgid "apt update only refreshes the list; apt upgrade installs."
+msgstr ""
+
+msgid "In pacman, -Syu does both together."
+msgstr ""
+
+msgid "Avoid “pacman -Sy” alone: it can break the system."
+msgstr ""
+
+msgid "Package types"
+msgstr ""
+
+msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
+msgstr ""
+
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr ""
+
+msgid "Programs from the community"
+msgstr ""
+
+msgid "The AUR plays the role of PPAs and COPR."
+msgstr ""
+
+msgid "Use “pamac build <name>”; never run AUR helpers with sudo."
+msgstr ""
+
+#, python-brace-format
+msgid "Tip: “{tool} help install” shows only the lines about one command."
+msgstr ""
+
+msgid "Quick reference: “sudo” is needed to install or remove; searching and listing are not."
+msgstr ""
+
+#, python-brace-format
+msgid "Command not found: {cmd}"
+msgstr ""
+
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr ""
+
+msgid "Unsupported RPM payload format."
+msgstr ""
+
+msgid "The file is not an RPM package."
+msgstr ""
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr ""
+
+#, python-brace-format
+msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr ""
+
+#, python-brace-format
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr ""
+
+#, python-brace-format
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr ""

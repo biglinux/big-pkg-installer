@@ -7,4 +7,4 @@ ignore = ["E501", "B008"]
 
 
 [lint.isort]
-known-first-party = ["debtap_mod", "conftest"]
+known-first-party = ["big_pkg_installer", "conftest"]

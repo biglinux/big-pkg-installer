@@ -4,13 +4,13 @@ import subprocess
 
 import pytest
 
+from big_pkg_installer.converter import Callbacks, convert, inspect
+from big_pkg_installer.debfile import DebError
+from big_pkg_installer.deps import map_rpm_name, parse_rpm_requirement
+from big_pkg_installer.package import open_package
+from big_pkg_installer.rpmfile import open_rpm
+from big_pkg_installer.scripts import build_install_rpm
 from conftest import has_makepkg, has_rpmbuild
-from debtap_mod.converter import Callbacks, convert, inspect
-from debtap_mod.debfile import DebError
-from debtap_mod.deps import map_rpm_name, parse_rpm_requirement
-from debtap_mod.package import open_package
-from debtap_mod.rpmfile import open_rpm
-from debtap_mod.scripts import build_install_rpm
 
 needs_rpmbuild = pytest.mark.skipif(not has_rpmbuild(), reason="rpmbuild not available")
 
@@ -82,13 +82,13 @@ def test_truncated_rpm(make_rpm, tmp_path):
 
 
 def test_rpm_scriptlets_run_with_rpm_arguments(tmp_path):
-    from debtap_mod.rpmfile import RpmScript
+    from big_pkg_installer.rpmfile import RpmScript
 
     scripts = {
-        "pre": RpmScript('echo "pre $1" >> "$DEBTAP_TEST_LOG"', ["/bin/sh"]),
-        "post": RpmScript('echo "post $1" >> "$DEBTAP_TEST_LOG"', ["/bin/sh"]),
-        "posttrans": RpmScript('echo posttrans >> "$DEBTAP_TEST_LOG"', ["/bin/sh"]),
-        "postun": RpmScript('echo "postun $1" >> "$DEBTAP_TEST_LOG"', ["/bin/bash"]),
+        "pre": RpmScript('echo "pre $1" >> "$BIG_PKG_TEST_LOG"', ["/bin/sh"]),
+        "post": RpmScript('echo "post $1" >> "$BIG_PKG_TEST_LOG"', ["/bin/sh"]),
+        "posttrans": RpmScript('echo posttrans >> "$BIG_PKG_TEST_LOG"', ["/bin/sh"]),
+        "postun": RpmScript('echo "postun $1" >> "$BIG_PKG_TEST_LOG"', ["/bin/bash"]),
         "preun": RpmScript("", ["/usr/bin/true"]),
         "pretrans": RpmScript("print('hi')", ["<lua>"]),
     }
@@ -102,7 +102,7 @@ def test_rpm_scriptlets_run_with_rpm_arguments(tmp_path):
     def run(func, *args):
         log.write_text("")
         subprocess.run(["bash", "-c", f'. "{install}"; {func} ' + " ".join(args)], check=True,
-                       env={"PATH": "/usr/bin:/bin", "DEBTAP_TEST_LOG": str(log)})
+                       env={"PATH": "/usr/bin:/bin", "BIG_PKG_TEST_LOG": str(log)})
         return log.read_text()
 
     assert run("post_install", "1.0-1") == "post 1\nposttrans\n"
@@ -135,7 +135,7 @@ def test_full_rpm_conversion(make_rpm):
         assert any("nonexistent-tool-xyz" in w for w in conversion.warnings)
         install = subprocess.run(["bsdtar", "-xOf", str(pkg), ".INSTALL"], capture_output=True, text=True).stdout
         subprocess.run(["bash", "-n"], input=install, text=True, check=True)
-        assert "_debtap_run post 1" in install and "_debtap_run postun 0" in install
+        assert "_bigpkg_run post 1" in install and "_bigpkg_run postun 0" in install
         assert [a.name for a in conversion.apps] == ["Hello RPM"]
     finally:
         conversion.cleanup()

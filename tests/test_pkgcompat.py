@@ -3,8 +3,8 @@ import shutil
 
 import pytest
 
-from debtap_mod import pkgcompat
-from debtap_mod.pkgcompat import Style, render_help, render_plan, translate
+from big_pkg_installer import pkgcompat
+from big_pkg_installer.pkgcompat import Style, render_help, render_plan, translate
 
 needs_pacman = pytest.mark.skipif(not shutil.which("pacman"), reason="pacman not available")
 ANSI = re.compile(r"\x1b\[[0-9;]*m")
@@ -75,13 +75,13 @@ def test_without_pamac_uses_sudo_pacman(monkeypatch):
     assert translate("apt", ["install", "vlc"]).run == ["sudo", "pacman", "-S", "--needed", "vlc"]
 
 
-def test_deb_files_go_to_debtap(user_with_pamac, tmp_path):
+def test_deb_files_go_to_installer(user_with_pamac, tmp_path):
     deb = tmp_path / "app.deb"
     deb.write_bytes(b"x")
     for tool, args in (("apt", ["install", str(deb)]), ("dpkg", ["-i", str(deb)])):
         plan = translate(tool, args)
         assert plan.action == "install-deb"
-        assert plan.run == ["debtap-mod", str(deb)]
+        assert plan.run == ["big-pkg-installer", str(deb)]
 
 
 def test_deb_as_root_builds_as_sudo_user(monkeypatch, tmp_path):
@@ -89,7 +89,7 @@ def test_deb_as_root_builds_as_sudo_user(monkeypatch, tmp_path):
     monkeypatch.setenv("SUDO_USER", "alice")
     deb = tmp_path / "app.deb"
     deb.write_bytes(b"x")
-    assert translate("apt", ["install", str(deb)]).run == ["sudo", "-u", "alice", "debtap-mod", str(deb)]
+    assert translate("apt", ["install", str(deb)]).run == ["sudo", "-u", "alice", "big-pkg-installer", str(deb)]
 
 
 def test_missing_deb_is_an_error(user_with_pamac):
@@ -97,12 +97,12 @@ def test_missing_deb_is_an_error(user_with_pamac):
     assert plan.action == "usage" and plan.run is None
 
 
-def test_rpm_files_go_to_debtap(user_with_pamac, tmp_path):
+def test_rpm_files_go_to_installer(user_with_pamac, tmp_path):
     rpm = tmp_path / "app.rpm"
     rpm.write_bytes(b"x")
     for tool, args in (("dnf", ["install", str(rpm)]), ("yum", ["localinstall", str(rpm)]), ("apt", ["install", str(rpm)])):
         plan = translate(tool, args)
-        assert plan.action == "install-deb" and plan.run == ["debtap-mod", str(rpm)]
+        assert plan.action == "install-deb" and plan.run == ["big-pkg-installer", str(rpm)]
     assert translate("dnf", ["install", "missing.rpm"]).action == "usage"
 
 
@@ -123,7 +123,7 @@ def test_ppa_explains_aur(user_with_pamac):
 def test_help_layouts(columns):
     text = render_help("apt", "", Style(False), columns=columns)
     assert "sudo pacman -Syu" in text
-    assert "debtap-mod app.deb" in text
+    assert "big-pkg-installer app.deb" in text
     assert max(len(line) for line in text.splitlines()) <= max(columns, 120)
     if columns >= 160:
         assert "pamac upgrade" in text  # full table includes the pamac column
@@ -186,7 +186,7 @@ def test_dpkg_print_architecture(capsys):
 
 
 def test_main_dry_run(monkeypatch, capsys, user_with_pamac):
-    monkeypatch.setenv("DEBTAP_COMPAT_DRY_RUN", "1")
+    monkeypatch.setenv("BIG_PKG_COMPAT_DRY_RUN", "1")
     monkeypatch.setattr(pkgcompat, "_real_binary", lambda tool: None)
     assert pkgcompat.main(["/usr/local/bin/apt", "install", "vlc"]) == 0
     err = capsys.readouterr().err
@@ -204,7 +204,7 @@ def test_real_binary_takes_precedence(monkeypatch):
     monkeypatch.setattr(pkgcompat, "_real_binary", lambda tool: "/usr/bin/apt")
     monkeypatch.setattr(pkgcompat.os, "execv", lambda path, argv: calls.append(argv))
     monkeypatch.setattr(pkgcompat, "translate", lambda *a: (_ for _ in ()).throw(AssertionError("translated")))
-    monkeypatch.delenv("DEBTAP_COMPAT_FORCE", raising=False)
+    monkeypatch.delenv("BIG_PKG_COMPAT_FORCE", raising=False)
     try:
         pkgcompat.main(["/usr/local/bin/apt", "update"])
     except AssertionError:

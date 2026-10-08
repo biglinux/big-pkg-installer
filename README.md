@@ -1,8 +1,12 @@
-# debtap-mod — Package Installer
+# big-pkg-installer — Package Installer
 
 **Install `.deb` and `.rpm` packages on Arch-based systems, the native way.**
 
-debtap-mod converts Debian/Ubuntu (`.deb`) and Fedora/openSUSE (`.rpm`)
+> Formerly **debtap-mod**. The package replaces `debtap-mod` automatically on
+> upgrade, and the old commands `debtap-mod`, `debtap-gui` and `gdebi-gtk`
+> still work.
+
+big-pkg-installer converts Debian/Ubuntu (`.deb`) and Fedora/openSUSE (`.rpm`)
 packages into real pacman packages and installs them. Open the file, click
 **Install**, and the application appears in your menu, tracked by pacman like
 any other package and removable with `pacman -R`.
@@ -15,7 +19,7 @@ any other package and removable with `pacman -R`.
 
 > **Prefer native packages when they exist.** Software from the official
 > repositories, Flatpak or AppImage is built for this system and usually works
-> better. debtap-mod is for programs that are only distributed as `.deb` or
+> better. big-pkg-installer is for programs that are only distributed as `.deb` or
 > `.rpm`. When the repositories have a package with the same name, the
 > installer says so before you continue.
 
@@ -69,17 +73,17 @@ any other package and removable with `pacman -R`.
 
 ## Installation
 
-On BigLinux, debtap-mod is available from the official repositories:
+On BigLinux, big-pkg-installer is available from the official repositories:
 
 ```sh
-sudo pacman -S debtap-mod
+sudo pacman -S big-pkg-installer
 ```
 
 To build from source:
 
 ```sh
-git clone https://github.com/biglinux/debtap-mod.git
-cd debtap-mod/pkgbuild
+git clone https://github.com/biglinux/big-pkg-installer.git
+cd big-pkg-installer/pkgbuild
 makepkg -si
 ```
 
@@ -90,8 +94,8 @@ makepkg -si
 Double-click a `.deb` or `.rpm` file, or run:
 
 ```sh
-debtap-gui package.deb
-debtap-gui package.rpm
+big-pkg-installer-gui package.deb
+big-pkg-installer-gui package.rpm
 ```
 
 | | |
@@ -117,7 +121,7 @@ folder of your choice), **Help**, **Send feedback** and **Report a problem**.
 ### Command line
 
 ```text
-debtap-mod [options] package.deb|package.rpm
+big-pkg-installer [options] package.deb|package.rpm
 
   -q, --quiet         no questions; open the install script in $EDITOR for review
   -Q, --Quiet         no questions at all
@@ -130,10 +134,10 @@ debtap-mod [options] package.deb|package.rpm
 ```
 
 ```sh
-debtap-mod ~/Downloads/app_amd64.deb        # convert, review, confirm, install
-debtap-mod -Q ~/Downloads/app.x86_64.rpm    # unattended installation
-debtap-mod -n -o ~/packages app.rpm         # build ~/packages/app-rpm-*.pkg.tar.zst
-debtap-mod -P app_amd64.deb                 # export ./app-deb/PKGBUILD
+big-pkg-installer ~/Downloads/app_amd64.deb        # convert, review, confirm, install
+big-pkg-installer -Q ~/Downloads/app.x86_64.rpm    # unattended installation
+big-pkg-installer -n -o ~/packages app.rpm         # build ~/packages/app-rpm-*.pkg.tar.zst
+big-pkg-installer -P app_amd64.deb                 # export ./app-deb/PKGBUILD
 ```
 
 The historic `-u`, `-s` and `-w` options are accepted and ignored: no local
@@ -141,7 +145,7 @@ database needs to be updated any more.
 
 ### apt / dnf command translator
 
-debtap-mod installs `apt`, `apt-get`, `apt-cache`, `apt-mark`, `dpkg`, `dnf`
+big-pkg-installer installs `apt`, `apt-get`, `apt-cache`, `apt-mark`, `dpkg`, `dnf`
 and `yum` in `/usr/local/bin`. Commands typed out of habit are not rejected:
 each one shows its pacman and pamac equivalents, then runs the right one.
 
@@ -157,7 +161,7 @@ terminal width; `apt help purge` shows only the rows about one command.
 </p>
 
 - `apt install ./app.deb`, `dpkg -i app.deb`, `dnf install ./app.rpm` and
-  `yum localinstall app.rpm` convert and install the file with debtap-mod.
+  `yum localinstall app.rpm` convert and install the file with big-pkg-installer.
 - `apt update` and `dnf check-update` only check for updates
   (`pamac checkupdates`); running `pacman -Sy` alone can cause partial upgrades.
 - Changes run through pamac as a regular user, or pacman when already root.
@@ -175,9 +179,9 @@ terminal width; `apt help purge` shows only the rows about one command.
 | **Read** | `.deb`: the `ar` container and the `control` archive. `.rpm`: the lead, signature and main headers (name, epoch, version, release, dependencies, scriptlets, configuration files, owners). Source RPMs are refused. |
 | **Extract** | `.deb`: `data.tar` (gzip, xz, bzip2, zstd, lzma or plain). `.rpm`: the cpio payload in the classic or the "stripped" format used by RPM v6 and by packages with very large files. Entries escaping the package through `..` or a symlink are refused; modes, hard links and non-root owners are kept. |
 | **Layout** | Merges `/bin`, `/sbin`, `/usr/sbin`, `/lib`, `/lib64`, `/usr/lib64` and the Debian multiarch directory into the Arch hierarchy, rewriting relative symlinks. Removes files that only make sense on the original distribution (lintian overrides, `/usr/lib/.build-id`, APT/YUM repository files). |
-| **Dependencies** | Scans every ELF file, ignoring binaries for other architectures or C libraries (the ARM, musl and Android prebuilds Electron apps ship). Libraries are resolved with `ldconfig` and `pacman -F`; libraries loaded with `dlopen()` become optional dependencies. Declared dependencies are mapped through [`debian-names.toml`](usr/share/debtap-mod/debtap_mod/data/debian-names.toml) and [`rpm-names.toml`](usr/share/debtap-mod/debtap_mod/data/rpm-names.toml), including RPM rich dependencies such as `(git or mercurial)`. |
+| **Dependencies** | Scans every ELF file, ignoring binaries for other architectures or C libraries (the ARM, musl and Android prebuilds Electron apps ship). Libraries are resolved with `ldconfig` and `pacman -F`; libraries loaded with `dlopen()` become optional dependencies. Declared dependencies are mapped through [`debian-names.toml`](usr/share/big-pkg-installer/big_pkg_installer/data/debian-names.toml) and [`rpm-names.toml`](usr/share/big-pkg-installer/big_pkg_installer/data/rpm-names.toml), including RPM rich dependencies such as `(git or mercurial)`. |
 | **Scripts** | Maintainer scripts are embedded verbatim in the `.install` file and called as dpkg (`configure`, `upgrade <old>`, `remove`) or rpm (`1` install, `2` upgrade, `0` removal) would call them. Shims for `dpkg`, debconf, `deb-systemd-helper`, `adduser`, `update-alternatives`, `alternatives`, `semanage`, `restorecon`, `dnf`/`yum` come first in `PATH`. Lua scriptlets, which only run inside rpm, are skipped with a note. Repository files created by vendor scripts are removed. |
-| **Build** | Writes a PKGBUILD and runs `makepkg` with zstd compression in `~/.cache/debtap-mod`. Work directories are always cleaned up, also after an interrupted run. |
+| **Build** | Writes a PKGBUILD and runs `makepkg` with zstd compression in `~/.cache/big-pkg-installer`. Work directories are always cleaned up, also after an interrupted run. |
 | **Install** | Previews the transaction with `pacman -Up`, checks for file conflicts, runs `pkexec pacman -U` (or `sudo` from a terminal) and verifies the installed version with `pacman -Q`. |
 
 ### Package naming
@@ -191,7 +195,7 @@ upgrade never replaces it with an unrelated repository package of the same name.
 
 Some vendor packages need small fixes: extra dependencies, a different name,
 files to remove or add, scripts to skip. They live in
-[`quirks.toml`](usr/share/debtap-mod/debtap_mod/data/quirks.toml) and are
+[`quirks.toml`](usr/share/big-pkg-installer/big_pkg_installer/data/quirks.toml) and are
 matched against the original package name, for both formats:
 
 ```toml
@@ -223,7 +227,7 @@ repositories do not provide. The screen lists what pacman could not find;
 look for an AUR package or a Flatpak of the program.
 
 **The installation failed.** Open **Details** on the error screen, or run
-`debtap-mod` from a terminal for the full pacman output. Common causes are
+`big-pkg-installer` from a terminal for the full pacman output. Common causes are
 files that already belong to another package and a pacman database locked by
 another package manager.
 
@@ -242,17 +246,17 @@ sudo pacman -R chatgpt-deb
 The application runs directly from a checkout:
 
 ```sh
-usr/bin/debtap-gui some.deb
-usr/bin/debtap-mod -n -o /tmp/out some.rpm
+usr/bin/big-pkg-installer-gui some.deb
+usr/bin/big-pkg-installer -n -o /tmp/out some.rpm
 usr/local/bin/apt help
 ```
 
 Project layout:
 
 ```text
-usr/bin/                       launchers (debtap-mod, debtap-gui, gdebi-gtk)
+usr/bin/                       launchers (big-pkg-installer, big-pkg-installer-gui, gdebi-gtk)
 usr/local/bin/                 apt, apt-get, apt-cache, apt-mark, dpkg, dnf, yum
-usr/share/debtap-mod/debtap_mod/
+usr/share/big-pkg-installer/big_pkg_installer/
     package.py                 opens .deb or .rpm behind one interface
     debfile.py                 .deb reader
     rpmfile.py                 .rpm reader (headers, classic and stripped cpio)
@@ -286,24 +290,24 @@ they are skipped when it is not installed.
 
 ### Translations
 
-User-facing strings use gettext (domain `debtap-mod`). Catalogs for 28
+User-facing strings use gettext (domain `big-pkg-installer`). Catalogs for 28
 languages live in `locale/`, and the compiled `.mo` files in
 `usr/share/locale/`. After changing strings, regenerate the template and
 compile the catalogs:
 
 ```sh
-xgettext --package-name=debtap-mod --no-location -L Python -k_ -kngettext:1,2 \
-    -o locale/debtap-mod.pot $(find usr/share/debtap-mod -name '*.py')
+xgettext --package-name=big-pkg-installer --no-location -L Python -k_ -kngettext:1,2 \
+    -o locale/big-pkg-installer.pot $(find usr/share/big-pkg-installer -name '*.py')
 for po in locale/*.po; do
     lang=$(basename "$po" .po)
-    msgmerge -U "$po" locale/debtap-mod.pot
-    msgfmt -o "usr/share/locale/$lang/LC_MESSAGES/debtap-mod.mo" "$po"
+    msgmerge -U "$po" locale/big-pkg-installer.pot
+    msgfmt -o "usr/share/locale/$lang/LC_MESSAGES/big-pkg-installer.mo" "$po"
 done
 ```
 
 ## Credits
 
-debtap-mod started as a fork of [debtap](https://github.com/helixarch/debtap)
+big-pkg-installer started as a fork of [debtap](https://github.com/helixarch/debtap)
 by George Savvidis. It is maintained by the [BigLinux](https://www.biglinux.com.br)
 community. Version 4 is a complete rewrite in Python.
 

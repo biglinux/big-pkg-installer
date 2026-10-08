@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,8 +59,8 @@ msgstr "{question} [y/N] "
 msgid "yes"
 msgstr "y"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "debtap-mod는 더 이상 로컬 데이터베이스가 필요하지 않습니다. 업데이트할 것이 없습니다."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "big-pkg-installer는 더 이상 로컬 데이터베이스가 필요하지 않습니다. 업데이트할 것이 없습니다."
 
 msgid "no package file given"
 msgstr "패키지 파일이 지정되지 않았습니다"
@@ -496,8 +496,8 @@ msgstr "응용 프로그램을 시작할 수 없습니다"
 msgid "The RPM package is truncated or corrupted."
 msgstr "RPM 패키지가 잘렸거나 손상되었습니다."
 
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "makepkg는 root로 실행할 수 없습니다. debtap-mod를 일반 사용자로 실행하세요."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "makepkg는 root로 실행할 수 없습니다. big-pkg-installer를 일반 사용자로 실행하세요."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg가 종료 코드 {code}(으)로 실패했습니다"
@@ -520,8 +520,8 @@ msgstr "설치할 패키지를 지정하세요. 예: {example}"
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac은 AUR과 Flatpak의 프로그램도 찾습니다: {cmd}"
 
-msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb 및 .rpm 패키지는 debtap-mod에서 네이티브 pacman 패키지로 변환됩니다."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr ".deb 및 .rpm 패키지는 big-pkg-installer에서 네이티브 pacman 패키지로 변환됩니다."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "이 명령은 일반 사용자로 실행하세요(sudo 없이)."
@@ -697,8 +697,8 @@ msgstr "패키지 형식"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt는 .deb 파일, dnf는 .rpm, pacman은 .pkg.tar.zst를 사용합니다."
 
-msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb 및 .rpm 파일은 debtap-mod로 변환 및 설치됩니다(더블 클릭도 가능)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr ".deb 및 .rpm 파일은 big-pkg-installer로 변환 및 설치됩니다(더블 클릭도 가능)."
 
 msgid "Programs from the community"
 msgstr "커뮤니티 프로그램"

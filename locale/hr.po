@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,8 +59,8 @@ msgstr "{question} [d/N] "
 msgid "yes"
 msgstr "da"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "debtap-mod više ne treba lokalnu bazu podataka; nema se što ažurirati."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "big-pkg-installer više ne treba lokalnu bazu podataka; nema se što ažurirati."
 
 msgid "no package file given"
 msgstr "nije zadana datoteka paketa"
@@ -500,8 +500,8 @@ msgstr "Aplikacija se nije mogla pokrenuti"
 msgid "The RPM package is truncated or corrupted."
 msgstr "RPM paket je skraćen ili oštećen."
 
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "makepkg se ne može pokrenuti kao root; pokrenite debtap-mod kao običan korisnik."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "makepkg se ne može pokrenuti kao root; pokrenite big-pkg-installer kao običan korisnik."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg nije uspio s izlaznim kodom {code}"
@@ -524,8 +524,8 @@ msgstr "Navedite koji paket instalirati, na primjer: {example}"
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac pronalazi programe i u AUR-u i Flatpaku: {cmd}"
 
-msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
-msgstr "debtap-mod pretvara .deb i .rpm pakete u izvorne pacman pakete."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr "big-pkg-installer pretvara .deb i .rpm pakete u izvorne pacman pakete."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Pokrenite ovu naredbu kao običan korisnik (bez sudo)."
@@ -701,8 +701,8 @@ msgstr "Vrste paketa"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt koristi .deb datoteke, dnf koristi .rpm, pacman koristi .pkg.tar.zst."
 
-msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
-msgstr "Datoteke .deb i .rpm pretvaraju se i instaliraju pomoću debtap-mod (ili dvostrukim klikom)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr "Datoteke .deb i .rpm pretvaraju se i instaliraju pomoću big-pkg-installer (ili dvostrukim klikom)."
 
 msgid "Programs from the community"
 msgstr "Programi zajednice"

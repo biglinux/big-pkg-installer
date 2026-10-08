@@ -11,7 +11,7 @@ import pytest
 os.environ["LANGUAGE"] = "C"
 os.environ["LC_MESSAGES"] = "C"
 
-APP_DIR = Path(__file__).resolve().parents[1] / "usr/share/debtap-mod"
+APP_DIR = Path(__file__).resolve().parents[1] / "usr/share/big-pkg-installer"
 sys.path.insert(0, str(APP_DIR))
 
 from compression import zstd  # noqa: E402
@@ -202,15 +202,15 @@ printf '[Desktop Entry]\\nType=Application\\nName=Hello RPM\\nExec={name}\\nIcon
 
 RPM_SCRIPTS = """\
 %pre
-echo "pre $1" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+echo "pre $1" >> "${BIG_PKG_TEST_LOG:-/dev/null}"
 %post
-echo "post $1" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+echo "post $1" >> "${BIG_PKG_TEST_LOG:-/dev/null}"
 %preun
-echo "preun $1" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+echo "preun $1" >> "${BIG_PKG_TEST_LOG:-/dev/null}"
 %postun
-echo "postun $1" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+echo "postun $1" >> "${BIG_PKG_TEST_LOG:-/dev/null}"
 %posttrans
-echo "posttrans" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+echo "posttrans" >> "${BIG_PKG_TEST_LOG:-/dev/null}"
 """
 
 

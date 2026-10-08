@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,8 +59,8 @@ msgstr "{question} [i/N] "
 msgid "yes"
 msgstr "igen"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "a debtap-mod-nak már nincs szüksége helyi adatbázisra; nincs mit frissíteni."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "a big-pkg-installer-nak már nincs szüksége helyi adatbázisra; nincs mit frissíteni."
 
 msgid "no package file given"
 msgstr "nincs megadva csomagfájl"
@@ -498,8 +498,8 @@ msgstr "Az alkalmazást nem sikerült elindítani"
 msgid "The RPM package is truncated or corrupted."
 msgstr "Az RPM csomag csonka vagy sérült."
 
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "a makepkg nem futtatható rootként; a debtap-mod-ot normál felhasználóként futtassa."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "a makepkg nem futtatható rootként; a big-pkg-installer-ot normál felhasználóként futtassa."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "a makepkg sikertelen volt, kilépési kód: {code}"
@@ -522,8 +522,8 @@ msgstr "Adja meg, melyik csomagot telepítse, például: {example}"
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "A pamac az AUR-ban és a Flatpakban is talál programokat: {cmd}"
 
-msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
-msgstr "A .deb és .rpm csomagokat a debtap-mod alakítja át natív pacman csomagokká."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr "A .deb és .rpm csomagokat a big-pkg-installer alakítja át natív pacman csomagokká."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Futtassa ezt a parancsot hétköznapi felhasználóként (sudo nélkül)."
@@ -699,8 +699,8 @@ msgstr "Csomagtípusok"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "Az apt .deb fájlokat, a dnf .rpm fájlokat, a pacman .pkg.tar.zst fájlokat használ."
 
-msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
-msgstr "A .deb és .rpm fájlok átalakítása és telepítése a debtap-mod segítségével történik (vagy dupla kattintással)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr "A .deb és .rpm fájlok átalakítása és telepítése a big-pkg-installer segítségével történik (vagy dupla kattintással)."
 
 msgid "Programs from the community"
 msgstr "Közösségi programok"

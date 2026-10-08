@@ -3,9 +3,9 @@ import subprocess
 
 import pytest
 
+from big_pkg_installer import installer
+from big_pkg_installer.installer import InstallProgress, preview_transaction
 from conftest import has_makepkg
-from debtap_mod import installer
-from debtap_mod.installer import InstallProgress, preview_transaction
 
 PACMAN_LOG = """loading packages...
 resolving dependencies...
@@ -84,12 +84,12 @@ def test_preview_reports_unknown_dependency(tmp_path):
 
 def test_settings_roundtrip(tmp_path, monkeypatch):
     monkeypatch.setenv("XDG_CONFIG_HOME", str(tmp_path))
-    from debtap_mod.settings import Settings
+    from big_pkg_installer.settings import Settings
 
     assert Settings.load().save_copy is False
     Settings(save_copy=True, save_dir="/srv/pkgs").save()
     loaded = Settings.load()
     assert loaded.save_copy and str(loaded.save_path) == "/srv/pkgs"
-    (tmp_path / "debtap-mod" / "settings.json").write_text("{broken")
+    (tmp_path / "big-pkg-installer" / "settings.json").write_text("{broken")
     assert Settings.load() == Settings()
     assert json.loads(json.dumps({"ok": 1}))

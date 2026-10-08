@@ -1,19 +1,19 @@
 import subprocess
 
-from debtap_mod.scripts import SCRIPTS_MARKER, build_install
+from big_pkg_installer.scripts import SCRIPTS_MARKER, build_install
 
 POSTINST = """#!/bin/sh
 set -e
 . /usr/share/debconf/confmodule
 db_get hello/question
-if dpkg --compare-versions "$2" lt 2.0; then echo upgraded-from-old >> "$DEBTAP_TEST_LOG"; fi
+if dpkg --compare-versions "$2" lt 2.0; then echo upgraded-from-old >> "$BIG_PKG_TEST_LOG"; fi
 update-alternatives --install /usr/bin/x-www-browser x /opt/x 50
 deb-systemd-helper enable hello.service
-echo "postinst $1 [$2] arch=$(dpkg --print-architecture)" >> "$DEBTAP_TEST_LOG"
+echo "postinst $1 [$2] arch=$(dpkg --print-architecture)" >> "$BIG_PKG_TEST_LOG"
 """
 
 PRERM = """#!/bin/bash
-echo "prerm $1" >> "$DEBTAP_TEST_LOG"
+echo "prerm $1" >> "$BIG_PKG_TEST_LOG"
 """
 
 
@@ -24,7 +24,7 @@ def _run(install_text: str, function: str, *args: str, tmp_path) -> str:
     script.write_text(install_text)
     cmd = f'. "{script}"; {function} ' + " ".join(f"'{a}'" for a in args)
     result = subprocess.run(
-        ["bash", "-c", cmd], env={"PATH": "/usr/bin:/bin", "DEBTAP_TEST_LOG": str(log)}, capture_output=True, text=True
+        ["bash", "-c", cmd], env={"PATH": "/usr/bin:/bin", "BIG_PKG_TEST_LOG": str(log)}, capture_output=True, text=True
     )
     assert result.returncode == 0, result.stderr
     return log.read_text()
@@ -58,9 +58,9 @@ def test_failing_script_does_not_break_transaction(tmp_path):
 
 
 def test_heredoc_delimiter_cannot_collide(tmp_path):
-    body = "#!/bin/sh\necho DEBTAP_EOF_ >> \"$DEBTAP_TEST_LOG\"\n"
+    body = "#!/bin/sh\necho BIG_PKG_EOF_ >> \"$BIG_PKG_TEST_LOG\"\n"
     install = build_install({"postinst": body}, "x", "amd64").text
-    assert _run(install, "post_install", "1", tmp_path=tmp_path) == "DEBTAP_EOF_\n"
+    assert _run(install, "post_install", "1", tmp_path=tmp_path) == "BIG_PKG_EOF_\n"
 
 
 def test_dash_shebang_and_apt_note():

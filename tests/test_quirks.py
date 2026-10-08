@@ -1,4 +1,4 @@
-from debtap_mod.quirks import Quirk, load_quirks, quirk_for
+from big_pkg_installer.quirks import Quirk, load_quirks, quirk_for
 
 
 def test_bundled_quirks_load():

@@ -1,7 +1,1 @@
-#!/bin/bash
-# Convert a .deb package into a pacman package and install it (command line).
-SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
-APP_DIR="$SCRIPT_DIR/../share/debtap-mod"
-[[ -d "$APP_DIR/debtap_mod" ]] || APP_DIR="/usr/share/debtap-mod"
-export PYTHONPATH="$APP_DIR${PYTHONPATH:+:$PYTHONPATH}"
-exec python3 -m debtap_mod.cli "$@"
+big-pkg-installer

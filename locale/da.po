@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,8 +59,8 @@ msgstr "{question} [j/N] "
 msgid "yes"
 msgstr "ja"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "debtap-mod behøver ikke længere en lokal database; intet at opdatere."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "big-pkg-installer behøver ikke længere en lokal database; intet at opdatere."
 
 msgid "no package file given"
 msgstr "ingen pakkefil angivet"
@@ -498,8 +498,8 @@ msgstr "Programmet kunne ikke startes"
 msgid "The RPM package is truncated or corrupted."
 msgstr "RPM-pakken er afkortet eller beskadiget."
 
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "makepkg kan ikke køre som root; kør debtap-mod som almindelig bruger."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "makepkg kan ikke køre som root; kør big-pkg-installer som almindelig bruger."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg mislykkedes med afslutningskode {code}"
@@ -522,8 +522,8 @@ msgstr "Angiv hvilken pakke der skal installeres, for eksempel: {example}"
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac finder også programmer i AUR og Flatpak: {cmd}"
 
-msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb- og .rpm-pakker konverteres til indbyggede pacman-pakker af debtap-mod."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr ".deb- og .rpm-pakker konverteres til indbyggede pacman-pakker af big-pkg-installer."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Kør denne kommando som almindelig bruger (uden sudo)."
@@ -699,8 +699,8 @@ msgstr "Pakketyper"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt bruger .deb-filer, dnf bruger .rpm, pacman bruger .pkg.tar.zst."
 
-msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb- og .rpm-filer konverteres og installeres med debtap-mod (eller ved dobbeltklik)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr ".deb- og .rpm-filer konverteres og installeres med big-pkg-installer (eller ved dobbeltklik)."
 
 msgid "Programs from the community"
 msgstr "Programmer fra fællesskabet"

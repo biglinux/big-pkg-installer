@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,8 +59,8 @@ msgstr "{question} [o/N] "
 msgid "yes"
 msgstr "oui"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "debtap-mod n’a plus besoin de base de données locale ; rien à mettre à jour."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "big-pkg-installer n’a plus besoin de base de données locale ; rien à mettre à jour."
 
 msgid "no package file given"
 msgstr "aucun fichier de paquet indiqué"
@@ -498,8 +498,8 @@ msgstr "L’application n’a pas pu être démarrée"
 msgid "The RPM package is truncated or corrupted."
 msgstr "Le paquet RPM est tronqué ou corrompu."
 
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "makepkg ne peut pas s’exécuter en tant que root ; lancez debtap-mod en tant qu’utilisateur normal."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "makepkg ne peut pas s’exécuter en tant que root ; lancez big-pkg-installer en tant qu’utilisateur normal."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg a échoué avec le code de sortie {code}"
@@ -522,8 +522,8 @@ msgstr "Indiquez quel paquet installer, par exemple : {example}"
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac trouve aussi des programmes dans l’AUR et Flatpak : {cmd}"
 
-msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
-msgstr "Les paquets .deb et .rpm sont convertis en paquets pacman natifs par debtap-mod."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr "Les paquets .deb et .rpm sont convertis en paquets pacman natifs par big-pkg-installer."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Exécutez cette commande en tant qu’utilisateur normal (sans sudo)."
@@ -699,8 +699,8 @@ msgstr "Types de paquets"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt utilise des fichiers .deb, dnf des .rpm, pacman des .pkg.tar.zst."
 
-msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
-msgstr "Les fichiers .deb et .rpm sont convertis et installés avec debtap-mod (ou par un double-clic)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr "Les fichiers .deb et .rpm sont convertis et installés avec big-pkg-installer (ou par un double-clic)."
 
 msgid "Programs from the community"
 msgstr "Programmes de la communauté"
