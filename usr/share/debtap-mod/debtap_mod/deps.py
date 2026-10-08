@@ -1,9 +1,10 @@
-"""Work out pacman dependencies for an extracted Debian package."""
+"""Work out pacman dependencies for an extracted .deb or .rpm package."""
 
 import os
 import re
 import tomllib
 from collections import deque
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from functools import cache
 from pathlib import Path
@@ -29,6 +30,25 @@ def name_tables() -> tuple[dict[str, str], dict[str, str]]:
     return data.get("map", {}), data.get("soname", {})
 
 
+@cache
+def rpm_name_table() -> dict[str, str]:
+    with open(DATA_DIR / "rpm-names.toml", "rb") as f:
+        return tomllib.load(f).get("map", {})
+
+
+@dataclass
+class DeclaredDeps:
+    """Dependencies written in the package metadata, in the source naming."""
+
+    required: list[list[str]]
+    recommended: list[list[str]]
+    suggested: list[list[str]]
+    mapper: Callable[[str, frozenset[str]], str | None]
+    # names the ELF scan already handles (libraries): no warning if unmapped
+    covered: Callable[[str], bool]
+    origin: str
+
+
 @dataclass
 class ScannedElf:
     path: str  # relative to the package root
@@ -40,7 +60,7 @@ class DependencyReport:
     depends: list[str] = field(default_factory=list)
     optdepends: dict[str, str] = field(default_factory=dict)
     unresolved_sonames: list[str] = field(default_factory=list)
-    unresolved_debian: list[str] = field(default_factory=list)
+    unresolved_declared: list[str] = field(default_factory=list)
     foreign_binaries: int = 0
     elf_count: int = 0
 
@@ -74,6 +94,74 @@ def map_debian_name(name: str, sync: frozenset[str]) -> str | None:
     if bare in sync and not bare.startswith("lib"):
         return bare
     return None
+
+
+def debian_declared(control: dict[str, str]) -> DeclaredDeps:
+    return DeclaredDeps(
+        required=parse_relationship(control.get("pre-depends", "")) + parse_relationship(control.get("depends", "")),
+        recommended=parse_relationship(control.get("recommends", "")),
+        suggested=parse_relationship(control.get("suggests", "")),
+        mapper=map_debian_name,
+        covered=lambda name: name.startswith("lib"),
+        origin="Debian",
+    )
+
+
+def map_rpm_name(name: str, sync: frozenset[str]) -> str | None:
+    """Fedora/openSUSE package name or file path -> Arch package."""
+    table = rpm_name_table()
+    if name in table:
+        return table[name]
+    if name.startswith("/"):
+        if os.path.lexists(name):
+            return pacman.owners_of([os.path.realpath(name)]).get(os.path.realpath(name))
+        return None
+    if name.startswith("python3-") and "python-" + name[8:] in sync:
+        return "python-" + name[8:]
+    if name.startswith("perl-") and name in sync:
+        return name
+    lowered = name.lower()
+    if lowered in sync:
+        return lowered
+    return None
+
+
+def _rpm_covered(name: str) -> bool:
+    # sonames ("libc.so.6()(64bit)"), rpmlib()/config() markers and libraries
+    return "(" in name or name.startswith(("lib", "/", "rpmlib", "config"))
+
+
+def parse_rpm_requirement(value: str) -> list[list[str]]:
+    """Plain names, or RPM rich dependencies such as "(a or b)", into groups."""
+    value = value.strip()
+    if not value.startswith("("):
+        return [[value]] if value else []
+    expr = value.strip("() ")
+    for keyword in (" if ", " unless ", " with ", " without "):
+        expr = expr.split(keyword, 1)[0]
+    groups = []
+    for part in expr.split(" and "):
+        names = [alt.strip("() ").split()[0] for alt in part.split(" or ") if alt.strip("() ")]
+        if names:
+            groups.append(names)
+    return groups
+
+
+def rpm_declared(requires: list[str], recommends: list[str], suggests: list[str]) -> DeclaredDeps:
+    def groups(values):
+        result = []
+        for value in values:
+            result.extend(parse_rpm_requirement(value))
+        return result
+
+    return DeclaredDeps(
+        required=groups(requires),
+        recommended=groups(recommends),
+        suggested=groups(suggests),
+        mapper=map_rpm_name,
+        covered=_rpm_covered,
+        origin="RPM",
+    )
 
 
 def _package_usable(name: str, sync: frozenset[str], installed: frozenset[str]) -> bool:
@@ -155,11 +243,13 @@ def resolve_sonames(sonames: set[str], machine: int, elfclass: int) -> tuple[dic
 
 def compute_dependencies(
     root: Path,
-    control: dict[str, str],
+    declared: DeclaredDeps | dict[str, str],
     target_arch: str,
     self_names: set[str],
     use_elf: bool = True,
 ) -> DependencyReport:
+    if isinstance(declared, dict):
+        declared = debian_declared(declared)
     report = DependencyReport()
     sync = pacman.sync_packages()
     installed = pacman.installed_packages()
@@ -221,24 +311,23 @@ def compute_dependencies(
             if pkg and pkg not in depends:
                 optional.setdefault(pkg, f"used by {user}")
 
-    for field_name in ("pre-depends", "depends"):
-        for group in parse_relationship(control.get(field_name, "")):
-            mapped = [map_debian_name(n, sync) for n in group]
-            if any(m == "" for m in mapped):
-                continue
-            usable = [m for m in mapped if m and _package_usable(m, sync, installed)]
-            if usable:
-                depends.add(usable[0])
-            elif not all(n.startswith("lib") for n in group):
-                # library alternatives are already covered by the ELF scan
-                report.unresolved_debian.append(" | ".join(group))
+    for group in declared.required:
+        mapped = [declared.mapper(n, sync) for n in group]
+        if any(m == "" for m in mapped):
+            continue
+        usable = [m for m in mapped if m and _package_usable(m, sync, installed)]
+        if usable:
+            depends.add(usable[0])
+        elif not all(declared.covered(n) for n in group):
+            # library alternatives are already covered by the ELF scan
+            report.unresolved_declared.append(" | ".join(group))
 
-    for field_name in ("recommends", "suggests"):
-        for group in parse_relationship(control.get(field_name, "")):
+    for kind, groups in (("recommended", declared.recommended), ("suggested", declared.suggested)):
+        for group in groups:
             for name in group:
-                mapped = map_debian_name(name, sync)
+                mapped = declared.mapper(name, sync)
                 if mapped and _package_usable(mapped, sync, installed) and mapped not in depends:
-                    optional.setdefault(mapped, f"{field_name[:-1]}ed by the Debian package")
+                    optional.setdefault(mapped, f"{kind} by the {declared.origin} package")
                     break
 
     depends -= self_names

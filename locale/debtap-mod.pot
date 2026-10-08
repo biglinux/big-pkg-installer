@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debtap-mod\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 14:05-0300\n"
+"POT-Creation-Date: 2026-10-08 00:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,10 +39,10 @@ msgstr ""
 msgid "Error:"
 msgstr ""
 
-msgid "Convert a .deb package into a pacman package and install it."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
 msgstr ""
 
-msgid "the .deb file"
+msgid "the .deb or .rpm file"
 msgstr ""
 
 msgid "do not ask questions, but open the install script for review"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "keep the built package in DIR"
 msgstr ""
 
-msgid "also write a PKGBUILD next to the .deb"
+msgid "also write a PKGBUILD next to the package file"
 msgstr ""
 
 msgid "only write a PKGBUILD, do not build"
@@ -73,7 +73,7 @@ msgstr ""
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr ""
 
-msgid "no .deb file given"
+msgid "no package file given"
 msgstr ""
 
 msgid "the -s and -w options are obsolete and were ignored"
@@ -152,7 +152,7 @@ msgid "Libraries not found in the repositories: {list}"
 msgstr ""
 
 #, python-brace-format
-msgid "Debian dependencies without an equivalent here: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
 msgstr ""
 
 #, python-brace-format
@@ -188,10 +188,62 @@ msgstr ""
 msgid "The control file has no Package or Version field."
 msgstr ""
 
-msgid "Install .deb package"
+msgid "Package Installer"
 msgstr ""
 
-msgid "Converts Debian packages into native pacman packages and installs them."
+msgid "original debtap"
+msgstr ""
+
+#, python-brace-format
+msgid "About {name}"
+msgstr ""
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr ""
+
+msgid "Credits"
+msgstr ""
+
+msgid "License"
+msgstr ""
+
+msgid "Project website"
+msgstr ""
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Converted packages"
+msgstr ""
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr ""
+
+msgid "Keep a copy of the converted package"
+msgstr ""
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr ""
+
+msgid "Folder"
+msgstr ""
+
+msgid "Choose…"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Copy details"
 msgstr ""
 
 msgid "Extracting files"
@@ -200,7 +252,7 @@ msgstr ""
 msgid "Adapting folders to this system"
 msgstr ""
 
-msgid "Finding dependencies"
+msgid "Checking dependencies"
 msgstr ""
 
 msgid "Preparing installation scripts"
@@ -209,37 +261,59 @@ msgstr ""
 msgid "Building the package"
 msgstr ""
 
-msgid "Waiting for authorization"
+msgid "Preparing the installation"
 msgstr ""
 
-msgid "Installing"
+#, python-brace-format
+msgid "Downloading packages ({done} of {total})"
 msgstr ""
 
-msgid "About"
+msgid "Downloading packages"
+msgstr ""
+
+msgid "Installing packages"
+msgstr ""
+
+msgid "Configuring the system"
+msgstr ""
+
+msgid "Finishing"
+msgstr ""
+
+msgid "About the Installer"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Send feedback"
+msgstr ""
+
+msgid "Report a problem"
 msgstr ""
 
 msgid "Main menu"
 msgstr ""
 
-msgid "Choose a .deb file…"
+msgid "Copied"
 msgstr ""
 
-msgid "Install a .deb package"
+msgid "Install a .deb or .rpm package"
 msgstr ""
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
 msgstr ""
 
-msgid "Details"
+msgid "Choose a package file…"
 msgstr ""
 
-msgid "Cancel"
+msgid "Or drag and drop the file here"
 msgstr ""
 
-msgid "Prefer native packages when available"
+msgid "Selected package"
 msgstr ""
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
+msgid "Review the package information before continuing."
 msgstr ""
 
 #, python-brace-format
@@ -252,7 +326,7 @@ msgstr ""
 msgid "Open"
 msgstr ""
 
-msgid "Package"
+msgid "Package name"
 msgstr ""
 
 msgid "Version"
@@ -261,7 +335,7 @@ msgstr ""
 msgid "Architecture"
 msgstr ""
 
-msgid "Installed size"
+msgid "Size"
 msgstr ""
 
 msgid "Maintainer"
@@ -273,43 +347,22 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-msgid "Review before installing"
+msgid "Cancel"
 msgstr ""
 
-msgid "Show the dependencies and the scripts that will run as administrator"
+msgid "Continue"
 msgstr ""
 
-msgid "Install"
-msgstr ""
-
-msgid "Ready to install"
-msgstr ""
-
-msgid "Check what will be installed."
-msgstr ""
-
-msgid "Package name on this system"
-msgstr ""
-
-msgid "Package size"
-msgstr ""
-
-msgid "Applications menu"
-msgstr ""
-
-msgid "No menu entry"
-msgstr ""
-
-msgid "Warnings"
-msgstr ""
-
-msgid "Notes"
+msgid "This may take a few moments…"
 msgstr ""
 
 msgid "Dependencies"
 msgstr ""
 
-msgid "Required"
+msgid "The following packages will be installed so the application works correctly."
+msgstr ""
+
+msgid "New packages to install"
 msgstr ""
 
 #, python-brace-format
@@ -318,7 +371,25 @@ msgid_plural "{n} packages"
 msgstr[0] ""
 msgstr[1] ""
 
-msgid "will be downloaded"
+msgid "converted from the package file"
+msgstr ""
+
+msgid "Other information"
+msgstr ""
+
+#, python-brace-format
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Package name on this system"
+msgstr ""
+
+msgid "Applications menu"
+msgstr ""
+
+msgid "No menu entry"
 msgstr ""
 
 msgid "Optional"
@@ -327,52 +398,129 @@ msgstr ""
 msgid "Scripts"
 msgstr ""
 
-msgid "These commands from the Debian package run as administrator during installation."
+msgid "These commands from the package run as administrator during installation."
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Authentication required"
+msgstr ""
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr ""
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr ""
+
+msgid "Package installed successfully!"
 msgstr ""
 
 #, python-brace-format
-msgid "Open {name}"
+msgid "The package “{name}” was installed correctly on your system."
 msgstr ""
 
-msgid "Copy details"
+#, python-brace-format
+msgid "Version {version}"
+msgstr ""
+
+msgid "Open application"
+msgstr ""
+
+msgid "Show details"
 msgstr ""
 
 msgid "Close"
 msgstr ""
 
+msgid "Error details"
+msgstr ""
+
+msgid "Incompatible package"
+msgstr ""
+
+#, python-brace-format
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr ""
+
+msgid "Package"
+msgstr ""
+
+msgid "Package architecture"
+msgstr ""
+
+msgid "System architecture"
+msgstr ""
+
+#, python-brace-format
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr ""
+
 msgid "This file cannot be installed"
 msgstr ""
 
-msgid "Choose a .deb file"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
 msgstr ""
 
-msgid "Debian packages"
+msgid "Invalid file"
 msgstr ""
 
-msgid "Type your password in the window that will appear."
+msgid "The selected file is not a .deb or .rpm package."
 msgstr ""
 
-msgid "Missing dependencies are downloaded from the repositories."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
 msgstr ""
 
-msgid "Compressing the files, this may take a minute."
+msgid "Choose a package file"
 msgstr ""
 
-msgid "The package could not be converted"
+msgid "Packages (.deb, .rpm)"
+msgstr ""
+
+msgid "Preparing the package"
+msgstr ""
+
+#, python-brace-format
+msgid "Extracting files ({percent}%)"
 msgstr ""
 
 msgid "Cancelled"
 msgstr ""
 
-#, python-brace-format
-msgid "{name} is installed"
+msgid "The package could not be converted"
 msgstr ""
 
-#, python-brace-format
-msgid "The package {name} was installed. It has no entry in the applications menu."
+msgid "Dependencies are not available"
 msgstr ""
 
-msgid "Installation complete"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr ""
+
+msgid "Installing the package"
+msgstr ""
+
+msgid "Preparing the installation…"
+msgstr ""
+
+msgid "Downloading and installing dependencies…"
+msgstr ""
+
+msgid "Installing packages…"
+msgstr ""
+
+msgid "Configuring the system…"
+msgstr ""
+
+msgid "Finishing…"
+msgstr ""
+
+msgid "Please wait until the installation finishes"
 msgstr ""
 
 msgid "Authorization was not granted"
@@ -381,17 +529,13 @@ msgstr ""
 msgid "The installation failed"
 msgstr ""
 
-#, python-brace-format
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
+msgid "An error happened while installing the package. See the details below."
 msgstr ""
 
 msgid "The application could not be started"
 msgstr ""
 
-msgid "Copied"
-msgstr ""
-
-msgid "Please wait until the installation finishes"
+msgid "The RPM package is truncated or corrupted."
 msgstr ""
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
@@ -418,17 +562,11 @@ msgstr ""
 msgid "Tell which package to install, for example: {example}"
 msgstr ""
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ""
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr ""
-
 #, python-brace-format
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr ""
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
 msgstr ""
 
 msgid "Run this command as a regular user (without sudo)."
@@ -511,7 +649,10 @@ msgstr ""
 msgid "Install a downloaded file"
 msgstr ""
 
-msgid "Install a .deb file here"
+msgid "Install a native package file"
+msgstr ""
+
+msgid "Install a .deb or .rpm file here"
 msgstr ""
 
 msgid "Reinstall"
@@ -614,7 +755,7 @@ msgstr ""
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr ""
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
 msgstr ""
 
 msgid "Programs from the community"
@@ -637,9 +778,26 @@ msgstr ""
 msgid "Command not found: {cmd}"
 msgstr ""
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr ""
+
+msgid "Unsupported RPM payload format."
+msgstr ""
+
+msgid "The file is not an RPM package."
+msgstr ""
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
 msgstr ""
 
 #, python-brace-format
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
+msgstr ""
+
+#, python-brace-format
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr ""
+
+#, python-brace-format
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
 msgstr ""

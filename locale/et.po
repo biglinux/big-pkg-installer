@@ -29,11 +29,11 @@ msgstr "Hoiatus:"
 msgid "Error:"
 msgstr "Viga:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Teisendab .deb-paketi pacmani paketiks ja installib selle."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Teisendab .deb- või .rpm-paketi pacmani paketiks ja paigaldab selle."
 
-msgid "the .deb file"
-msgstr ".deb-fail"
+msgid "the .deb or .rpm file"
+msgstr "fail .deb või .rpm"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "ära küsi küsimusi, kuid ava installiskript ülevaatamiseks"
@@ -47,8 +47,8 @@ msgstr "ehita ainult pakett, ära installi seda"
 msgid "keep the built package in DIR"
 msgstr "hoia ehitatud paketti kaustas DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "kirjuta ka PKGBUILD .deb-faili kõrvale"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "kirjuta paketifaili kõrvale ka PKGBUILD"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "kirjuta ainult PKGBUILD, ära ehita"
@@ -62,8 +62,8 @@ msgstr "jah"
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod ei vaja enam kohalikku andmebaasi; midagi pole uuendada."
 
-msgid "no .deb file given"
-msgstr ".deb-faili pole antud"
+msgid "no package file given"
+msgstr "paketifaili pole antud"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "valikud -s ja -w on iganenud ning neid ignoreeriti"
@@ -125,8 +125,8 @@ msgstr "{count} teistele süsteemidele või arhitektuuridele ehitatud binaarfail
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Teeke ei leitud hoidlatest: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Debiani sõltuvused, millel pole siin vastet: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Paketi sõltuvused, millel siin vastet pole: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Failid, mis kuuluvad juba teistele pakettidele: {list}"
@@ -158,11 +158,62 @@ msgstr "Debiani paketis puudub control-fail."
 msgid "The control file has no Package or Version field."
 msgstr "Control-failis puudub väli Package või Version."
 
-msgid "Install .deb package"
-msgstr "Installi .deb-pakett"
+msgid "Package Installer"
+msgstr "Paketipaigaldaja"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Teisendab Debiani paketid natiivseteks pacmani pakettideks ja installib need."
+msgid "original debtap"
+msgstr "algne debtap"
+
+msgid "About {name}"
+msgstr "Teave: {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "Lihtne ja turvaline viis .deb- ja .rpm-pakettide paigaldamiseks."
+
+msgid "Credits"
+msgstr "Autorid"
+
+msgid "License"
+msgstr "Litsents"
+
+msgid "Project website"
+msgstr "Projekti veebileht"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "Loodud BigLinuxile GTK4/Libadwaita abil"
+
+msgid "About"
+msgstr "Teave"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "See programm on vaba tarkvara, mida levitatakse GNU General Public License versiooni 2 või uuema versiooni tingimustel. Sellel pole mingit garantiid."
+
+msgid "Preferences"
+msgstr "Eelistused"
+
+msgid "Converted packages"
+msgstr "Teisendatud paketid"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "Fail .deb või .rpm teisendatakse enne paigaldamist natiivseks paketiks."
+
+msgid "Keep a copy of the converted package"
+msgstr "Säilita teisendatud paketi koopia"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Kasulik selle hilisemaks või teises arvutis uuesti paigaldamiseks"
+
+msgid "Folder"
+msgstr "Kaust"
+
+msgid "Choose…"
+msgstr "Vali…"
+
+msgid "Details"
+msgstr "Üksikasjad"
+
+msgid "Copy details"
+msgstr "Kopeeri üksikasjad"
 
 msgid "Extracting files"
 msgstr "Failide lahtipakkimine"
@@ -170,8 +221,8 @@ msgstr "Failide lahtipakkimine"
 msgid "Adapting folders to this system"
 msgstr "Kaustade kohandamine sellele süsteemile"
 
-msgid "Finding dependencies"
-msgstr "Sõltuvuste otsimine"
+msgid "Checking dependencies"
+msgstr "Sõltuvuste kontrollimine"
 
 msgid "Preparing installation scripts"
 msgstr "Installiskriptide ettevalmistamine"
@@ -179,38 +230,59 @@ msgstr "Installiskriptide ettevalmistamine"
 msgid "Building the package"
 msgstr "Paketi ehitamine"
 
-msgid "Waiting for authorization"
-msgstr "Ootan volitust"
+msgid "Preparing the installation"
+msgstr "Paigalduse ettevalmistamine"
 
-msgid "Installing"
-msgstr "Installimine"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Pakettide allalaadimine ({done}/{total})"
 
-msgid "About"
-msgstr "Teave"
+msgid "Downloading packages"
+msgstr "Pakettide allalaadimine"
+
+msgid "Installing packages"
+msgstr "Pakettide paigaldamine"
+
+msgid "Configuring the system"
+msgstr "Süsteemi seadistamine"
+
+msgid "Finishing"
+msgstr "Lõpetamine"
+
+msgid "About the Installer"
+msgstr "Teave paigaldaja kohta"
+
+msgid "Help"
+msgstr "Abi"
+
+msgid "Send feedback"
+msgstr "Saada tagasisidet"
+
+msgid "Report a problem"
+msgstr "Teata probleemist"
 
 msgid "Main menu"
 msgstr "Peamenüü"
 
-msgid "Choose a .deb file…"
-msgstr "Vali .deb-fail…"
+msgid "Copied"
+msgstr "Kopeeritud"
 
-msgid "Install a .deb package"
-msgstr "Installi .deb-pakett"
+msgid "Install a .deb or .rpm package"
+msgstr "Paigalda .deb- või .rpm-pakett"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Ava Debiani pakett või lohista see siia. See teisendatakse selle süsteemi jaoks natiivseks paketiks ja installitakse."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Vali arvutist .deb- või .rpm-fail, et paigaldada see oma Linuxi süsteemi lihtsalt ja turvaliselt."
 
-msgid "Details"
-msgstr "Üksikasjad"
+msgid "Choose a package file…"
+msgstr "Vali paketifail…"
 
-msgid "Cancel"
-msgstr "Tühista"
+msgid "Or drag and drop the file here"
+msgstr "Või lohista fail siia"
 
-msgid "Prefer native packages when available"
-msgstr "Eelista natiivseid pakette, kui need on saadaval"
+msgid "Selected package"
+msgstr "Valitud pakett"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Süsteemi hoidlate programmid, Flatpak või AppImage töötavad tavaliselt paremini. Teisendatud .deb-paketid ei pruugi töötada täiuslikult."
+msgid "Review the package information before continuing."
+msgstr "Enne jätkamist vaata paketi teave üle."
 
 msgid "“{name}” is available in the repositories"
 msgstr "„{name}“ on hoidlates saadaval"
@@ -221,8 +293,8 @@ msgstr "Soovitatav on installida natiivne pakett."
 msgid "Open"
 msgstr "Ava"
 
-msgid "Package"
-msgstr "Pakett"
+msgid "Package name"
+msgstr "Paketi nimi"
 
 msgid "Version"
 msgstr "Versioon"
@@ -230,8 +302,8 @@ msgstr "Versioon"
 msgid "Architecture"
 msgstr "Arhitektuur"
 
-msgid "Installed size"
-msgstr "Installitud maht"
+msgid "Size"
+msgstr "Suurus"
 
 msgid "Maintainer"
 msgstr "Hooldaja"
@@ -242,26 +314,42 @@ msgstr "Veebisait"
 msgid "Description"
 msgstr "Kirjeldus"
 
-msgid "Review before installing"
-msgstr "Vaata üle enne installimist"
+msgid "Cancel"
+msgstr "Tühista"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Näitab sõltuvusi ja skripte, mis käivitatakse administraatorina"
+msgid "Continue"
+msgstr "Jätka"
 
-msgid "Install"
-msgstr "Installi"
+msgid "This may take a few moments…"
+msgstr "See võib võtta hetke…"
 
-msgid "Ready to install"
-msgstr "Valmis installimiseks"
+msgid "Dependencies"
+msgstr "Sõltuvused"
 
-msgid "Check what will be installed."
-msgstr "Kontrolli, mida installitakse."
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Rakenduse korrektseks tööks paigaldatakse järgmised paketid."
+
+msgid "New packages to install"
+msgstr "Paigaldatavad uued paketid"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} pakett"
+msgstr[1] "{n} paketti"
+
+msgid "converted from the package file"
+msgstr "teisendatud paketifailist"
+
+msgid "Other information"
+msgstr "Muu teave"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} hoiatus"
+msgstr[1] "{n} hoiatust"
 
 msgid "Package name on this system"
 msgstr "Paketi nimi selles süsteemis"
-
-msgid "Package size"
-msgstr "Paketi suurus"
 
 msgid "Applications menu"
 msgstr "Rakenduste menüü"
@@ -269,76 +357,131 @@ msgstr "Rakenduste menüü"
 msgid "No menu entry"
 msgstr "Menüükirjet pole"
 
-msgid "Warnings"
-msgstr "Hoiatused"
-
-msgid "Notes"
-msgstr "Märkused"
-
-msgid "Dependencies"
-msgstr "Sõltuvused"
-
-msgid "Required"
-msgstr "Nõutavad"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} pakett"
-msgstr[1] "{n} paketti"
-
-msgid "will be downloaded"
-msgstr "laaditakse alla"
-
 msgid "Optional"
 msgstr "Valikulised"
 
 msgid "Scripts"
 msgstr "Skriptid"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Need Debiani paketi käsud käivitatakse installimise ajal administraatorina."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Need paketi käsud käivitatakse paigaldamise ajal administraatorina."
 
-msgid "Open {name}"
-msgstr "Ava {name}"
+msgid "Show"
+msgstr "Näita"
 
-msgid "Copy details"
-msgstr "Kopeeri üksikasjad"
+msgid "Back"
+msgstr "Tagasi"
+
+msgid "Install"
+msgstr "Installi"
+
+msgid "Authentication required"
+msgstr "Vajalik on autentimine"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Paigalduse jätkamiseks sisesta oma parool süsteemi autentimisaknas."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Pakettide paigaldamiseks on vaja administraatori õigusi."
+
+msgid "Package installed successfully!"
+msgstr "Pakett on edukalt paigaldatud!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "Pakett „{name}” paigaldati süsteemi õigesti."
+
+msgid "Version {version}"
+msgstr "Versioon {version}"
+
+msgid "Open application"
+msgstr "Ava rakendus"
+
+msgid "Show details"
+msgstr "Näita üksikasju"
 
 msgid "Close"
 msgstr "Sulge"
 
+msgid "Error details"
+msgstr "Vea üksikasjad"
+
+msgid "Incompatible package"
+msgstr "Ühildumatu pakett"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "See pakett on ehitatud arhitektuurile {deb_arch}, kuid sinu süsteem on {host}."
+
+msgid "Package"
+msgstr "Pakett"
+
+msgid "Package architecture"
+msgstr "Paketi arhitektuur"
+
+msgid "System architecture"
+msgstr "Süsteemi arhitektuur"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Seda paketti ei saa sellesse arvutisse paigaldada. Otsi arhitektuurile {host} mõeldud paketi versiooni."
+
 msgid "This file cannot be installed"
 msgstr "Seda faili ei saa installida"
 
-msgid "Choose a .deb file"
-msgstr "Vali .deb-fail"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Fail võib olla kahjustatud või ei ole kehtiv pakett. Laadi see uuesti alla või kontrolli, kust see pärineb."
 
-msgid "Debian packages"
-msgstr "Debiani paketid"
+msgid "Invalid file"
+msgstr "Vigane fail"
 
-msgid "Type your password in the window that will appear."
-msgstr "Sisesta oma parool avanevas aknas."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Valitud fail ei ole .deb- ega .rpm-pakett."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Puuduvad sõltuvused laaditakse alla hoidlatest."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "See paigaldaja töötab ainult .deb- ja .rpm-failidega (paketid Debiani, Ubuntu, Fedora, openSUSE ja nende tuletiste jaoks)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Pakin faile kokku, see võib võtta minuti."
+msgid "Choose a package file"
+msgstr "Vali paketifail"
 
-msgid "The package could not be converted"
-msgstr "Paketti ei õnnestunud teisendada"
+msgid "Packages (.deb, .rpm)"
+msgstr "Paketid (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Paketi ettevalmistamine"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Failide lahtipakkimine ({percent}%)"
 
 msgid "Cancelled"
 msgstr "Tühistatud"
 
-msgid "{name} is installed"
-msgstr "{name} on installitud"
+msgid "The package could not be converted"
+msgstr "Paketti ei õnnestunud teisendada"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "Pakett {name} installiti. Sellel pole rakenduste menüüs kirjet."
+msgid "Dependencies are not available"
+msgstr "Sõltuvused pole saadaval"
 
-msgid "Installation complete"
-msgstr "Installimine lõppes"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Mõnda selle programmi vajalikku paketti ei leitud hoidlatest."
+
+msgid "Installing the package"
+msgstr "Paketi paigaldamine"
+
+msgid "Preparing the installation…"
+msgstr "Paigalduse ettevalmistamine…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Sõltuvuste allalaadimine ja paigaldamine…"
+
+msgid "Installing packages…"
+msgstr "Pakettide paigaldamine…"
+
+msgid "Configuring the system…"
+msgstr "Süsteemi seadistamine…"
+
+msgid "Finishing…"
+msgstr "Lõpetamine…"
+
+msgid "Please wait until the installation finishes"
+msgstr "Palun oota, kuni installimine lõpeb"
 
 msgid "Authorization was not granted"
 msgstr "Volitust ei antud"
@@ -346,17 +489,14 @@ msgstr "Volitust ei antud"
 msgid "The installation failed"
 msgstr "Installimine ebaõnnestus"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman tagastas vea (kood {code}). Vaata üksikasju, et näha, mis juhtus."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Paketi paigaldamisel tekkis viga. Üksikasjad leiad allpool."
 
 msgid "The application could not be started"
 msgstr "Rakendust ei õnnestunud käivitada"
 
-msgid "Copied"
-msgstr "Kopeeritud"
-
-msgid "Please wait until the installation finishes"
-msgstr "Palun oota, kuni installimine lõpeb"
+msgid "The RPM package is truncated or corrupted."
+msgstr "RPM-pakett on lühendatud või riknenud."
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg ei saa root-kasutajana töötada; käivita debtap-mod tavakasutajana."
@@ -379,17 +519,11 @@ msgstr "Arch ei uuenda üksikuid pakette; kogu süsteemi uuendatakse korraga."
 msgid "Tell which package to install, for example: {example}"
 msgstr "Ütle, milline pakett paigaldada, näiteks: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm-paketid on mõeldud Fedorale/openSUSE-le ja neid ei saa siia paigaldada."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Otsi programmi hoidlatest (pamac search), Flathubist või AppImage'ina."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac leiab programme ka AUR-ist ja Flatpakist: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr "debtap-mod teisendab .deb-paketid natiivseteks pacmani pakettideks."
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
+msgstr "debtap-mod teisendab .deb- ja .rpm-paketid natiivseteks pacmani pakettideks."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Käivita see käsk tavakasutajana (ilma sudota)."
@@ -463,8 +597,11 @@ msgstr "Paigalda programm"
 msgid "Install a downloaded file"
 msgstr "Paigalda allalaaditud fail"
 
-msgid "Install a .deb file here"
-msgstr "Paigalda siin .deb-fail"
+msgid "Install a native package file"
+msgstr "Paigalda natiivne paketifail"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Paigalda siin .deb- või .rpm-fail"
 
 msgid "Reinstall"
 msgstr "Paigalda uuesti"
@@ -562,8 +699,8 @@ msgstr "Paketitüübid"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt kasutab .deb-faile, dnf .rpm-e, pacman .pkg.tar.zst-e."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb-failid teisendatakse ja paigaldatakse debtap-modiga (või topeltklõpsuga)."
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb- ja .rpm-failid teisendatakse ja paigaldatakse debtap-modiga (või topeltklõpsuga)."
 
 msgid "Programs from the community"
 msgstr "Kogukonna programmid"
@@ -583,8 +720,23 @@ msgstr "Kiirviide: paigaldamiseks või eemaldamiseks on vaja “sudo”; otsimis
 msgid "Command not found: {cmd}"
 msgstr "Käsku ei leitud: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Debiani skriptid ainult registreerivad Ubuntu jaoks APT-hoidla ja AppArmori profiili; siin neid vaja ei ole."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Paketi enda skriptid ainult registreerivad tarkvaraoleku ja AppArmori profiili teiste distributsioonide jaoks; siin neid vaja ei ole."
+
+msgid "Unsupported RPM payload format."
+msgstr "Toetamata RPM-i kasulikku koormusvormingut."
+
+msgid "The file is not an RPM package."
+msgstr "Fail ei ole RPM-pakett."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "See on lähte-RPM (.src.rpm): see sisaldab lähtekoodi, mitte paigaldatavat programmi."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Skript {script} seadistab APT-hoidla; see osa ei mõjuta seda süsteemi."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "Skript {script} on kirjutatud Luas RPM-i enda jaoks ja jäeti vahele."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "Skript {script} seadistab DNF/YUM-i hoidla; see osa ei mõjuta seda süsteemi."

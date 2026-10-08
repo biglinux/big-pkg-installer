@@ -10,25 +10,17 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from . import pacman
-from .debfile import Cancelled, DebPackage, extract_data, open_deb
+from .debfile import Cancelled
 from .deps import DependencyReport, compute_dependencies
 from .elf import host_arch
 from .i18n import _
 from .installer import DesktopEntry, FileConflicts, check_conflicts, desktop_entries
 from .layout import normalize_layout
+from .package import Package, open_package
 from .pkgbuild import PackageSpec, run_makepkg, write_build_dir, write_portable
 from .quirks import Quirk, quirk_for
-from .scripts import SCRIPTS_MARKER, build_install
-from .version import PacmanVersion, to_pacman_name, to_pacman_version
-
-DEB_TO_PACMAN_ARCH = {
-    "amd64": "x86_64",
-    "arm64": "aarch64",
-    "armhf": "armv7h",
-    "i386": "i686",
-    "riscv64": "riscv64",
-    "all": "any",
-}
+from .scripts import SCRIPTS_MARKER
+from .version import PacmanVersion, to_pacman_name
 
 STEPS = ("extract", "layout", "deps", "scripts", "build")
 
@@ -62,7 +54,7 @@ def remove_stale_workdirs() -> None:
 
 @dataclass
 class Conversion:
-    deb: DebPackage
+    package: Package
     pkgname: str
     version: PacmanVersion
     arch: str
@@ -76,6 +68,11 @@ class Conversion:
     warnings: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
     removed_paths: list[str] = field(default_factory=list)
+
+    @property
+    def deb(self) -> Package:
+        """Old name of ``package``, kept for callers written before RPM support."""
+        return self.package
 
     @property
     def full_version(self) -> str:
@@ -101,16 +98,16 @@ class Conversion:
 
 def inspect(path: str | os.PathLike) -> Conversion:
     """Read the package metadata (fast, nothing is extracted)."""
-    deb = open_deb(path)
-    quirk = quirk_for(deb.name)
-    pkgname = quirk.name or to_pacman_name(deb.name) + "-deb"
-    arch = DEB_TO_PACMAN_ARCH.get(deb.architecture, deb.architecture)
-    conversion = Conversion(deb=deb, pkgname=pkgname, version=to_pacman_version(deb.version), arch=arch, quirk=quirk)
+    package = open_package(path)
+    quirk = quirk_for(package.name)
+    pkgname = quirk.name or to_pacman_name(package.name) + package.name_suffix
+    arch = package.pacman_arch
+    conversion = Conversion(package=package, pkgname=pkgname, version=package.pacman_version(), arch=arch, quirk=quirk)
     host = host_arch()
     if arch not in ("any", host):
         conversion.warnings.append(
             _("This package was built for {deb_arch} but this computer is {host}; it will not run here.").format(
-                deb_arch=deb.architecture, host=host
+                deb_arch=package.architecture, host=host
             )
         )
     if quirk.note:
@@ -137,7 +134,7 @@ class Callbacks:
             raise Cancelled()
 
 
-def _description(deb: DebPackage) -> str:
+def _description(deb: Package) -> str:
     summary = " ".join(deb.summary.split())
     return summary or deb.name
 
@@ -154,7 +151,7 @@ def convert(
     often a small tmpfs) and is removed by ``Conversion.cleanup()``.
     """
     cb = callbacks or Callbacks()
-    deb = conversion.deb
+    deb = conversion.package
     if not compatible(conversion):
         raise ConversionError(conversion.warnings[0])
 
@@ -165,7 +162,7 @@ def convert(
     try:
         cb.step("extract")
         cb.log(_("Extracting {name}…").format(name=deb.path.name))
-        extracted = extract_data(deb, root, progress=cb.progress, cancelled=cb.cancelled)
+        extracted = deb.extract(root, progress=cb.progress, cancelled=cb.cancelled)
         if extracted.skipped:
             conversion.warnings.append(
                 _("Ignored unsafe or special entries: {list}").format(list=", ".join(extracted.skipped[:5]))
@@ -197,7 +194,9 @@ def convert(
         cb.log(_("Looking for dependencies…"))
         debname = deb.name.lower()
         self_names = {conversion.pkgname, debname}
-        deps = compute_dependencies(root, deb.control, target_arch, self_names, use_elf=conversion.quirk.elf_deps)
+        deps = compute_dependencies(
+            root, deb.declared_dependencies(), target_arch, self_names, use_elf=conversion.quirk.elf_deps
+        )
         conversion.deps = deps
         depends = conversion.quirk.filter_depends(deps.depends)
         optdepends = {k: v for k, v in deps.optdepends.items() if k not in depends}
@@ -211,10 +210,10 @@ def convert(
             conversion.warnings.append(
                 _("Libraries not found in the repositories: {list}").format(list=", ".join(deps.unresolved_sonames))
             )
-        if deps.unresolved_debian:
+        if deps.unresolved_declared:
             conversion.warnings.append(
-                _("Debian dependencies without an equivalent here: {list}").format(
-                    list=", ".join(deps.unresolved_debian)
+                _("Package dependencies without an equivalent here: {list}").format(
+                    list=", ".join(deps.unresolved_declared)
                 )
             )
         for dep in depends:
@@ -222,12 +221,7 @@ def convert(
         cb.check()
 
         cb.step("scripts")
-        scripts = {
-            name: deb.script(name)
-            for name in ("preinst", "postinst", "prerm", "postrm")
-            if name not in conversion.quirk.skip_scripts and deb.script(name)
-        }
-        install = build_install(scripts, debname, deb.architecture, conversion.quirk.post_install)
+        install = deb.install_script(conversion.quirk.skip_scripts, conversion.quirk.post_install)
         conversion.notes.extend(install.notes)
 
         provides = [f"{debname}={conversion.version.pkgver}"] if debname != conversion.pkgname else []
@@ -240,7 +234,7 @@ def convert(
             version=conversion.version,
             pkgdesc=_description(deb),
             arch=conversion.arch,
-            url=deb.control.get("homepage", "").strip(),
+            url=deb.homepage,
             depends=depends,
             optdepends=optdepends,
             provides=provides,

@@ -35,7 +35,7 @@ def test_dependencies_from_elf_and_control(tmp_path):
     assert "xdg-utils" in report.depends
     assert "glib2" in report.depends
     assert "git" in report.optdepends
-    assert report.unresolved_debian == ["nonexistent-tool-xyz"]
+    assert report.unresolved_declared == ["nonexistent-tool-xyz"]
 
 
 @needs_pacman

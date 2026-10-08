@@ -1,0 +1,95 @@
+/* Colored circle behind the big status icons */
+.status-circle {
+  border-radius: 999px;
+  min-width: 76px;
+  min-height: 76px;
+  color: white;
+}
+.status-circle.success { background-color: var(--success-bg-color); }
+.status-circle.error { background-color: var(--error-bg-color); }
+.status-circle.accent { background-color: var(--accent-bg-color); }
+.status-warning { color: var(--warning-color); }
+.status-circle.status-badge {
+  min-width: 34px;
+  min-height: 34px;
+  border: 3px solid var(--window-bg-color);
+}
+
+/* Dashed area that accepts a dropped file */
+.drop-zone {
+  border: 2px dashed alpha(currentColor, 0.25);
+  border-radius: 12px;
+  padding: 22px 18px;
+}
+.drop-zone.drag-hover {
+  border-color: var(--accent-color);
+  background-color: alpha(var(--accent-bg-color), 0.12);
+}
+
+/* Small pill with the version */
+.badge {
+  background-color: alpha(var(--accent-bg-color), 0.22);
+  color: var(--accent-color);
+  border-radius: 999px;
+  padding: 1px 10px;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+/* Colored message boxes */
+.banner {
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.banner-info {
+  background-color: alpha(var(--accent-bg-color), 0.14);
+  border: 1px solid alpha(var(--accent-bg-color), 0.45);
+}
+.banner-warning {
+  background-color: alpha(var(--warning-bg-color), 0.16);
+  border: 1px solid alpha(var(--warning-bg-color), 0.5);
+}
+.banner-error {
+  background-color: alpha(var(--error-bg-color), 0.14);
+  border: 1px solid alpha(var(--error-bg-color), 0.45);
+}
+.banner-info image { color: var(--accent-color); }
+.banner-warning image { color: var(--warning-color); }
+.banner-error image { color: var(--error-color); }
+
+/* Step list of the progress page */
+.step-dot {
+  min-width: 18px;
+  min-height: 18px;
+  border-radius: 999px;
+  border: 2px solid alpha(currentColor, 0.3);
+}
+.step-dot.current { border-color: var(--accent-color); }
+.step-dot.current > box {
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 999px;
+  background-color: var(--accent-color);
+}
+.step-dot.done {
+  padding: 0;
+  border-color: var(--success-bg-color);
+  background-color: var(--success-bg-color);
+  color: white;
+}
+.step-label.pending { opacity: 0.55; }
+.step-label.current { font-weight: bold; }
+
+/* Property rows inside cards */
+.prop-key { opacity: 0.65; }
+.download-icon { color: var(--success-color); }
+
+/* Monospace boxes (logs, error details, scripts) */
+.code-box {
+  border-radius: 10px;
+  background-color: alpha(currentColor, 0.06);
+}
+
+/* Bottom buttons of every page */
+.action-bar { padding: 12px 18px 18px 18px; }
+.action-bar button { padding: 8px 22px; min-height: 22px; }

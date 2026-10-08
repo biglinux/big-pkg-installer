@@ -97,9 +97,13 @@ def test_missing_deb_is_an_error(user_with_pamac):
     assert plan.action == "usage" and plan.run is None
 
 
-def test_rpm_explains(user_with_pamac):
-    plan = translate("dnf", ["install", "x.rpm"])
-    assert plan.run is None and plan.notes
+def test_rpm_files_go_to_debtap(user_with_pamac, tmp_path):
+    rpm = tmp_path / "app.rpm"
+    rpm.write_bytes(b"x")
+    for tool, args in (("dnf", ["install", str(rpm)]), ("yum", ["localinstall", str(rpm)]), ("apt", ["install", str(rpm)])):
+        plan = translate(tool, args)
+        assert plan.action == "install-deb" and plan.run == ["debtap-mod", str(rpm)]
+    assert translate("dnf", ["install", "missing.rpm"]).action == "usage"
 
 
 def test_unknown_and_empty(user_with_pamac):

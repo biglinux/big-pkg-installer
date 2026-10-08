@@ -29,11 +29,11 @@ msgstr "אזהרה:"
 msgid "Error:"
 msgstr "שגיאה:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "ממיר חבילת .deb לחבילת pacman ומתקין אותה."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "המרת חבילת .deb או .rpm לחבילת pacman והתקנתה."
 
-msgid "the .deb file"
-msgstr "קובץ ה-.deb"
+msgid "the .deb or .rpm file"
+msgstr "קובץ ה-.deb או ה-.rpm"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "לא לשאול שאלות, אבל לפתוח את סקריפט ההתקנה לבדיקה"
@@ -47,8 +47,8 @@ msgstr "רק לבנות את החבילה, בלי להתקין אותה"
 msgid "keep the built package in DIR"
 msgstr "לשמור את החבילה שנבנתה ב-DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "לכתוב גם PKGBUILD לצד קובץ ה-.deb"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "כתיבת PKGBUILD לצד קובץ החבילה"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "לכתוב PKGBUILD בלבד, בלי לבנות"
@@ -62,8 +62,8 @@ msgstr "כן"
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod כבר לא צריך מסד נתונים מקומי; אין מה לעדכן."
 
-msgid "no .deb file given"
-msgstr "לא צוין קובץ .deb"
+msgid "no package file given"
+msgstr "לא ניתן קובץ חבילה"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "האפשרויות ‎-s ו-‎-w מיושנות והן הוזנחו"
@@ -125,8 +125,8 @@ msgstr "{count} קבצים בינאריים שנבנו עבור מערכות א�
 msgid "Libraries not found in the repositories: {list}"
 msgstr "ספריות שלא נמצאו במאגרים: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "תלויות Debian ללא מקבילה כאן: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "תלויות חבילה ללא מקבילה כאן: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "קבצים שכבר שייכים לחבילות אחרות: {list}"
@@ -158,11 +158,62 @@ msgstr "בחבילת Debian אין קובץ control."
 msgid "The control file has no Package or Version field."
 msgstr "בקובץ control אין שדה Package או Version."
 
-msgid "Install .deb package"
-msgstr "התקנת חבילת .deb"
+msgid "Package Installer"
+msgstr "מתקין חבילות"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "ממיר חבילות Debian לחבילות pacman מקוריות ומתקין אותן."
+msgid "original debtap"
+msgstr "debtap המקורי"
+
+msgid "About {name}"
+msgstr "על אודות {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "דרך פשוטה ובטוחה להתקין חבילות .deb ו-.rpm."
+
+msgid "Credits"
+msgstr "תודות"
+
+msgid "License"
+msgstr "רישיון"
+
+msgid "Project website"
+msgstr "אתר הפרויקט"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "נוצר עבור BigLinux באמצעות GTK4/Libadwaita"
+
+msgid "About"
+msgstr "אודות"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "תוכנית זו היא תוכנה חופשית, המופצת תחת GNU General Public License, גרסה 2 או חדשה יותר. היא מסופקת ללא כל אחריות."
+
+msgid "Preferences"
+msgstr "העדפות"
+
+msgid "Converted packages"
+msgstr "חבילות שהומרו"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "קובץ ה-.deb או ה-.rpm מומר לחבילה מקורית לפני ההתקנה."
+
+msgid "Keep a copy of the converted package"
+msgstr "שמירת עותק של החבילה שהומרה"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "שימושי להתקנה מחדש מאוחר יותר או במחשב אחר"
+
+msgid "Folder"
+msgstr "תיקייה"
+
+msgid "Choose…"
+msgstr "בחירה…"
+
+msgid "Details"
+msgstr "פרטים"
+
+msgid "Copy details"
+msgstr "העתקת הפרטים"
 
 msgid "Extracting files"
 msgstr "מחלץ קבצים"
@@ -170,8 +221,8 @@ msgstr "מחלץ קבצים"
 msgid "Adapting folders to this system"
 msgstr "מתאים תיקיות למערכת הזו"
 
-msgid "Finding dependencies"
-msgstr "מחפש תלויות"
+msgid "Checking dependencies"
+msgstr "בודק תלויות"
 
 msgid "Preparing installation scripts"
 msgstr "מכין סקריפטי התקנה"
@@ -179,38 +230,59 @@ msgstr "מכין סקריפטי התקנה"
 msgid "Building the package"
 msgstr "בונה את החבילה"
 
-msgid "Waiting for authorization"
-msgstr "ממתין לאישור"
+msgid "Preparing the installation"
+msgstr "מכין את ההתקנה"
 
-msgid "Installing"
-msgstr "מתקין"
+msgid "Downloading packages ({done} of {total})"
+msgstr "מוריד חבילות ({done} מתוך {total})"
 
-msgid "About"
-msgstr "אודות"
+msgid "Downloading packages"
+msgstr "מוריד חבילות"
+
+msgid "Installing packages"
+msgstr "מתקין חבילות"
+
+msgid "Configuring the system"
+msgstr "מגדיר את המערכת"
+
+msgid "Finishing"
+msgstr "מסיים"
+
+msgid "About the Installer"
+msgstr "על אודות המתקין"
+
+msgid "Help"
+msgstr "עזרה"
+
+msgid "Send feedback"
+msgstr "שליחת משוב"
+
+msgid "Report a problem"
+msgstr "דיווח על בעיה"
 
 msgid "Main menu"
 msgstr "תפריט ראשי"
 
-msgid "Choose a .deb file…"
-msgstr "בחירת קובץ .deb…"
+msgid "Copied"
+msgstr "הועתק"
 
-msgid "Install a .deb package"
-msgstr "התקנת חבילת .deb"
+msgid "Install a .deb or .rpm package"
+msgstr "התקנת חבילת .deb או .rpm"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "פתחו חבילת Debian או גררו אותה לכאן. היא תומר לחבילה מקורית של המערכת הזו ותותקן."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "בחרו קובץ .deb או .rpm במחשב כדי להתקין אותו במערכת ה-Linux שלכם בדרך פשוטה ובטוחה."
 
-msgid "Details"
-msgstr "פרטים"
+msgid "Choose a package file…"
+msgstr "בחירת קובץ חבילה…"
 
-msgid "Cancel"
-msgstr "ביטול"
+msgid "Or drag and drop the file here"
+msgstr "או גררו ושחררו את הקובץ כאן"
 
-msgid "Prefer native packages when available"
-msgstr "להעדיף חבילות מקוריות כשהן זמינות"
+msgid "Selected package"
+msgstr "החבילה שנבחרה"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "תוכנות ממאגרי המערכת, Flatpak או AppImage בדרך כלל עובדות טוב יותר. חבילות .deb שהומרו עשויות שלא לעבוד בצורה מושלמת."
+msgid "Review the package information before continuing."
+msgstr "עיינו בפרטי החבילה לפני שממשיכים."
 
 msgid "“{name}” is available in the repositories"
 msgstr "“{name}” זמינה במאגרים"
@@ -221,8 +293,8 @@ msgstr "מומלץ להתקין את החבילה המקורית."
 msgid "Open"
 msgstr "פתיחה"
 
-msgid "Package"
-msgstr "חבילה"
+msgid "Package name"
+msgstr "שם החבילה"
 
 msgid "Version"
 msgstr "גרסה"
@@ -230,8 +302,8 @@ msgstr "גרסה"
 msgid "Architecture"
 msgstr "ארכיטקטורה"
 
-msgid "Installed size"
-msgstr "גודל מותקן"
+msgid "Size"
+msgstr "גודל"
 
 msgid "Maintainer"
 msgstr "מתחזק"
@@ -242,26 +314,42 @@ msgstr "אתר"
 msgid "Description"
 msgstr "תיאור"
 
-msgid "Review before installing"
-msgstr "בדיקה לפני ההתקנה"
+msgid "Cancel"
+msgstr "ביטול"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "מציג את התלויות ואת הסקריפטים שירוצו כמנהל"
+msgid "Continue"
+msgstr "המשך"
 
-msgid "Install"
-msgstr "התקנה"
+msgid "This may take a few moments…"
+msgstr "זה עשוי לקחת כמה רגעים…"
 
-msgid "Ready to install"
-msgstr "מוכן להתקנה"
+msgid "Dependencies"
+msgstr "תלויות"
 
-msgid "Check what will be installed."
-msgstr "בדקו מה עומד להיות מותקן."
+msgid "The following packages will be installed so the application works correctly."
+msgstr "החבילות הבאות יותקנו כדי שהיישום יפעל כראוי."
+
+msgid "New packages to install"
+msgstr "חבילות חדשות להתקנה"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} חבילה"
+msgstr[1] "{n} חבילות"
+
+msgid "converted from the package file"
+msgstr "הומר מקובץ החבילה"
+
+msgid "Other information"
+msgstr "מידע נוסף"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} אזהרה"
+msgstr[1] "{n} אזהרות"
 
 msgid "Package name on this system"
 msgstr "שם החבילה במערכת הזו"
-
-msgid "Package size"
-msgstr "גודל החבילה"
 
 msgid "Applications menu"
 msgstr "תפריט היישומים"
@@ -269,76 +357,131 @@ msgstr "תפריט היישומים"
 msgid "No menu entry"
 msgstr "אין פריט בתפריט"
 
-msgid "Warnings"
-msgstr "אזהרות"
-
-msgid "Notes"
-msgstr "הערות"
-
-msgid "Dependencies"
-msgstr "תלויות"
-
-msgid "Required"
-msgstr "נדרשות"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} חבילה"
-msgstr[1] "{n} חבילות"
-
-msgid "will be downloaded"
-msgstr "יורדו"
-
 msgid "Optional"
 msgstr "אופציונליות"
 
 msgid "Scripts"
 msgstr "סקריפטים"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "הפקודות האלה מחבילת Debian רצות כמנהל במהלך ההתקנה."
+msgid "These commands from the package run as administrator during installation."
+msgstr "הפקודות האלה מהחבילה רצות כמנהל מערכת במהלך ההתקנה."
 
-msgid "Open {name}"
-msgstr "פתיחת {name}"
+msgid "Show"
+msgstr "הצגה"
 
-msgid "Copy details"
-msgstr "העתקת הפרטים"
+msgid "Back"
+msgstr "חזרה"
+
+msgid "Install"
+msgstr "התקנה"
+
+msgid "Authentication required"
+msgstr "נדרש אימות"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "הקלידו את הסיסמה שלכם בחלון האימות של המערכת כדי להמשיך בהתקנה."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "נדרשות הרשאות מנהל כדי להתקין חבילות במערכת שלכם."
+
+msgid "Package installed successfully!"
+msgstr "החבילה הותקנה בהצלחה!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "החבילה “{name}” הותקנה כראוי במערכת שלכם."
+
+msgid "Version {version}"
+msgstr "גרסה {version}"
+
+msgid "Open application"
+msgstr "פתיחת היישום"
+
+msgid "Show details"
+msgstr "הצגת פרטים"
 
 msgid "Close"
 msgstr "סגירה"
 
+msgid "Error details"
+msgstr "פרטי השגיאה"
+
+msgid "Incompatible package"
+msgstr "חבילה לא תואמת"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "חבילה זו נבנתה עבור ארכיטקטורת {deb_arch}, אך המערכת שלכם היא {host}."
+
+msgid "Package"
+msgstr "חבילה"
+
+msgid "Package architecture"
+msgstr "ארכיטקטורת החבילה"
+
+msgid "System architecture"
+msgstr "ארכיטקטורת המערכת"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "לא ניתן להתקין חבילה זו במחשב הזה. חפשו גרסה של החבילה שנבנתה עבור {host}."
+
 msgid "This file cannot be installed"
 msgstr "לא ניתן להתקין את הקובץ הזה"
 
-msgid "Choose a .deb file"
-msgstr "בחירת קובץ .deb"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "ייתכן שהקובץ פגום או שאינו חבילה תקינה. הורידו אותו שוב או בדקו מאין הגיע."
 
-msgid "Debian packages"
-msgstr "חבילות Debian"
+msgid "Invalid file"
+msgstr "קובץ לא תקין"
 
-msgid "Type your password in the window that will appear."
-msgstr "הקלידו את הסיסמה בחלון שיופיע."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "הקובץ שנבחר אינו חבילת .deb או .rpm."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "תלויות חסרות מורדות מהמאגרים."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "מתקין זה פועל רק עם קובצי .deb ו-.rpm (חבילות עבור Debian, Ubuntu, Fedora, openSUSE והנגזרות שלהן)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "דוחס את הקבצים, זה עשוי לקחת דקה."
+msgid "Choose a package file"
+msgstr "בחירת קובץ חבילה"
 
-msgid "The package could not be converted"
-msgstr "לא ניתן היה להמיר את החבילה"
+msgid "Packages (.deb, .rpm)"
+msgstr "חבילות (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "מכין את החבילה"
+
+msgid "Extracting files ({percent}%)"
+msgstr "מחלץ קבצים ({percent}%)"
 
 msgid "Cancelled"
 msgstr "בוטל"
 
-msgid "{name} is installed"
-msgstr "{name} מותקנת"
+msgid "The package could not be converted"
+msgstr "לא ניתן היה להמיר את החבילה"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "החבילה {name} הותקנה. אין לה פריט בתפריט היישומים."
+msgid "Dependencies are not available"
+msgstr "התלויות אינן זמינות"
 
-msgid "Installation complete"
-msgstr "ההתקנה הושלמה"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "חלק מהחבילות שתוכנית זו צריכה לא נמצאו במאגרים."
+
+msgid "Installing the package"
+msgstr "מתקין את החבילה"
+
+msgid "Preparing the installation…"
+msgstr "מכין את ההתקנה…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "מוריד ומתקין תלויות…"
+
+msgid "Installing packages…"
+msgstr "מתקין חבילות…"
+
+msgid "Configuring the system…"
+msgstr "מגדיר את המערכת…"
+
+msgid "Finishing…"
+msgstr "מסיים…"
+
+msgid "Please wait until the installation finishes"
+msgstr "אנא המתינו עד לסיום ההתקנה"
 
 msgid "Authorization was not granted"
 msgstr "ההרשאה לא ניתנה"
@@ -346,17 +489,14 @@ msgstr "ההרשאה לא ניתנה"
 msgid "The installation failed"
 msgstr "ההתקנה נכשלה"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman החזיר שגיאה (קוד {code}). פתחו את הפרטים כדי לראות מה קרה."
+msgid "An error happened while installing the package. See the details below."
+msgstr "אירעה שגיאה בהתקנת החבילה. פרטים מופיעים להלן."
 
 msgid "The application could not be started"
 msgstr "לא ניתן היה להפעיל את היישום"
 
-msgid "Copied"
-msgstr "הועתק"
-
-msgid "Please wait until the installation finishes"
-msgstr "אנא המתינו עד לסיום ההתקנה"
+msgid "The RPM package is truncated or corrupted."
+msgstr "חבילת ה-RPM קטועה או פגומה."
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg לא יכול לרוץ כ-root; הריצו את debtap-mod כמשתמש רגיל."
@@ -379,17 +519,11 @@ msgstr "Arch אינה משדרגת חבילות בודדות; כל המערכת 
 msgid "Tell which package to install, for example: {example}"
 msgstr "יש לציין איזו חבילה להתקין, לדוגמה: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr "חבילות .rpm נוצרו עבור Fedora/openSUSE ולא ניתן להתקין אותן כאן."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "חפשו את התוכנה במאגרים (pamac search), ב-Flathub או כ-AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac מוצא תוכנות גם ב-AUR וב-Flatpak: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr "חבילות .deb מומרות לחבילות pacman מקוריות על ידי debtap-mod."
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
+msgstr "חבילות .deb ו-.rpm מומרות לחבילות pacman מקוריות על ידי debtap-mod."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "יש להריץ פקודה זו כמשתמש רגיל (בלי sudo)."
@@ -463,8 +597,11 @@ msgstr "התקנת תוכנה"
 msgid "Install a downloaded file"
 msgstr "התקנת קובץ שהורד"
 
-msgid "Install a .deb file here"
-msgstr "התקנת קובץ .deb כאן"
+msgid "Install a native package file"
+msgstr "התקנת קובץ חבילה מקורי"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "התקנת קובץ .deb או .rpm כאן"
 
 msgid "Reinstall"
 msgstr "התקנה מחדש"
@@ -562,8 +699,8 @@ msgstr "סוגי חבילות"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt משתמש בקובצי .deb, dnf משתמש ב-.rpm, ו-pacman משתמש ב-.pkg.tar.zst."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr "קובצי .deb מומרים ומותקנים באמצעות debtap-mod (או בלחיצה כפולה)."
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
+msgstr "קובצי .deb ו-.rpm מומרים ומותקנים באמצעות debtap-mod (או בלחיצה כפולה)."
 
 msgid "Programs from the community"
 msgstr "תוכנות מהקהילה"
@@ -583,8 +720,23 @@ msgstr "עזר מהיר: נדרש “sudo” כדי להתקין או להסיר
 msgid "Command not found: {cmd}"
 msgstr "הפקודה לא נמצאה: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "סקריפטי Debian רק רושמים מאגר APT ופרופיל AppArmor עבור Ubuntu; הם אינם נחוצים כאן."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "הסקריפטים של החבילה רק רושמים מאגר תוכנה ופרופיל AppArmor עבור הפצות אחרות; אין בהם צורך כאן."
+
+msgid "Unsupported RPM payload format."
+msgstr "פורמט מטען RPM לא נתמך."
+
+msgid "The file is not an RPM package."
+msgstr "הקובץ אינו חבילת RPM."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "זוהי חבילת RPM של קוד מקור (.src.rpm): היא מכילה קוד מקור ולא תוכנה להתקנה."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "הסקריפט {script} מגדיר מאגר APT; לחלק הזה אין השפעה על המערכת הזו."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "הסקריפט {script} כתוב ב-Lua עבור RPM עצמו ולכן דולג."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "הסקריפט {script} מגדיר מאגר DNF/YUM; לחלק זה אין השפעה על מערכת זו."

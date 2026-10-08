@@ -16,7 +16,8 @@ MULTIARCH = {
 }
 
 # Paths that only make sense for dpkg/apt.
-DEBIAN_ONLY = ("usr/share/lintian", "usr/share/bug", "etc/apt")
+# Paths that only make sense for dpkg/apt or rpm/dnf.
+DEBIAN_ONLY = ("usr/share/lintian", "usr/share/bug", "etc/apt", "usr/lib/.build-id", "etc/yum.repos.d")
 
 
 def merge_rules(arch: str) -> list[tuple[str, str]]:

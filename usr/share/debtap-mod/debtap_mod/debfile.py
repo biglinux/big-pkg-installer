@@ -6,25 +6,21 @@ import io
 import lzma
 import os
 import posixpath
-import stat
 import tarfile
 from collections.abc import Callable
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 
 from compression import zstd
 
+from .extract import Cancelled, ExtractResult, SafeWriter
 from .i18n import _
 
 MAINTAINER_SCRIPTS = ("preinst", "postinst", "prerm", "postrm")
 
 
 class DebError(Exception):
-    """The file is not a usable Debian package."""
-
-
-class Cancelled(Exception):
-    """The user cancelled the operation."""
+    """The file is not a usable Debian (or RPM) package."""
 
 
 @dataclass
@@ -119,9 +115,45 @@ class DebPackage:
     control_files: dict[str, bytes]
     data_member: ArMember
 
+    kind = "deb"
+    name_suffix = "-deb"
+
     @property
     def name(self) -> str:
         return self.control.get("package", "")
+
+    @property
+    def maintainer(self) -> str:
+        return self.control.get("maintainer", "")
+
+    @property
+    def homepage(self) -> str:
+        return self.control.get("homepage", "").strip()
+
+    @property
+    def pacman_arch(self) -> str:
+        arch = self.architecture
+        return {"amd64": "x86_64", "arm64": "aarch64", "armhf": "armv7h", "i386": "i686",
+                "riscv64": "riscv64", "all": "any"}.get(arch, arch)
+
+    def pacman_version(self):
+        from .version import to_pacman_version
+
+        return to_pacman_version(self.version)
+
+    def extract(self, root: Path, progress=None, cancelled=None) -> ExtractResult:
+        return extract_data(self, root, progress=progress, cancelled=cancelled)
+
+    def declared_dependencies(self):
+        from .deps import debian_declared
+
+        return debian_declared(self.control)
+
+    def install_script(self, skip: list[str], extra_post_install: str = ""):
+        from .scripts import build_install
+
+        scripts = {n: self.script(n) for n in MAINTAINER_SCRIPTS if n not in skip and self.script(n)}
+        return build_install(scripts, self.name.lower(), self.architecture, extra_post_install)
 
     @property
     def version(self) -> str:
@@ -200,42 +232,15 @@ def open_deb(path: str | os.PathLike) -> DebPackage:
     return DebPackage(path=path, control=control, control_files=control_files, data_member=data_member)
 
 
-@dataclass
-class ExtractResult:
-    owners: dict[str, tuple[str, str]] = field(default_factory=dict)
-    skipped: list[str] = field(default_factory=list)
-
-
-def _normalize_member(name: str) -> str | None:
-    norm = posixpath.normpath("/" + name).lstrip("/")
-    if norm in ("", "."):
-        return ""
-    if norm.startswith("..") or "/../" in f"/{norm}/":
-        return None
-    return norm
-
-
 def extract_data(
-    deb: DebPackage,
+    deb: "DebPackage",
     root: Path,
     progress: Callable[[float], None] | None = None,
     cancelled: Callable[[], bool] | None = None,
 ) -> ExtractResult:
-    """Extract data.tar into ``root`` safely, preserving modes (setuid too).
-
-    Members escaping ``root`` through ``..`` or through a previously
-    extracted symlink are refused instead of being written outside.
-    """
-    root.mkdir(parents=True, exist_ok=True)
-    real_root = os.path.realpath(root)
-    result = ExtractResult()
-    dir_modes: list[tuple[str, int, float]] = []
+    """Extract data.tar into ``root`` (see extract.SafeWriter for the rules)."""
+    writer = SafeWriter(root)
     member = deb.data_member
-
-    def inside_root(path: str) -> bool:
-        real = os.path.realpath(path)
-        return real == real_root or real.startswith(real_root + os.sep)
-
     with open(deb.path, "rb") as f:
         raw = _Slice(f, member.offset, member.size)
         with _decompressor(member.name, raw) as stream:
@@ -245,55 +250,20 @@ def extract_data(
                         raise Cancelled()
                     if progress and count % 32 == 0:
                         progress(raw.consumed / max(member.size, 1))
-                    rel = _normalize_member(info.name)
-                    if rel is None:
-                        result.skipped.append(info.name)
-                        continue
-                    if rel == "":
-                        continue
-                    dest = os.path.join(real_root, rel)
-                    parent = os.path.dirname(dest)
-                    if not inside_root(parent):
-                        result.skipped.append(info.name)
-                        continue
-                    os.makedirs(parent, exist_ok=True)
-                    uname = info.uname or ("root" if info.uid == 0 else str(info.uid))
-                    gname = info.gname or ("root" if info.gid == 0 else str(info.gid))
-                    if (uname, gname) != ("root", "root"):
-                        result.owners[rel] = (uname, gname)
-
+                    owner = (
+                        info.uname or ("root" if info.uid == 0 else str(info.uid)),
+                        info.gname or ("root" if info.gid == 0 else str(info.gid)),
+                    )
                     if info.isdir():
-                        if os.path.lexists(dest) and not os.path.isdir(dest):
-                            os.unlink(dest)
-                        os.makedirs(dest, exist_ok=True)
-                        os.chmod(dest, 0o755)
-                        dir_modes.append((dest, info.mode, info.mtime))
-                        continue
-                    if os.path.lexists(dest) and not os.path.isdir(dest):
-                        os.unlink(dest)
-                    if info.isreg():
-                        source = tar.extractfile(info)
-                        with open(dest, "wb") as out:
-                            while chunk := source.read(1 << 20):
-                                out.write(chunk)
-                        os.chmod(dest, stat.S_IMODE(info.mode))
-                        os.utime(dest, (info.mtime, info.mtime))
+                        writer.directory(info.name, info.mode, info.mtime, owner)
+                    elif info.isreg():
+                        writer.file(info.name, info.mode, info.mtime, tar.extractfile(info), owner)
                     elif info.issym():
-                        os.symlink(info.linkname, dest)
+                        writer.symlink(info.name, info.linkname, owner)
                     elif info.islnk():
-                        target_rel = _normalize_member(info.linkname)
-                        target = os.path.join(real_root, target_rel or "")
-                        if target_rel and os.path.isfile(target) and inside_root(target):
-                            os.link(target, dest)
-                        else:
-                            result.skipped.append(info.name)
+                        writer.hardlink(info.name, info.linkname, owner)
                     else:
-                        # device nodes and fifos make no sense inside a package
-                        result.skipped.append(info.name)
-
-    for path, mode, mtime in reversed(dir_modes):
-        os.chmod(path, stat.S_IMODE(mode) | stat.S_IRWXU)
-        os.utime(path, (mtime, mtime))
+                        writer.skip(info.name)
     if progress:
         progress(1.0)
-    return result
+    return writer.finish()

@@ -21,7 +21,13 @@ STEP_LABELS = {
     "build": _("Building the pacman package"),
 }
 
-_tty = sys.stdout.isatty()
+def _colors() -> bool:
+    from .pkgcompat import _color_enabled
+
+    return _color_enabled(sys.stdout)
+
+
+_tty = _colors()
 
 
 def _style(text: str, code: str) -> str:
@@ -52,14 +58,14 @@ def human_size(size: int) -> str:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="debtap-mod",
-        description=_("Convert a .deb package into a pacman package and install it."),
+        description=_("Convert a .deb or .rpm package into a pacman package and install it."),
     )
-    parser.add_argument("package", nargs="?", help=_("the .deb file"))
+    parser.add_argument("package", nargs="?", help=_("the .deb or .rpm file"))
     parser.add_argument("-q", "--quiet", action="store_true", help=_("do not ask questions, but open the install script for review"))
     parser.add_argument("-Q", "--Quiet", action="store_true", help=_("do not ask any question"))
     parser.add_argument("-n", "--no-install", action="store_true", help=_("only build the package, do not install it"))
     parser.add_argument("-o", "--output", metavar="DIR", help=_("keep the built package in DIR"))
-    parser.add_argument("-p", "--pkgbuild", action="store_true", help=_("also write a PKGBUILD next to the .deb"))
+    parser.add_argument("-p", "--pkgbuild", action="store_true", help=_("also write a PKGBUILD next to the package file"))
     parser.add_argument("-P", "--Pkgbuild", action="store_true", help=_("only write a PKGBUILD, do not build"))
     parser.add_argument("-u", "--update", action="store_true", help=argparse.SUPPRESS)
     parser.add_argument("-s", "--pseudo", action="store_true", help=argparse.SUPPRESS)
@@ -92,7 +98,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if not args.package:
         build_parser().print_usage(sys.stderr)
-        error(_("no .deb file given"))
+        error(_("no package file given"))
         return 2
     if args.pseudo or args.wipeout:
         warn(_("the -s and -w options are obsolete and were ignored"))

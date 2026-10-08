@@ -29,11 +29,11 @@ msgstr "Upozornenie:"
 msgid "Error:"
 msgstr "Chyba:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Skonvertuje balík .deb na balík pacman a nainštaluje ho."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Skonvertuje balík .deb alebo .rpm na balík pacman a nainštaluje ho."
 
-msgid "the .deb file"
-msgstr "súbor .deb"
+msgid "the .deb or .rpm file"
+msgstr "súbor .deb alebo .rpm"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "nekladať otázky, ale otvoriť inštalačný skript na kontrolu"
@@ -47,8 +47,8 @@ msgstr "iba zostaviť balík, nenainštalovať ho"
 msgid "keep the built package in DIR"
 msgstr "uložiť zostavený balík do DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "zapísať PKGBUILD vedľa súboru .deb"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "zapísať aj PKGBUILD vedľa súboru balíka"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "iba zapísať PKGBUILD, nezostavovať"
@@ -62,8 +62,8 @@ msgstr "ano"
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod už nepotrebuje lokálnu databázu; nie je čo aktualizovať."
 
-msgid "no .deb file given"
-msgstr "nebol zadaný žiadny súbor .deb"
+msgid "no package file given"
+msgstr "nebol zadaný súbor balíka"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "voľby -s a -w sú zastarané a boli ignorované"
@@ -125,8 +125,8 @@ msgstr "Ignorované binárne súbory pre iné systémy alebo architektúry: {cou
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Knižnice sa nenašli v repozitároch: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Závislosti Debianu bez ekvivalentu v tomto systéme: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Závislosti balíka bez ekvivalentu v tomto systéme: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Súbory, ktoré už vlastnia iné balíky: {list}"
@@ -158,11 +158,62 @@ msgstr "Balík Debianu neobsahuje súbor control."
 msgid "The control file has no Package or Version field."
 msgstr "Súbor control neobsahuje pole Package ani Version."
 
-msgid "Install .deb package"
-msgstr "Inštalovať balík .deb"
+msgid "Package Installer"
+msgstr "Inštalátor balíkov"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Konvertuje balíky Debianu na natívne balíky pacman a inštaluje ich."
+msgid "original debtap"
+msgstr "pôvodný debtap"
+
+msgid "About {name}"
+msgstr "O aplikácii {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "Jednoduchý a bezpečný spôsob inštalácie balíkov .deb a .rpm."
+
+msgid "Credits"
+msgstr "Poďakovanie"
+
+msgid "License"
+msgstr "Licencia"
+
+msgid "Project website"
+msgstr "Webová stránka projektu"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "Vytvorené pre BigLinux pomocou GTK4/Libadwaita"
+
+msgid "About"
+msgstr "O aplikácii"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "Tento program je slobodný softvér šírený pod licenciou GNU General Public License, verzia 2 alebo novšia. Je poskytovaný bez akejkoľvek záruky."
+
+msgid "Preferences"
+msgstr "Predvoľby"
+
+msgid "Converted packages"
+msgstr "Skonvertované balíky"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "Súbor .deb alebo .rpm sa pred inštaláciou skonvertuje na natívny balík."
+
+msgid "Keep a copy of the converted package"
+msgstr "Ponechať kópiu skonvertovaného balíka"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Užitočné na neskoršiu preinštaláciu alebo na inom počítači"
+
+msgid "Folder"
+msgstr "Priečinok"
+
+msgid "Choose…"
+msgstr "Vybrať…"
+
+msgid "Details"
+msgstr "Podrobnosti"
+
+msgid "Copy details"
+msgstr "Kopírovať podrobnosti"
 
 msgid "Extracting files"
 msgstr "Extrahovanie súborov"
@@ -170,8 +221,8 @@ msgstr "Extrahovanie súborov"
 msgid "Adapting folders to this system"
 msgstr "Prispôsobenie priečinkov tomuto systému"
 
-msgid "Finding dependencies"
-msgstr "Hľadanie závislostí"
+msgid "Checking dependencies"
+msgstr "Kontrola závislostí"
 
 msgid "Preparing installation scripts"
 msgstr "Príprava inštalačných skriptov"
@@ -179,38 +230,59 @@ msgstr "Príprava inštalačných skriptov"
 msgid "Building the package"
 msgstr "Zostavovanie balíka"
 
-msgid "Waiting for authorization"
-msgstr "Čaká sa na autorizáciu"
+msgid "Preparing the installation"
+msgstr "Príprava inštalácie"
 
-msgid "Installing"
-msgstr "Inštalácia"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Sťahovanie balíkov ({done} z {total})"
 
-msgid "About"
-msgstr "O aplikácii"
+msgid "Downloading packages"
+msgstr "Sťahovanie balíkov"
+
+msgid "Installing packages"
+msgstr "Inštalácia balíkov"
+
+msgid "Configuring the system"
+msgstr "Konfigurácia systému"
+
+msgid "Finishing"
+msgstr "Dokončovanie"
+
+msgid "About the Installer"
+msgstr "O inštalátore"
+
+msgid "Help"
+msgstr "Pomocník"
+
+msgid "Send feedback"
+msgstr "Odoslať spätnú väzbu"
+
+msgid "Report a problem"
+msgstr "Nahlásiť problém"
 
 msgid "Main menu"
 msgstr "Hlavná ponuka"
 
-msgid "Choose a .deb file…"
-msgstr "Vybrať súbor .deb…"
+msgid "Copied"
+msgstr "Skopírované"
 
-msgid "Install a .deb package"
-msgstr "Inštalácia balíka .deb"
+msgid "Install a .deb or .rpm package"
+msgstr "Nainštalovať balík .deb alebo .rpm"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Otvorte balík Debianu alebo ho sem presuňte. Bude skonvertovaný na natívny balík pre tento systém a nainštalovaný."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Vyberte vo svojom počítači súbor .deb alebo .rpm a jednoducho a bezpečne ho nainštalujte do systému Linux."
 
-msgid "Details"
-msgstr "Podrobnosti"
+msgid "Choose a package file…"
+msgstr "Vybrať súbor balíka…"
 
-msgid "Cancel"
-msgstr "Zrušiť"
+msgid "Or drag and drop the file here"
+msgstr "Alebo sem presuňte súbor myšou"
 
-msgid "Prefer native packages when available"
-msgstr "Uprednostniť natívne balíky, ak sú dostupné"
+msgid "Selected package"
+msgstr "Vybraný balík"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Programy zo systémových repozitárov, Flatpak alebo AppImage zvyčajne fungujú lepšie. Skonvertované balíky .deb nemusia fungovať dokonale."
+msgid "Review the package information before continuing."
+msgstr "Pred pokračovaním skontrolujte informácie o balíku."
 
 msgid "“{name}” is available in the repositories"
 msgstr "„{name}“ je dostupný v repozitároch"
@@ -221,8 +293,8 @@ msgstr "Odporúča sa nainštalovať natívny balík."
 msgid "Open"
 msgstr "Otvoriť"
 
-msgid "Package"
-msgstr "Balík"
+msgid "Package name"
+msgstr "Názov balíka"
 
 msgid "Version"
 msgstr "Verzia"
@@ -230,8 +302,8 @@ msgstr "Verzia"
 msgid "Architecture"
 msgstr "Architektúra"
 
-msgid "Installed size"
-msgstr "Inštalovaná veľkosť"
+msgid "Size"
+msgstr "Veľkosť"
 
 msgid "Maintainer"
 msgstr "Správca"
@@ -242,44 +314,23 @@ msgstr "Webová stránka"
 msgid "Description"
 msgstr "Popis"
 
-msgid "Review before installing"
-msgstr "Skontrolovať pred inštaláciou"
+msgid "Cancel"
+msgstr "Zrušiť"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Zobraziť závislosti a skripty, ktoré sa spustia ako správca"
+msgid "Continue"
+msgstr "Pokračovať"
 
-msgid "Install"
-msgstr "Inštalovať"
-
-msgid "Ready to install"
-msgstr "Pripravené na inštaláciu"
-
-msgid "Check what will be installed."
-msgstr "Skontrolujte, čo sa nainštaluje."
-
-msgid "Package name on this system"
-msgstr "Názov balíka v tomto systéme"
-
-msgid "Package size"
-msgstr "Veľkosť balíka"
-
-msgid "Applications menu"
-msgstr "Ponuka aplikácií"
-
-msgid "No menu entry"
-msgstr "Žiadna položka v ponuke"
-
-msgid "Warnings"
-msgstr "Upozornenia"
-
-msgid "Notes"
-msgstr "Poznámky"
+msgid "This may take a few moments…"
+msgstr "Môže to chvíľu trvať…"
 
 msgid "Dependencies"
 msgstr "Závislosti"
 
-msgid "Required"
-msgstr "Povinné"
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Nasledujúce balíky sa nainštalujú, aby aplikácia fungovala správne."
+
+msgid "New packages to install"
+msgstr "Nové balíky na inštaláciu"
 
 msgid "{n} package"
 msgid_plural "{n} packages"
@@ -287,8 +338,26 @@ msgstr[0] "{n} balík"
 msgstr[1] "{n} balíky"
 msgstr[2] "{n} balíkov"
 
-msgid "will be downloaded"
-msgstr "sa stiahne"
+msgid "converted from the package file"
+msgstr "skonvertované zo súboru balíka"
+
+msgid "Other information"
+msgstr "Ďalšie informácie"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} upozornenie"
+msgstr[1] "{n} upozornenia"
+msgstr[2] "{n} upozornení"
+
+msgid "Package name on this system"
+msgstr "Názov balíka v tomto systéme"
+
+msgid "Applications menu"
+msgstr "Ponuka aplikácií"
+
+msgid "No menu entry"
+msgstr "Žiadna položka v ponuke"
 
 msgid "Optional"
 msgstr "Voliteľné"
@@ -296,50 +365,125 @@ msgstr "Voliteľné"
 msgid "Scripts"
 msgstr "Skripty"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Tieto príkazy z balíka Debianu sa počas inštalácie spustia ako správca."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Tieto príkazy z balíka sa počas inštalácie spúšťajú ako správca."
 
-msgid "Open {name}"
-msgstr "Otvoriť {name}"
+msgid "Show"
+msgstr "Zobraziť"
 
-msgid "Copy details"
-msgstr "Kopírovať podrobnosti"
+msgid "Back"
+msgstr "Späť"
+
+msgid "Install"
+msgstr "Inštalovať"
+
+msgid "Authentication required"
+msgstr "Vyžaduje sa overenie totožnosti"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Na pokračovanie v inštalácii zadajte heslo v systémovom okne overenia."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Na inštaláciu balíkov do systému sú potrebné oprávnenia správcu."
+
+msgid "Package installed successfully!"
+msgstr "Balík bol úspešne nainštalovaný!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "Balík „{name}“ bol správne nainštalovaný do vášho systému."
+
+msgid "Version {version}"
+msgstr "Verzia {version}"
+
+msgid "Open application"
+msgstr "Otvoriť aplikáciu"
+
+msgid "Show details"
+msgstr "Zobraziť podrobnosti"
 
 msgid "Close"
 msgstr "Zavrieť"
 
+msgid "Error details"
+msgstr "Podrobnosti o chybe"
+
+msgid "Incompatible package"
+msgstr "Nekompatibilný balík"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "Tento balík bol zostavený pre architektúru {deb_arch}, ale váš systém je {host}."
+
+msgid "Package"
+msgstr "Balík"
+
+msgid "Package architecture"
+msgstr "Architektúra balíka"
+
+msgid "System architecture"
+msgstr "Architektúra systému"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Tento balík nie je možné nainštalovať na tento počítač. Vyhľadajte verziu balíka vytvorenú pre {host}."
+
 msgid "This file cannot be installed"
 msgstr "Tento súbor sa nedá nainštalovať"
 
-msgid "Choose a .deb file"
-msgstr "Vybrať súbor .deb"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Súbor môže byť poškodený alebo nie je platným balíkom. Stiahnite ho znova alebo skontrolujte, odkiaľ pochádza."
 
-msgid "Debian packages"
-msgstr "Balíky Debianu"
+msgid "Invalid file"
+msgstr "Neplatný súbor"
 
-msgid "Type your password in the window that will appear."
-msgstr "Zadajte heslo v okne, ktoré sa zobrazí."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Vybraný súbor nie je balík .deb ani .rpm."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Chýbajúce závislosti sa stiahnu z repozitárov."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "Tento inštalátor funguje iba so súbormi .deb a .rpm (balíky pre Debian, Ubuntu, Fedoru, openSUSE a ich deriváty)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Súbory sa komprimujú, môže to chvíľu trvať."
+msgid "Choose a package file"
+msgstr "Vyberte súbor balíka"
 
-msgid "The package could not be converted"
-msgstr "Balík sa nepodarilo skonvertovať"
+msgid "Packages (.deb, .rpm)"
+msgstr "Balíky (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Príprava balíka"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Rozbaľovanie súborov ({percent} %)"
 
 msgid "Cancelled"
 msgstr "Zrušené"
 
-msgid "{name} is installed"
-msgstr "{name} je nainštalovaný"
+msgid "The package could not be converted"
+msgstr "Balík sa nepodarilo skonvertovať"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "Balík {name} bol nainštalovaný. Nemá položku v ponuke aplikácií."
+msgid "Dependencies are not available"
+msgstr "Závislosti nie sú dostupné"
 
-msgid "Installation complete"
-msgstr "Inštalácia dokončená"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Niektoré balíky, ktoré tento program potrebuje, sa v repozitároch nenašli."
+
+msgid "Installing the package"
+msgstr "Inštalácia balíka"
+
+msgid "Preparing the installation…"
+msgstr "Príprava inštalácie…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Sťahovanie a inštalácia závislostí…"
+
+msgid "Installing packages…"
+msgstr "Inštalácia balíkov…"
+
+msgid "Configuring the system…"
+msgstr "Konfigurácia systému…"
+
+msgid "Finishing…"
+msgstr "Dokončovanie…"
+
+msgid "Please wait until the installation finishes"
+msgstr "Počkajte, kým sa inštalácia dokončí"
 
 msgid "Authorization was not granted"
 msgstr "Autorizácia nebola udelená"
@@ -347,17 +491,14 @@ msgstr "Autorizácia nebola udelená"
 msgid "The installation failed"
 msgstr "Inštalácia zlyhala"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman vrátil chybu (kód {code}). Podrobnosti zobrazíte po otvorení detailov."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Pri inštalácii balíka sa vyskytla chyba. Podrobnosti nájdete nižšie."
 
 msgid "The application could not be started"
 msgstr "Aplikáciu sa nepodarilo spustiť"
 
-msgid "Copied"
-msgstr "Skopírované"
-
-msgid "Please wait until the installation finishes"
-msgstr "Počkajte, kým sa inštalácia dokončí"
+msgid "The RPM package is truncated or corrupted."
+msgstr "Balík RPM je skrátený alebo poškodený."
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg sa nedá spustiť ako root; spustite debtap-mod ako bežný používateľ."
@@ -380,17 +521,11 @@ msgstr "Arch neaktualizuje jednotlivé balíky; celý systém sa aktualizuje nar
 msgid "Tell which package to install, for example: {example}"
 msgstr "Uveďte, ktorý balík nainštalovať, napríklad: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr "Balíky .rpm sú určené pre Fedoru/openSUSE a nedajú sa tu nainštalovať."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Hľadajte program v repozitároch (pamac search), na Flathube alebo ako AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac nájde programy aj v AUR a Flatpaku: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr "Balíky .deb sa pomocou debtap-mod prevedú na natívne balíky pacman."
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
+msgstr "Balíky .deb a .rpm konvertuje na natívne balíky pacman nástroj debtap-mod."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Spustite tento príkaz ako bežný používateľ (bez sudo)."
@@ -464,8 +599,11 @@ msgstr "Nainštalovať program"
 msgid "Install a downloaded file"
 msgstr "Nainštalovať stiahnutý súbor"
 
-msgid "Install a .deb file here"
-msgstr "Nainštalovať súbor .deb odtiaľto"
+msgid "Install a native package file"
+msgstr "Nainštalovať súbor natívneho balíka"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Sem nainštalujte súbor .deb alebo .rpm"
 
 msgid "Reinstall"
 msgstr "Preinštalovať"
@@ -563,8 +701,8 @@ msgstr "Typy balíkov"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt používa súbory .deb, dnf používa .rpm, pacman používa .pkg.tar.zst."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr "Súbory .deb sa prevedú a nainštalujú pomocou debtap-mod (alebo dvojitým kliknutím)."
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
+msgstr "Súbory .deb a .rpm sa konvertujú a inštalujú pomocou debtap-mod (alebo dvojitým kliknutím)."
 
 msgid "Programs from the community"
 msgstr "Programy od komunity"
@@ -584,8 +722,23 @@ msgstr "Rýchly prehľad: „sudo“ je potrebné na inštaláciu alebo odstrán
 msgid "Command not found: {cmd}"
 msgstr "Príkaz sa nenašiel: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Skripty Debianu iba registrujú repozitár APT a profil AppArmor pre Ubuntu; tu nie sú potrebné."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Skripty samotného balíka iba registrujú softvérový repozitár a profil AppArmor pre iné distribúcie; tu nie sú potrebné."
+
+msgid "Unsupported RPM payload format."
+msgstr "Nepodporovaný formát dát RPM."
+
+msgid "The file is not an RPM package."
+msgstr "Súbor nie je balík RPM."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "Toto je zdrojový RPM (.src.rpm): obsahuje zdrojový kód, nie program na inštaláciu."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Skript {script} nastavuje repozitár APT; táto časť nemá v tomto systéme žiadny účinok."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "Skript {script} je napísaný v jazyku Lua pre samotný RPM a bol preskočený."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "Skript {script} nastavuje repozitár DNF/YUM; táto časť nemá na tento systém žiadny vplyv."

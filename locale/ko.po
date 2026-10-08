@@ -29,11 +29,11 @@ msgstr "경고:"
 msgid "Error:"
 msgstr "오류:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr ".deb 패키지를 pacman 패키지로 변환하고 설치합니다."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr ".deb 또는 .rpm 패키지를 pacman 패키지로 변환하여 설치합니다."
 
-msgid "the .deb file"
-msgstr ".deb 파일"
+msgid "the .deb or .rpm file"
+msgstr ".deb 또는 .rpm 파일"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "질문하지 않고 검토할 수 있도록 설치 스크립트를 엽니다"
@@ -47,8 +47,8 @@ msgstr "패키지를 빌드만 하고 설치하지 않음"
 msgid "keep the built package in DIR"
 msgstr "빌드한 패키지를 DIR에 보관"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr ".deb 옆에 PKGBUILD도 함께 저장"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "패키지 파일 옆에 PKGBUILD도 작성"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "PKGBUILD만 저장하고 빌드하지 않음"
@@ -62,8 +62,8 @@ msgstr "y"
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod는 더 이상 로컬 데이터베이스가 필요하지 않습니다. 업데이트할 것이 없습니다."
 
-msgid "no .deb file given"
-msgstr ".deb 파일이 지정되지 않았습니다"
+msgid "no package file given"
+msgstr "패키지 파일이 지정되지 않았습니다"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "-s 및 -w 옵션은 더 이상 사용되지 않으며 무시되었습니다"
@@ -125,8 +125,8 @@ msgstr "다른 시스템 또는 아키텍처용으로 빌드된 바이너리 {co
 msgid "Libraries not found in the repositories: {list}"
 msgstr "저장소에서 찾을 수 없는 라이브러리: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "이 시스템에 대응하는 항목이 없는 Debian 의존성: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "여기에 대응하는 항목이 없는 패키지 의존성: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "이미 다른 패키지가 소유한 파일: {list}"
@@ -158,11 +158,62 @@ msgstr "이 Debian 패키지에는 control 파일이 없습니다."
 msgid "The control file has no Package or Version field."
 msgstr "control 파일에 Package 또는 Version 필드가 없습니다."
 
-msgid "Install .deb package"
-msgstr ".deb 패키지 설치"
+msgid "Package Installer"
+msgstr "패키지 설치 관리자"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Debian 패키지를 네이티브 pacman 패키지로 변환하고 설치합니다."
+msgid "original debtap"
+msgstr "원본 debtap"
+
+msgid "About {name}"
+msgstr "{name} 정보"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr ".deb 및 .rpm 패키지를 간단하고 안전하게 설치하는 방법입니다."
+
+msgid "Credits"
+msgstr "제작자"
+
+msgid "License"
+msgstr "라이선스"
+
+msgid "Project website"
+msgstr "프로젝트 웹사이트"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "GTK4/Libadwaita로 만든 BigLinux용 앱"
+
+msgid "About"
+msgstr "정보"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "이 프로그램은 자유 소프트웨어이며 GNU General Public License 버전 2 이상에 따라 배포됩니다. 어떠한 보증도 제공되지 않습니다."
+
+msgid "Preferences"
+msgstr "환경설정"
+
+msgid "Converted packages"
+msgstr "변환된 패키지"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr ".deb 또는 .rpm 파일은 설치 전에 네이티브 패키지로 변환됩니다."
+
+msgid "Keep a copy of the converted package"
+msgstr "변환된 패키지 사본 보관"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "나중에 또는 다른 컴퓨터에서 다시 설치할 때 유용합니다"
+
+msgid "Folder"
+msgstr "폴더"
+
+msgid "Choose…"
+msgstr "선택…"
+
+msgid "Details"
+msgstr "세부 정보"
+
+msgid "Copy details"
+msgstr "세부 정보 복사"
 
 msgid "Extracting files"
 msgstr "파일 추출 중"
@@ -170,8 +221,8 @@ msgstr "파일 추출 중"
 msgid "Adapting folders to this system"
 msgstr "이 시스템에 맞게 폴더 조정 중"
 
-msgid "Finding dependencies"
-msgstr "의존성 찾는 중"
+msgid "Checking dependencies"
+msgstr "의존성 확인 중"
 
 msgid "Preparing installation scripts"
 msgstr "설치 스크립트 준비 중"
@@ -179,38 +230,59 @@ msgstr "설치 스크립트 준비 중"
 msgid "Building the package"
 msgstr "패키지 빌드 중"
 
-msgid "Waiting for authorization"
-msgstr "인증을 기다리는 중"
+msgid "Preparing the installation"
+msgstr "설치 준비 중"
 
-msgid "Installing"
-msgstr "설치 중"
+msgid "Downloading packages ({done} of {total})"
+msgstr "패키지 다운로드 중 ({done}/{total})"
 
-msgid "About"
-msgstr "정보"
+msgid "Downloading packages"
+msgstr "패키지 다운로드 중"
+
+msgid "Installing packages"
+msgstr "패키지 설치 중"
+
+msgid "Configuring the system"
+msgstr "시스템 구성 중"
+
+msgid "Finishing"
+msgstr "마무리 중"
+
+msgid "About the Installer"
+msgstr "설치 관리자 정보"
+
+msgid "Help"
+msgstr "도움말"
+
+msgid "Send feedback"
+msgstr "피드백 보내기"
+
+msgid "Report a problem"
+msgstr "문제 신고"
 
 msgid "Main menu"
 msgstr "주 메뉴"
 
-msgid "Choose a .deb file…"
-msgstr ".deb 파일 선택…"
+msgid "Copied"
+msgstr "복사됨"
 
-msgid "Install a .deb package"
-msgstr ".deb 패키지 설치"
+msgid "Install a .deb or .rpm package"
+msgstr ".deb 또는 .rpm 패키지 설치"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Debian 패키지를 열거나 여기에 끌어다 놓으세요. 이 시스템용 네이티브 패키지로 변환되어 설치됩니다."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "컴퓨터에서 .deb 또는 .rpm 파일을 선택하여 Linux 시스템에 간단하고 안전하게 설치하세요."
 
-msgid "Details"
-msgstr "세부 정보"
+msgid "Choose a package file…"
+msgstr "패키지 파일 선택…"
 
-msgid "Cancel"
-msgstr "취소"
+msgid "Or drag and drop the file here"
+msgstr "또는 파일을 여기로 끌어다 놓으세요"
 
-msgid "Prefer native packages when available"
-msgstr "가능하면 네이티브 패키지 우선"
+msgid "Selected package"
+msgstr "선택한 패키지"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "시스템 저장소, Flatpak 또는 AppImage의 프로그램이 대체로 더 잘 작동합니다. 변환된 .deb 패키지는 완벽하게 작동하지 않을 수 있습니다."
+msgid "Review the package information before continuing."
+msgstr "계속하기 전에 패키지 정보를 확인하세요."
 
 msgid "“{name}” is available in the repositories"
 msgstr "“{name}”을(를) 저장소에서 설치할 수 있습니다"
@@ -221,8 +293,8 @@ msgstr "네이티브 패키지를 설치하는 것을 권장합니다."
 msgid "Open"
 msgstr "열기"
 
-msgid "Package"
-msgstr "패키지"
+msgid "Package name"
+msgstr "패키지 이름"
 
 msgid "Version"
 msgstr "버전"
@@ -230,8 +302,8 @@ msgstr "버전"
 msgid "Architecture"
 msgstr "아키텍처"
 
-msgid "Installed size"
-msgstr "설치 크기"
+msgid "Size"
+msgstr "크기"
 
 msgid "Maintainer"
 msgstr "관리자"
@@ -242,26 +314,40 @@ msgstr "웹사이트"
 msgid "Description"
 msgstr "설명"
 
-msgid "Review before installing"
-msgstr "설치 전 검토"
+msgid "Cancel"
+msgstr "취소"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "관리자 권한으로 실행될 의존성과 스크립트를 표시합니다"
+msgid "Continue"
+msgstr "계속"
 
-msgid "Install"
-msgstr "설치"
+msgid "This may take a few moments…"
+msgstr "잠시 걸릴 수 있습니다…"
 
-msgid "Ready to install"
-msgstr "설치 준비 완료"
+msgid "Dependencies"
+msgstr "의존성"
 
-msgid "Check what will be installed."
-msgstr "설치될 내용을 확인하세요."
+msgid "The following packages will be installed so the application works correctly."
+msgstr "응용 프로그램이 올바르게 작동하도록 다음 패키지가 설치됩니다."
+
+msgid "New packages to install"
+msgstr "설치할 새 패키지"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "패키지 {n}개"
+
+msgid "converted from the package file"
+msgstr "패키지 파일에서 변환됨"
+
+msgid "Other information"
+msgstr "기타 정보"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "경고 {n}개"
 
 msgid "Package name on this system"
 msgstr "이 시스템의 패키지 이름"
-
-msgid "Package size"
-msgstr "패키지 크기"
 
 msgid "Applications menu"
 msgstr "응용 프로그램 메뉴"
@@ -269,75 +355,131 @@ msgstr "응용 프로그램 메뉴"
 msgid "No menu entry"
 msgstr "메뉴 항목 없음"
 
-msgid "Warnings"
-msgstr "경고"
-
-msgid "Notes"
-msgstr "참고"
-
-msgid "Dependencies"
-msgstr "의존성"
-
-msgid "Required"
-msgstr "필수"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "패키지 {n}개"
-
-msgid "will be downloaded"
-msgstr "다운로드됩니다"
-
 msgid "Optional"
 msgstr "선택"
 
 msgid "Scripts"
 msgstr "스크립트"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Debian 패키지의 이 명령들은 설치 중에 관리자 권한으로 실행됩니다."
+msgid "These commands from the package run as administrator during installation."
+msgstr "패키지의 이 명령은 설치 중에 관리자 권한으로 실행됩니다."
 
-msgid "Open {name}"
-msgstr "{name} 열기"
+msgid "Show"
+msgstr "표시"
 
-msgid "Copy details"
-msgstr "세부 정보 복사"
+msgid "Back"
+msgstr "뒤로"
+
+msgid "Install"
+msgstr "설치"
+
+msgid "Authentication required"
+msgstr "인증 필요"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "설치를 계속하려면 시스템 인증 창에 암호를 입력하세요."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "시스템에 패키지를 설치하려면 관리자 권한이 필요합니다."
+
+msgid "Package installed successfully!"
+msgstr "패키지를 성공적으로 설치했습니다!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "“{name}” 패키지가 시스템에 올바르게 설치되었습니다."
+
+msgid "Version {version}"
+msgstr "버전 {version}"
+
+msgid "Open application"
+msgstr "응용 프로그램 열기"
+
+msgid "Show details"
+msgstr "세부 정보 표시"
 
 msgid "Close"
 msgstr "닫기"
 
+msgid "Error details"
+msgstr "오류 세부 정보"
+
+msgid "Incompatible package"
+msgstr "호환되지 않는 패키지"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "이 패키지는 {deb_arch} 아키텍처용으로 빌드되었지만 사용 중인 시스템은 {host}입니다."
+
+msgid "Package"
+msgstr "패키지"
+
+msgid "Package architecture"
+msgstr "패키지 아키텍처"
+
+msgid "System architecture"
+msgstr "시스템 아키텍처"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "이 패키지는 이 컴퓨터에 설치할 수 없습니다. {host}용으로 만들어진 패키지 버전을 찾아보세요."
+
 msgid "This file cannot be installed"
 msgstr "이 파일은 설치할 수 없습니다"
 
-msgid "Choose a .deb file"
-msgstr ".deb 파일 선택"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "파일이 손상되었거나 올바른 패키지가 아닐 수 있습니다. 다시 내려받거나 출처를 확인하세요."
 
-msgid "Debian packages"
-msgstr "Debian 패키지"
+msgid "Invalid file"
+msgstr "잘못된 파일"
 
-msgid "Type your password in the window that will appear."
-msgstr "나타나는 창에 암호를 입력하세요."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "선택한 파일은 .deb 또는 .rpm 패키지가 아닙니다."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "없는 의존성은 저장소에서 다운로드됩니다."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "이 설치 관리자는 .deb 및 .rpm 파일(Debian, Ubuntu, Fedora, openSUSE 및 그 파생 배포판용 패키지)에서만 작동합니다."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "파일을 압축하는 중입니다. 1분 정도 걸릴 수 있습니다."
+msgid "Choose a package file"
+msgstr "패키지 파일 선택"
 
-msgid "The package could not be converted"
-msgstr "패키지를 변환할 수 없습니다"
+msgid "Packages (.deb, .rpm)"
+msgstr "패키지 (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "패키지 준비 중"
+
+msgid "Extracting files ({percent}%)"
+msgstr "파일 추출 중 ({percent}%)"
 
 msgid "Cancelled"
 msgstr "취소됨"
 
-msgid "{name} is installed"
-msgstr "{name}이(가) 설치되어 있습니다"
+msgid "The package could not be converted"
+msgstr "패키지를 변환할 수 없습니다"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "패키지 {name}이(가) 설치되었습니다. 응용 프로그램 메뉴에 항목이 없습니다."
+msgid "Dependencies are not available"
+msgstr "의존성을 사용할 수 없음"
 
-msgid "Installation complete"
-msgstr "설치 완료"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "이 프로그램에 필요한 일부 패키지를 저장소에서 찾지 못했습니다."
+
+msgid "Installing the package"
+msgstr "패키지 설치 중"
+
+msgid "Preparing the installation…"
+msgstr "설치 준비 중…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "의존성 다운로드 및 설치 중…"
+
+msgid "Installing packages…"
+msgstr "패키지 설치 중…"
+
+msgid "Configuring the system…"
+msgstr "시스템 구성 중…"
+
+msgid "Finishing…"
+msgstr "마무리 중…"
+
+msgid "Please wait until the installation finishes"
+msgstr "설치가 끝날 때까지 기다려 주세요"
 
 msgid "Authorization was not granted"
 msgstr "인증이 허용되지 않았습니다"
@@ -345,17 +487,14 @@ msgstr "인증이 허용되지 않았습니다"
 msgid "The installation failed"
 msgstr "설치하지 못했습니다"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman에서 오류가 발생했습니다 (코드 {code}). 세부 정보를 열어 무슨 일이 있었는지 확인하세요."
+msgid "An error happened while installing the package. See the details below."
+msgstr "패키지를 설치하는 중 오류가 발생했습니다. 아래 세부 정보를 확인하세요."
 
 msgid "The application could not be started"
 msgstr "응용 프로그램을 시작할 수 없습니다"
 
-msgid "Copied"
-msgstr "복사됨"
-
-msgid "Please wait until the installation finishes"
-msgstr "설치가 끝날 때까지 기다려 주세요"
+msgid "The RPM package is truncated or corrupted."
+msgstr "RPM 패키지가 잘렸거나 손상되었습니다."
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg는 root로 실행할 수 없습니다. debtap-mod를 일반 사용자로 실행하세요."
@@ -378,17 +517,11 @@ msgstr "Arch는 개별 패키지를 따로 업그레이드하지 않습니다. �
 msgid "Tell which package to install, for example: {example}"
 msgstr "설치할 패키지를 지정하세요. 예: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm 패키지는 Fedora/openSUSE용이므로 여기에 설치할 수 없습니다."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "저장소(pamac search), Flathub 또는 AppImage에서 프로그램을 찾아보세요."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac은 AUR과 Flatpak의 프로그램도 찾습니다: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb 패키지는 debtap-mod가 기본 pacman 패키지로 변환합니다."
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb 및 .rpm 패키지는 debtap-mod에서 네이티브 pacman 패키지로 변환됩니다."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "이 명령은 일반 사용자로 실행하세요(sudo 없이)."
@@ -462,8 +595,11 @@ msgstr "프로그램 설치"
 msgid "Install a downloaded file"
 msgstr "내려받은 파일 설치"
 
-msgid "Install a .deb file here"
-msgstr "여기서 .deb 파일 설치"
+msgid "Install a native package file"
+msgstr "네이티브 패키지 파일 설치"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "여기에 .deb 또는 .rpm 파일 설치"
 
 msgid "Reinstall"
 msgstr "재설치"
@@ -561,8 +697,8 @@ msgstr "패키지 형식"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt는 .deb 파일, dnf는 .rpm, pacman은 .pkg.tar.zst를 사용합니다."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb 파일은 debtap-mod(또는 더블 클릭)로 변환하여 설치합니다."
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb 및 .rpm 파일은 debtap-mod로 변환 및 설치됩니다(더블 클릭도 가능)."
 
 msgid "Programs from the community"
 msgstr "커뮤니티 프로그램"
@@ -582,8 +718,23 @@ msgstr "빠른 참고: 설치나 제거에는 “sudo”가 필요하지만, 검
 msgid "Command not found: {cmd}"
 msgstr "명령을 찾을 수 없음: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Debian 스크립트는 Ubuntu용 APT 저장소와 AppArmor 프로필만 등록하므로 여기서는 필요하지 않습니다."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "패키지 자체 스크립트는 다른 배포판용 소프트웨어 저장소와 AppArmor 프로파일을 등록할 뿐이며, 여기서는 필요하지 않습니다."
+
+msgid "Unsupported RPM payload format."
+msgstr "지원되지 않는 RPM 페이로드 형식입니다."
+
+msgid "The file is not an RPM package."
+msgstr "이 파일은 RPM 패키지가 아닙니다."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "소스 RPM(.src.rpm)입니다. 설치할 프로그램이 아니라 소스 코드가 들어 있습니다."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "{script} 스크립트가 APT 저장소를 설정하지만, 해당 부분은 이 시스템에서 효과가 없습니다."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "{script} 스크립트는 RPM 자체용으로 Lua로 작성되어 건너뛰었습니다."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "{script} 스크립트는 DNF/YUM 저장소를 설정합니다. 이 부분은 이 시스템에 영향을 주지 않습니다."

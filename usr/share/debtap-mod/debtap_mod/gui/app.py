@@ -2,24 +2,42 @@
 
 from gi.repository import Adw, Gio, GLib, Gtk
 
-from .. import APP_ID, PROJECT_URL, __version__
-from ..i18n import _
+from .. import APP_ID, PROJECT_URL
+from .dialogs import APP_NAME, AboutDialog, PreferencesDialog
+from .widgets import load_css
 from .window import InstallerWindow
+
+HELP_URL = PROJECT_URL + "#usage"
+FEEDBACK_URL = "https://forum.biglinux.com.br"
+ISSUES_URL = PROJECT_URL + "/issues"
 
 
 class DebtapApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id=APP_ID, flags=Gio.ApplicationFlags.HANDLES_OPEN)
-        GLib.set_application_name(_("Install .deb package"))
-        self._add_action("about", self._on_about)
-        self._add_action("quit", lambda *_args: self.quit())
+        GLib.set_application_name(APP_NAME)
+        self._add_action("about", lambda *_a: AboutDialog().present(self.get_active_window()))
+        self._add_action("preferences", lambda *_a: PreferencesDialog().present(self.get_active_window()))
+        self._add_action("help", lambda *_a: self._open(HELP_URL))
+        self._add_action("feedback", lambda *_a: self._open(FEEDBACK_URL))
+        self._add_action("report", lambda *_a: self._open(ISSUES_URL))
+        self._add_action("quit", lambda *_a: self.quit())
         self.set_accels_for_action("app.quit", ["<Control>q"])
+        self.set_accels_for_action("app.help", ["F1"])
+        self.set_accels_for_action("app.preferences", ["<Control>comma"])
         self.set_accels_for_action("window.close", ["<Control>w"])
 
     def _add_action(self, name, callback):
         action = Gio.SimpleAction.new(name, None)
         action.connect("activate", callback)
         self.add_action(action)
+
+    def _open(self, uri: str) -> None:
+        Gtk.UriLauncher.new(uri).launch(self.get_active_window(), None, None, None)
+
+    def do_startup(self):
+        Adw.Application.do_startup(self)
+        load_css()
 
     def do_activate(self):
         window = self.get_active_window()
@@ -34,20 +52,6 @@ class DebtapApplication(Adw.Application):
             if path:
                 window.load(path)
             window.present()
-
-    def _on_about(self, *_args):
-        about = Adw.AboutDialog(
-            application_name=_("Install .deb package"),
-            application_icon="application-x-deb",
-            developer_name="BigLinux",
-            version=__version__,
-            website=PROJECT_URL,
-            issue_url=PROJECT_URL + "/issues",
-            license_type=Gtk.License.GPL_2_0,
-            comments=_("Converts Debian packages into native pacman packages and installs them."),
-            developers=["Bruno Goncalves", "Tales A. Mendonça", "George Savvidis (debtap)"],
-        )
-        about.present(self.get_active_window())
 
 
 def main(argv: list[str]) -> int:

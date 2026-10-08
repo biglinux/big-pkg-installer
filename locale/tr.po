@@ -29,11 +29,11 @@ msgstr "Uyarı:"
 msgid "Error:"
 msgstr "Hata:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Bir .deb paketini pacman paketine dönüştürür ve kurar."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Bir .deb veya .rpm paketini pacman paketine dönüştürür ve kurar."
 
-msgid "the .deb file"
-msgstr ".deb dosyası"
+msgid "the .deb or .rpm file"
+msgstr ".deb veya .rpm dosyası"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "soru sorma, ancak kurulum betiğini incelemek için aç"
@@ -47,8 +47,8 @@ msgstr "yalnızca paketi derle, kurma"
 msgid "keep the built package in DIR"
 msgstr "derlenen paketi DIR içinde sakla"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr ".deb dosyasının yanına bir PKGBUILD de yaz"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "paket dosyasının yanına bir PKGBUILD de yaz"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "yalnızca bir PKGBUILD yaz, derleme"
@@ -62,8 +62,8 @@ msgstr "evet"
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod artık yerel bir veritabanına ihtiyaç duymaz; güncellenecek bir şey yok."
 
-msgid "no .deb file given"
-msgstr ".deb dosyası verilmedi"
+msgid "no package file given"
+msgstr "paket dosyası verilmedi"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "-s ve -w seçenekleri artık kullanılmıyor ve yok sayıldı"
@@ -125,8 +125,8 @@ msgstr "Diğer sistemler veya mimariler için derlenmiş {count} ikili dosya yok
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Kitaplıklar depolarda bulunamadı: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Burada karşılığı olmayan Debian bağımlılıkları: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Burada karşılığı olmayan paket bağımlılıkları: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Zaten diğer paketlere ait olan dosyalar: {list}"
@@ -158,11 +158,62 @@ msgstr "Debian paketinde control dosyası yok."
 msgid "The control file has no Package or Version field."
 msgstr "control dosyasında Package veya Version alanı yok."
 
-msgid "Install .deb package"
-msgstr ".deb paketini kur"
+msgid "Package Installer"
+msgstr "Paket Yükleyici"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Debian paketlerini yerel pacman paketlerine dönüştürür ve kurar."
+msgid "original debtap"
+msgstr "özgün debtap"
+
+msgid "About {name}"
+msgstr "{name} Hakkında"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr ".deb ve .rpm paketlerini kurmanın basit ve güvenli yolu."
+
+msgid "Credits"
+msgstr "Katkıda Bulunanlar"
+
+msgid "License"
+msgstr "Lisans"
+
+msgid "Project website"
+msgstr "Proje web sitesi"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "GTK4/Libadwaita ile BigLinux için yapıldı"
+
+msgid "About"
+msgstr "Hakkında"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "Bu program özgür yazılımdır ve GNU General Public License, sürüm 2 veya sonrası altında dağıtılır. Kesinlikle hiçbir garantisi yoktur."
+
+msgid "Preferences"
+msgstr "Tercihler"
+
+msgid "Converted packages"
+msgstr "Dönüştürülen paketler"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr ".deb veya .rpm dosyası, kurulmadan önce yerel bir pakete dönüştürülür."
+
+msgid "Keep a copy of the converted package"
+msgstr "Dönüştürülen paketin bir kopyasını sakla"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Daha sonra veya başka bir bilgisayarda yeniden kurmak için kullanışlıdır"
+
+msgid "Folder"
+msgstr "Klasör"
+
+msgid "Choose…"
+msgstr "Seç…"
+
+msgid "Details"
+msgstr "Ayrıntılar"
+
+msgid "Copy details"
+msgstr "Ayrıntıları kopyala"
 
 msgid "Extracting files"
 msgstr "Dosyalar çıkarılıyor"
@@ -170,8 +221,8 @@ msgstr "Dosyalar çıkarılıyor"
 msgid "Adapting folders to this system"
 msgstr "Klasörler bu sisteme uyarlanıyor"
 
-msgid "Finding dependencies"
-msgstr "Bağımlılıklar bulunuyor"
+msgid "Checking dependencies"
+msgstr "Bağımlılıklar denetleniyor"
 
 msgid "Preparing installation scripts"
 msgstr "Kurulum betikleri hazırlanıyor"
@@ -179,38 +230,59 @@ msgstr "Kurulum betikleri hazırlanıyor"
 msgid "Building the package"
 msgstr "Paket derleniyor"
 
-msgid "Waiting for authorization"
-msgstr "Yetkilendirme bekleniyor"
+msgid "Preparing the installation"
+msgstr "Kurulum hazırlanıyor"
 
-msgid "Installing"
-msgstr "Kuruluyor"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Paketler indiriliyor ({total} paketten {done}.)"
 
-msgid "About"
-msgstr "Hakkında"
+msgid "Downloading packages"
+msgstr "Paketler indiriliyor"
+
+msgid "Installing packages"
+msgstr "Paketler kuruluyor"
+
+msgid "Configuring the system"
+msgstr "Sistem yapılandırılıyor"
+
+msgid "Finishing"
+msgstr "Tamamlanıyor"
+
+msgid "About the Installer"
+msgstr "Yükleyici Hakkında"
+
+msgid "Help"
+msgstr "Yardım"
+
+msgid "Send feedback"
+msgstr "Geri bildirim gönder"
+
+msgid "Report a problem"
+msgstr "Sorun bildir"
 
 msgid "Main menu"
 msgstr "Ana menü"
 
-msgid "Choose a .deb file…"
-msgstr ".deb dosyası seç…"
+msgid "Copied"
+msgstr "Kopyalandı"
 
-msgid "Install a .deb package"
-msgstr "Bir .deb paketi kur"
+msgid "Install a .deb or .rpm package"
+msgstr "Bir .deb veya .rpm paketi kur"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Bir Debian paketi açın veya buraya bırakın. Bu sistem için yerel bir pakete dönüştürülüp kurulacak."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Linux sisteminize basit ve güvenli şekilde kurmak için bilgisayarınızdan bir .deb veya .rpm dosyası seçin."
 
-msgid "Details"
-msgstr "Ayrıntılar"
+msgid "Choose a package file…"
+msgstr "Bir paket dosyası seç…"
 
-msgid "Cancel"
-msgstr "İptal"
+msgid "Or drag and drop the file here"
+msgstr "Veya dosyayı buraya sürükleyip bırakın"
 
-msgid "Prefer native packages when available"
-msgstr "Varsa yerel paketleri tercih et"
+msgid "Selected package"
+msgstr "Seçilen paket"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Sistem depolarındaki programlar, Flatpak veya AppImage genellikle daha iyi çalışır. Dönüştürülen .deb paketleri kusursuz çalışmayabilir."
+msgid "Review the package information before continuing."
+msgstr "Devam etmeden önce paket bilgilerini gözden geçirin."
 
 msgid "“{name}” is available in the repositories"
 msgstr "“{name}” depolarda mevcut"
@@ -221,8 +293,8 @@ msgstr "Yerel paketi kurmanız önerilir."
 msgid "Open"
 msgstr "Aç"
 
-msgid "Package"
-msgstr "Paket"
+msgid "Package name"
+msgstr "Paket adı"
 
 msgid "Version"
 msgstr "Sürüm"
@@ -230,8 +302,8 @@ msgstr "Sürüm"
 msgid "Architecture"
 msgstr "Mimari"
 
-msgid "Installed size"
-msgstr "Kurulu boyut"
+msgid "Size"
+msgstr "Boyut"
 
 msgid "Maintainer"
 msgstr "Bakımcı"
@@ -242,26 +314,42 @@ msgstr "Web sitesi"
 msgid "Description"
 msgstr "Açıklama"
 
-msgid "Review before installing"
-msgstr "Kurmadan önce gözden geçir"
+msgid "Cancel"
+msgstr "İptal"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Bağımlılıkları ve yönetici olarak çalışacak betikleri göster"
+msgid "Continue"
+msgstr "Devam"
 
-msgid "Install"
-msgstr "Kur"
+msgid "This may take a few moments…"
+msgstr "Bu birkaç saniye sürebilir…"
 
-msgid "Ready to install"
-msgstr "Kurulmaya hazır"
+msgid "Dependencies"
+msgstr "Bağımlılıklar"
 
-msgid "Check what will be installed."
-msgstr "Nelerin kurulacağını kontrol edin."
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Uygulamanın düzgün çalışması için aşağıdaki paketler kurulacak."
+
+msgid "New packages to install"
+msgstr "Kurulacak yeni paketler"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} paket"
+msgstr[1] "{n} paket"
+
+msgid "converted from the package file"
+msgstr "paket dosyasından dönüştürüldü"
+
+msgid "Other information"
+msgstr "Diğer bilgiler"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} uyarı"
+msgstr[1] "{n} uyarı"
 
 msgid "Package name on this system"
 msgstr "Bu sistemdeki paket adı"
-
-msgid "Package size"
-msgstr "Paket boyutu"
 
 msgid "Applications menu"
 msgstr "Uygulama menüsü"
@@ -269,76 +357,131 @@ msgstr "Uygulama menüsü"
 msgid "No menu entry"
 msgstr "Menü girdisi yok"
 
-msgid "Warnings"
-msgstr "Uyarılar"
-
-msgid "Notes"
-msgstr "Notlar"
-
-msgid "Dependencies"
-msgstr "Bağımlılıklar"
-
-msgid "Required"
-msgstr "Gerekli"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} paket"
-msgstr[1] "{n} paket"
-
-msgid "will be downloaded"
-msgstr "indirilecek"
-
 msgid "Optional"
 msgstr "İsteğe bağlı"
 
 msgid "Scripts"
 msgstr "Betikler"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Debian paketindeki bu komutlar kurulum sırasında yönetici olarak çalışır."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Paketteki bu komutlar kurulum sırasında yönetici olarak çalıştırılır."
 
-msgid "Open {name}"
-msgstr "{name} uygulamasını aç"
+msgid "Show"
+msgstr "Göster"
 
-msgid "Copy details"
-msgstr "Ayrıntıları kopyala"
+msgid "Back"
+msgstr "Geri"
+
+msgid "Install"
+msgstr "Kur"
+
+msgid "Authentication required"
+msgstr "Kimlik doğrulama gerekli"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Kuruluma devam etmek için sistem kimlik doğrulama penceresine parolanızı yazın."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Sisteminize paket kurmak için yönetici izinleri gerekir."
+
+msgid "Package installed successfully!"
+msgstr "Paket başarıyla kuruldu!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "“{name}” paketi sisteminize doğru şekilde kuruldu."
+
+msgid "Version {version}"
+msgstr "Sürüm {version}"
+
+msgid "Open application"
+msgstr "Uygulamayı aç"
+
+msgid "Show details"
+msgstr "Ayrıntıları göster"
 
 msgid "Close"
 msgstr "Kapat"
 
+msgid "Error details"
+msgstr "Hata ayrıntıları"
+
+msgid "Incompatible package"
+msgstr "Uyumsuz paket"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "Bu paket {deb_arch} mimarisi için derlenmiş, ancak sisteminiz {host}."
+
+msgid "Package"
+msgstr "Paket"
+
+msgid "Package architecture"
+msgstr "Paket mimarisi"
+
+msgid "System architecture"
+msgstr "Sistem mimarisi"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Bu paket bu bilgisayara kurulamaz. Paketin {host} için hazırlanmış bir sürümünü arayın."
+
 msgid "This file cannot be installed"
 msgstr "Bu dosya kurulamaz"
 
-msgid "Choose a .deb file"
-msgstr ".deb dosyası seçin"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Dosya hasarlı olabilir veya geçerli bir paket değildir. Yeniden indirin veya nereden geldiğini kontrol edin."
 
-msgid "Debian packages"
-msgstr "Debian paketleri"
+msgid "Invalid file"
+msgstr "Geçersiz dosya"
 
-msgid "Type your password in the window that will appear."
-msgstr "Parolanızı görünecek pencereye yazın."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Seçilen dosya bir .deb veya .rpm paketi değil."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Eksik bağımlılıklar depolardan indirilir."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "Bu yükleyici yalnızca .deb ve .rpm dosyalarıyla çalışır (Debian, Ubuntu, Fedora, openSUSE ve türevleri için paketler)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Dosyalar sıkıştırılıyor, bu bir dakika sürebilir."
+msgid "Choose a package file"
+msgstr "Bir paket dosyası seçin"
 
-msgid "The package could not be converted"
-msgstr "Paket dönüştürülemedi"
+msgid "Packages (.deb, .rpm)"
+msgstr "Paketler (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Paket hazırlanıyor"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Dosyalar çıkarılıyor (%{percent})"
 
 msgid "Cancelled"
 msgstr "İptal edildi"
 
-msgid "{name} is installed"
-msgstr "{name} kuruldu"
+msgid "The package could not be converted"
+msgstr "Paket dönüştürülemedi"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "{name} paketi kuruldu. Uygulama menüsünde girdisi yok."
+msgid "Dependencies are not available"
+msgstr "Bağımlılıklar kullanılamıyor"
 
-msgid "Installation complete"
-msgstr "Kurulum tamamlandı"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Bu programın ihtiyaç duyduğu bazı paketler depolarda bulunamadı."
+
+msgid "Installing the package"
+msgstr "Paket kuruluyor"
+
+msgid "Preparing the installation…"
+msgstr "Kurulum hazırlanıyor…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Bağımlılıklar indiriliyor ve kuruluyor…"
+
+msgid "Installing packages…"
+msgstr "Paketler kuruluyor…"
+
+msgid "Configuring the system…"
+msgstr "Sistem yapılandırılıyor…"
+
+msgid "Finishing…"
+msgstr "Tamamlanıyor…"
+
+msgid "Please wait until the installation finishes"
+msgstr "Lütfen kurulum bitene kadar bekleyin"
 
 msgid "Authorization was not granted"
 msgstr "Yetkilendirme verilmedi"
@@ -346,17 +489,14 @@ msgstr "Yetkilendirme verilmedi"
 msgid "The installation failed"
 msgstr "Kurulum başarısız oldu"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman bir hata döndürdü (kod {code}). Ne olduğunu görmek için ayrıntıları açın."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Paket kurulurken bir hata oluştu. Aşağıdaki ayrıntılara bakın."
 
 msgid "The application could not be started"
 msgstr "Uygulama başlatılamadı"
 
-msgid "Copied"
-msgstr "Kopyalandı"
-
-msgid "Please wait until the installation finishes"
-msgstr "Lütfen kurulum bitene kadar bekleyin"
+msgid "The RPM package is truncated or corrupted."
+msgstr "RPM paketi kesilmiş veya bozuk."
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg root olarak çalışamaz; debtap-mod'u normal bir kullanıcı olarak çalıştırın."
@@ -379,17 +519,11 @@ msgstr "Arch tek tek paketleri yükseltmez; tüm sistem birlikte yükseltilir."
 msgid "Tell which package to install, for example: {example}"
 msgstr "Hangi paketin kurulacağını belirtin, örneğin: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm paketleri Fedora/openSUSE için hazırlanmıştır ve burada kurulamaz."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Programı depolarda (pamac search), Flathub'da veya AppImage olarak arayın."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac, AUR ve Flatpak içindeki programları da bulur: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb paketleri debtap-mod tarafından yerel pacman paketlerine dönüştürülür."
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb ve .rpm paketleri debtap-mod tarafından yerel pacman paketlerine dönüştürülür."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Bu komutu normal kullanıcı olarak çalıştırın (sudo olmadan)."
@@ -463,8 +597,11 @@ msgstr "Program kur"
 msgid "Install a downloaded file"
 msgstr "İndirilen dosyayı kur"
 
-msgid "Install a .deb file here"
-msgstr "Buradaki .deb dosyasını kur"
+msgid "Install a native package file"
+msgstr "Yerel bir paket dosyası kur"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Buraya bir .deb veya .rpm dosyası kur"
 
 msgid "Reinstall"
 msgstr "Yeniden kur"
@@ -562,8 +699,8 @@ msgstr "Paket türleri"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt .deb dosyalarını, dnf .rpm dosyalarını, pacman .pkg.tar.zst dosyalarını kullanır."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb dosyaları debtap-mod ile (veya çift tıklayarak) dönüştürülüp kurulur."
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb ve .rpm dosyaları debtap-mod ile (veya çift tıklayarak) dönüştürülüp kurulur."
 
 msgid "Programs from the community"
 msgstr "Topluluk programları"
@@ -583,8 +720,23 @@ msgstr "Hızlı başvuru: kurmak veya kaldırmak için “sudo” gerekir; arama
 msgid "Command not found: {cmd}"
 msgstr "Komut bulunamadı: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Debian betikleri yalnızca Ubuntu için bir APT deposu ve bir AppArmor profili kaydeder; burada gerekli değildir."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Paketin kendi betikleri yalnızca diğer dağıtımlar için bir yazılım deposu ve bir AppArmor profili kaydeder; burada gerekli değildir."
+
+msgid "Unsupported RPM payload format."
+msgstr "Desteklenmeyen RPM veri biçimi."
+
+msgid "The file is not an RPM package."
+msgstr "Dosya bir RPM paketi değil."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "Bu bir kaynak RPM'dir (.src.rpm): kurulacak bir program değil, kaynak kodu içerir."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "{script} betiği bir APT deposu yapılandırır; bu kısmın bu sistemde bir etkisi yoktur."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "{script} betiği RPM'in kendisi için Lua ile yazılmıştır ve atlandı."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "{script} betiği bir DNF/YUM deposunu yapılandırır; bu kısmın bu sistemde etkisi yoktur."

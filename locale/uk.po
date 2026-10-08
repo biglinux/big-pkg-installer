@@ -29,11 +29,11 @@ msgstr "Попередження:"
 msgid "Error:"
 msgstr "Помилка:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Перетворити пакунок .deb на пакунок pacman і встановити його."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Перетворює пакет .deb або .rpm на пакет pacman і встановлює його."
 
-msgid "the .deb file"
-msgstr "файл .deb"
+msgid "the .deb or .rpm file"
+msgstr "файл .deb або .rpm"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "не ставити запитань, але відкрити скрипт встановлення для перегляду"
@@ -47,8 +47,8 @@ msgstr "лише зібрати пакунок, не встановлювати 
 msgid "keep the built package in DIR"
 msgstr "зберегти зібраний пакунок у DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "також записати PKGBUILD поруч із .deb"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "також створити PKGBUILD поруч із файлом пакета"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "лише записати PKGBUILD, не збирати"
@@ -62,8 +62,8 @@ msgstr "так"
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod більше не потребує локальної бази даних; оновлювати нічого."
 
-msgid "no .deb file given"
-msgstr "не вказано файл .deb"
+msgid "no package file given"
+msgstr "файл пакета не вказано"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "параметри -s і -w застарілі та були проігноровані"
@@ -125,8 +125,8 @@ msgstr "Проігноровано виконуваних файлів для і
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Бібліотеки не знайдено в репозиторіях: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Залежності Debian без відповідника тут: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Залежності пакета, які не мають відповідника тут: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Файли, які вже належать іншим пакункам: {list}"
@@ -158,11 +158,62 @@ msgstr "У пакунку Debian немає файлу control."
 msgid "The control file has no Package or Version field."
 msgstr "У файлі control немає поля Package або Version."
 
-msgid "Install .deb package"
-msgstr "Встановити пакунок .deb"
+msgid "Package Installer"
+msgstr "Інсталятор пакетів"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Перетворює пакунки Debian на рідні пакунки pacman і встановлює їх."
+msgid "original debtap"
+msgstr "оригінальний debtap"
+
+msgid "About {name}"
+msgstr "Про {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "Простий і безпечний спосіб встановлення пакетів .deb і .rpm."
+
+msgid "Credits"
+msgstr "Подяки"
+
+msgid "License"
+msgstr "Ліцензія"
+
+msgid "Project website"
+msgstr "Вебсайт проєкту"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "Створено для BigLinux за допомогою GTK4/Libadwaita"
+
+msgid "About"
+msgstr "Про програму"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "Ця програма є вільним програмним забезпеченням і поширюється за умовами GNU General Public License версії 2 або новішої. Вона постачається без жодних гарантій."
+
+msgid "Preferences"
+msgstr "Налаштування"
+
+msgid "Converted packages"
+msgstr "Перетворені пакунки"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "Файл .deb або .rpm перетворюється на рідний пакет перед установленням."
+
+msgid "Keep a copy of the converted package"
+msgstr "Зберігати копію перетвореного пакунка"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Корисно для повторного встановлення пізніше або на іншому комп’ютері"
+
+msgid "Folder"
+msgstr "Тека"
+
+msgid "Choose…"
+msgstr "Вибрати…"
+
+msgid "Details"
+msgstr "Подробиці"
+
+msgid "Copy details"
+msgstr "Копіювати подробиці"
 
 msgid "Extracting files"
 msgstr "Видобування файлів"
@@ -170,8 +221,8 @@ msgstr "Видобування файлів"
 msgid "Adapting folders to this system"
 msgstr "Адаптація тек до цієї системи"
 
-msgid "Finding dependencies"
-msgstr "Пошук залежностей"
+msgid "Checking dependencies"
+msgstr "Перевірка залежностей"
 
 msgid "Preparing installation scripts"
 msgstr "Підготовка скриптів встановлення"
@@ -179,38 +230,59 @@ msgstr "Підготовка скриптів встановлення"
 msgid "Building the package"
 msgstr "Збирання пакунка"
 
-msgid "Waiting for authorization"
-msgstr "Очікування авторизації"
+msgid "Preparing the installation"
+msgstr "Підготовка до встановлення"
 
-msgid "Installing"
-msgstr "Встановлення"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Завантаження пакунків ({done} з {total})"
 
-msgid "About"
-msgstr "Про програму"
+msgid "Downloading packages"
+msgstr "Завантаження пакунків"
+
+msgid "Installing packages"
+msgstr "Встановлення пакунків"
+
+msgid "Configuring the system"
+msgstr "Налаштування системи"
+
+msgid "Finishing"
+msgstr "Завершення"
+
+msgid "About the Installer"
+msgstr "Про встановлювач"
+
+msgid "Help"
+msgstr "Довідка"
+
+msgid "Send feedback"
+msgstr "Надіслати відгук"
+
+msgid "Report a problem"
+msgstr "Повідомити про проблему"
 
 msgid "Main menu"
 msgstr "Головне меню"
 
-msgid "Choose a .deb file…"
-msgstr "Вибрати файл .deb…"
+msgid "Copied"
+msgstr "Скопійовано"
 
-msgid "Install a .deb package"
-msgstr "Встановити пакунок .deb"
+msgid "Install a .deb or .rpm package"
+msgstr "Установити пакет .deb або .rpm"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Відкрийте пакунок Debian або перетягніть його сюди. Його буде перетворено на рідний пакунок для цієї системи та встановлено."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Виберіть файл .deb або .rpm на комп’ютері, щоб просто й безпечно встановити його у вашу систему Linux."
 
-msgid "Details"
-msgstr "Подробиці"
+msgid "Choose a package file…"
+msgstr "Вибрати файл пакета…"
 
-msgid "Cancel"
-msgstr "Скасувати"
+msgid "Or drag and drop the file here"
+msgstr "Або перетягніть файл сюди"
 
-msgid "Prefer native packages when available"
-msgstr "Надавати перевагу рідним пакункам, якщо вони є"
+msgid "Selected package"
+msgstr "Вибраний пакунок"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Програми із системних репозиторіїв, Flatpak або AppImage зазвичай працюють краще. Перетворені пакунки .deb можуть працювати не ідеально."
+msgid "Review the package information before continuing."
+msgstr "Перегляньте відомості про пакунок, перш ніж продовжити."
 
 msgid "“{name}” is available in the repositories"
 msgstr "«{name}» доступний у репозиторіях"
@@ -221,8 +293,8 @@ msgstr "Рекомендовано встановити рідний пакун�
 msgid "Open"
 msgstr "Відкрити"
 
-msgid "Package"
-msgstr "Пакунок"
+msgid "Package name"
+msgstr "Назва пакунка"
 
 msgid "Version"
 msgstr "Версія"
@@ -230,8 +302,8 @@ msgstr "Версія"
 msgid "Architecture"
 msgstr "Архітектура"
 
-msgid "Installed size"
-msgstr "Розмір після встановлення"
+msgid "Size"
+msgstr "Розмір"
 
 msgid "Maintainer"
 msgstr "Супровідник"
@@ -242,44 +314,23 @@ msgstr "Вебсайт"
 msgid "Description"
 msgstr "Опис"
 
-msgid "Review before installing"
-msgstr "Перевірити перед встановленням"
+msgid "Cancel"
+msgstr "Скасувати"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Показати залежності та скрипти, які виконуватимуться від імені адміністратора"
+msgid "Continue"
+msgstr "Продовжити"
 
-msgid "Install"
-msgstr "Встановити"
-
-msgid "Ready to install"
-msgstr "Готово до встановлення"
-
-msgid "Check what will be installed."
-msgstr "Перевірте, що буде встановлено."
-
-msgid "Package name on this system"
-msgstr "Назва пакунка в цій системі"
-
-msgid "Package size"
-msgstr "Розмір пакунка"
-
-msgid "Applications menu"
-msgstr "Меню застосунків"
-
-msgid "No menu entry"
-msgstr "Немає пункту меню"
-
-msgid "Warnings"
-msgstr "Попередження"
-
-msgid "Notes"
-msgstr "Примітки"
+msgid "This may take a few moments…"
+msgstr "Це може тривати кілька хвилин…"
 
 msgid "Dependencies"
 msgstr "Залежності"
 
-msgid "Required"
-msgstr "Обов’язкові"
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Щоб програма працювала належним чином, буде встановлено такі пакунки."
+
+msgid "New packages to install"
+msgstr "Нові пакунки для встановлення"
 
 msgid "{n} package"
 msgid_plural "{n} packages"
@@ -287,8 +338,26 @@ msgstr[0] "{n} пакунок"
 msgstr[1] "{n} пакунки"
 msgstr[2] "{n} пакунків"
 
-msgid "will be downloaded"
-msgstr "буде завантажено"
+msgid "converted from the package file"
+msgstr "перетворено з файла пакета"
+
+msgid "Other information"
+msgstr "Інші відомості"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} попередження"
+msgstr[1] "{n} попередження"
+msgstr[2] "{n} попереджень"
+
+msgid "Package name on this system"
+msgstr "Назва пакунка в цій системі"
+
+msgid "Applications menu"
+msgstr "Меню застосунків"
+
+msgid "No menu entry"
+msgstr "Немає пункту меню"
 
 msgid "Optional"
 msgstr "Необов’язкові"
@@ -296,50 +365,125 @@ msgstr "Необов’язкові"
 msgid "Scripts"
 msgstr "Скрипти"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Ці команди з пакунка Debian виконуються від імені адміністратора під час встановлення."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Ці команди з пакета виконуються від імені адміністратора під час установлення."
 
-msgid "Open {name}"
-msgstr "Відкрити {name}"
+msgid "Show"
+msgstr "Показати"
 
-msgid "Copy details"
-msgstr "Копіювати подробиці"
+msgid "Back"
+msgstr "Назад"
+
+msgid "Install"
+msgstr "Встановити"
+
+msgid "Authentication required"
+msgstr "Потрібна автентифікація"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Введіть пароль у системному вікні автентифікації, щоб продовжити встановлення."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Для встановлення пакунків у вашу систему потрібні права адміністратора."
+
+msgid "Package installed successfully!"
+msgstr "Пакунок успішно встановлено!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "Пакунок «{name}» правильно встановлено у вашу систему."
+
+msgid "Version {version}"
+msgstr "Версія {version}"
+
+msgid "Open application"
+msgstr "Відкрити програму"
+
+msgid "Show details"
+msgstr "Показати подробиці"
 
 msgid "Close"
 msgstr "Закрити"
 
+msgid "Error details"
+msgstr "Подробиці помилки"
+
+msgid "Incompatible package"
+msgstr "Несумісний пакунок"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "Цей пакунок зібрано для архітектури {deb_arch}, але ваша система має архітектуру {host}."
+
+msgid "Package"
+msgstr "Пакунок"
+
+msgid "Package architecture"
+msgstr "Архітектура пакунка"
+
+msgid "System architecture"
+msgstr "Архітектура системи"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Цей пакунок не можна встановити на цьому комп’ютері. Знайдіть версію пакунка, створену для {host}."
+
 msgid "This file cannot be installed"
 msgstr "Цей файл неможливо встановити"
 
-msgid "Choose a .deb file"
-msgstr "Виберіть файл .deb"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Файл може бути пошкоджений або не є дійсним пакетом. Завантажте його ще раз або перевірте, звідки він узявся."
 
-msgid "Debian packages"
-msgstr "Пакунки Debian"
+msgid "Invalid file"
+msgstr "Недійсний файл"
 
-msgid "Type your password in the window that will appear."
-msgstr "Введіть пароль у вікні, що з’явиться."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Вибраний файл не є пакетом .deb або .rpm."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Відсутні залежності завантажуються з репозиторіїв."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "Цей інсталятор працює лише з файлами .deb і .rpm (пакети для Debian, Ubuntu, Fedora, openSUSE та їхніх похідних)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Стиснення файлів, це може тривати хвилину."
+msgid "Choose a package file"
+msgstr "Виберіть файл пакета"
 
-msgid "The package could not be converted"
-msgstr "Не вдалося перетворити пакунок"
+msgid "Packages (.deb, .rpm)"
+msgstr "Пакети (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Підготовка пакунка"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Видобування файлів ({percent}%)"
 
 msgid "Cancelled"
 msgstr "Скасовано"
 
-msgid "{name} is installed"
-msgstr "{name} встановлено"
+msgid "The package could not be converted"
+msgstr "Не вдалося перетворити пакунок"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "Пакунок {name} встановлено. Він не має пункту в меню застосунків."
+msgid "Dependencies are not available"
+msgstr "Залежності недоступні"
 
-msgid "Installation complete"
-msgstr "Встановлення завершено"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Деякі пакунки, потрібні цій програмі, не знайдено в репозиторіях."
+
+msgid "Installing the package"
+msgstr "Встановлення пакунка"
+
+msgid "Preparing the installation…"
+msgstr "Підготовка до встановлення…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Завантаження й встановлення залежностей…"
+
+msgid "Installing packages…"
+msgstr "Встановлення пакунків…"
+
+msgid "Configuring the system…"
+msgstr "Налаштування системи…"
+
+msgid "Finishing…"
+msgstr "Завершення…"
+
+msgid "Please wait until the installation finishes"
+msgstr "Зачекайте, доки завершиться встановлення"
 
 msgid "Authorization was not granted"
 msgstr "Авторизацію не надано"
@@ -347,17 +491,14 @@ msgstr "Авторизацію не надано"
 msgid "The installation failed"
 msgstr "Не вдалося встановити"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman повернув помилку (код {code}). Відкрийте подробиці, щоб побачити, що сталося."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Під час встановлення пакунка сталася помилка. Подробиці наведено нижче."
 
 msgid "The application could not be started"
 msgstr "Не вдалося запустити застосунок"
 
-msgid "Copied"
-msgstr "Скопійовано"
-
-msgid "Please wait until the installation finishes"
-msgstr "Зачекайте, доки завершиться встановлення"
+msgid "The RPM package is truncated or corrupted."
+msgstr "Пакет RPM обрізаний або пошкоджений."
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg не може працювати від імені root; запускайте debtap-mod як звичайний користувач."
@@ -380,17 +521,11 @@ msgstr "Arch не оновлює окремі пакунки; уся систе�
 msgid "Tell which package to install, for example: {example}"
 msgstr "Вкажіть, який пакунок встановити, наприклад: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr "Пакунки .rpm призначені для Fedora/openSUSE і не можуть бути встановлені тут."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Шукайте програму в репозиторіях (pamac search), на Flathub або як AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac також знаходить програми в AUR і Flatpak: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr "Пакунки .deb перетворюються на рідні пакунки pacman за допомогою debtap-mod."
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
+msgstr "Пакети .deb і .rpm перетворюються на рідні пакети pacman за допомогою debtap-mod."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Виконайте цю команду як звичайний користувач (без sudo)."
@@ -464,8 +599,11 @@ msgstr "Встановити програму"
 msgid "Install a downloaded file"
 msgstr "Встановити завантажений файл"
 
-msgid "Install a .deb file here"
-msgstr "Встановити файл .deb звідси"
+msgid "Install a native package file"
+msgstr "Установити рідний файл пакета"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Установити файл .deb або .rpm тут"
 
 msgid "Reinstall"
 msgstr "Перевстановити"
@@ -563,8 +701,8 @@ msgstr "Типи пакунків"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt використовує файли .deb, dnf — .rpm, pacman — .pkg.tar.zst."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr "Файли .deb перетворюються та встановлюються за допомогою debtap-mod (або подвійним клацанням)."
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
+msgstr "Файли .deb і .rpm перетворюються й установлюються за допомогою debtap-mod (або подвійним клацанням)."
 
 msgid "Programs from the community"
 msgstr "Програми від спільноти"
@@ -584,8 +722,23 @@ msgstr "Короткий довідник: «sudo» потрібен для вс
 msgid "Command not found: {cmd}"
 msgstr "Команду не знайдено: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Скрипти Debian лише реєструють репозиторій APT і профіль AppArmor для Ubuntu; тут вони не потрібні."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Власні скрипти пакета лише реєструють репозиторій програм і профіль AppArmor для інших дистрибутивів; тут вони не потрібні."
+
+msgid "Unsupported RPM payload format."
+msgstr "Непідтримуваний формат даних RPM."
+
+msgid "The file is not an RPM package."
+msgstr "Файл не є пакетом RPM."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "Це вихідний RPM (.src.rpm): він містить вихідний код, а не програму для встановлення."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Скрипт {script} налаштовує репозиторій APT; ця частина не має ефекту в цій системі."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "Скрипт {script} написано мовою Lua для самого RPM, і його пропущено."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "Скрипт {script} налаштовує репозиторій DNF/YUM; ця частина не діє в цій системі."

@@ -7,7 +7,7 @@ pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL-2.0-or-later')
 url="https://github.com/biglinux/debtap-mod"
-pkgdesc="Convert and install .deb packages, and translate apt/dnf/dpkg commands to pacman"
+pkgdesc="Convert and install .deb and .rpm packages, and translate apt/dnf/dpkg commands to pacman"
 source=("git+https://github.com/biglinux/debtap-mod.git")
 md5sums=(SKIP)
 depends=(
@@ -23,7 +23,7 @@ depends=(
     'libadwaita'
 )
 optdepends=('pamac-gtk: open native packages suggested by the installer')
-checkdepends=('python-pytest')
+checkdepends=('python-pytest' 'rpm-tools')
 # /usr/local/bin/{apt,apt-get,dnf,yum} moved here from biglinux-improve-compatibility;
 # older builds of that package still ship them.
 conflicts=('biglinux-improve-compatibility<26.10.07')

@@ -18,7 +18,7 @@
 match = "chatgpt"
 skip_scripts = true
 remove_files = ["etc/apparmor.d/chatgpt"]
-note = "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
+note = "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
 
 [[quirk]]
 match = "warsaw"

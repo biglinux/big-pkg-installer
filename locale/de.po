@@ -29,11 +29,11 @@ msgstr "Warnung:"
 msgid "Error:"
 msgstr "Fehler:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Wandelt ein .deb-Paket in ein pacman-Paket um und installiert es."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Wandelt ein .deb- oder .rpm-Paket in ein pacman-Paket um und installiert es."
 
-msgid "the .deb file"
-msgstr "die .deb-Datei"
+msgid "the .deb or .rpm file"
+msgstr "die .deb- oder .rpm-Datei"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "keine Fragen stellen, aber das Installationsskript zur Prüfung öffnen"
@@ -47,8 +47,8 @@ msgstr "das Paket nur erstellen, nicht installieren"
 msgid "keep the built package in DIR"
 msgstr "das erstellte Paket in DIR behalten"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "zusätzlich eine PKGBUILD neben der .deb-Datei schreiben"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "zusätzlich eine PKGBUILD neben der Paketdatei schreiben"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "nur eine PKGBUILD schreiben, nicht erstellen"
@@ -62,8 +62,8 @@ msgstr "ja"
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod benötigt keine lokale Datenbank mehr; es gibt nichts zu aktualisieren."
 
-msgid "no .deb file given"
-msgstr "keine .deb-Datei angegeben"
+msgid "no package file given"
+msgstr "keine Paketdatei angegeben"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "die Optionen -s und -w sind veraltet und wurden ignoriert"
@@ -125,8 +125,8 @@ msgstr "{count} für andere Systeme oder Architekturen erstellte Binärdateien i
 msgid "Libraries not found in the repositories: {list}"
 msgstr "In den Paketquellen nicht gefundene Bibliotheken: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Debian-Abhängigkeiten ohne Entsprechung hier: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Paketabhängigkeiten ohne Entsprechung hier: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Dateien, die bereits anderen Paketen gehören: {list}"
@@ -158,11 +158,62 @@ msgstr "Das Debian-Paket enthält keine control-Datei."
 msgid "The control file has no Package or Version field."
 msgstr "Die control-Datei enthält kein Feld Package oder Version."
 
-msgid "Install .deb package"
-msgstr "Paket .deb installieren"
+msgid "Package Installer"
+msgstr "Paketinstallationsprogramm"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Wandelt Debian-Pakete in native pacman-Pakete um und installiert sie."
+msgid "original debtap"
+msgstr "originalen debtap"
+
+msgid "About {name}"
+msgstr "Über {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "Eine einfache und sichere Möglichkeit, .deb- und .rpm-Pakete zu installieren."
+
+msgid "Credits"
+msgstr "Danksagungen"
+
+msgid "License"
+msgstr "Lizenz"
+
+msgid "Project website"
+msgstr "Projektwebsite"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "Entwickelt für BigLinux mit GTK4/Libadwaita"
+
+msgid "About"
+msgstr "Info"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "Dieses Programm ist freie Software und wird unter der GNU General Public License, Version 2 oder neuer, verbreitet. Es wird ohne jegliche Gewährleistung bereitgestellt."
+
+msgid "Preferences"
+msgstr "Einstellungen"
+
+msgid "Converted packages"
+msgstr "Konvertierte Pakete"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "Die .deb- oder .rpm-Datei wird vor der Installation in ein natives Paket umgewandelt."
+
+msgid "Keep a copy of the converted package"
+msgstr "Kopie des konvertierten Pakets behalten"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Nützlich, um es später oder auf einem anderen Computer erneut zu installieren"
+
+msgid "Folder"
+msgstr "Ordner"
+
+msgid "Choose…"
+msgstr "Auswählen…"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Copy details"
+msgstr "Details kopieren"
 
 msgid "Extracting files"
 msgstr "Dateien werden entpackt"
@@ -170,8 +221,8 @@ msgstr "Dateien werden entpackt"
 msgid "Adapting folders to this system"
 msgstr "Ordner werden an dieses System angepasst"
 
-msgid "Finding dependencies"
-msgstr "Abhängigkeiten werden gesucht"
+msgid "Checking dependencies"
+msgstr "Abhängigkeiten werden geprüft"
 
 msgid "Preparing installation scripts"
 msgstr "Installationsskripte werden vorbereitet"
@@ -179,38 +230,59 @@ msgstr "Installationsskripte werden vorbereitet"
 msgid "Building the package"
 msgstr "Paket wird erstellt"
 
-msgid "Waiting for authorization"
-msgstr "Warten auf Autorisierung"
+msgid "Preparing the installation"
+msgstr "Installation wird vorbereitet"
 
-msgid "Installing"
-msgstr "Installation läuft"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Pakete werden heruntergeladen ({done} von {total})"
 
-msgid "About"
-msgstr "Info"
+msgid "Downloading packages"
+msgstr "Pakete werden heruntergeladen"
+
+msgid "Installing packages"
+msgstr "Pakete werden installiert"
+
+msgid "Configuring the system"
+msgstr "System wird konfiguriert"
+
+msgid "Finishing"
+msgstr "Abschluss"
+
+msgid "About the Installer"
+msgstr "Über das Installationsprogramm"
+
+msgid "Help"
+msgstr "Hilfe"
+
+msgid "Send feedback"
+msgstr "Rückmeldung senden"
+
+msgid "Report a problem"
+msgstr "Problem melden"
 
 msgid "Main menu"
 msgstr "Hauptmenü"
 
-msgid "Choose a .deb file…"
-msgstr "Eine .deb-Datei auswählen …"
+msgid "Copied"
+msgstr "Kopiert"
 
-msgid "Install a .deb package"
-msgstr "Ein .deb-Paket installieren"
+msgid "Install a .deb or .rpm package"
+msgstr "Ein .deb- oder .rpm-Paket installieren"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Öffnen Sie ein Debian-Paket oder ziehen Sie es hierher. Es wird in ein natives Paket für dieses System umgewandelt und installiert."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Wählen Sie eine .deb- oder .rpm-Datei auf Ihrem Computer aus, um sie einfach und sicher auf Ihrem Linux-System zu installieren."
 
-msgid "Details"
-msgstr "Details"
+msgid "Choose a package file…"
+msgstr "Paketdatei auswählen …"
 
-msgid "Cancel"
-msgstr "Abbrechen"
+msgid "Or drag and drop the file here"
+msgstr "Oder ziehen Sie die Datei hierher"
 
-msgid "Prefer native packages when available"
-msgstr "Native Pakete bevorzugen, wenn verfügbar"
+msgid "Selected package"
+msgstr "Ausgewähltes Paket"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Programme aus den Systempaketquellen, als Flatpak oder AppImage funktionieren meist besser. Umgewandelte .deb-Pakete funktionieren möglicherweise nicht einwandfrei."
+msgid "Review the package information before continuing."
+msgstr "Prüfen Sie die Paketinformationen, bevor Sie fortfahren."
 
 msgid "“{name}” is available in the repositories"
 msgstr "„{name}“ ist in den Paketquellen verfügbar"
@@ -221,8 +293,8 @@ msgstr "Es wird empfohlen, das native Paket zu installieren."
 msgid "Open"
 msgstr "Öffnen"
 
-msgid "Package"
-msgstr "Paket"
+msgid "Package name"
+msgstr "Paketname"
 
 msgid "Version"
 msgstr "Version"
@@ -230,8 +302,8 @@ msgstr "Version"
 msgid "Architecture"
 msgstr "Architektur"
 
-msgid "Installed size"
-msgstr "Installierte Größe"
+msgid "Size"
+msgstr "Größe"
 
 msgid "Maintainer"
 msgstr "Betreuer"
@@ -242,26 +314,42 @@ msgstr "Webseite"
 msgid "Description"
 msgstr "Beschreibung"
 
-msgid "Review before installing"
-msgstr "Vor der Installation prüfen"
+msgid "Cancel"
+msgstr "Abbrechen"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Die Abhängigkeiten und die Skripte anzeigen, die als Administrator ausgeführt werden"
+msgid "Continue"
+msgstr "Fortfahren"
 
-msgid "Install"
-msgstr "Installieren"
+msgid "This may take a few moments…"
+msgstr "Das kann einen Moment dauern …"
 
-msgid "Ready to install"
-msgstr "Bereit zur Installation"
+msgid "Dependencies"
+msgstr "Abhängigkeiten"
 
-msgid "Check what will be installed."
-msgstr "Prüfen Sie, was installiert wird."
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Die folgenden Pakete werden installiert, damit die Anwendung korrekt funktioniert."
+
+msgid "New packages to install"
+msgstr "Neu zu installierende Pakete"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} Paket"
+msgstr[1] "{n} Pakete"
+
+msgid "converted from the package file"
+msgstr "aus der Paketdatei umgewandelt"
+
+msgid "Other information"
+msgstr "Weitere Informationen"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} Warnung"
+msgstr[1] "{n} Warnungen"
 
 msgid "Package name on this system"
 msgstr "Paketname auf diesem System"
-
-msgid "Package size"
-msgstr "Paketgröße"
 
 msgid "Applications menu"
 msgstr "Anwendungsmenü"
@@ -269,76 +357,131 @@ msgstr "Anwendungsmenü"
 msgid "No menu entry"
 msgstr "Kein Menüeintrag"
 
-msgid "Warnings"
-msgstr "Warnungen"
-
-msgid "Notes"
-msgstr "Hinweise"
-
-msgid "Dependencies"
-msgstr "Abhängigkeiten"
-
-msgid "Required"
-msgstr "Erforderlich"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} Paket"
-msgstr[1] "{n} Pakete"
-
-msgid "will be downloaded"
-msgstr "wird heruntergeladen"
-
 msgid "Optional"
 msgstr "Optional"
 
 msgid "Scripts"
 msgstr "Skripte"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Diese Befehle aus dem Debian-Paket werden bei der Installation als Administrator ausgeführt."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Diese Befehle aus dem Paket werden während der Installation als Administrator ausgeführt."
 
-msgid "Open {name}"
-msgstr "{name} öffnen"
+msgid "Show"
+msgstr "Anzeigen"
 
-msgid "Copy details"
-msgstr "Details kopieren"
+msgid "Back"
+msgstr "Zurück"
+
+msgid "Install"
+msgstr "Installieren"
+
+msgid "Authentication required"
+msgstr "Legitimierung erforderlich"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Geben Sie Ihr Passwort im Legitimierungsfenster des Systems ein, um die Installation fortzusetzen."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Für die Installation von Paketen auf Ihrem System sind Administratorrechte erforderlich."
+
+msgid "Package installed successfully!"
+msgstr "Paket erfolgreich installiert!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "Das Paket „{name}“ wurde korrekt auf Ihrem System installiert."
+
+msgid "Version {version}"
+msgstr "Version {version}"
+
+msgid "Open application"
+msgstr "Anwendung öffnen"
+
+msgid "Show details"
+msgstr "Details anzeigen"
 
 msgid "Close"
 msgstr "Schließen"
 
+msgid "Error details"
+msgstr "Fehlerdetails"
+
+msgid "Incompatible package"
+msgstr "Inkompatibles Paket"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "Dieses Paket wurde für die Architektur {deb_arch} erstellt, Ihr System ist jedoch {host}."
+
+msgid "Package"
+msgstr "Paket"
+
+msgid "Package architecture"
+msgstr "Paketarchitektur"
+
+msgid "System architecture"
+msgstr "Systemarchitektur"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Dieses Paket kann auf diesem Computer nicht installiert werden. Suchen Sie nach einer Version des Pakets für {host}."
+
 msgid "This file cannot be installed"
 msgstr "Diese Datei kann nicht installiert werden"
 
-msgid "Choose a .deb file"
-msgstr "Eine .deb-Datei auswählen"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Die Datei ist möglicherweise beschädigt oder kein gültiges Paket. Laden Sie sie erneut herunter oder prüfen Sie ihre Herkunft."
 
-msgid "Debian packages"
-msgstr "Debian-Pakete"
+msgid "Invalid file"
+msgstr "Ungültige Datei"
 
-msgid "Type your password in the window that will appear."
-msgstr "Geben Sie Ihr Passwort in dem Fenster ein, das erscheint."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Die ausgewählte Datei ist kein .deb- oder .rpm-Paket."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Fehlende Abhängigkeiten werden aus den Paketquellen heruntergeladen."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "Dieses Installationsprogramm funktioniert nur mit .deb- und .rpm-Dateien (Pakete für Debian, Ubuntu, Fedora, openSUSE und deren Derivate)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Die Dateien werden komprimiert, das kann eine Minute dauern."
+msgid "Choose a package file"
+msgstr "Paketdatei auswählen"
 
-msgid "The package could not be converted"
-msgstr "Das Paket konnte nicht umgewandelt werden"
+msgid "Packages (.deb, .rpm)"
+msgstr "Pakete (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Paket wird vorbereitet"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Dateien werden extrahiert ({percent} %)"
 
 msgid "Cancelled"
 msgstr "Abgebrochen"
 
-msgid "{name} is installed"
-msgstr "{name} ist installiert"
+msgid "The package could not be converted"
+msgstr "Das Paket konnte nicht umgewandelt werden"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "Das Paket {name} wurde installiert. Es hat keinen Eintrag im Anwendungsmenü."
+msgid "Dependencies are not available"
+msgstr "Abhängigkeiten sind nicht verfügbar"
 
-msgid "Installation complete"
-msgstr "Installation abgeschlossen"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Einige Pakete, die dieses Programm benötigt, wurden in den Paketquellen nicht gefunden."
+
+msgid "Installing the package"
+msgstr "Paket wird installiert"
+
+msgid "Preparing the installation…"
+msgstr "Installation wird vorbereitet …"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Abhängigkeiten werden heruntergeladen und installiert …"
+
+msgid "Installing packages…"
+msgstr "Pakete werden installiert …"
+
+msgid "Configuring the system…"
+msgstr "System wird konfiguriert …"
+
+msgid "Finishing…"
+msgstr "Abschluss …"
+
+msgid "Please wait until the installation finishes"
+msgstr "Bitte warten, bis die Installation abgeschlossen ist"
 
 msgid "Authorization was not granted"
 msgstr "Die Autorisierung wurde nicht erteilt"
@@ -346,17 +489,14 @@ msgstr "Die Autorisierung wurde nicht erteilt"
 msgid "The installation failed"
 msgstr "Die Installation ist fehlgeschlagen"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman hat einen Fehler gemeldet (Code {code}). Öffnen Sie die Details, um zu sehen, was passiert ist."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Beim Installieren des Pakets ist ein Fehler aufgetreten. Details finden Sie unten."
 
 msgid "The application could not be started"
 msgstr "Die Anwendung konnte nicht gestartet werden"
 
-msgid "Copied"
-msgstr "Kopiert"
-
-msgid "Please wait until the installation finishes"
-msgstr "Bitte warten, bis die Installation abgeschlossen ist"
+msgid "The RPM package is truncated or corrupted."
+msgstr "Das RPM-Paket ist abgeschnitten oder beschädigt."
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg kann nicht als root ausgeführt werden; starten Sie debtap-mod als normaler Benutzer."
@@ -379,17 +519,11 @@ msgstr "Arch aktualisiert keine einzelnen Pakete; das gesamte System wird gemein
 msgid "Tell which package to install, for example: {example}"
 msgstr "Geben Sie an, welches Paket installiert werden soll, zum Beispiel: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm-Pakete sind für Fedora/openSUSE gemacht und können hier nicht installiert werden."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Suchen Sie das Programm in den Paketquellen (pamac search), auf Flathub oder als AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac findet Programme auch im AUR und bei Flatpak: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb-Pakete werden von debtap-mod in native pacman-Pakete umgewandelt."
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb- und .rpm-Pakete werden von debtap-mod in native pacman-Pakete umgewandelt."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Führen Sie diesen Befehl als normaler Benutzer aus (ohne sudo)."
@@ -463,8 +597,11 @@ msgstr "Ein Programm installieren"
 msgid "Install a downloaded file"
 msgstr "Eine heruntergeladene Datei installieren"
 
-msgid "Install a .deb file here"
-msgstr "Eine .deb-Datei hier installieren"
+msgid "Install a native package file"
+msgstr "Eine native Paketdatei installieren"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Hier eine .deb- oder .rpm-Datei installieren"
 
 msgid "Reinstall"
 msgstr "Neu installieren"
@@ -562,8 +699,8 @@ msgstr "Paketarten"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt verwendet .deb-Dateien, dnf verwendet .rpm, pacman verwendet .pkg.tar.zst."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb-Dateien werden mit debtap-mod (oder per Doppelklick) umgewandelt und installiert."
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb- und .rpm-Dateien werden mit debtap-mod umgewandelt und installiert (oder per Doppelklick)."
 
 msgid "Programs from the community"
 msgstr "Programme aus der Community"
@@ -583,8 +720,23 @@ msgstr "Kurzreferenz: „sudo“ wird zum Installieren oder Entfernen benötigt;
 msgid "Command not found: {cmd}"
 msgstr "Befehl nicht gefunden: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Die Debian-Skripte registrieren nur eine APT-Paketquelle und ein AppArmor-Profil für Ubuntu; sie werden hier nicht benötigt."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Die eigenen Skripte des Pakets registrieren nur eine Software-Paketquelle und ein AppArmor-Profil für andere Distributionen; sie werden hier nicht benötigt."
+
+msgid "Unsupported RPM payload format."
+msgstr "Nicht unterstütztes RPM-Nutzdatenformat."
+
+msgid "The file is not an RPM package."
+msgstr "Die Datei ist kein RPM-Paket."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "Dies ist ein Quell-RPM (.src.rpm): Es enthält Quellcode, kein installierbares Programm."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Das Skript {script} richtet eine APT-Paketquelle ein; dieser Teil hat auf diesem System keine Wirkung."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "Das Skript {script} ist in Lua für RPM selbst geschrieben und wurde übersprungen."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "Das Skript {script} richtet ein DNF/YUM-Repository ein; dieser Teil hat auf diesem System keine Wirkung."

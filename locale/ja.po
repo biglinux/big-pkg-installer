@@ -29,11 +29,11 @@ msgstr "警告:"
 msgid "Error:"
 msgstr "エラー:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr ".deb パッケージを pacman パッケージに変換してインストールします。"
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr ".deb または .rpm パッケージを pacman パッケージに変換してインストールします。"
 
-msgid "the .deb file"
-msgstr ".deb ファイル"
+msgid "the .deb or .rpm file"
+msgstr ".deb または .rpm ファイル"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "質問せず、インストールスクリプトを開いて確認できるようにする"
@@ -47,8 +47,8 @@ msgstr "パッケージのビルドのみ行い、インストールしない"
 msgid "keep the built package in DIR"
 msgstr "ビルドしたパッケージを DIR に保存する"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr ".deb と同じ場所に PKGBUILD も書き出す"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "パッケージファイルの隣に PKGBUILD も書き出す"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "PKGBUILD の書き出しのみ行い、ビルドしない"
@@ -62,8 +62,8 @@ msgstr "y"
 msgid "debtap-mod no longer needs a local database; nothing to update."
 msgstr "debtap-mod はローカルデータベースを必要としなくなりました。更新するものはありません。"
 
-msgid "no .deb file given"
-msgstr ".deb ファイルが指定されていません"
+msgid "no package file given"
+msgstr "パッケージファイルが指定されていません"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "-s と -w オプションは廃止されたため、無視されました"
@@ -125,8 +125,8 @@ msgstr "他のシステムまたはアーキテクチャ向けのバイナリを
 msgid "Libraries not found in the repositories: {list}"
 msgstr "リポジトリに見つからないライブラリ: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "このシステムに対応するものがない Debian の依存関係: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "ここに対応するものがないパッケージの依存関係: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "すでに他のパッケージが所有しているファイル: {list}"
@@ -158,11 +158,62 @@ msgstr "この Debian パッケージには control ファイルがありませ�
 msgid "The control file has no Package or Version field."
 msgstr "control ファイルに Package または Version フィールドがありません。"
 
-msgid "Install .deb package"
-msgstr ".deb パッケージをインストール"
+msgid "Package Installer"
+msgstr "パッケージインストーラー"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Debian パッケージをネイティブの pacman パッケージに変換してインストールします。"
+msgid "original debtap"
+msgstr "オリジナルの debtap"
+
+msgid "About {name}"
+msgstr "{name} について"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr ".deb および .rpm パッケージをシンプルかつ安全にインストールします。"
+
+msgid "Credits"
+msgstr "クレジット"
+
+msgid "License"
+msgstr "ライセンス"
+
+msgid "Project website"
+msgstr "プロジェクトのウェブサイト"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "GTK4/Libadwaita を使用した BigLinux 向けアプリ"
+
+msgid "About"
+msgstr "このアプリについて"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "このプログラムはフリーソフトウェアであり、GNU General Public License バージョン 2 以降の下で配布されています。保証は一切ありません。"
+
+msgid "Preferences"
+msgstr "設定"
+
+msgid "Converted packages"
+msgstr "変換済みパッケージ"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr ".deb または .rpm ファイルは、インストール前にネイティブパッケージへ変換されます。"
+
+msgid "Keep a copy of the converted package"
+msgstr "変換したパッケージのコピーを保存する"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "後で、または別のコンピューターに再インストールするときに便利です"
+
+msgid "Folder"
+msgstr "フォルダー"
+
+msgid "Choose…"
+msgstr "選択…"
+
+msgid "Details"
+msgstr "詳細"
+
+msgid "Copy details"
+msgstr "詳細をコピー"
 
 msgid "Extracting files"
 msgstr "ファイルを展開中"
@@ -170,8 +221,8 @@ msgstr "ファイルを展開中"
 msgid "Adapting folders to this system"
 msgstr "フォルダーをこのシステムに合わせて調整中"
 
-msgid "Finding dependencies"
-msgstr "依存関係を検索中"
+msgid "Checking dependencies"
+msgstr "依存関係を確認中"
 
 msgid "Preparing installation scripts"
 msgstr "インストールスクリプトを準備中"
@@ -179,38 +230,59 @@ msgstr "インストールスクリプトを準備中"
 msgid "Building the package"
 msgstr "パッケージをビルド中"
 
-msgid "Waiting for authorization"
-msgstr "認証を待っています"
+msgid "Preparing the installation"
+msgstr "インストールを準備中"
 
-msgid "Installing"
-msgstr "インストール中"
+msgid "Downloading packages ({done} of {total})"
+msgstr "パッケージをダウンロード中 ({done}/{total})"
 
-msgid "About"
-msgstr "このアプリについて"
+msgid "Downloading packages"
+msgstr "パッケージをダウンロード中"
+
+msgid "Installing packages"
+msgstr "パッケージをインストール中"
+
+msgid "Configuring the system"
+msgstr "システムを設定中"
+
+msgid "Finishing"
+msgstr "完了処理中"
+
+msgid "About the Installer"
+msgstr "インストーラーについて"
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid "Send feedback"
+msgstr "フィードバックを送信"
+
+msgid "Report a problem"
+msgstr "問題を報告"
 
 msgid "Main menu"
 msgstr "メインメニュー"
 
-msgid "Choose a .deb file…"
-msgstr ".deb ファイルを選択…"
+msgid "Copied"
+msgstr "コピーしました"
 
-msgid "Install a .deb package"
-msgstr ".deb パッケージをインストール"
+msgid "Install a .deb or .rpm package"
+msgstr ".deb または .rpm パッケージをインストール"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Debian パッケージを開くか、ここにドロップしてください。このシステム用のネイティブパッケージに変換してインストールします。"
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "コンピューター上の .deb または .rpm ファイルを選択して、Linux システムにシンプルかつ安全にインストールします。"
 
-msgid "Details"
-msgstr "詳細"
+msgid "Choose a package file…"
+msgstr "パッケージファイルを選択…"
 
-msgid "Cancel"
-msgstr "キャンセル"
+msgid "Or drag and drop the file here"
+msgstr "またはここにファイルをドラッグ＆ドロップ"
 
-msgid "Prefer native packages when available"
-msgstr "ネイティブパッケージを優先する"
+msgid "Selected package"
+msgstr "選択したパッケージ"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "システムリポジトリ、Flatpak、AppImage のプログラムのほうが、通常はよく動作します。変換した .deb パッケージは完全には動作しない場合があります。"
+msgid "Review the package information before continuing."
+msgstr "続行する前にパッケージ情報を確認してください。"
 
 msgid "“{name}” is available in the repositories"
 msgstr "「{name}」はリポジトリにあります"
@@ -221,8 +293,8 @@ msgstr "ネイティブパッケージのインストールをおすすめしま
 msgid "Open"
 msgstr "開く"
 
-msgid "Package"
-msgstr "パッケージ"
+msgid "Package name"
+msgstr "パッケージ名"
 
 msgid "Version"
 msgstr "バージョン"
@@ -230,8 +302,8 @@ msgstr "バージョン"
 msgid "Architecture"
 msgstr "アーキテクチャ"
 
-msgid "Installed size"
-msgstr "インストールサイズ"
+msgid "Size"
+msgstr "サイズ"
 
 msgid "Maintainer"
 msgstr "メンテナー"
@@ -242,26 +314,40 @@ msgstr "ウェブサイト"
 msgid "Description"
 msgstr "説明"
 
-msgid "Review before installing"
-msgstr "インストール前に確認"
+msgid "Cancel"
+msgstr "キャンセル"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "依存関係と、管理者として実行されるスクリプトを表示します"
+msgid "Continue"
+msgstr "続行"
 
-msgid "Install"
-msgstr "インストール"
+msgid "This may take a few moments…"
+msgstr "しばらくお待ちください…"
 
-msgid "Ready to install"
-msgstr "インストールの準備完了"
+msgid "Dependencies"
+msgstr "依存関係"
 
-msgid "Check what will be installed."
-msgstr "インストールされる内容を確認してください。"
+msgid "The following packages will be installed so the application works correctly."
+msgstr "アプリケーションが正しく動作するように、次のパッケージがインストールされます。"
+
+msgid "New packages to install"
+msgstr "インストールされる新しいパッケージ"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} 個のパッケージ"
+
+msgid "converted from the package file"
+msgstr "パッケージファイルから変換"
+
+msgid "Other information"
+msgstr "その他の情報"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "警告 {n} 件"
 
 msgid "Package name on this system"
 msgstr "このシステムでのパッケージ名"
-
-msgid "Package size"
-msgstr "パッケージサイズ"
 
 msgid "Applications menu"
 msgstr "アプリケーションメニュー"
@@ -269,75 +355,131 @@ msgstr "アプリケーションメニュー"
 msgid "No menu entry"
 msgstr "メニューエントリなし"
 
-msgid "Warnings"
-msgstr "警告"
-
-msgid "Notes"
-msgstr "メモ"
-
-msgid "Dependencies"
-msgstr "依存関係"
-
-msgid "Required"
-msgstr "必須"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} 個のパッケージ"
-
-msgid "will be downloaded"
-msgstr "ダウンロードされます"
-
 msgid "Optional"
 msgstr "オプション"
 
 msgid "Scripts"
 msgstr "スクリプト"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Debian パッケージのこれらのコマンドは、インストール中に管理者として実行されます。"
+msgid "These commands from the package run as administrator during installation."
+msgstr "パッケージのこれらのコマンドは、インストール中に管理者として実行されます。"
 
-msgid "Open {name}"
-msgstr "{name} を開く"
+msgid "Show"
+msgstr "表示"
 
-msgid "Copy details"
-msgstr "詳細をコピー"
+msgid "Back"
+msgstr "戻る"
+
+msgid "Install"
+msgstr "インストール"
+
+msgid "Authentication required"
+msgstr "認証が必要です"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "インストールを続行するには、システムの認証ウィンドウでパスワードを入力してください。"
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "システムにパッケージをインストールするには管理者権限が必要です。"
+
+msgid "Package installed successfully!"
+msgstr "パッケージを正常にインストールしました"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "パッケージ「{name}」はシステムに正しくインストールされました。"
+
+msgid "Version {version}"
+msgstr "バージョン {version}"
+
+msgid "Open application"
+msgstr "アプリケーションを開く"
+
+msgid "Show details"
+msgstr "詳細を表示"
 
 msgid "Close"
 msgstr "閉じる"
 
+msgid "Error details"
+msgstr "エラーの詳細"
+
+msgid "Incompatible package"
+msgstr "互換性のないパッケージ"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "このパッケージは {deb_arch} アーキテクチャ向けに作られていますが、お使いのシステムは {host} です。"
+
+msgid "Package"
+msgstr "パッケージ"
+
+msgid "Package architecture"
+msgstr "パッケージのアーキテクチャ"
+
+msgid "System architecture"
+msgstr "システムのアーキテクチャ"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "このパッケージはこのコンピューターにはインストールできません。{host} 向けのバージョンを探してください。"
+
 msgid "This file cannot be installed"
 msgstr "このファイルはインストールできません"
 
-msgid "Choose a .deb file"
-msgstr ".deb ファイルを選択"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "ファイルが破損しているか、有効なパッケージではない可能性があります。もう一度ダウンロードするか、入手元を確認してください。"
 
-msgid "Debian packages"
-msgstr "Debian パッケージ"
+msgid "Invalid file"
+msgstr "無効なファイル"
 
-msgid "Type your password in the window that will appear."
-msgstr "表示されるウィンドウにパスワードを入力してください。"
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "選択したファイルは .deb または .rpm パッケージではありません。"
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "不足している依存関係はリポジトリからダウンロードされます。"
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "このインストーラーは .deb および .rpm ファイル (Debian、Ubuntu、Fedora、openSUSE とその派生ディストリビューション向けのパッケージ) でのみ動作します。"
 
-msgid "Compressing the files, this may take a minute."
-msgstr "ファイルを圧縮しています。1 分ほどかかる場合があります。"
+msgid "Choose a package file"
+msgstr "パッケージファイルを選択"
 
-msgid "The package could not be converted"
-msgstr "パッケージを変換できませんでした"
+msgid "Packages (.deb, .rpm)"
+msgstr "パッケージ (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "パッケージを準備中"
+
+msgid "Extracting files ({percent}%)"
+msgstr "ファイルを展開中 ({percent}%)"
 
 msgid "Cancelled"
 msgstr "キャンセルしました"
 
-msgid "{name} is installed"
-msgstr "{name} はインストール済みです"
+msgid "The package could not be converted"
+msgstr "パッケージを変換できませんでした"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "パッケージ {name} をインストールしました。アプリケーションメニューにエントリはありません。"
+msgid "Dependencies are not available"
+msgstr "依存関係を利用できません"
 
-msgid "Installation complete"
-msgstr "インストールが完了しました"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "このプログラムに必要な一部のパッケージがリポジトリに見つかりませんでした。"
+
+msgid "Installing the package"
+msgstr "パッケージをインストール中"
+
+msgid "Preparing the installation…"
+msgstr "インストールを準備中…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "依存関係をダウンロードしてインストール中…"
+
+msgid "Installing packages…"
+msgstr "パッケージをインストール中…"
+
+msgid "Configuring the system…"
+msgstr "システムを設定中…"
+
+msgid "Finishing…"
+msgstr "完了処理中…"
+
+msgid "Please wait until the installation finishes"
+msgstr "インストールが終わるまでお待ちください"
 
 msgid "Authorization was not granted"
 msgstr "認証が許可されませんでした"
@@ -345,17 +487,14 @@ msgstr "認証が許可されませんでした"
 msgid "The installation failed"
 msgstr "インストールに失敗しました"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman がエラーを返しました (コード {code})。詳細を開いて状況を確認してください。"
+msgid "An error happened while installing the package. See the details below."
+msgstr "パッケージのインストール中にエラーが発生しました。詳細は以下をご覧ください。"
 
 msgid "The application could not be started"
 msgstr "アプリケーションを起動できませんでした"
 
-msgid "Copied"
-msgstr "コピーしました"
-
-msgid "Please wait until the installation finishes"
-msgstr "インストールが終わるまでお待ちください"
+msgid "The RPM package is truncated or corrupted."
+msgstr "RPM パッケージが途中で切れているか、破損しています。"
 
 msgid "makepkg cannot run as root; run debtap-mod as a regular user."
 msgstr "makepkg は root として実行できません。debtap-mod は一般ユーザーとして実行してください。"
@@ -378,17 +517,11 @@ msgstr "Arch では個別のパッケージだけをアップグレードしま�
 msgid "Tell which package to install, for example: {example}"
 msgstr "インストールするパッケージを指定してください。例: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm パッケージは Fedora/openSUSE 用のため、ここではインストールできません。"
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "リポジトリ(pamac search)、Flathub、または AppImage でプログラムを探してください。"
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac は AUR と Flatpak のプログラムも検索できます: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb パッケージは debtap-mod によってネイティブの pacman パッケージに変換されます。"
+msgid ".deb and .rpm packages are converted into native pacman packages by debtap-mod."
+msgstr ".deb および .rpm パッケージは debtap-mod によってネイティブの pacman パッケージに変換されます。"
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "このコマンドは一般ユーザーで実行してください(sudo なし)。"
@@ -462,8 +595,11 @@ msgstr "プログラムをインストール"
 msgid "Install a downloaded file"
 msgstr "ダウンロードしたファイルをインストール"
 
-msgid "Install a .deb file here"
-msgstr "この .deb ファイルをインストール"
+msgid "Install a native package file"
+msgstr "ネイティブパッケージファイルをインストール"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "ここに .deb または .rpm ファイルをインストール"
 
 msgid "Reinstall"
 msgstr "再インストール"
@@ -561,8 +697,8 @@ msgstr "パッケージの種類"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt は .deb、dnf は .rpm、pacman は .pkg.tar.zst を使います。"
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb ファイルは debtap-mod(またはダブルクリック)で変換してインストールします。"
+msgid ".deb and .rpm files are converted and installed with debtap-mod (or a double click)."
+msgstr ".deb および .rpm ファイルは debtap-mod で変換してインストールされます (ダブルクリックでも可)。"
 
 msgid "Programs from the community"
 msgstr "コミュニティのプログラム"
@@ -582,8 +718,23 @@ msgstr "クイックリファレンス: インストールや削除には「sudo
 msgid "Command not found: {cmd}"
 msgstr "コマンドが見つかりません: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "この Debian スクリプトは Ubuntu 向けに APT リポジトリと AppArmor プロファイルを登録するだけなので、ここでは不要です。"
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "パッケージ自身のスクリプトは、他のディストリビューション向けにソフトウェアリポジトリと AppArmor プロファイルを登録するだけで、ここでは不要です。"
+
+msgid "Unsupported RPM payload format."
+msgstr "サポートされていない RPM ペイロード形式です。"
+
+msgid "The file is not an RPM package."
+msgstr "このファイルは RPM パッケージではありません。"
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "これはソース RPM (.src.rpm) です。ソースコードが含まれており、インストールするプログラムではありません。"
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "{script} スクリプトは APT リポジトリを設定しますが、その部分はこのシステムでは効果がありません。"
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "{script} スクリプトは RPM 自体向けに Lua で書かれているため、スキップされました。"
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "{script} スクリプトは DNF/YUM リポジトリを設定します。この部分はこのシステムでは効果がありません。"

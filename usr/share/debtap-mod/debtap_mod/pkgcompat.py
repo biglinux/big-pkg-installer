@@ -143,17 +143,10 @@ class Translator:
         if not names:
             return self.usage_error(_("Tell which package to install, for example: {example}").format(
                 example=f"{self.tool} install vlc"))
-        debs = [n for n in names if n.endswith(".deb")]
-        rpms = [n for n in names if n.endswith(".rpm")]
+        debs = [n for n in names if n.endswith((".deb", ".rpm"))]
         local = [n for n in names if ".pkg.tar" in n]
         if debs:
             return self.install_deb(debs)
-        if rpms:
-            return self.plan(
-                "install-rpm", [], None, None,
-                _(".rpm packages are made for Fedora/openSUSE and cannot be installed here."),
-                _("Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."),
-            )
         if local:
             return self.plan(
                 "install-file",
@@ -186,7 +179,7 @@ class Translator:
             user = os.environ.get("SUDO_USER")
             # makepkg refuses to run as root: build as the user who called sudo
             run = ["sudo", "-u", user, *run] if user and user != "root" else None
-        notes = [_(".deb packages are converted into native pacman packages by debtap-mod.")]
+        notes = [_(".deb and .rpm packages are converted into native pacman packages by debtap-mod.")]
         if run is None:
             notes.append(_("Run this command as a regular user (without sudo)."))
         return self.plan("install-deb", ["debtap-mod", *debs], None, run, *notes)
@@ -620,9 +613,11 @@ def help_rows() -> list[tuple[str, str, str, str, str, tuple[str, ...]]]:
         (_("Install a program"), "sudo apt install vlc", "sudo dnf install vlc",
          "sudo pacman -S vlc", "pamac install vlc", ("install",)),
         (_("Install a downloaded file"), "sudo apt install ./app.deb", "sudo dnf install ./app.rpm",
-         "sudo pacman -U app.pkg.tar.zst", "—", ("install", "-i", "localinstall", "file")),
-        (_("Install a .deb file here"), "sudo dpkg -i app.deb", "—",
-         "debtap-mod app.deb", "—", ("install", "deb", "-i", "dpkg")),
+         "debtap-mod app.rpm", "—", ("install", "-i", "localinstall", "file")),
+        (_("Install a native package file"), "—", "—",
+         "sudo pacman -U app.pkg.tar.zst", "—", ("install", "-U", "pkg.tar")),
+        (_("Install a .deb or .rpm file here"), "sudo dpkg -i app.deb", "sudo dnf install ./app.rpm",
+         "debtap-mod app.deb", "—", ("install", "deb", "rpm", "-i", "dpkg")),
         (_("Reinstall"), "sudo apt reinstall vlc", "sudo dnf reinstall vlc",
          "sudo pacman -S vlc", "pamac reinstall vlc", ("reinstall",)),
         (_("Remove a program"), "sudo apt remove vlc", "sudo dnf remove vlc",
@@ -743,7 +738,7 @@ def render_help(tool: str, topic: str, style: Style, columns: int | None = None)
             ]),
             (_("Package types"), BLUE, [
                 _("apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."),
-                _(".deb files are converted and installed with debtap-mod (or a double click)."),
+                _(".deb and .rpm files are converted and installed with debtap-mod (or a double click)."),
             ]),
             (_("Programs from the community"), YELLOW, [
                 _("The AUR plays the role of PPAs and COPR."),

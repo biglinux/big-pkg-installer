@@ -10,13 +10,14 @@ from pathlib import Path
 from .deps import DATA_DIR
 from .i18n import _
 
-SCRIPT_NAMES = ("preinst", "postinst", "prerm", "postrm")
+# Debian maintainer scripts and RPM scriptlets
+SCRIPT_NAMES = ("preinst", "postinst", "prerm", "postrm", "pretrans", "pre", "post", "preun", "postun", "posttrans")
 
 
 # Notes used in data/quirks.toml, listed here so xgettext extracts them;
 # they are translated again with _() when shown.
 _NOTES = (
-    _("The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."),
+    _("The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."),
 )
 
 

@@ -7,6 +7,10 @@ from pathlib import Path
 
 import pytest
 
+# tests check English messages, whatever the language of the machine
+os.environ["LANGUAGE"] = "C"
+os.environ["LC_MESSAGES"] = "C"
+
 APP_DIR = Path(__file__).resolve().parents[1] / "usr/share/debtap-mod"
 sys.path.insert(0, str(APP_DIR))
 
@@ -149,3 +153,91 @@ def _isolated_cache(tmp_path, monkeypatch):
 
 def has_makepkg() -> bool:
     return all(os.access(f"/usr/bin/{tool}", os.X_OK) for tool in ("makepkg", "fakeroot", "pacman"))
+
+
+def has_rpmbuild() -> bool:
+    import shutil
+
+    return shutil.which("rpmbuild") is not None
+
+
+RPM_SPEC = """\
+Name:           {name}
+Version:        2.4~rc1
+Release:        3.fc42
+Epoch:          1
+Summary:        Hello RPM test package
+License:        MIT
+URL:            https://example.com/{name}
+BuildArch:      {arch}
+Requires:       xdg-utils, gtk3, /bin/sh, libX11, (git or mercurial), nonexistent-tool-xyz
+Recommends:     lsb-release
+%global debug_package %{{nil}}
+%global _binary_payload {payload}
+
+%description
+A longer description
+of the test package.
+
+%install
+mkdir -p %{{buildroot}}/usr/bin %{{buildroot}}/usr/lib64/hello %{{buildroot}}/usr/share/applications %{{buildroot}}/etc/hello %{{buildroot}}/opt/hello %{{buildroot}}/var/lib/hello
+install -m755 %{{_sourcedir}}/hello-bin %{{buildroot}}/usr/bin/{name}
+install -m4755 %{{_sourcedir}}/hello-bin %{{buildroot}}/opt/hello/chrome-sandbox
+echo data > %{{buildroot}}/usr/lib64/hello/data.txt
+ln %{{buildroot}}/usr/lib64/hello/data.txt %{{buildroot}}/usr/lib64/hello/data-link.txt
+ln -s ../../usr/bin/{name} %{{buildroot}}/opt/hello/run
+echo "x=1" > %{{buildroot}}/etc/hello/hello.conf
+printf '[Desktop Entry]\\nType=Application\\nName=Hello RPM\\nExec={name}\\nIcon=hello\\n' > %{{buildroot}}/usr/share/applications/{name}.desktop
+
+{scripts}
+
+%files
+/usr/bin/{name}
+/opt/hello
+/usr/lib64/hello
+/usr/share/applications/{name}.desktop
+%config(noreplace) /etc/hello/hello.conf
+%attr(0750,nobody,nobody) /var/lib/hello
+"""
+
+RPM_SCRIPTS = """\
+%pre
+echo "pre $1" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+%post
+echo "post $1" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+%preun
+echo "preun $1" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+%postun
+echo "postun $1" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+%posttrans
+echo "posttrans" >> "${DEBTAP_TEST_LOG:-/dev/null}"
+"""
+
+
+def build_rpm(tmp_path: Path, name="hello-rpm", arch="x86_64", payload="w19.zstdio", scripts=RPM_SCRIPTS,
+              source=False) -> Path:
+    import subprocess
+
+    top = tmp_path / f"rpmbuild-{payload}-{arch}"
+    src = top / "SOURCES"
+    src.mkdir(parents=True, exist_ok=True)
+    # noarch packages may not contain ELF binaries
+    binary = b"#!/bin/sh\necho hello\n" if arch == "noarch" else Path("/usr/bin/ls").read_bytes()
+    (src / "hello-bin").write_bytes(binary)
+    spec = top / f"{name}.spec"
+    spec.write_text(RPM_SPEC.format(name=name, arch=arch, payload=payload, scripts=scripts))
+    mode = "-bs" if source else "-bb"
+    subprocess.run(
+        ["rpmbuild", mode, "--define", f"_topdir {top}", "--define", f"_sourcedir {src}", str(spec)],
+        check=True, capture_output=True,
+    )
+    pattern = "*.src.rpm" if source else "*.rpm"
+    return next((top / ("SRPMS" if source else "RPMS")).rglob(pattern))
+
+
+@pytest.fixture
+def make_rpm(tmp_path):
+    def factory(**kwargs):
+        return build_rpm(tmp_path, **kwargs)
+
+    return factory
