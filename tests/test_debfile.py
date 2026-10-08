@@ -3,7 +3,7 @@ import stat
 
 import pytest
 
-from debtap_mod.debfile import DebError, extract_data, open_deb, parse_control
+from big_pkg_installer.debfile import DebError, extract_data, open_deb, parse_control
 
 
 def test_parse_control_multiline():

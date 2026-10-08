@@ -2,8 +2,8 @@ import shutil
 
 import pytest
 
-from debtap_mod import deps, pacman
-from debtap_mod.deps import compute_dependencies, map_debian_name, parse_relationship
+from big_pkg_installer import deps, pacman
+from big_pkg_installer.deps import compute_dependencies, map_debian_name, parse_relationship
 
 needs_pacman = pytest.mark.skipif(not shutil.which("pacman"), reason="pacman not available")
 
@@ -35,7 +35,7 @@ def test_dependencies_from_elf_and_control(tmp_path):
     assert "xdg-utils" in report.depends
     assert "glib2" in report.depends
     assert "git" in report.optdepends
-    assert report.unresolved_debian == ["nonexistent-tool-xyz"]
+    assert report.unresolved_declared == ["nonexistent-tool-xyz"]
 
 
 @needs_pacman
@@ -55,7 +55,7 @@ def test_foreign_binaries_are_ignored(tmp_path, monkeypatch):
 @needs_pacman
 def test_plugins_become_optional(tmp_path, monkeypatch):
     # a library nobody links against (dlopen plugin) gets optional deps only
-    from debtap_mod.elf import ElfInfo
+    from big_pkg_installer.elf import ElfInfo
 
     fake = [
         deps.ScannedElf("usr/bin/app", ElfInfo(62, 2, 3, interp="/lib64/ld-linux-x86-64.so.2", needed=["libc.so.6"])),

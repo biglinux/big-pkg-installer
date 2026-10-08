@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +29,11 @@ msgstr "警告:"
 msgid "Error:"
 msgstr "错误:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "将 .deb 软件包转换为 pacman 软件包并安装。"
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "将 .deb 或 .rpm 软件包转换为 pacman 软件包并安装。"
 
-msgid "the .deb file"
-msgstr ".deb 文件"
+msgid "the .deb or .rpm file"
+msgstr ".deb 或 .rpm 文件"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "不提问，但打开安装脚本供检查"
@@ -47,8 +47,8 @@ msgstr "仅构建软件包，不安装"
 msgid "keep the built package in DIR"
 msgstr "将构建的软件包保存到 DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "同时在 .deb 旁边写入 PKGBUILD"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "同时在软件包文件旁生成 PKGBUILD"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "仅写入 PKGBUILD，不构建"
@@ -59,11 +59,11 @@ msgstr "{question} [y/N] "
 msgid "yes"
 msgstr "y"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "debtap-mod 不再需要本地数据库，无需更新。"
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "big-pkg-installer 不再需要本地数据库，无需更新。"
 
-msgid "no .deb file given"
-msgstr "未指定 .deb 文件"
+msgid "no package file given"
+msgstr "未指定软件包文件"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "-s 和 -w 选项已废弃，已被忽略"
@@ -125,8 +125,8 @@ msgstr "已忽略 {count} 个为其他系统或架构构建的二进制文件。
 msgid "Libraries not found in the repositories: {list}"
 msgstr "在软件仓库中找不到的库: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "在此系统中没有对应项的 Debian 依赖项: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "此处没有对应项的软件包依赖：{list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "已被其他软件包拥有的文件: {list}"
@@ -158,11 +158,62 @@ msgstr "该 Debian 软件包没有 control 文件。"
 msgid "The control file has no Package or Version field."
 msgstr "control 文件缺少 Package 或 Version 字段。"
 
-msgid "Install .deb package"
-msgstr "安装 .deb 软件包"
+msgid "Package Installer"
+msgstr "软件包安装器"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "将 Debian 软件包转换为原生 pacman 软件包并安装。"
+msgid "original debtap"
+msgstr "原版 debtap"
+
+msgid "About {name}"
+msgstr "关于{name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "安装 .deb 和 .rpm 软件包的简单安全方式。"
+
+msgid "Credits"
+msgstr "致谢"
+
+msgid "License"
+msgstr "许可证"
+
+msgid "Project website"
+msgstr "项目网站"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "使用 GTK4/Libadwaita 为 BigLinux 打造"
+
+msgid "About"
+msgstr "关于"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "本程序是自由软件，依据 GNU General Public License 第 2 版或更高版本分发。本程序不提供任何担保。"
+
+msgid "Preferences"
+msgstr "首选项"
+
+msgid "Converted packages"
+msgstr "已转换的软件包"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "安装前，.deb 或 .rpm 文件会先转换为原生软件包。"
+
+msgid "Keep a copy of the converted package"
+msgstr "保留已转换软件包的副本"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "便于日后或在另一台计算机上重新安装"
+
+msgid "Folder"
+msgstr "文件夹"
+
+msgid "Choose…"
+msgstr "选择…"
+
+msgid "Details"
+msgstr "详细信息"
+
+msgid "Copy details"
+msgstr "复制详细信息"
 
 msgid "Extracting files"
 msgstr "正在提取文件"
@@ -170,8 +221,8 @@ msgstr "正在提取文件"
 msgid "Adapting folders to this system"
 msgstr "正在使文件夹适配此系统"
 
-msgid "Finding dependencies"
-msgstr "正在查找依赖项"
+msgid "Checking dependencies"
+msgstr "正在检查依赖项"
 
 msgid "Preparing installation scripts"
 msgstr "正在准备安装脚本"
@@ -179,38 +230,59 @@ msgstr "正在准备安装脚本"
 msgid "Building the package"
 msgstr "正在构建软件包"
 
-msgid "Waiting for authorization"
-msgstr "正在等待授权"
+msgid "Preparing the installation"
+msgstr "正在准备安装"
 
-msgid "Installing"
-msgstr "正在安装"
+msgid "Downloading packages ({done} of {total})"
+msgstr "正在下载软件包（{done}/{total}）"
 
-msgid "About"
-msgstr "关于"
+msgid "Downloading packages"
+msgstr "正在下载软件包"
+
+msgid "Installing packages"
+msgstr "正在安装软件包"
+
+msgid "Configuring the system"
+msgstr "正在配置系统"
+
+msgid "Finishing"
+msgstr "正在完成"
+
+msgid "About the Installer"
+msgstr "关于安装器"
+
+msgid "Help"
+msgstr "帮助"
+
+msgid "Send feedback"
+msgstr "发送反馈"
+
+msgid "Report a problem"
+msgstr "报告问题"
 
 msgid "Main menu"
 msgstr "主菜单"
 
-msgid "Choose a .deb file…"
-msgstr "选择 .deb 文件…"
+msgid "Copied"
+msgstr "已复制"
 
-msgid "Install a .deb package"
-msgstr "安装 .deb 软件包"
+msgid "Install a .deb or .rpm package"
+msgstr "安装 .deb 或 .rpm 软件包"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "打开 Debian 软件包或将其拖放到此处。它将被转换为适用于此系统的原生软件包并安装。"
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "在电脑上选择一个 .deb 或 .rpm 文件，即可简单安全地将其安装到您的 Linux 系统中。"
 
-msgid "Details"
-msgstr "详细信息"
+msgid "Choose a package file…"
+msgstr "选择软件包文件…"
 
-msgid "Cancel"
-msgstr "取消"
+msgid "Or drag and drop the file here"
+msgstr "或将文件拖放到此处"
 
-msgid "Prefer native packages when available"
-msgstr "优先使用原生软件包"
+msgid "Selected package"
+msgstr "所选软件包"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "来自系统软件源、Flatpak 或 AppImage 的程序通常运行得更好。转换后的 .deb 软件包可能无法完美运行。"
+msgid "Review the package information before continuing."
+msgstr "继续之前，请先查看软件包信息。"
 
 msgid "“{name}” is available in the repositories"
 msgstr "软件源中提供“{name}”"
@@ -221,8 +293,8 @@ msgstr "建议安装原生软件包。"
 msgid "Open"
 msgstr "打开"
 
-msgid "Package"
-msgstr "软件包"
+msgid "Package name"
+msgstr "软件包名称"
 
 msgid "Version"
 msgstr "版本"
@@ -230,8 +302,8 @@ msgstr "版本"
 msgid "Architecture"
 msgstr "架构"
 
-msgid "Installed size"
-msgstr "安装后大小"
+msgid "Size"
+msgstr "大小"
 
 msgid "Maintainer"
 msgstr "维护者"
@@ -242,26 +314,40 @@ msgstr "网站"
 msgid "Description"
 msgstr "描述"
 
-msgid "Review before installing"
-msgstr "安装前检查"
+msgid "Cancel"
+msgstr "取消"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "显示依赖项以及将以管理员身份运行的脚本"
+msgid "Continue"
+msgstr "继续"
 
-msgid "Install"
-msgstr "安装"
+msgid "This may take a few moments…"
+msgstr "这可能需要一些时间…"
 
-msgid "Ready to install"
-msgstr "准备安装"
+msgid "Dependencies"
+msgstr "依赖项"
 
-msgid "Check what will be installed."
-msgstr "请检查将要安装的内容。"
+msgid "The following packages will be installed so the application works correctly."
+msgstr "将安装以下软件包，以确保应用程序正常运行。"
+
+msgid "New packages to install"
+msgstr "要安装的新软件包"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} 个软件包"
+
+msgid "converted from the package file"
+msgstr "由软件包文件转换而来"
+
+msgid "Other information"
+msgstr "其他信息"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} 条警告"
 
 msgid "Package name on this system"
 msgstr "此系统上的软件包名称"
-
-msgid "Package size"
-msgstr "软件包大小"
 
 msgid "Applications menu"
 msgstr "应用程序菜单"
@@ -269,75 +355,131 @@ msgstr "应用程序菜单"
 msgid "No menu entry"
 msgstr "无菜单项"
 
-msgid "Warnings"
-msgstr "警告"
-
-msgid "Notes"
-msgstr "备注"
-
-msgid "Dependencies"
-msgstr "依赖项"
-
-msgid "Required"
-msgstr "必需"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} 个软件包"
-
-msgid "will be downloaded"
-msgstr "将被下载"
-
 msgid "Optional"
 msgstr "可选"
 
 msgid "Scripts"
 msgstr "脚本"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Debian 软件包中的这些命令将在安装期间以管理员身份运行。"
+msgid "These commands from the package run as administrator during installation."
+msgstr "软件包中的这些命令会在安装时以管理员身份运行。"
 
-msgid "Open {name}"
-msgstr "打开 {name}"
+msgid "Show"
+msgstr "显示"
 
-msgid "Copy details"
-msgstr "复制详细信息"
+msgid "Back"
+msgstr "返回"
+
+msgid "Install"
+msgstr "安装"
+
+msgid "Authentication required"
+msgstr "需要身份验证"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "请在系统身份验证窗口中输入密码以继续安装。"
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "在系统上安装软件包需要管理员权限。"
+
+msgid "Package installed successfully!"
+msgstr "软件包安装成功！"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "软件包“{name}”已正确安装到您的系统中。"
+
+msgid "Version {version}"
+msgstr "版本 {version}"
+
+msgid "Open application"
+msgstr "打开应用程序"
+
+msgid "Show details"
+msgstr "显示详细信息"
 
 msgid "Close"
 msgstr "关闭"
 
+msgid "Error details"
+msgstr "错误详细信息"
+
+msgid "Incompatible package"
+msgstr "不兼容的软件包"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "此软件包是为 {deb_arch} 架构构建的，但您的系统是 {host}。"
+
+msgid "Package"
+msgstr "软件包"
+
+msgid "Package architecture"
+msgstr "软件包架构"
+
+msgid "System architecture"
+msgstr "系统架构"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "此软件包无法安装在这台计算机上。请查找适用于 {host} 的软件包版本。"
+
 msgid "This file cannot be installed"
 msgstr "无法安装此文件"
 
-msgid "Choose a .deb file"
-msgstr "选择 .deb 文件"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "文件可能已损坏，或不是有效的软件包。请重新下载，或检查其来源。"
 
-msgid "Debian packages"
-msgstr "Debian 软件包"
+msgid "Invalid file"
+msgstr "无效的文件"
 
-msgid "Type your password in the window that will appear."
-msgstr "请在弹出的窗口中输入密码。"
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "所选文件不是 .deb 或 .rpm 软件包。"
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "缺少的依赖项将从软件源下载。"
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "此安装器仅适用于 .deb 和 .rpm 文件（适用于 Debian、Ubuntu、Fedora、openSUSE 及其衍生发行版的软件包）。"
 
-msgid "Compressing the files, this may take a minute."
-msgstr "正在压缩文件，这可能需要一分钟。"
+msgid "Choose a package file"
+msgstr "选择软件包文件"
 
-msgid "The package could not be converted"
-msgstr "无法转换该软件包"
+msgid "Packages (.deb, .rpm)"
+msgstr "软件包 (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "正在准备软件包"
+
+msgid "Extracting files ({percent}%)"
+msgstr "正在提取文件（{percent}%）"
 
 msgid "Cancelled"
 msgstr "已取消"
 
-msgid "{name} is installed"
-msgstr "{name} 已安装"
+msgid "The package could not be converted"
+msgstr "无法转换该软件包"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "软件包 {name} 已安装，但它在应用程序菜单中没有条目。"
+msgid "Dependencies are not available"
+msgstr "依赖项不可用"
 
-msgid "Installation complete"
-msgstr "安装完成"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "此程序所需的某些软件包在软件仓库中未找到。"
+
+msgid "Installing the package"
+msgstr "正在安装软件包"
+
+msgid "Preparing the installation…"
+msgstr "正在准备安装…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "正在下载并安装依赖项…"
+
+msgid "Installing packages…"
+msgstr "正在安装软件包…"
+
+msgid "Configuring the system…"
+msgstr "正在配置系统…"
+
+msgid "Finishing…"
+msgstr "正在完成…"
+
+msgid "Please wait until the installation finishes"
+msgstr "请等待安装完成"
 
 msgid "Authorization was not granted"
 msgstr "未获得授权"
@@ -345,20 +487,17 @@ msgstr "未获得授权"
 msgid "The installation failed"
 msgstr "安装失败"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman 返回了错误（代码 {code}）。打开详细信息查看发生了什么。"
+msgid "An error happened while installing the package. See the details below."
+msgstr "安装软件包时出错。请查看下方的详细信息。"
 
 msgid "The application could not be started"
 msgstr "无法启动该应用程序"
 
-msgid "Copied"
-msgstr "已复制"
+msgid "The RPM package is truncated or corrupted."
+msgstr "RPM 软件包被截断或已损坏。"
 
-msgid "Please wait until the installation finishes"
-msgstr "请等待安装完成"
-
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "makepkg 不能以 root 身份运行；请以普通用户身份运行 debtap-mod。"
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "makepkg 不能以 root 身份运行；请以普通用户身份运行 big-pkg-installer。"
 
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg 失败，退出代码 {code}"
@@ -378,17 +517,11 @@ msgstr "Arch 不会单独升级某个软件包,而是整体升级整个系统。
 msgid "Tell which package to install, for example: {example}"
 msgstr "请指定要安装的软件包,例如:{example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm 软件包是为 Fedora/openSUSE 制作的,无法在此安装。"
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "请在软件仓库(pamac search)、Flathub 中查找该程序,或使用 AppImage。"
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac 也能在 AUR 和 Flatpak 中找到程序:{cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb 软件包会由 debtap-mod 转换为原生 pacman 软件包。"
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr ".deb 和 .rpm 软件包由 big-pkg-installer 转换为原生 pacman 软件包。"
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "请以普通用户身份运行此命令(不使用 sudo)。"
@@ -462,8 +595,11 @@ msgstr "安装程序"
 msgid "Install a downloaded file"
 msgstr "安装已下载的文件"
 
-msgid "Install a .deb file here"
-msgstr "安装此处的 .deb 文件"
+msgid "Install a native package file"
+msgstr "安装原生软件包文件"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "在此安装 .deb 或 .rpm 文件"
 
 msgid "Reinstall"
 msgstr "重新安装"
@@ -561,8 +697,8 @@ msgstr "软件包类型"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt 使用 .deb 文件,dnf 使用 .rpm,pacman 使用 .pkg.tar.zst。"
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb 文件通过 debtap-mod(或双击)转换并安装。"
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr ".deb 和 .rpm 文件会通过 big-pkg-installer 转换并安装（也可双击）。"
 
 msgid "Programs from the community"
 msgstr "社区程序"
@@ -582,8 +718,23 @@ msgstr "快速参考:安装或卸载需要“sudo”;搜索和列出则不需要
 msgid "Command not found: {cmd}"
 msgstr "未找到命令:{cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "这些 Debian 脚本只为 Ubuntu 注册 APT 软件源和 AppArmor 配置文件，此处不需要。"
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "软件包自带的脚本只是为其他发行版注册软件仓库和 AppArmor 配置文件，此处不需要。"
+
+msgid "Unsupported RPM payload format."
+msgstr "不支持的 RPM 负载格式。"
+
+msgid "The file is not an RPM package."
+msgstr "该文件不是 RPM 软件包。"
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "这是源码 RPM (.src.rpm)：其中包含源代码，而不是可安装的程序。"
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "脚本 {script} 会配置 APT 软件源；该部分在此系统上不起作用。"
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "{script} 脚本是为 RPM 本身用 Lua 编写的，已被跳过。"
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "{script} 脚本用于配置 DNF/YUM 仓库；该部分对此系统无效。"

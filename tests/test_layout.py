@@ -1,6 +1,6 @@
 import os
 
-from debtap_mod.layout import normalize_layout
+from big_pkg_installer.layout import normalize_layout
 
 
 def make(root, rel, data="x"):

@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +29,11 @@ msgstr "Advarsel:"
 msgid "Error:"
 msgstr "Fejl:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Konvertér en .deb-pakke til en pacman-pakke og installér den."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Konverter en .deb- eller .rpm-pakke til en pacman-pakke og installer den."
 
-msgid "the .deb file"
-msgstr ".deb-filen"
+msgid "the .deb or .rpm file"
+msgstr ".deb- eller .rpm-filen"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "stil ingen spørgsmål, men åbn installationsscriptet til gennemsyn"
@@ -47,8 +47,8 @@ msgstr "byg kun pakken, installér den ikke"
 msgid "keep the built package in DIR"
 msgstr "behold den byggede pakke i DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "skriv også en PKGBUILD ved siden af .deb-filen"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "skriv også en PKGBUILD ved siden af pakkefilen"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "skriv kun en PKGBUILD, byg ikke"
@@ -59,11 +59,11 @@ msgstr "{question} [j/N] "
 msgid "yes"
 msgstr "ja"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "debtap-mod behøver ikke længere en lokal database; intet at opdatere."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "big-pkg-installer behøver ikke længere en lokal database; intet at opdatere."
 
-msgid "no .deb file given"
-msgstr "ingen .deb-fil angivet"
+msgid "no package file given"
+msgstr "ingen pakkefil angivet"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "tilvalgene -s og -w er forældede og blev ignoreret"
@@ -125,8 +125,8 @@ msgstr "Ignorerede {count} binære filer bygget til andre systemer eller arkitek
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Biblioteker, der ikke blev fundet i arkiverne: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Debian-afhængigheder uden tilsvarende her: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Pakkeafhængigheder uden en tilsvarende her: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Filer, der allerede tilhører andre pakker: {list}"
@@ -158,11 +158,62 @@ msgstr "Debian-pakken har ingen control-fil."
 msgid "The control file has no Package or Version field."
 msgstr "Control-filen har intet Package- eller Version-felt."
 
-msgid "Install .deb package"
-msgstr "Installér .deb-pakke"
+msgid "Package Installer"
+msgstr "Pakkeinstallationsprogram"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Konverterer Debian-pakker til native pacman-pakker og installerer dem."
+msgid "original debtap"
+msgstr "original debtap"
+
+msgid "About {name}"
+msgstr "Om {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "En enkel og sikker måde at installere .deb- og .rpm-pakker på."
+
+msgid "Credits"
+msgstr "Anerkendelser"
+
+msgid "License"
+msgstr "Licens"
+
+msgid "Project website"
+msgstr "Projektets websted"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "Lavet til BigLinux med GTK4/Libadwaita"
+
+msgid "About"
+msgstr "Om"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "Dette program er frit software, distribueret under GNU General Public License, version 2 eller senere. Det leveres helt uden garanti."
+
+msgid "Preferences"
+msgstr "Indstillinger"
+
+msgid "Converted packages"
+msgstr "Konverterede pakker"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "Filen .deb eller .rpm konverteres til en indbygget pakke, før den installeres."
+
+msgid "Keep a copy of the converted package"
+msgstr "Behold en kopi af den konverterede pakke"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Nyttigt til at geninstallere den senere eller på en anden computer"
+
+msgid "Folder"
+msgstr "Mappe"
+
+msgid "Choose…"
+msgstr "Vælg…"
+
+msgid "Details"
+msgstr "Detaljer"
+
+msgid "Copy details"
+msgstr "Kopiér detaljer"
 
 msgid "Extracting files"
 msgstr "Udpakker filer"
@@ -170,8 +221,8 @@ msgstr "Udpakker filer"
 msgid "Adapting folders to this system"
 msgstr "Tilpasser mapper til dette system"
 
-msgid "Finding dependencies"
-msgstr "Finder afhængigheder"
+msgid "Checking dependencies"
+msgstr "Tjekker afhængigheder"
 
 msgid "Preparing installation scripts"
 msgstr "Forbereder installationsscripts"
@@ -179,38 +230,59 @@ msgstr "Forbereder installationsscripts"
 msgid "Building the package"
 msgstr "Bygger pakken"
 
-msgid "Waiting for authorization"
-msgstr "Venter på godkendelse"
+msgid "Preparing the installation"
+msgstr "Forbereder installationen"
 
-msgid "Installing"
-msgstr "Installerer"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Henter pakker ({done} af {total})"
 
-msgid "About"
-msgstr "Om"
+msgid "Downloading packages"
+msgstr "Henter pakker"
+
+msgid "Installing packages"
+msgstr "Installerer pakker"
+
+msgid "Configuring the system"
+msgstr "Konfigurerer systemet"
+
+msgid "Finishing"
+msgstr "Afslutter"
+
+msgid "About the Installer"
+msgstr "Om installationsprogrammet"
+
+msgid "Help"
+msgstr "Hjælp"
+
+msgid "Send feedback"
+msgstr "Send feedback"
+
+msgid "Report a problem"
+msgstr "Rapportér et problem"
 
 msgid "Main menu"
 msgstr "Hovedmenu"
 
-msgid "Choose a .deb file…"
-msgstr "Vælg en .deb-fil…"
+msgid "Copied"
+msgstr "Kopieret"
 
-msgid "Install a .deb package"
-msgstr "Installér en .deb-pakke"
+msgid "Install a .deb or .rpm package"
+msgstr "Installer en .deb- eller .rpm-pakke"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Åbn en Debian-pakke, eller slip den her. Den konverteres til en native pakke til dette system og installeres."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Vælg en .deb- eller .rpm-fil på din computer for at installere den på dit Linux-system på en enkel og sikker måde."
 
-msgid "Details"
-msgstr "Detaljer"
+msgid "Choose a package file…"
+msgstr "Vælg en pakkefil…"
 
-msgid "Cancel"
-msgstr "Annullér"
+msgid "Or drag and drop the file here"
+msgstr "Eller træk og slip filen her"
 
-msgid "Prefer native packages when available"
-msgstr "Foretræk native pakker, når de er tilgængelige"
+msgid "Selected package"
+msgstr "Valgt pakke"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Programmer fra systemets arkiver, Flatpak eller AppImage fungerer som regel bedre. Konverterede .deb-pakker fungerer måske ikke perfekt."
+msgid "Review the package information before continuing."
+msgstr "Gennemgå pakkeoplysningerne, før du fortsætter."
 
 msgid "“{name}” is available in the repositories"
 msgstr "»{name}« findes i arkiverne"
@@ -221,8 +293,8 @@ msgstr "Det anbefales at installere den native pakke."
 msgid "Open"
 msgstr "Åbn"
 
-msgid "Package"
-msgstr "Pakke"
+msgid "Package name"
+msgstr "Pakkenavn"
 
 msgid "Version"
 msgstr "Version"
@@ -230,8 +302,8 @@ msgstr "Version"
 msgid "Architecture"
 msgstr "Arkitektur"
 
-msgid "Installed size"
-msgstr "Installeret størrelse"
+msgid "Size"
+msgstr "Størrelse"
 
 msgid "Maintainer"
 msgstr "Vedligeholder"
@@ -242,26 +314,42 @@ msgstr "Websted"
 msgid "Description"
 msgstr "Beskrivelse"
 
-msgid "Review before installing"
-msgstr "Gennemse før installation"
+msgid "Cancel"
+msgstr "Annullér"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Vis afhængighederne og de scripts, der kører som administrator"
+msgid "Continue"
+msgstr "Fortsæt"
 
-msgid "Install"
-msgstr "Installér"
+msgid "This may take a few moments…"
+msgstr "Det kan tage et øjeblik…"
 
-msgid "Ready to install"
-msgstr "Klar til installation"
+msgid "Dependencies"
+msgstr "Afhængigheder"
 
-msgid "Check what will be installed."
-msgstr "Kontrollér, hvad der bliver installeret."
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Følgende pakker bliver installeret, så programmet fungerer korrekt."
+
+msgid "New packages to install"
+msgstr "Nye pakker der skal installeres"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} pakke"
+msgstr[1] "{n} pakker"
+
+msgid "converted from the package file"
+msgstr "konverteret fra pakkefilen"
+
+msgid "Other information"
+msgstr "Andre oplysninger"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} advarsel"
+msgstr[1] "{n} advarsler"
 
 msgid "Package name on this system"
 msgstr "Pakkenavn på dette system"
-
-msgid "Package size"
-msgstr "Pakkestørrelse"
 
 msgid "Applications menu"
 msgstr "Programmenu"
@@ -269,76 +357,131 @@ msgstr "Programmenu"
 msgid "No menu entry"
 msgstr "Intet menupunkt"
 
-msgid "Warnings"
-msgstr "Advarsler"
-
-msgid "Notes"
-msgstr "Bemærkninger"
-
-msgid "Dependencies"
-msgstr "Afhængigheder"
-
-msgid "Required"
-msgstr "Påkrævet"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} pakke"
-msgstr[1] "{n} pakker"
-
-msgid "will be downloaded"
-msgstr "vil blive hentet"
-
 msgid "Optional"
 msgstr "Valgfri"
 
 msgid "Scripts"
 msgstr "Scripts"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Disse kommandoer fra Debian-pakken kører som administrator under installationen."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Disse kommandoer fra pakken køres som administrator under installationen."
 
-msgid "Open {name}"
-msgstr "Åbn {name}"
+msgid "Show"
+msgstr "Vis"
 
-msgid "Copy details"
-msgstr "Kopiér detaljer"
+msgid "Back"
+msgstr "Tilbage"
+
+msgid "Install"
+msgstr "Installér"
+
+msgid "Authentication required"
+msgstr "Godkendelse påkrævet"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Indtast din adgangskode i systemets godkendelsesvindue for at fortsætte installationen."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Der kræves administratorrettigheder for at installere pakker på dit system."
+
+msgid "Package installed successfully!"
+msgstr "Pakken blev installeret!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "Pakken “{name}” blev installeret korrekt på dit system."
+
+msgid "Version {version}"
+msgstr "Version {version}"
+
+msgid "Open application"
+msgstr "Åbn program"
+
+msgid "Show details"
+msgstr "Vis detaljer"
 
 msgid "Close"
 msgstr "Luk"
 
+msgid "Error details"
+msgstr "Fejldetaljer"
+
+msgid "Incompatible package"
+msgstr "Inkompatibel pakke"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "Denne pakke blev bygget til arkitekturen {deb_arch}, men dit system er {host}."
+
+msgid "Package"
+msgstr "Pakke"
+
+msgid "Package architecture"
+msgstr "Pakkearkitektur"
+
+msgid "System architecture"
+msgstr "Systemarkitektur"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Denne pakke kan ikke installeres på denne computer. Led efter en version af pakken lavet til {host}."
+
 msgid "This file cannot be installed"
 msgstr "Denne fil kan ikke installeres"
 
-msgid "Choose a .deb file"
-msgstr "Vælg en .deb-fil"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Filen kan være beskadiget eller er ikke en gyldig pakke. Download den igen, eller undersøg, hvor den kommer fra."
 
-msgid "Debian packages"
-msgstr "Debian-pakker"
+msgid "Invalid file"
+msgstr "Ugyldig fil"
 
-msgid "Type your password in the window that will appear."
-msgstr "Skriv din adgangskode i vinduet, der vises."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Den valgte fil er ikke en .deb- eller .rpm-pakke."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Manglende afhængigheder hentes fra arkiverne."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "Dette installationsprogram fungerer kun med .deb- og .rpm-filer (pakker til Debian, Ubuntu, Fedora, openSUSE og deres afledte distributioner)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Komprimerer filerne, det kan tage et minut."
+msgid "Choose a package file"
+msgstr "Vælg en pakkefil"
 
-msgid "The package could not be converted"
-msgstr "Pakken kunne ikke konverteres"
+msgid "Packages (.deb, .rpm)"
+msgstr "Pakker (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Forbereder pakken"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Udpakker filer ({percent}%)"
 
 msgid "Cancelled"
 msgstr "Annulleret"
 
-msgid "{name} is installed"
-msgstr "{name} er installeret"
+msgid "The package could not be converted"
+msgstr "Pakken kunne ikke konverteres"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "Pakken {name} blev installeret. Den har intet punkt i programmenuen."
+msgid "Dependencies are not available"
+msgstr "Afhængigheder er ikke tilgængelige"
 
-msgid "Installation complete"
-msgstr "Installationen er færdig"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Nogle pakker, som dette program har brug for, blev ikke fundet i arkiverne."
+
+msgid "Installing the package"
+msgstr "Installerer pakken"
+
+msgid "Preparing the installation…"
+msgstr "Forbereder installationen…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Henter og installerer afhængigheder…"
+
+msgid "Installing packages…"
+msgstr "Installerer pakker…"
+
+msgid "Configuring the system…"
+msgstr "Konfigurerer systemet…"
+
+msgid "Finishing…"
+msgstr "Afslutter…"
+
+msgid "Please wait until the installation finishes"
+msgstr "Vent venligst, til installationen er færdig"
 
 msgid "Authorization was not granted"
 msgstr "Godkendelsen blev ikke givet"
@@ -346,20 +489,17 @@ msgstr "Godkendelsen blev ikke givet"
 msgid "The installation failed"
 msgstr "Installationen mislykkedes"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman returnerede en fejl (kode {code}). Åbn detaljerne for at se, hvad der skete."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Der opstod en fejl under installation af pakken. Se detaljerne nedenfor."
 
 msgid "The application could not be started"
 msgstr "Programmet kunne ikke startes"
 
-msgid "Copied"
-msgstr "Kopieret"
+msgid "The RPM package is truncated or corrupted."
+msgstr "RPM-pakken er afkortet eller beskadiget."
 
-msgid "Please wait until the installation finishes"
-msgstr "Vent venligst, til installationen er færdig"
-
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "makepkg kan ikke køre som root; kør debtap-mod som almindelig bruger."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "makepkg kan ikke køre som root; kør big-pkg-installer som almindelig bruger."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg mislykkedes med afslutningskode {code}"
@@ -379,17 +519,11 @@ msgstr "Arch opgraderer ikke enkelte pakker; hele systemet opgraderes samlet."
 msgid "Tell which package to install, for example: {example}"
 msgstr "Angiv hvilken pakke der skal installeres, for eksempel: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm-pakker er lavet til Fedora/openSUSE og kan ikke installeres her."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Led efter programmet i arkiverne (pamac search), på Flathub eller som AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac finder også programmer i AUR og Flatpak: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb-pakker konverteres til native pacman-pakker af debtap-mod."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr ".deb- og .rpm-pakker konverteres til indbyggede pacman-pakker af big-pkg-installer."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Kør denne kommando som almindelig bruger (uden sudo)."
@@ -463,8 +597,11 @@ msgstr "Installér et program"
 msgid "Install a downloaded file"
 msgstr "Installér en downloadet fil"
 
-msgid "Install a .deb file here"
-msgstr "Installér en .deb-fil her"
+msgid "Install a native package file"
+msgstr "Installer en indbygget pakkefil"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Installer en .deb- eller .rpm-fil her"
 
 msgid "Reinstall"
 msgstr "Geninstallér"
@@ -562,8 +699,8 @@ msgstr "Pakketyper"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt bruger .deb-filer, dnf bruger .rpm, pacman bruger .pkg.tar.zst."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb-filer konverteres og installeres med debtap-mod (eller et dobbeltklik)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr ".deb- og .rpm-filer konverteres og installeres med big-pkg-installer (eller ved dobbeltklik)."
 
 msgid "Programs from the community"
 msgstr "Programmer fra fællesskabet"
@@ -583,8 +720,23 @@ msgstr "Hurtig reference: “sudo” er nødvendig for at installere eller fjern
 msgid "Command not found: {cmd}"
 msgstr "Kommando ikke fundet: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Debian-scripts registrerer kun et APT-arkiv og en AppArmor-profil til Ubuntu; de er ikke nødvendige her."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Pakkens egne scripts registrerer kun et softwarelager og en AppArmor-profil til andre distributioner; de er ikke nødvendige her."
+
+msgid "Unsupported RPM payload format."
+msgstr "Ikke-understøttet RPM-nyttelastformat."
+
+msgid "The file is not an RPM package."
+msgstr "Filen er ikke en RPM-pakke."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "Dette er en kilde-RPM (.src.rpm): den indeholder kildekode, ikke et program, der kan installeres."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Scriptet {script} konfigurerer et APT-arkiv; den del har ingen effekt på dette system."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "Scriptet {script} er skrevet i Lua til selve RPM og blev sprunget over."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "Scriptet {script} konfigurerer et DNF/YUM-lager; den del har ingen effekt på dette system."

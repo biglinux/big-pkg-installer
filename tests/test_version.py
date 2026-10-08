@@ -1,6 +1,6 @@
 import pytest
 
-from debtap_mod.version import split_debian_version, to_pacman_name, to_pacman_version
+from big_pkg_installer.version import split_debian_version, to_pacman_name, to_pacman_version
 
 
 @pytest.mark.parametrize(

@@ -3,7 +3,7 @@ import struct
 
 import pytest
 
-from debtap_mod.elf import read_elf
+from big_pkg_installer.elf import read_elf
 
 
 def test_reads_program():

@@ -4,10 +4,10 @@ import subprocess
 
 import pytest
 
+from big_pkg_installer import cli
+from big_pkg_installer.converter import Callbacks, ConversionError, convert, inspect
+from big_pkg_installer.debfile import Cancelled
 from conftest import has_makepkg
-from debtap_mod import cli
-from debtap_mod.converter import Callbacks, ConversionError, convert, inspect
-from debtap_mod.debfile import Cancelled
 
 pytestmark = [pytest.mark.slow, pytest.mark.skipif(not has_makepkg(), reason="makepkg not available")]
 

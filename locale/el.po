@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +29,11 @@ msgstr "Προειδοποίηση:"
 msgid "Error:"
 msgstr "Σφάλμα:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Μετατρέπει ένα πακέτο .deb σε πακέτο pacman και το εγκαθιστά."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Μετατρέπει ένα πακέτο .deb ή .rpm σε πακέτο pacman και το εγκαθιστά."
 
-msgid "the .deb file"
-msgstr "το αρχείο .deb"
+msgid "the .deb or .rpm file"
+msgstr "το αρχείο .deb ή .rpm"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "χωρίς ερωτήσεις, αλλά άνοιγμα του σεναρίου εγκατάστασης για έλεγχο"
@@ -47,8 +47,8 @@ msgstr "μόνο δημιουργία του πακέτου, χωρίς εγκα
 msgid "keep the built package in DIR"
 msgstr "διατήρηση του πακέτου που δημιουργήθηκε στο DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "εγγραφή και ενός PKGBUILD δίπλα στο .deb"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "εγγραφή και ενός PKGBUILD δίπλα στο αρχείο του πακέτου"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "μόνο εγγραφή ενός PKGBUILD, χωρίς δημιουργία"
@@ -59,11 +59,11 @@ msgstr "{question} [ν/Ο] "
 msgid "yes"
 msgstr "ναι"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "το debtap-mod δεν χρειάζεται πλέον τοπική βάση δεδομένων· δεν υπάρχει κάτι για ενημέρωση."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "το big-pkg-installer δεν χρειάζεται πλέον τοπική βάση δεδομένων· δεν υπάρχει κάτι για ενημέρωση."
 
-msgid "no .deb file given"
-msgstr "δεν δόθηκε αρχείο .deb"
+msgid "no package file given"
+msgstr "δεν δόθηκε αρχείο πακέτου"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "οι επιλογές -s και -w έχουν καταργηθεί και αγνοήθηκαν"
@@ -125,8 +125,8 @@ msgstr "Αγνοήθηκαν {count} εκτελέσιμα που δημιουρ�
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Βιβλιοθήκες που δεν βρέθηκαν στα αποθετήρια: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Εξαρτήσεις Debian χωρίς αντίστοιχο εδώ: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Εξαρτήσεις πακέτου χωρίς αντίστοιχο εδώ: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Αρχεία που ανήκουν ήδη σε άλλα πακέτα: {list}"
@@ -158,11 +158,62 @@ msgstr "Το πακέτο Debian δεν έχει αρχείο control."
 msgid "The control file has no Package or Version field."
 msgstr "Το αρχείο control δεν έχει πεδίο Package ή Version."
 
-msgid "Install .deb package"
-msgstr "Εγκατάσταση πακέτου .deb"
+msgid "Package Installer"
+msgstr "Εγκατάσταση πακέτων"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Μετατρέπει πακέτα Debian σε εγγενή πακέτα pacman και τα εγκαθιστά."
+msgid "original debtap"
+msgstr "πρωτότυπο debtap"
+
+msgid "About {name}"
+msgstr "Σχετικά με το {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "Ένας απλός και ασφαλής τρόπος εγκατάστασης πακέτων .deb και .rpm."
+
+msgid "Credits"
+msgstr "Συντελεστές"
+
+msgid "License"
+msgstr "Άδεια χρήσης"
+
+msgid "Project website"
+msgstr "Ιστότοπος του έργου"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "Φτιαγμένο για το BigLinux με GTK4/Libadwaita"
+
+msgid "About"
+msgstr "Σχετικά"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "Αυτό το πρόγραμμα είναι ελεύθερο λογισμικό και διανέμεται υπό την GNU General Public License, έκδοση 2 ή μεταγενέστερη. Παρέχεται χωρίς καμία απολύτως εγγύηση."
+
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+msgid "Converted packages"
+msgstr "Μετατρεπόμενα πακέτα"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "Το αρχείο .deb ή .rpm μετατρέπεται σε εγγενές πακέτο πριν από την εγκατάστασή του."
+
+msgid "Keep a copy of the converted package"
+msgstr "Διατήρηση αντιγράφου του μετατραπέντος πακέτου"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Χρήσιμο για επανεγκατάσταση αργότερα ή σε άλλον υπολογιστή"
+
+msgid "Folder"
+msgstr "Φάκελος"
+
+msgid "Choose…"
+msgstr "Επιλογή…"
+
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+msgid "Copy details"
+msgstr "Αντιγραφή λεπτομερειών"
 
 msgid "Extracting files"
 msgstr "Εξαγωγή αρχείων"
@@ -170,8 +221,8 @@ msgstr "Εξαγωγή αρχείων"
 msgid "Adapting folders to this system"
 msgstr "Προσαρμογή φακέλων σε αυτό το σύστημα"
 
-msgid "Finding dependencies"
-msgstr "Εύρεση εξαρτήσεων"
+msgid "Checking dependencies"
+msgstr "Έλεγχος εξαρτήσεων"
 
 msgid "Preparing installation scripts"
 msgstr "Προετοιμασία σεναρίων εγκατάστασης"
@@ -179,38 +230,59 @@ msgstr "Προετοιμασία σεναρίων εγκατάστασης"
 msgid "Building the package"
 msgstr "Δημιουργία του πακέτου"
 
-msgid "Waiting for authorization"
-msgstr "Αναμονή για εξουσιοδότηση"
+msgid "Preparing the installation"
+msgstr "Προετοιμασία της εγκατάστασης"
 
-msgid "Installing"
-msgstr "Εγκατάσταση"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Λήψη πακέτων ({done} από {total})"
 
-msgid "About"
-msgstr "Σχετικά"
+msgid "Downloading packages"
+msgstr "Λήψη πακέτων"
+
+msgid "Installing packages"
+msgstr "Εγκατάσταση πακέτων"
+
+msgid "Configuring the system"
+msgstr "Ρύθμιση του συστήματος"
+
+msgid "Finishing"
+msgstr "Ολοκλήρωση"
+
+msgid "About the Installer"
+msgstr "Σχετικά με το πρόγραμμα εγκατάστασης"
+
+msgid "Help"
+msgstr "Βοήθεια"
+
+msgid "Send feedback"
+msgstr "Αποστολή σχολίων"
+
+msgid "Report a problem"
+msgstr "Αναφορά προβλήματος"
 
 msgid "Main menu"
 msgstr "Κύριο μενού"
 
-msgid "Choose a .deb file…"
-msgstr "Επιλογή αρχείου .deb…"
+msgid "Copied"
+msgstr "Αντιγράφηκε"
 
-msgid "Install a .deb package"
-msgstr "Εγκατάσταση πακέτου .deb"
+msgid "Install a .deb or .rpm package"
+msgstr "Εγκατάσταση πακέτου .deb ή .rpm"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Ανοίξτε ένα πακέτο Debian ή αφήστε το εδώ. Θα μετατραπεί σε εγγενές πακέτο για αυτό το σύστημα και θα εγκατασταθεί."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Επιλέξτε ένα αρχείο .deb ή .rpm στον υπολογιστή σας για να το εγκαταστήσετε στο σύστημα Linux με απλό και ασφαλή τρόπο."
 
-msgid "Details"
-msgstr "Λεπτομέρειες"
+msgid "Choose a package file…"
+msgstr "Επιλογή αρχείου πακέτου…"
 
-msgid "Cancel"
-msgstr "Ακύρωση"
+msgid "Or drag and drop the file here"
+msgstr "Ή σύρετε και αποθέστε το αρχείο εδώ"
 
-msgid "Prefer native packages when available"
-msgstr "Προτίμηση εγγενών πακέτων όταν είναι διαθέσιμα"
+msgid "Selected package"
+msgstr "Επιλεγμένο πακέτο"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Τα προγράμματα από τα αποθετήρια του συστήματος, το Flatpak ή το AppImage συνήθως λειτουργούν καλύτερα. Τα μετατρεπόμενα πακέτα .deb μπορεί να μη λειτουργούν τέλεια."
+msgid "Review the package information before continuing."
+msgstr "Ελέγξτε τις πληροφορίες του πακέτου πριν συνεχίσετε."
 
 msgid "“{name}” is available in the repositories"
 msgstr "Το «{name}» είναι διαθέσιμο στα αποθετήρια"
@@ -221,8 +293,8 @@ msgstr "Συνιστάται η εγκατάσταση του εγγενούς �
 msgid "Open"
 msgstr "Άνοιγμα"
 
-msgid "Package"
-msgstr "Πακέτο"
+msgid "Package name"
+msgstr "Όνομα πακέτου"
 
 msgid "Version"
 msgstr "Έκδοση"
@@ -230,8 +302,8 @@ msgstr "Έκδοση"
 msgid "Architecture"
 msgstr "Αρχιτεκτονική"
 
-msgid "Installed size"
-msgstr "Εγκατεστημένο μέγεθος"
+msgid "Size"
+msgstr "Μέγεθος"
 
 msgid "Maintainer"
 msgstr "Συντηρητής"
@@ -242,26 +314,42 @@ msgstr "Ιστότοπος"
 msgid "Description"
 msgstr "Περιγραφή"
 
-msgid "Review before installing"
-msgstr "Έλεγχος πριν την εγκατάσταση"
+msgid "Cancel"
+msgstr "Ακύρωση"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Εμφάνιση των εξαρτήσεων και των σεναρίων που θα εκτελεστούν ως διαχειριστής"
+msgid "Continue"
+msgstr "Συνέχεια"
 
-msgid "Install"
-msgstr "Εγκατάσταση"
+msgid "This may take a few moments…"
+msgstr "Αυτό μπορεί να διαρκέσει λίγο…"
 
-msgid "Ready to install"
-msgstr "Έτοιμο για εγκατάσταση"
+msgid "Dependencies"
+msgstr "Εξαρτήσεις"
 
-msgid "Check what will be installed."
-msgstr "Ελέγξτε τι θα εγκατασταθεί."
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Τα παρακάτω πακέτα θα εγκατασταθούν ώστε η εφαρμογή να λειτουργεί σωστά."
+
+msgid "New packages to install"
+msgstr "Νέα πακέτα προς εγκατάσταση"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} πακέτο"
+msgstr[1] "{n} πακέτα"
+
+msgid "converted from the package file"
+msgstr "μετατράπηκε από το αρχείο πακέτου"
+
+msgid "Other information"
+msgstr "Άλλες πληροφορίες"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} προειδοποίηση"
+msgstr[1] "{n} προειδοποιήσεις"
 
 msgid "Package name on this system"
 msgstr "Όνομα πακέτου σε αυτό το σύστημα"
-
-msgid "Package size"
-msgstr "Μέγεθος πακέτου"
 
 msgid "Applications menu"
 msgstr "Μενού εφαρμογών"
@@ -269,76 +357,131 @@ msgstr "Μενού εφαρμογών"
 msgid "No menu entry"
 msgstr "Καμία καταχώριση μενού"
 
-msgid "Warnings"
-msgstr "Προειδοποιήσεις"
-
-msgid "Notes"
-msgstr "Σημειώσεις"
-
-msgid "Dependencies"
-msgstr "Εξαρτήσεις"
-
-msgid "Required"
-msgstr "Απαιτούμενες"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} πακέτο"
-msgstr[1] "{n} πακέτα"
-
-msgid "will be downloaded"
-msgstr "θα γίνει λήψη"
-
 msgid "Optional"
 msgstr "Προαιρετικές"
 
 msgid "Scripts"
 msgstr "Σενάρια"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Αυτές οι εντολές από το πακέτο Debian εκτελούνται ως διαχειριστής κατά την εγκατάσταση."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Αυτές οι εντολές του πακέτου εκτελούνται ως διαχειριστής κατά την εγκατάσταση."
 
-msgid "Open {name}"
-msgstr "Άνοιγμα του {name}"
+msgid "Show"
+msgstr "Εμφάνιση"
 
-msgid "Copy details"
-msgstr "Αντιγραφή λεπτομερειών"
+msgid "Back"
+msgstr "Πίσω"
+
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+msgid "Authentication required"
+msgstr "Απαιτείται πιστοποίηση"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Πληκτρολογήστε τον κωδικό πρόσβασής σας στο παράθυρο πιστοποίησης του συστήματος για να συνεχίσετε την εγκατάσταση."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Απαιτούνται δικαιώματα διαχειριστή για την εγκατάσταση πακέτων στο σύστημά σας."
+
+msgid "Package installed successfully!"
+msgstr "Το πακέτο εγκαταστάθηκε με επιτυχία!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "Το πακέτο «{name}» εγκαταστάθηκε σωστά στο σύστημά σας."
+
+msgid "Version {version}"
+msgstr "Έκδοση {version}"
+
+msgid "Open application"
+msgstr "Άνοιγμα εφαρμογής"
+
+msgid "Show details"
+msgstr "Εμφάνιση λεπτομερειών"
 
 msgid "Close"
 msgstr "Κλείσιμο"
 
+msgid "Error details"
+msgstr "Λεπτομέρειες σφάλματος"
+
+msgid "Incompatible package"
+msgstr "Ασύμβατο πακέτο"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "Αυτό το πακέτο δημιουργήθηκε για την αρχιτεκτονική {deb_arch}, αλλά το σύστημά σας είναι {host}."
+
+msgid "Package"
+msgstr "Πακέτο"
+
+msgid "Package architecture"
+msgstr "Αρχιτεκτονική πακέτου"
+
+msgid "System architecture"
+msgstr "Αρχιτεκτονική συστήματος"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Αυτό το πακέτο δεν μπορεί να εγκατασταθεί σε αυτόν τον υπολογιστή. Αναζητήστε μια έκδοση του πακέτου για {host}."
+
 msgid "This file cannot be installed"
 msgstr "Αυτό το αρχείο δεν μπορεί να εγκατασταθεί"
 
-msgid "Choose a .deb file"
-msgstr "Επιλογή αρχείου .deb"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Το αρχείο μπορεί να είναι κατεστραμμένο ή να μην είναι έγκυρο πακέτο. Κατεβάστε το ξανά ή ελέγξτε από πού προέρχεται."
 
-msgid "Debian packages"
-msgstr "Πακέτα Debian"
+msgid "Invalid file"
+msgstr "Μη έγκυρο αρχείο"
 
-msgid "Type your password in the window that will appear."
-msgstr "Πληκτρολογήστε τον κωδικό πρόσβασής σας στο παράθυρο που θα εμφανιστεί."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Το επιλεγμένο αρχείο δεν είναι πακέτο .deb ή .rpm."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Οι εξαρτήσεις που λείπουν λαμβάνονται από τα αποθετήρια."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "Αυτό το πρόγραμμα εγκατάστασης λειτουργεί μόνο με αρχεία .deb και .rpm (πακέτα για Debian, Ubuntu, Fedora, openSUSE και τις παραγώγους τους)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Γίνεται συμπίεση των αρχείων, αυτό μπορεί να διαρκέσει ένα λεπτό."
+msgid "Choose a package file"
+msgstr "Επιλογή αρχείου πακέτου"
 
-msgid "The package could not be converted"
-msgstr "Δεν ήταν δυνατή η μετατροπή του πακέτου"
+msgid "Packages (.deb, .rpm)"
+msgstr "Πακέτα (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Προετοιμασία του πακέτου"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Εξαγωγή αρχείων ({percent}%)"
 
 msgid "Cancelled"
 msgstr "Ακυρώθηκε"
 
-msgid "{name} is installed"
-msgstr "Το {name} είναι εγκατεστημένο"
+msgid "The package could not be converted"
+msgstr "Δεν ήταν δυνατή η μετατροπή του πακέτου"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "Το πακέτο {name} εγκαταστάθηκε. Δεν έχει καταχώριση στο μενού εφαρμογών."
+msgid "Dependencies are not available"
+msgstr "Οι εξαρτήσεις δεν είναι διαθέσιμες"
 
-msgid "Installation complete"
-msgstr "Η εγκατάσταση ολοκληρώθηκε"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Ορισμένα πακέτα που χρειάζεται αυτό το πρόγραμμα δεν βρέθηκαν στα αποθετήρια."
+
+msgid "Installing the package"
+msgstr "Εγκατάσταση του πακέτου"
+
+msgid "Preparing the installation…"
+msgstr "Προετοιμασία της εγκατάστασης…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Λήψη και εγκατάσταση εξαρτήσεων…"
+
+msgid "Installing packages…"
+msgstr "Εγκατάσταση πακέτων…"
+
+msgid "Configuring the system…"
+msgstr "Ρύθμιση του συστήματος…"
+
+msgid "Finishing…"
+msgstr "Ολοκλήρωση…"
+
+msgid "Please wait until the installation finishes"
+msgstr "Περιμένετε μέχρι να ολοκληρωθεί η εγκατάσταση"
 
 msgid "Authorization was not granted"
 msgstr "Η εξουσιοδότηση δεν δόθηκε"
@@ -346,20 +489,17 @@ msgstr "Η εξουσιοδότηση δεν δόθηκε"
 msgid "The installation failed"
 msgstr "Η εγκατάσταση απέτυχε"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "Το pacman επέστρεψε σφάλμα (κωδικός {code}). Ανοίξτε τις λεπτομέρειες για να δείτε τι συνέβη."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Παρουσιάστηκε σφάλμα κατά την εγκατάσταση του πακέτου. Δείτε τις λεπτομέρειες παρακάτω."
 
 msgid "The application could not be started"
 msgstr "Δεν ήταν δυνατή η εκκίνηση της εφαρμογής"
 
-msgid "Copied"
-msgstr "Αντιγράφηκε"
+msgid "The RPM package is truncated or corrupted."
+msgstr "Το πακέτο RPM είναι περικομμένο ή κατεστραμμένο."
 
-msgid "Please wait until the installation finishes"
-msgstr "Περιμένετε μέχρι να ολοκληρωθεί η εγκατάσταση"
-
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "Το makepkg δεν μπορεί να εκτελεστεί ως root· εκτελέστε το debtap-mod ως απλός χρήστης."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "Το makepkg δεν μπορεί να εκτελεστεί ως root· εκτελέστε το big-pkg-installer ως απλός χρήστης."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "Το makepkg απέτυχε με κωδικό εξόδου {code}"
@@ -379,17 +519,11 @@ msgstr "Το Arch δεν αναβαθμίζει μεμονωμένα πακέτ�
 msgid "Tell which package to install, for example: {example}"
 msgstr "Πείτε ποιο πακέτο να εγκατασταθεί, για παράδειγμα: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr "Τα πακέτα .rpm φτιάχνονται για Fedora/openSUSE και δεν μπορούν να εγκατασταθούν εδώ."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Αναζητήστε το πρόγραμμα στα αποθετήρια (pamac search), στο Flathub ή ως AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "Το pamac βρίσκει προγράμματα και στο AUR και στο Flatpak: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr "Τα πακέτα .deb μετατρέπονται σε εγγενή πακέτα pacman από το debtap-mod."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr "Τα πακέτα .deb και .rpm μετατρέπονται σε εγγενή πακέτα pacman από το big-pkg-installer."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Εκτελέστε αυτή την εντολή ως απλός χρήστης (χωρίς sudo)."
@@ -463,8 +597,11 @@ msgstr "Εγκατάσταση προγράμματος"
 msgid "Install a downloaded file"
 msgstr "Εγκατάσταση ληφθέντος αρχείου"
 
-msgid "Install a .deb file here"
-msgstr "Εγκατάσταση αρχείου .deb εδώ"
+msgid "Install a native package file"
+msgstr "Εγκατάσταση αρχείου εγγενούς πακέτου"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Εγκατάσταση αρχείου .deb ή .rpm εδώ"
 
 msgid "Reinstall"
 msgstr "Επανεγκατάσταση"
@@ -562,8 +699,8 @@ msgstr "Τύποι πακέτων"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "Το apt χρησιμοποιεί αρχεία .deb, το dnf χρησιμοποιεί .rpm, το pacman χρησιμοποιεί .pkg.tar.zst."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr "Τα αρχεία .deb μετατρέπονται και εγκαθίστανται με το debtap-mod (ή με διπλό κλικ)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr "Τα αρχεία .deb και .rpm μετατρέπονται και εγκαθίστανται με το big-pkg-installer (ή με διπλό κλικ)."
 
 msgid "Programs from the community"
 msgstr "Προγράμματα της κοινότητας"
@@ -583,8 +720,23 @@ msgstr "Γρήγορη αναφορά: το «sudo» χρειάζεται για
 msgid "Command not found: {cmd}"
 msgstr "Η εντολή δεν βρέθηκε: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Τα σενάρια του Debian απλώς καταχωρούν ένα αποθετήριο APT και ένα προφίλ AppArmor για το Ubuntu· δεν χρειάζονται εδώ."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Τα ίδια τα σενάρια του πακέτου απλώς καταχωρούν ένα αποθετήριο λογισμικού και ένα προφίλ AppArmor για άλλες διανομές· δεν χρειάζονται εδώ."
+
+msgid "Unsupported RPM payload format."
+msgstr "Μη υποστηριζόμενη μορφή φορτίου RPM."
+
+msgid "The file is not an RPM package."
+msgstr "Το αρχείο δεν είναι πακέτο RPM."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "Αυτό είναι RPM πηγαίου κώδικα (.src.rpm): περιέχει πηγαίο κώδικα, όχι πρόγραμμα προς εγκατάσταση."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Το σενάριο {script} ρυθμίζει ένα αποθετήριο APT· αυτό το μέρος δεν έχει κανένα αποτέλεσμα σε αυτό το σύστημα."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "Το σενάριο {script} είναι γραμμένο σε Lua για το ίδιο το RPM και παραλείφθηκε."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "Το σενάριο {script} ρυθμίζει ένα αποθετήριο DNF/YUM· αυτό το μέρος δεν έχει εφαρμογή σε αυτό το σύστημα."

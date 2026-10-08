@@ -1,4 +1,4 @@
-from debtap_mod.quirks import Quirk, load_quirks, quirk_for
+from big_pkg_installer.quirks import Quirk, load_quirks, quirk_for
 
 
 def test_bundled_quirks_load():
@@ -20,7 +20,8 @@ def test_filter_depends():
 
 
 def test_skip_scripts_true_means_all():
-    assert quirk_for("chatgpt").skip_scripts == ["preinst", "postinst", "prerm", "postrm"]
+    skipped = quirk_for("chatgpt").skip_scripts
+    assert {"preinst", "postinst", "prerm", "postrm", "pre", "post", "preun", "postun"} <= set(skipped)
 
 
 def test_apply_files(tmp_path):

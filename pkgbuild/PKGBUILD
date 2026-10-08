@@ -1,14 +1,14 @@
 # Maintainer: Bruno Goncalves <bigbruno@gmail.com>
 # Maintainer: Tales A. Mendonça <talesam@gmail.com>
 
-pkgname=debtap-mod
+pkgname=big-pkg-installer
 pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL-2.0-or-later')
-url="https://github.com/biglinux/debtap-mod"
-pkgdesc="Convert and install .deb packages, and translate apt/dnf/dpkg commands to pacman"
-source=("git+https://github.com/biglinux/debtap-mod.git")
+url="https://github.com/biglinux/big-pkg-installer"
+pkgdesc="Convert and install .deb and .rpm packages, and translate apt/dnf/dpkg commands to pacman"
+source=("git+https://github.com/biglinux/big-pkg-installer.git")
 md5sums=(SKIP)
 depends=(
     'pacman'          # makepkg, pacman, vercmp, pacman-conf
@@ -23,10 +23,14 @@ depends=(
     'libadwaita'
 )
 optdepends=('pamac-gtk: open native packages suggested by the installer')
-checkdepends=('python-pytest')
+checkdepends=('python-pytest' 'rpm-tools')
 # /usr/local/bin/{apt,apt-get,dnf,yum} moved here from biglinux-improve-compatibility;
 # older builds of that package still ship them.
-conflicts=('biglinux-improve-compatibility<26.10.07')
+# Formerly "debtap-mod": the old package is replaced automatically and the
+# old commands (debtap-mod, debtap-gui, gdebi-gtk) still work.
+provides=("debtap-mod=${pkgver}")
+replaces=('debtap-mod')
+conflicts=('debtap-mod' 'biglinux-improve-compatibility<26.10.07')
 
 check() {
     if [ -d "${srcdir}/${pkgname}/${pkgname}" ]; then

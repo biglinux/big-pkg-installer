@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +29,11 @@ msgstr "Upozorenje:"
 msgid "Error:"
 msgstr "Greška:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Pretvorite .deb paket u pacman paket i instalirajte ga."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Pretvori .deb ili .rpm paket u pacman paket i instaliraj ga."
 
-msgid "the .deb file"
-msgstr ".deb datoteka"
+msgid "the .deb or .rpm file"
+msgstr "datoteka .deb ili .rpm"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "ne postavljaj pitanja, ali otvori instalacijsku skriptu na pregled"
@@ -47,8 +47,8 @@ msgstr "samo izradi paket, ne instaliraj ga"
 msgid "keep the built package in DIR"
 msgstr "zadrži izrađeni paket u DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "zapiši i PKGBUILD pored .deb datoteke"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "zapiši i PKGBUILD pokraj datoteke paketa"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "samo zapiši PKGBUILD, bez izrade"
@@ -59,11 +59,11 @@ msgstr "{question} [d/N] "
 msgid "yes"
 msgstr "da"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "debtap-mod više ne treba lokalnu bazu podataka; nema se što ažurirati."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "big-pkg-installer više ne treba lokalnu bazu podataka; nema se što ažurirati."
 
-msgid "no .deb file given"
-msgstr "nije zadana .deb datoteka"
+msgid "no package file given"
+msgstr "nije zadana datoteka paketa"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "opcije -s i -w su zastarjele i zanemarene su"
@@ -125,8 +125,8 @@ msgstr "Zanemareno binarnih datoteka izrađenih za druge sustave ili arhitekture
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Biblioteke nisu pronađene u repozitorijima: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Debian ovisnosti bez ekvivalenta ovdje: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Ovisnosti paketa bez ekvivalenta ovdje: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Datoteke koje već pripadaju drugim paketima: {list}"
@@ -158,11 +158,62 @@ msgstr "Debian paket nema datoteku control."
 msgid "The control file has no Package or Version field."
 msgstr "Datoteka control nema polje Package ili Version."
 
-msgid "Install .deb package"
-msgstr "Instaliraj .deb paket"
+msgid "Package Installer"
+msgstr "Instalacija paketa"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Pretvara Debian pakete u izvorne pacman pakete i instalira ih."
+msgid "original debtap"
+msgstr "izvorni debtap"
+
+msgid "About {name}"
+msgstr "O programu {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "Jednostavan i siguran način instalacije .deb i .rpm paketa."
+
+msgid "Credits"
+msgstr "Zasluge"
+
+msgid "License"
+msgstr "Licenca"
+
+msgid "Project website"
+msgstr "Web stranica projekta"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "Izrađeno za BigLinux s GTK4/Libadwaita"
+
+msgid "About"
+msgstr "O programu"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "Ovaj program je slobodan softver, distribuiran pod GNU General Public License, verzija 2 ili novija. Dolazi bez ikakvog jamstva."
+
+msgid "Preferences"
+msgstr "Postavke"
+
+msgid "Converted packages"
+msgstr "Pretvoreni paketi"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "Datoteka .deb ili .rpm pretvara se u izvorni paket prije instalacije."
+
+msgid "Keep a copy of the converted package"
+msgstr "Zadrži kopiju pretvorenog paketa"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Korisno za ponovnu instalaciju kasnije ili na drugom računalu"
+
+msgid "Folder"
+msgstr "Mapa"
+
+msgid "Choose…"
+msgstr "Odaberi…"
+
+msgid "Details"
+msgstr "Pojedinosti"
+
+msgid "Copy details"
+msgstr "Kopiraj pojedinosti"
 
 msgid "Extracting files"
 msgstr "Izdvajanje datoteka"
@@ -170,8 +221,8 @@ msgstr "Izdvajanje datoteka"
 msgid "Adapting folders to this system"
 msgstr "Prilagodba mapa ovom sustavu"
 
-msgid "Finding dependencies"
-msgstr "Pronalaženje ovisnosti"
+msgid "Checking dependencies"
+msgstr "Provjera ovisnosti"
 
 msgid "Preparing installation scripts"
 msgstr "Priprema instalacijskih skripti"
@@ -179,38 +230,59 @@ msgstr "Priprema instalacijskih skripti"
 msgid "Building the package"
 msgstr "Izrada paketa"
 
-msgid "Waiting for authorization"
-msgstr "Čekanje autorizacije"
+msgid "Preparing the installation"
+msgstr "Priprema instalacije"
 
-msgid "Installing"
-msgstr "Instalacija"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Preuzimanje paketa ({done} od {total})"
 
-msgid "About"
-msgstr "O programu"
+msgid "Downloading packages"
+msgstr "Preuzimanje paketa"
+
+msgid "Installing packages"
+msgstr "Instalacija paketa"
+
+msgid "Configuring the system"
+msgstr "Konfiguriranje sustava"
+
+msgid "Finishing"
+msgstr "Završavanje"
+
+msgid "About the Installer"
+msgstr "O instalacijskom programu"
+
+msgid "Help"
+msgstr "Pomoć"
+
+msgid "Send feedback"
+msgstr "Pošalji povratne informacije"
+
+msgid "Report a problem"
+msgstr "Prijavi problem"
 
 msgid "Main menu"
 msgstr "Glavni izbornik"
 
-msgid "Choose a .deb file…"
-msgstr "Odaberite .deb datoteku…"
+msgid "Copied"
+msgstr "Kopirano"
 
-msgid "Install a .deb package"
-msgstr "Instalirajte .deb paket"
+msgid "Install a .deb or .rpm package"
+msgstr "Instaliraj .deb ili .rpm paket"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Otvorite Debian paket ili ga ovdje ispustite. Bit će pretvoren u izvorni paket za ovaj sustav i instaliran."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Odaberite .deb ili .rpm datoteku na računalu kako biste je jednostavno i sigurno instalirali na svoj Linux sustav."
 
-msgid "Details"
-msgstr "Pojedinosti"
+msgid "Choose a package file…"
+msgstr "Odaberi datoteku paketa…"
 
-msgid "Cancel"
-msgstr "Odustani"
+msgid "Or drag and drop the file here"
+msgstr "Ili ovdje povucite i ispustite datoteku"
 
-msgid "Prefer native packages when available"
-msgstr "Radije izvorni paketi kada su dostupni"
+msgid "Selected package"
+msgstr "Odabrani paket"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Programi iz sistemskih repozitorija, Flatpaka ili AppImagea obično rade bolje. Pretvoreni .deb paketi možda neće raditi savršeno."
+msgid "Review the package information before continuing."
+msgstr "Pregledajte informacije o paketu prije nastavka."
 
 msgid "“{name}” is available in the repositories"
 msgstr "„{name}“ je dostupan u repozitorijima"
@@ -221,8 +293,8 @@ msgstr "Preporučuje se instalacija izvornog paketa."
 msgid "Open"
 msgstr "Otvori"
 
-msgid "Package"
-msgstr "Paket"
+msgid "Package name"
+msgstr "Naziv paketa"
 
 msgid "Version"
 msgstr "Verzija"
@@ -230,8 +302,8 @@ msgstr "Verzija"
 msgid "Architecture"
 msgstr "Arhitektura"
 
-msgid "Installed size"
-msgstr "Instalirana veličina"
+msgid "Size"
+msgstr "Veličina"
 
 msgid "Maintainer"
 msgstr "Održavatelj"
@@ -242,44 +314,23 @@ msgstr "Web-stranica"
 msgid "Description"
 msgstr "Opis"
 
-msgid "Review before installing"
-msgstr "Pregled prije instalacije"
+msgid "Cancel"
+msgstr "Odustani"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Prikaži ovisnosti i skripte koje će se izvršiti kao administrator"
+msgid "Continue"
+msgstr "Nastavi"
 
-msgid "Install"
-msgstr "Instaliraj"
-
-msgid "Ready to install"
-msgstr "Spremno za instalaciju"
-
-msgid "Check what will be installed."
-msgstr "Provjerite što će biti instalirano."
-
-msgid "Package name on this system"
-msgstr "Naziv paketa na ovom sustavu"
-
-msgid "Package size"
-msgstr "Veličina paketa"
-
-msgid "Applications menu"
-msgstr "Izbornik aplikacija"
-
-msgid "No menu entry"
-msgstr "Nema stavke izbornika"
-
-msgid "Warnings"
-msgstr "Upozorenja"
-
-msgid "Notes"
-msgstr "Bilješke"
+msgid "This may take a few moments…"
+msgstr "Ovo može potrajati nekoliko trenutaka…"
 
 msgid "Dependencies"
 msgstr "Ovisnosti"
 
-msgid "Required"
-msgstr "Obavezne"
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Sljedeći paketi bit će instalirani kako bi aplikacija ispravno radila."
+
+msgid "New packages to install"
+msgstr "Novi paketi za instalaciju"
 
 msgid "{n} package"
 msgid_plural "{n} packages"
@@ -287,8 +338,26 @@ msgstr[0] "{n} paket"
 msgstr[1] "{n} paketa"
 msgstr[2] "{n} paketa"
 
-msgid "will be downloaded"
-msgstr "bit će preuzeto"
+msgid "converted from the package file"
+msgstr "pretvoreno iz datoteke paketa"
+
+msgid "Other information"
+msgstr "Ostale informacije"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} upozorenje"
+msgstr[1] "{n} upozorenja"
+msgstr[2] "{n} upozorenja"
+
+msgid "Package name on this system"
+msgstr "Naziv paketa na ovom sustavu"
+
+msgid "Applications menu"
+msgstr "Izbornik aplikacija"
+
+msgid "No menu entry"
+msgstr "Nema stavke izbornika"
 
 msgid "Optional"
 msgstr "Neobavezne"
@@ -296,50 +365,125 @@ msgstr "Neobavezne"
 msgid "Scripts"
 msgstr "Skripte"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Ove naredbe iz Debian paketa izvršavaju se kao administrator tijekom instalacije."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Ove naredbe iz paketa izvode se kao administrator tijekom instalacije."
 
-msgid "Open {name}"
-msgstr "Otvori {name}"
+msgid "Show"
+msgstr "Prikaži"
 
-msgid "Copy details"
-msgstr "Kopiraj pojedinosti"
+msgid "Back"
+msgstr "Natrag"
+
+msgid "Install"
+msgstr "Instaliraj"
+
+msgid "Authentication required"
+msgstr "Potrebna je autentifikacija"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Upišite svoju lozinku u prozor za autentifikaciju sustava kako biste nastavili instalaciju."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Za instalaciju paketa na vaš sustav potrebna su administratorska ovlaštenja."
+
+msgid "Package installed successfully!"
+msgstr "Paket je uspješno instaliran!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "Paket „{name}” ispravno je instaliran na vaš sustav."
+
+msgid "Version {version}"
+msgstr "Verzija {version}"
+
+msgid "Open application"
+msgstr "Otvori aplikaciju"
+
+msgid "Show details"
+msgstr "Prikaži pojedinosti"
 
 msgid "Close"
 msgstr "Zatvori"
 
+msgid "Error details"
+msgstr "Pojedinosti o pogrešci"
+
+msgid "Incompatible package"
+msgstr "Nekompatibilan paket"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "Ovaj paket izrađen je za arhitekturu {deb_arch}, ali vaš sustav je {host}."
+
+msgid "Package"
+msgstr "Paket"
+
+msgid "Package architecture"
+msgstr "Arhitektura paketa"
+
+msgid "System architecture"
+msgstr "Arhitektura sustava"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Ovaj paket nije moguće instalirati na ovo računalo. Potražite verziju paketa izrađenu za {host}."
+
 msgid "This file cannot be installed"
 msgstr "Ova datoteka se ne može instalirati"
 
-msgid "Choose a .deb file"
-msgstr "Odaberite .deb datoteku"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Datoteka je možda oštećena ili nije valjan paket. Preuzmite je ponovno ili provjerite odakle dolazi."
 
-msgid "Debian packages"
-msgstr "Debian paketi"
+msgid "Invalid file"
+msgstr "Nevaljana datoteka"
 
-msgid "Type your password in the window that will appear."
-msgstr "Unesite svoju lozinku u prozor koji će se pojaviti."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Odabrana datoteka nije .deb ili .rpm paket."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Ovisnosti koje nedostaju preuzimaju se iz repozitorija."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "Ovaj instalacijski program radi samo s .deb i .rpm datotekama (paketi za Debian, Ubuntu, Fedora, openSUSE i njihove derivate)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Sažimanje datoteka, to može potrajati minutu."
+msgid "Choose a package file"
+msgstr "Odaberite datoteku paketa"
 
-msgid "The package could not be converted"
-msgstr "Paket se nije mogao pretvoriti"
+msgid "Packages (.deb, .rpm)"
+msgstr "Paketi (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Priprema paketa"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Izdvajanje datoteka ({percent}%)"
 
 msgid "Cancelled"
 msgstr "Otkazano"
 
-msgid "{name} is installed"
-msgstr "{name} je instaliran"
+msgid "The package could not be converted"
+msgstr "Paket se nije mogao pretvoriti"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "Paket {name} je instaliran. Nema stavku u izborniku aplikacija."
+msgid "Dependencies are not available"
+msgstr "Ovisnosti nisu dostupne"
 
-msgid "Installation complete"
-msgstr "Instalacija je dovršena"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Neki paketi koje ovaj program treba nisu pronađeni u repozitorijima."
+
+msgid "Installing the package"
+msgstr "Instalacija paketa"
+
+msgid "Preparing the installation…"
+msgstr "Priprema instalacije…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Preuzimanje i instalacija ovisnosti…"
+
+msgid "Installing packages…"
+msgstr "Instalacija paketa…"
+
+msgid "Configuring the system…"
+msgstr "Konfiguriranje sustava…"
+
+msgid "Finishing…"
+msgstr "Završavanje…"
+
+msgid "Please wait until the installation finishes"
+msgstr "Pričekajte da se instalacija završi"
 
 msgid "Authorization was not granted"
 msgstr "Autorizacija nije odobrena"
@@ -347,20 +491,17 @@ msgstr "Autorizacija nije odobrena"
 msgid "The installation failed"
 msgstr "Instalacija nije uspjela"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman je vratio grešku (kod {code}). Otvorite pojedinosti da vidite što se dogodilo."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Došlo je do pogreške pri instalaciji paketa. Pogledajte pojedinosti u nastavku."
 
 msgid "The application could not be started"
 msgstr "Aplikacija se nije mogla pokrenuti"
 
-msgid "Copied"
-msgstr "Kopirano"
+msgid "The RPM package is truncated or corrupted."
+msgstr "RPM paket je skraćen ili oštećen."
 
-msgid "Please wait until the installation finishes"
-msgstr "Pričekajte da se instalacija završi"
-
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "makepkg se ne može pokrenuti kao root; pokrenite debtap-mod kao običan korisnik."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "makepkg se ne može pokrenuti kao root; pokrenite big-pkg-installer kao običan korisnik."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg nije uspio s izlaznim kodom {code}"
@@ -380,17 +521,11 @@ msgstr "Arch ne nadograđuje pojedinačne pakete; cijeli se sustav nadograđuje 
 msgid "Tell which package to install, for example: {example}"
 msgstr "Navedite koji paket instalirati, na primjer: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm paketi su izrađeni za Fedora/openSUSE i ovdje se ne mogu instalirati."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Potražite program u repozitorijima (pamac search), na Flathubu ili kao AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac pronalazi programe i u AUR-u i Flatpaku: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb pakete debtap-mod pretvara u izvorne pacman pakete."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr "big-pkg-installer pretvara .deb i .rpm pakete u izvorne pacman pakete."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Pokrenite ovu naredbu kao običan korisnik (bez sudo)."
@@ -464,8 +599,11 @@ msgstr "Instaliraj program"
 msgid "Install a downloaded file"
 msgstr "Instaliraj preuzetu datoteku"
 
-msgid "Install a .deb file here"
-msgstr "Instaliraj .deb datoteku ovdje"
+msgid "Install a native package file"
+msgstr "Instaliraj izvornu datoteku paketa"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Instaliraj .deb ili .rpm datoteku ovdje"
 
 msgid "Reinstall"
 msgstr "Ponovno instaliraj"
@@ -563,8 +701,8 @@ msgstr "Vrste paketa"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt koristi .deb datoteke, dnf koristi .rpm, pacman koristi .pkg.tar.zst."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb datoteke se pretvaraju i instaliraju s debtap-mod (ili dvostrukim klikom)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr "Datoteke .deb i .rpm pretvaraju se i instaliraju pomoću big-pkg-installer (ili dvostrukim klikom)."
 
 msgid "Programs from the community"
 msgstr "Programi zajednice"
@@ -584,8 +722,23 @@ msgstr "Brza referenca: “sudo” je potreban za instalaciju ili uklanjanje; pr
 msgid "Command not found: {cmd}"
 msgstr "Naredba nije pronađena: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Debian skripte samo registriraju APT repozitorij i AppArmor profil za Ubuntu; ovdje nisu potrebne."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Vlastite skripte paketa samo registriraju repozitorij softvera i AppArmor profil za druge distribucije; ovdje nisu potrebne."
+
+msgid "Unsupported RPM payload format."
+msgstr "Nepodržan format RPM sadržaja."
+
+msgid "The file is not an RPM package."
+msgstr "Datoteka nije RPM paket."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "Ovo je izvorni RPM (.src.rpm): sadrži izvorni kôd, a ne program za instalaciju."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Skripta {script} podešava APT repozitorij; taj dio nema učinka na ovaj sustav."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "Skripta {script} napisana je u Lua za sam RPM i preskočena je."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "Skripta {script} konfigurira DNF/YUM repozitorij; taj dio nema učinka na ovaj sustav."

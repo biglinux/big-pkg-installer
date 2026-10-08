@@ -1,7 +1,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debtap-mod\n"
+"Project-Id-Version: big-pkg-installer\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +29,11 @@ msgstr "Aðvörun:"
 msgid "Error:"
 msgstr "Villa:"
 
-msgid "Convert a .deb package into a pacman package and install it."
-msgstr "Breyta .deb-pakka í pacman-pakka og setja hann upp."
+msgid "Convert a .deb or .rpm package into a pacman package and install it."
+msgstr "Umbreyta .deb eða .rpm pakka í pacman-pakka og setja hann upp."
 
-msgid "the .deb file"
-msgstr ".deb-skráin"
+msgid "the .deb or .rpm file"
+msgstr ".deb eða .rpm skráin"
 
 msgid "do not ask questions, but open the install script for review"
 msgstr "ekki spyrja spurninga, en opna uppsetningarskriftuna til yfirferðar"
@@ -47,8 +47,8 @@ msgstr "aðeins smíða pakkann, ekki setja hann upp"
 msgid "keep the built package in DIR"
 msgstr "geyma smíðaða pakkann í DIR"
 
-msgid "also write a PKGBUILD next to the .deb"
-msgstr "skrifa einnig PKGBUILD við hlið .deb-skrárinnar"
+msgid "also write a PKGBUILD next to the package file"
+msgstr "skrifa einnig PKGBUILD við hliðina á pakkaskránni"
 
 msgid "only write a PKGBUILD, do not build"
 msgstr "aðeins skrifa PKGBUILD, ekki smíða"
@@ -59,11 +59,11 @@ msgstr "{question} [j/N] "
 msgid "yes"
 msgstr "já"
 
-msgid "debtap-mod no longer needs a local database; nothing to update."
-msgstr "debtap-mod þarf ekki lengur staðbundinn gagnagrunn; ekkert til að uppfæra."
+msgid "big-pkg-installer no longer needs a local database; nothing to update."
+msgstr "big-pkg-installer þarf ekki lengur staðbundinn gagnagrunn; ekkert til að uppfæra."
 
-msgid "no .deb file given"
-msgstr "engin .deb-skrá gefin"
+msgid "no package file given"
+msgstr "engin pakkaskrá gefin"
 
 msgid "the -s and -w options are obsolete and were ignored"
 msgstr "valkostirnir -s og -w eru úreltir og voru hunsaðir"
@@ -125,8 +125,8 @@ msgstr "Hunsaði {count} keyrsluskrár sem eru smíðaðar fyrir önnur kerfi e�
 msgid "Libraries not found in the repositories: {list}"
 msgstr "Safnskrár fundust ekki í hugbúnaðarsöfnunum: {list}"
 
-msgid "Debian dependencies without an equivalent here: {list}"
-msgstr "Debian-kröfur án samsvörunar hér: {list}"
+msgid "Package dependencies without an equivalent here: {list}"
+msgstr "Pakkaháðir án jafngildis hér: {list}"
 
 msgid "Files already owned by other packages: {list}"
 msgstr "Skrár sem aðrir pakkar eiga nú þegar: {list}"
@@ -158,11 +158,62 @@ msgstr "Debian-pakkinn hefur enga control-skrá."
 msgid "The control file has no Package or Version field."
 msgstr "Control-skráin hefur hvorki Package- né Version-reit."
 
-msgid "Install .deb package"
-msgstr "Setja upp .deb-pakka"
+msgid "Package Installer"
+msgstr "Pakkauppsetning"
 
-msgid "Converts Debian packages into native pacman packages and installs them."
-msgstr "Breytir Debian-pökkum í innfædda pacman-pakka og setur þá upp."
+msgid "original debtap"
+msgstr "upprunalega debtap"
+
+msgid "About {name}"
+msgstr "Um {name}"
+
+msgid "A simple and safe way to install .deb and .rpm packages."
+msgstr "Einföld og örugg leið til að setja upp .deb og .rpm pakka."
+
+msgid "Credits"
+msgstr "Þakkir"
+
+msgid "License"
+msgstr "Leyfi"
+
+msgid "Project website"
+msgstr "Vefsvæði verkefnisins"
+
+msgid "Made for BigLinux with GTK4/Libadwaita"
+msgstr "Gert fyrir BigLinux með GTK4/Libadwaita"
+
+msgid "About"
+msgstr "Um forritið"
+
+msgid "This program is free software, distributed under the GNU General Public License, version 2 or later. It comes with absolutely no warranty."
+msgstr "Þetta forrit er frjáls hugbúnaður, dreift samkvæmt GNU General Public License, útgáfu 2 eða síðari. Því fylgir engin ábyrgð."
+
+msgid "Preferences"
+msgstr "Kjörstillingar"
+
+msgid "Converted packages"
+msgstr "Umbreyttir pakkar"
+
+msgid "The .deb or .rpm file is converted into a native package before it is installed."
+msgstr "Skránni .deb eða .rpm er umbreytt í innbyggðan pakka áður en hún er sett upp."
+
+msgid "Keep a copy of the converted package"
+msgstr "Geyma afrit af umbreytta pakkanum"
+
+msgid "Useful to reinstall it later or on another computer"
+msgstr "Gagnlegt til að setja hann upp aftur síðar eða á annarri tölvu"
+
+msgid "Folder"
+msgstr "Mappa"
+
+msgid "Choose…"
+msgstr "Velja…"
+
+msgid "Details"
+msgstr "Nánar"
+
+msgid "Copy details"
+msgstr "Afrita nánari upplýsingar"
 
 msgid "Extracting files"
 msgstr "Dreg út skrár"
@@ -170,8 +221,8 @@ msgstr "Dreg út skrár"
 msgid "Adapting folders to this system"
 msgstr "Aðlaga möppur að þessu kerfi"
 
-msgid "Finding dependencies"
-msgstr "Finn kröfur"
+msgid "Checking dependencies"
+msgstr "Athuga kerfiskröfur"
 
 msgid "Preparing installation scripts"
 msgstr "Undirbý uppsetningarskriftur"
@@ -179,38 +230,59 @@ msgstr "Undirbý uppsetningarskriftur"
 msgid "Building the package"
 msgstr "Smíða pakkann"
 
-msgid "Waiting for authorization"
-msgstr "Bíð eftir heimild"
+msgid "Preparing the installation"
+msgstr "Undirbý uppsetninguna"
 
-msgid "Installing"
-msgstr "Set upp"
+msgid "Downloading packages ({done} of {total})"
+msgstr "Sæki pakka ({done} af {total})"
 
-msgid "About"
-msgstr "Um forritið"
+msgid "Downloading packages"
+msgstr "Sæki pakka"
+
+msgid "Installing packages"
+msgstr "Set upp pakka"
+
+msgid "Configuring the system"
+msgstr "Stilli kerfið"
+
+msgid "Finishing"
+msgstr "Lýk"
+
+msgid "About the Installer"
+msgstr "Um uppsetningarforritið"
+
+msgid "Help"
+msgstr "Hjálp"
+
+msgid "Send feedback"
+msgstr "Senda ábendingu"
+
+msgid "Report a problem"
+msgstr "Tilkynna vandamál"
 
 msgid "Main menu"
 msgstr "Aðalvalmynd"
 
-msgid "Choose a .deb file…"
-msgstr "Veldu .deb-skrá…"
+msgid "Copied"
+msgstr "Afritað"
 
-msgid "Install a .deb package"
-msgstr "Setja upp .deb-pakka"
+msgid "Install a .deb or .rpm package"
+msgstr "Setja upp .deb eða .rpm pakka"
 
-msgid "Open a Debian package or drop it here. It will be converted into a native package for this system and installed."
-msgstr "Opnaðu Debian-pakka eða slepptu honum hér. Honum verður breytt í innfæddan pakka fyrir þetta kerfi og hann settur upp."
+msgid "Select a .deb or .rpm file on your computer to install it on your Linux system in a simple and safe way."
+msgstr "Veldu .deb eða .rpm skrá á tölvunni þinni til að setja hana upp á Linux-kerfinu þínu á einfaldan og öruggan hátt."
 
-msgid "Details"
-msgstr "Nánar"
+msgid "Choose a package file…"
+msgstr "Velja pakkaskrá…"
 
-msgid "Cancel"
-msgstr "Hætta við"
+msgid "Or drag and drop the file here"
+msgstr "Eða dragðu skrána hingað og slepptu henni"
 
-msgid "Prefer native packages when available"
-msgstr "Kjósa innfædda pakka þegar þeir standa til boða"
+msgid "Selected package"
+msgstr "Valinn pakki"
 
-msgid "Programs from the system repositories, Flatpak or AppImage usually work better. Converted .deb packages may not work perfectly."
-msgstr "Forrit úr hugbúnaðarsöfnum kerfisins, Flatpak eða AppImage virka yfirleitt betur. Umbreyttir .deb-pakkar virka kannski ekki fullkomlega."
+msgid "Review the package information before continuing."
+msgstr "Farðu yfir upplýsingar um pakkann áður en haldið er áfram."
 
 msgid "“{name}” is available in the repositories"
 msgstr "„{name}“ er í boði í hugbúnaðarsöfnunum"
@@ -221,8 +293,8 @@ msgstr "Mælt er með að setja upp innfædda pakkann."
 msgid "Open"
 msgstr "Opna"
 
-msgid "Package"
-msgstr "Pakki"
+msgid "Package name"
+msgstr "Heiti pakka"
 
 msgid "Version"
 msgstr "Útgáfa"
@@ -230,8 +302,8 @@ msgstr "Útgáfa"
 msgid "Architecture"
 msgstr "Arkitektúr"
 
-msgid "Installed size"
-msgstr "Uppsett stærð"
+msgid "Size"
+msgstr "Stærð"
 
 msgid "Maintainer"
 msgstr "Umsjónarmaður"
@@ -242,26 +314,42 @@ msgstr "Vefsvæði"
 msgid "Description"
 msgstr "Lýsing"
 
-msgid "Review before installing"
-msgstr "Yfirfara áður en sett er upp"
+msgid "Cancel"
+msgstr "Hætta við"
 
-msgid "Show the dependencies and the scripts that will run as administrator"
-msgstr "Sýna kröfurnar og skriftur sem keyra sem kerfisstjóri"
+msgid "Continue"
+msgstr "Halda áfram"
 
-msgid "Install"
-msgstr "Setja upp"
+msgid "This may take a few moments…"
+msgstr "Þetta gæti tekið smástund…"
 
-msgid "Ready to install"
-msgstr "Tilbúið til uppsetningar"
+msgid "Dependencies"
+msgstr "Kröfur"
 
-msgid "Check what will be installed."
-msgstr "Athugaðu hvað verður sett upp."
+msgid "The following packages will be installed so the application works correctly."
+msgstr "Eftirfarandi pakkar verða settir upp svo forritið virki rétt."
+
+msgid "New packages to install"
+msgstr "Nýir pakkar til að setja upp"
+
+msgid "{n} package"
+msgid_plural "{n} packages"
+msgstr[0] "{n} pakki"
+msgstr[1] "{n} pakkar"
+
+msgid "converted from the package file"
+msgstr "umbreytt úr pakkaskránni"
+
+msgid "Other information"
+msgstr "Aðrar upplýsingar"
+
+msgid "{n} warning"
+msgid_plural "{n} warnings"
+msgstr[0] "{n} aðvörun"
+msgstr[1] "{n} aðvaranir"
 
 msgid "Package name on this system"
 msgstr "Heiti pakkans á þessu kerfi"
-
-msgid "Package size"
-msgstr "Stærð pakka"
 
 msgid "Applications menu"
 msgstr "Forritavalmynd"
@@ -269,76 +357,131 @@ msgstr "Forritavalmynd"
 msgid "No menu entry"
 msgstr "Engin valmyndarfærsla"
 
-msgid "Warnings"
-msgstr "Aðvaranir"
-
-msgid "Notes"
-msgstr "Athugasemdir"
-
-msgid "Dependencies"
-msgstr "Kröfur"
-
-msgid "Required"
-msgstr "Nauðsynlegt"
-
-msgid "{n} package"
-msgid_plural "{n} packages"
-msgstr[0] "{n} pakki"
-msgstr[1] "{n} pakkar"
-
-msgid "will be downloaded"
-msgstr "verður sótt"
-
 msgid "Optional"
 msgstr "Valfrjálst"
 
 msgid "Scripts"
 msgstr "Skriftur"
 
-msgid "These commands from the Debian package run as administrator during installation."
-msgstr "Þessar skipanir úr Debian-pakkanum keyra sem kerfisstjóri við uppsetningu."
+msgid "These commands from the package run as administrator during installation."
+msgstr "Þessar skipanir úr pakkanum keyra sem kerfisstjóri við uppsetningu."
 
-msgid "Open {name}"
-msgstr "Opna {name}"
+msgid "Show"
+msgstr "Sýna"
 
-msgid "Copy details"
-msgstr "Afrita nánari upplýsingar"
+msgid "Back"
+msgstr "Til baka"
+
+msgid "Install"
+msgstr "Setja upp"
+
+msgid "Authentication required"
+msgstr "Auðkenning er nauðsynleg"
+
+msgid "Type your password in the system authentication window to continue the installation."
+msgstr "Sláðu inn lykilorðið þitt í auðkenningarglugga kerfisins til að halda uppsetningunni áfram."
+
+msgid "Administrator permissions are needed to install packages on your system."
+msgstr "Stjórnandaheimildir eru nauðsynlegar til að setja upp pakka á kerfinu þínu."
+
+msgid "Package installed successfully!"
+msgstr "Pakkinn var settur upp!"
+
+msgid "The package “{name}” was installed correctly on your system."
+msgstr "Pakkinn „{name}“ var settur upp á kerfinu þínu."
+
+msgid "Version {version}"
+msgstr "Útgáfa {version}"
+
+msgid "Open application"
+msgstr "Opna forrit"
+
+msgid "Show details"
+msgstr "Sýna nánari upplýsingar"
 
 msgid "Close"
 msgstr "Loka"
 
+msgid "Error details"
+msgstr "Upplýsingar um villu"
+
+msgid "Incompatible package"
+msgstr "Ósamhæfður pakki"
+
+msgid "This package was built for the {deb_arch} architecture, but your system is {host}."
+msgstr "Þessi pakki var gerður fyrir {deb_arch} arkitektúr en kerfið þitt er {host}."
+
+msgid "Package"
+msgstr "Pakki"
+
+msgid "Package architecture"
+msgstr "Arkitektúr pakka"
+
+msgid "System architecture"
+msgstr "Arkitektúr kerfis"
+
+msgid "This package cannot be installed on this computer. Look for a version of the package made for {host}."
+msgstr "Ekki er hægt að setja þennan pakka upp á þessari tölvu. Leitaðu að útgáfu pakkans sem gerð er fyrir {host}."
+
 msgid "This file cannot be installed"
 msgstr "Ekki er hægt að setja þessa skrá upp"
 
-msgid "Choose a .deb file"
-msgstr "Veldu .deb-skrá"
+msgid "The file may be damaged or is not a valid package. Download it again or check where it came from."
+msgstr "Skráin gæti verið skemmd eða ekki gildur pakki. Sæktu hana aftur eða athugaðu hvaðan hún kemur."
 
-msgid "Debian packages"
-msgstr "Debian-pakkar"
+msgid "Invalid file"
+msgstr "Ógild skrá"
 
-msgid "Type your password in the window that will appear."
-msgstr "Sláðu inn lykilorðið þitt í glugganum sem birtist."
+msgid "The selected file is not a .deb or .rpm package."
+msgstr "Valda skráin er ekki .deb eða .rpm pakki."
 
-msgid "Missing dependencies are downloaded from the repositories."
-msgstr "Kröfur sem vantar eru sóttar úr hugbúnaðarsöfnunum."
+msgid "This installer works only with .deb and .rpm files (packages for Debian, Ubuntu, Fedora, openSUSE and their derivatives)."
+msgstr "Þetta uppsetningarforrit virkar aðeins með .deb og .rpm skrám (pakkar fyrir Debian, Ubuntu, Fedora, openSUSE og afleiður þeirra)."
 
-msgid "Compressing the files, this may take a minute."
-msgstr "Þjappa skrám, þetta getur tekið eina mínútu."
+msgid "Choose a package file"
+msgstr "Velja pakkaskrá"
 
-msgid "The package could not be converted"
-msgstr "Ekki tókst að breyta pakkanum"
+msgid "Packages (.deb, .rpm)"
+msgstr "Pakkar (.deb, .rpm)"
+
+msgid "Preparing the package"
+msgstr "Undirbý pakkann"
+
+msgid "Extracting files ({percent}%)"
+msgstr "Pakka út skrám ({percent}%)"
 
 msgid "Cancelled"
 msgstr "Hætt við"
 
-msgid "{name} is installed"
-msgstr "{name} er uppsett"
+msgid "The package could not be converted"
+msgstr "Ekki tókst að breyta pakkanum"
 
-msgid "The package {name} was installed. It has no entry in the applications menu."
-msgstr "Pakkinn {name} var settur upp. Hann hefur enga færslu í forritavalmyndinni."
+msgid "Dependencies are not available"
+msgstr "Kerfiskröfur eru ekki tiltækar"
 
-msgid "Installation complete"
-msgstr "Uppsetningu lokið"
+msgid "Some packages this program needs were not found in the repositories."
+msgstr "Suma pakka sem þetta forrit þarfnast er ekki að finna í pakkasöfnunum."
+
+msgid "Installing the package"
+msgstr "Set upp pakkann"
+
+msgid "Preparing the installation…"
+msgstr "Undirbý uppsetninguna…"
+
+msgid "Downloading and installing dependencies…"
+msgstr "Sæki og set upp kerfiskröfur…"
+
+msgid "Installing packages…"
+msgstr "Set upp pakka…"
+
+msgid "Configuring the system…"
+msgstr "Stilli kerfið…"
+
+msgid "Finishing…"
+msgstr "Lýk…"
+
+msgid "Please wait until the installation finishes"
+msgstr "Bíddu þar til uppsetningu lýkur"
 
 msgid "Authorization was not granted"
 msgstr "Heimild fékkst ekki"
@@ -346,20 +489,17 @@ msgstr "Heimild fékkst ekki"
 msgid "The installation failed"
 msgstr "Uppsetningin mistókst"
 
-msgid "pacman returned an error (code {code}). Open the details to see what happened."
-msgstr "pacman skilaði villu (kóði {code}). Opnaðu nánari upplýsingar til að sjá hvað gerðist."
+msgid "An error happened while installing the package. See the details below."
+msgstr "Villa kom upp við uppsetningu pakkans. Sjáðu nánari upplýsingar hér að neðan."
 
 msgid "The application could not be started"
 msgstr "Ekki tókst að ræsa forritið"
 
-msgid "Copied"
-msgstr "Afritað"
+msgid "The RPM package is truncated or corrupted."
+msgstr "RPM-pakkinn er styttur eða skemmdur."
 
-msgid "Please wait until the installation finishes"
-msgstr "Bíddu þar til uppsetningu lýkur"
-
-msgid "makepkg cannot run as root; run debtap-mod as a regular user."
-msgstr "makepkg getur ekki keyrt sem root; keyrðu debtap-mod sem venjulegur notandi."
+msgid "makepkg cannot run as root; run big-pkg-installer as a regular user."
+msgstr "makepkg getur ekki keyrt sem root; keyrðu big-pkg-installer sem venjulegur notandi."
 
 msgid "makepkg failed with exit code {code}"
 msgstr "makepkg mistókst með lokunarkóðanum {code}"
@@ -379,17 +519,11 @@ msgstr "Arch uppfærir ekki staka pakka; allt kerfið er uppfært í einu."
 msgid "Tell which package to install, for example: {example}"
 msgstr "Tilgreindu hvaða pakka á að setja upp, til dæmis: {example}"
 
-msgid ".rpm packages are made for Fedora/openSUSE and cannot be installed here."
-msgstr ".rpm pakkar eru gerðir fyrir Fedora/openSUSE og ekki hægt að setja þá upp hér."
-
-msgid "Look for the program in the repositories (pamac search), on Flathub, or as an AppImage."
-msgstr "Leitaðu að forritinu í pakkasöfnunum (pamac search), á Flathub eða sem AppImage."
-
 msgid "pamac also finds programs in the AUR and Flatpak: {cmd}"
 msgstr "pamac finnur líka forrit í AUR og Flatpak: {cmd}"
 
-msgid ".deb packages are converted into native pacman packages by debtap-mod."
-msgstr ".deb pökkum er breytt í innbyggða pacman pakka með debtap-mod."
+msgid ".deb and .rpm packages are converted into native pacman packages by big-pkg-installer."
+msgstr ".deb og .rpm pökkum er umbreytt í innbyggða pacman-pakka með big-pkg-installer."
 
 msgid "Run this command as a regular user (without sudo)."
 msgstr "Keyrðu þessa skipun sem venjulegur notandi (án sudo)."
@@ -463,8 +597,11 @@ msgstr "Setja upp forrit"
 msgid "Install a downloaded file"
 msgstr "Setja upp niðurhalaða skrá"
 
-msgid "Install a .deb file here"
-msgstr "Setja upp .deb skrá hér"
+msgid "Install a native package file"
+msgstr "Setja upp innbyggða pakkaskrá"
+
+msgid "Install a .deb or .rpm file here"
+msgstr "Setja upp .deb eða .rpm skrá hér"
 
 msgid "Reinstall"
 msgstr "Setja aftur upp"
@@ -562,8 +699,8 @@ msgstr "Tegundir pakka"
 msgid "apt uses .deb files, dnf uses .rpm, pacman uses .pkg.tar.zst."
 msgstr "apt notar .deb skrár, dnf notar .rpm, pacman notar .pkg.tar.zst."
 
-msgid ".deb files are converted and installed with debtap-mod (or a double click)."
-msgstr ".deb skrám er breytt og þær settar upp með debtap-mod (eða með tvísmelli)."
+msgid ".deb and .rpm files are converted and installed with big-pkg-installer (or a double click)."
+msgstr ".deb og .rpm skrár eru umbreyttar og settar upp með big-pkg-installer (eða með tvísmelli)."
 
 msgid "Programs from the community"
 msgstr "Forrit frá samfélaginu"
@@ -583,8 +720,23 @@ msgstr "Stutt yfirlit: „sudo“ þarf til að setja upp eða fjarlægja; leit 
 msgid "Command not found: {cmd}"
 msgstr "Skipun fannst ekki: {cmd}"
 
-msgid "The Debian scripts only register an APT repository and an AppArmor profile for Ubuntu; they are not needed here."
-msgstr "Debian-skrifturnar skrá aðeins APT-hugbúnaðarsafn og AppArmor-snið fyrir Ubuntu; þeirra er ekki þörf hér."
+msgid "The package's own scripts only register a software repository and an AppArmor profile for other distributions; they are not needed here."
+msgstr "Eigin skriftur pakkans skrá aðeins hugbúnaðarsafn og AppArmor-snið fyrir aðrar dreifingar; þeirra er ekki þörf hér."
+
+msgid "Unsupported RPM payload format."
+msgstr "Óstutt RPM-gagnasnið."
+
+msgid "The file is not an RPM package."
+msgstr "Skráin er ekki RPM-pakki."
+
+msgid "This is a source RPM (.src.rpm): it contains source code, not a program to install."
+msgstr "Þetta er RPM-frumkóðapakki (.src.rpm): hann inniheldur frumkóða, ekki forrit til uppsetningar."
 
 msgid "The {script} script configures an APT repository; that part has no effect on this system."
 msgstr "Skriftan {script} stillir APT-hugbúnaðarsafn; sá hluti hefur engin áhrif á þetta kerfi."
+
+msgid "The {script} script is written in Lua for RPM itself and was skipped."
+msgstr "Skriftan {script} er skrifuð í Lua fyrir RPM sjálft og var sleppt."
+
+msgid "The {script} script configures a DNF/YUM repository; that part has no effect on this system."
+msgstr "Skriftan {script} stillir DNF/YUM hugbúnaðarsafn; sá hluti hefur engin áhrif á þetta kerfi."
