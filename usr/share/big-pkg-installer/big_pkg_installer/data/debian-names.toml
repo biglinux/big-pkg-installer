@@ -22,6 +22,8 @@
 "login" = ""
 "libc6" = ""
 "libc-bin" = ""
+# Debian names its zlib package without the "lib" prefix
+"zlib1g" = ""
 "dash" = ""
 "sensible-utils" = ""
 "mesa-vulkan-drivers" = ""
