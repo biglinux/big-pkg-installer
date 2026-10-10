@@ -63,9 +63,11 @@ def test_plugins_become_optional(tmp_path, monkeypatch):
     ]
     monkeypatch.setattr(deps, "scan_elves", lambda root: fake)
     report = compute_dependencies(tmp_path, {}, "x86_64", set())
-    assert "glibc" in report.depends
-    assert "zlib" not in report.depends
-    assert "zlib" in report.optdepends
+    # The package that provides libz.so.1 differs per machine (zlib, or
+    # zlib-ng-compat where the -ng build replaces it), so only the split
+    # between hard and optional dependencies is asserted here.
+    assert report.depends == ["glibc"]
+    assert list(report.optdepends.values()) == ["used by libqt_shim.so"]
 
 
 @needs_pacman
