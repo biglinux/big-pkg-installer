@@ -17,6 +17,7 @@ def test_map_debian_name():
     sync = frozenset({"git", "libfoo"})
     assert map_debian_name("xz-utils", sync) == "xz"
     assert map_debian_name("libc6", sync) == ""
+    assert map_debian_name("zlib1g", sync) == ""  # the ELF scan finds libz.so.1
     assert map_debian_name("git", sync) == "git"
     assert map_debian_name("libfoo", sync) is None  # libraries come from the ELF scan
     assert map_debian_name("unknown-thing", sync) is None
